@@ -112,6 +112,9 @@ D = bpy.data
 C = bpy.context
 S = C.scene
 RENDER_DESTINATION = "C:/Users/peter/OneDrive/thesis_realistic_mvs_dataset/renders"
+DEPTH_MAP_FOLDER = "depth_maps"
+CAMERA_PARAMS_FOLDER = "cam_params"
+
 
 for object in bpy.data.objects:
     if object.name in ['Camera','Lamp','Sun', 'Man', 'maybeMan']:
@@ -133,12 +136,11 @@ rot_angle = 360 / n_angles
 
 for i in range(n_angles):
     angle = i * rot_angle
-    print(angle)
     empty.rotation_euler[2] = radians(angle) % radians(360)
     
     file_name = "angle_{a}".format(a = angle)
     
-    with open(join(RENDER_DESTINATION, file_name), 'w') as params_file:
+    with open(join(RENDER_DESTINATION, CAMERA_PARAMS_FOLDER, file_name), 'w') as params_file:
         params_file.write("K*RT: " + str(get_3x4_P_matrix_from_blender(cam)[0]) + '\n' 
                           + "K: " + str(get_3x4_P_matrix_from_blender(cam)[1]) + '\n'
                           + "RT: " + str(get_3x4_P_matrix_from_blender(cam)[2]))
