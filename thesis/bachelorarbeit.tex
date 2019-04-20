@@ -1,0 +1,79 @@
+\documentclass[a4paper,cleardoubleempty,BCOR1cm]{scrbook}
+\input{header}
+
+\title{Thesis Template}
+\author{Peter Trost\thanks{e-mail: peter.trost@student.uni-tuebingen.de}}
+\date{\today}
+\begin{document}
+
+\input{teaser}
+
+\chapter*{Abstract}
+Template
+
+\chapter*{Acknowledgments}
+If you have someone to Acknowledge ;)
+
+\tableofcontents
+
+%% braucht kein Mensch ...
+%\listoffigures
+%\listoftables
+
+% write content here or...
+\chapter{Introduction}
+What is this all about?
+
+Cite like this: \cite{agarwal2011}
+
+\chapter{Related Work}
+\section{Synthetically rendered datasets}
+\subsection{A naturalistic open source movie for optical flow evaluation}
+\cite{Butler:ECCV:2012}
+\subsubsection{Overview}
+In this paper the authors provide a dataset for optical flow estimation derived from the open source 3D animated short film Sintel
+\todo{cite Sintel: https://durian.blender.org/}.
+The dataset contains long sequences, large motions, specular reflections, motion blur, defocus blur, atmospheric effects and more. Its scenes are rendered in varying complexity through the source graphics data provided by the authors of the film. Because of this aforementioned variety the dataset can be used to improve optical flow methods. 
+
+\subsubsection{Render passes}
+As mentioned above the dataset contains scenes rendered in the following variying complexity:\\
+\begin{itemize}
+	\item Albedo Pass: Flat and unshaded. Surfaces exhibit constant albedo over time
+	\item Clean Pass: Illumination including smooth shading and specular reflections adds realism
+	\item Final Pass: Full rendering with all effects including blur due to camera depth of field and motion, and atmospheric effects.
+\end{itemize}
+
+\subsubsection{Main aspects}
+
+
+
+\subsection{Playing for data: Ground truth from computer games}
+\cite{Richter_2016_ECCV}
+
+\subsection{The synthia dataset: A large collection of synthetic images for semantic segmentation of urban scenes}
+\cite{RosCVPR16}
+
+\subsection{SyB3R: A Realistic Synthetic Benchmark for 3D Reconstruction from Images}
+\cite{syb3r2016}
+
+
+
+
+
+
+
+
+\section{Problem Statement}
+\todo{what you have to do here :)}
+
+% ... input content via other .tex files
+\input{content/conclusion}
+
+\appendix
+\chapter{Blub}
+
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+
+\end{document}
+

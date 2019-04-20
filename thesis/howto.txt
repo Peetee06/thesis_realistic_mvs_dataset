@@ -1,0 +1,4 @@
+$ pdflatex diplomarbeit.tex
+$ bibtex diplomarbeit.aux
+$ pdflatex diplomarbeit.tex
+$ pdflatex diplomarbeit.tex

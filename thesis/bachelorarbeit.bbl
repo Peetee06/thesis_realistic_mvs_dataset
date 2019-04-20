@@ -1,0 +1,33 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{RVRK16}
+
+\bibitem[AFS{\etalchar{+}}11]{agarwal2011}
+Sameer Agarwal, Yasutaka Furukawa, Noah Snavely, Ian Simon, Brian Curless,
+  Steven~M. Seitz, and Richard Szeliski.
+\newblock Building rome in a day.
+\newblock {\em Commun. ACM}, 54(10):105--112, October 2011.
+
+\bibitem[BWSB12]{Butler:ECCV:2012}
+D.~J. Butler, J.~Wulff, G.~B. Stanley, and M.~J. Black.
+\newblock A naturalistic open source movie for optical flow evaluation.
+\newblock In {\em European Conf. on Computer Vision (ECCV)}, Part IV, LNCS
+  7577, pages 611--625. Springer-Verlag, October 2012.
+
+\bibitem[LH]{syb3r2016}
+Andreas Ley and H\.
+
+\bibitem[RSM{\etalchar{+}}16]{RosCVPR16}
+German Ros, Laura Sellart, Joanna Materzynska, David Vazquez, and Antonio
+  Lopez.
+\newblock {The SYNTHIA Dataset}: A large collection of synthetic images for
+  semantic segmentation of urban scenes.
+\newblock 2016.
+
+\bibitem[RVRK16]{Richter_2016_ECCV}
+Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
+\newblock Playing for data: {G}round truth from computer games.
+\newblock In Bastian Leibe, Jiri Matas, Nicu Sebe, and Max Welling, editors,
+  {\em European Conference on Computer Vision (ECCV)}, volume 9906 of {\em
+  LNCS}, pages 102--118. Springer International Publishing, 2016.
+
+\end{thebibliography}
