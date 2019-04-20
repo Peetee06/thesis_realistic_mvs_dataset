@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  18 APR 2019 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  20 APR 2019 14:17
 entering extended mode
 **./bachelorarbeit.tex
 (bachelorarbeit.tex
@@ -1103,7 +1103,7 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 67.
+(scrbook)              `\normalfont \bfseries ' on input line 70.
 
 (content/conclusion.tex [14]
 chapter 3.
@@ -1118,36 +1118,25 @@ chapter A.
 (bachelorarbeit.bbl [17] [18
 
 
-]
-Runaway argument?
-! Paragraph ended before \T1\. was complete.
-<to be read again> 
-                   \par 
-l.18 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-) [19] (bachelorarbeit.aux) ) 
+]) [19] (bachelorarbeit.aux) ) 
 Here is how much of TeX's memory you used:
- 12521 strings out of 492903
- 201641 string characters out of 3130412
+ 12537 strings out of 492903
+ 201445 string characters out of 3130412
  550984 words of memory out of 3000000
  16080 multiletter control sequences out of 15000+200000
- 44122 words of font info for 145 fonts, out of 3000000 for 9000
+ 44910 words of font info for 157 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,11n,66p,9109b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/home/peete/.miktex/texmfs/install/fonts/enc/dvip
-s/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rp
-cxr.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxb.pfb
-></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></home
-/peete/.miktex/texmfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peete
-/.miktex/texmfs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.mikte
-x/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmf
-s/install/fonts/type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/insta
-ll/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on bachelorarbeit.pdf (19 pages, 316347 bytes).
+{/home/peete/.miktex/texmfs/install/fonts/enc/dvi
+ps/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/r
+pcxr.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxb.pf
+b></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></hom
+e/peete/.miktex/texmfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peet
+e/.miktex/texmfs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.mikt
+ex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texm
+fs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/inst
+all/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on bachelorarbeit.pdf (19 pages, 320572 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -36,7 +36,7 @@ In this paper the authors provide a dataset for optical flow estimation derived 
 The dataset contains long sequences, large motions, specular reflections, motion blur, defocus blur, atmospheric effects and more. Its scenes are rendered in varying complexity through the source graphics data provided by the authors of the film. Because of this aforementioned variety the dataset can be used to improve optical flow methods. 
 
 \subsubsection{Render passes}
-As mentioned above the dataset contains scenes rendered in the following variying complexity:\\
+As mentioned above the dataset contains image sequences rendered in the following variying complexity:\\
 \begin{itemize}
 	\item Albedo Pass: Flat and unshaded. Surfaces exhibit constant albedo over time
 	\item Clean Pass: Illumination including smooth shading and specular reflections adds realism
@@ -44,8 +44,11 @@ As mentioned above the dataset contains scenes rendered in the following variyin
 \end{itemize}
 
 \subsubsection{Main aspects}
+The main aspects of the Sintel dataset are the following:\\
+It contains varying and more challenging (for existing methods) scenes than older datasets. Sequences are 50 frames long and are provided with 49 ground truth flow fields which are a measure of changes in position for objects in the scene from frame to frame. Some frames include motions of well over 100 pixels. There are 1628 frames with 564 for testing and 1064 for training. The Sintel dataset contains sequences having real-world challenges like lighting variations, shadows, complex materials, reflections and more.
 
-
+\subsubsection{Meta}
+The authors modified Blender's internal motion blur pipeline to give accurate motion vectors at each pixel which provide ground truth optical flow maps. Although the clips are selected so that optical flow is realistic, one still has to be cautios when training and evaluating algorithms that strongly rely on real-world laws of physics. The images are saved as 8-bit PNG files and the clips have a framerate of 24 fps.
 
 \subsection{Playing for data: Ground truth from computer games}
 \cite{Richter_2016_ECCV}

@@ -13,8 +13,11 @@ D.~J. Butler, J.~Wulff, G.~B. Stanley, and M.~J. Black.
 \newblock In {\em European Conf. on Computer Vision (ECCV)}, Part IV, LNCS
   7577, pages 611--625. Springer-Verlag, October 2012.
 
-\bibitem[LH]{syb3r2016}
-Andreas Ley and H\.
+\bibitem[LHH16]{syb3r2016}
+Andreas Ley, Ronny H{\"a}nsch, and Olaf Hellwich.
+\newblock {\em SyB3R: A Realistic Synthetic Benchmark for 3D Reconstruction
+  from Images}, pages 236--251.
+\newblock Springer International Publishing, 2016.
 
 \bibitem[RSM{\etalchar{+}}16]{RosCVPR16}
 German Ros, Laura Sellart, Joanna Materzynska, David Vazquez, and Antonio
