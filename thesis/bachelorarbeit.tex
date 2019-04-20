@@ -30,6 +30,16 @@ Cite like this: \cite{agarwal2011}
 \section{Synthetically rendered datasets}
 \subsection{A naturalistic open source movie for optical flow evaluation}
 \cite{Butler:ECCV:2012}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{images/Sintel.png}
+	\caption{Example images (ground truth flow in uneven rows and RGB in even ones) from the Sintel dataset}
+	\label{Sintel}
+\end{figure}
+
+
+
 \subsubsection{Overview}
 In this paper the authors provide a dataset for optical flow estimation derived from the open source 3D animated short film Sintel
 \todo{cite Sintel: https://durian.blender.org/}.
@@ -50,11 +60,30 @@ It contains varying and more challenging (for existing methods) scenes than olde
 \subsubsection{Meta}
 The authors modified Blender's internal motion blur pipeline to give accurate motion vectors at each pixel which provide ground truth optical flow maps. Although the clips are selected so that optical flow is realistic, one still has to be cautios when training and evaluating algorithms that strongly rely on real-world laws of physics. The images are saved as 8-bit PNG files and the clips have a framerate of 24 fps.
 
+\newpage
+
 \subsection{Playing for data: Ground truth from computer games}
 \cite{Richter_2016_ECCV}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{images/P4D.png}
+	\caption{Example images (RGB on the left and semantic segmentation right) from the ''Playing for data``-dataset}
+	\label{P4D}
+\end{figure}
+
+\section{Overview}
+The main aspect of this paper is to get pixel-accurate ground truth of synthetic data and therefore be able to label objects in the images accurately and efficiently.
+The authors use detouring (i.e. injecting a wrapper between the game and the operating system) to record, modify and reproduce rendering commands from the game Grand Theft Auto 5 (GTA5). They retrieve the distinct rendering resources (geometry, textures, shaders) which they hash in order to create object signatures. These signatures are then used to label the objects pixel-accurately. The signatures then enable them to propagate these labels across time and instances that share distinctive resources. The dataset of the paper contains 25,000 images from GTA5 with pixel-level semantic segmentation ground-truth. Labeling the data took 49 hours  which is 3 orders of magnitude faster than other semantic segmentation datasets with similar annotation density). This is achieved through the object signatures: When an object is labeled in a given image this label is propagated to every image that contains this object using the object signatures. 
+
+
+\newpage
+
 \subsection{The synthia dataset: A large collection of synthetic images for semantic segmentation of urban scenes}
 \cite{RosCVPR16}
+
+
+\newpage
 
 \subsection{SyB3R: A Realistic Synthetic Benchmark for 3D Reconstruction from Images}
 \cite{syb3r2016}
@@ -65,6 +94,7 @@ The authors modified Blender's internal motion blur pipeline to give accurate mo
 
 
 
+\newpage
 
 \section{Problem Statement}
 \todo{what you have to do here :)}
