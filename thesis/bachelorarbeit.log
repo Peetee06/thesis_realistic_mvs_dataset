@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  20 APR 2019 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  22 APR 2019 17:12
 entering extended mode
 **./bachelorarbeit.tex
 (bachelorarbeit.tex
@@ -1094,7 +1094,7 @@ File: images/P4D.png Graphic file (type png)
 <use images/P4D.png>
 Package pdftex.def Info: images/P4D.png  used on input line 70.
 (pdftex.def)             Requested size: 398.33864pt x 333.20004pt.
- [15 <./images/P4D.png>] [16] [17] [18]
+ [15 <./images/P4D.png>]
 
 Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -1114,28 +1114,119 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 100.
+(scrbook)              `\normalfont \bfseries ' on input line 80.
 
-(content/conclusion.tex [19] [20
+[16]
+
+Class scrbook Warning: deprecated old font command `\bf' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\bf' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\bf' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \bfseries ' on input line 89.
+
+<images/SYNTHIA_seasons.png, id=85, 1186.4325pt x 706.64pt>
+File: images/SYNTHIA_seasons.png Graphic file (type png)
+<use images/SYNTHIA_seasons.png>
+Package pdftex.def Info: images/SYNTHIA_seasons.png  used on input line 93.
+(pdftex.def)             Requested size: 398.33864pt x 237.24611pt.
+[17 <./images/SYNTHIA_seasons.png>]
+<images/SYNTHIA_depth.png, id=90, 1597.97pt x 374.39874pt>
+File: images/SYNTHIA_depth.png Graphic file (type png)
+<use images/SYNTHIA_depth.png>
+Package pdftex.def Info: images/SYNTHIA_depth.png  used on input line 103.
+(pdftex.def)             Requested size: 398.33864pt x 93.33095pt.
+ [18 <./images/SYNTHIA_depth.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+<images/SyB3R.png, id=95, 1628.0825pt x 493.845pt>
+File: images/SyB3R.png Graphic file (type png)
+<use images/SyB3R.png>
+Package pdftex.def Info: images/SyB3R.png  used on input line 117.
+(pdftex.def)             Requested size: 398.33864pt x 120.82353pt.
+
+Class scrbook Warning: deprecated old font command `\bf' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\bf' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\bf' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \bfseries ' on input line 123.
+
+<images/SyB3R_pp.png, id=96, 1435.3625pt x 113.42375pt>
+File: images/SyB3R_pp.png Graphic file (type png)
+<use images/SyB3R_pp.png>
+Package pdftex.def Info: images/SyB3R_pp.png  used on input line 130.
+(pdftex.def)             Requested size: 398.33864pt x 31.47632pt.
+[19 <./images/SyB3R.png>] [20 <./images/SyB3R_pp.png>]
+
+Class scrbook Warning: deprecated old font command `\bf' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\bf' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\bf' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \bfseries ' on input line 139.
+
+(content/conclusion.tex [21] [22
 
 
 ]
 chapter 3.
-) [21] [22
+) [23] [24
 
 
 ]
 chapter A.
-(bachelorarbeit.bbl [23] [24
+(bachelorarbeit.bbl [25] [26
 
 
-]) [25] (bachelorarbeit.aux) ) 
+]) [27] (bachelorarbeit.aux) ) 
 Here is how much of TeX's memory you used:
- 12562 strings out of 492903
- 201769 string characters out of 3130412
- 550984 words of memory out of 3000000
- 16093 multiletter control sequences out of 15000+200000
- 45304 words of font info for 163 fonts, out of 3000000 for 9000
+ 12622 strings out of 492903
+ 202550 string characters out of 3130412
+ 551984 words of memory out of 3000000
+ 16113 multiletter control sequences out of 15000+200000
+ 47077 words of font info for 190 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,11n,66p,9109b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dvi
@@ -1147,9 +1238,9 @@ e/.miktex/texmfs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.mikt
 ex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texm
 fs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/inst
 all/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on bachelorarbeit.pdf (25 pages, 3564394 bytes).
+Output written on bachelorarbeit.pdf (27 pages, 7035424 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
+ 156 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 29200 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 29220 words of extra memory for PDF output out of 29859 (max. 10000000)
 
