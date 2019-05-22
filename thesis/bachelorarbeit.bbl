@@ -1,17 +1,23 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{RVRK16}
 
-\bibitem[AFS{\etalchar{+}}11]{agarwal2011}
-Sameer Agarwal, Yasutaka Furukawa, Noah Snavely, Ian Simon, Brian Curless,
-  Steven~M. Seitz, and Richard Szeliski.
-\newblock Building rome in a day.
-\newblock {\em Commun. ACM}, 54(10):105--112, October 2011.
-
 \bibitem[BWSB12]{Butler:ECCV:2012}
 D.~J. Butler, J.~Wulff, G.~B. Stanley, and M.~J. Black.
 \newblock A naturalistic open source movie for optical flow evaluation.
 \newblock In {\em European Conf. on Computer Vision (ECCV)}, Part IV, LNCS
   7577, pages 611--625. Springer-Verlag, October 2012.
+
+\bibitem[GEB16]{DBLP:conf/cvpr/GatysEB16}
+Leon~A. Gatys, Alexander~S. Ecker, and Matthias Bethge.
+\newblock Image style transfer using convolutional neural networks.
+\newblock In {\em 2016 {IEEE} Conference on Computer Vision and Pattern
+  Recognition, {CVPR} 2016, Las Vegas, NV, USA, June 27-30, 2016}, pages
+  2414--2423, 2016.
+
+\bibitem[IZZE16]{DBLP:journals/corr/IsolaZZE16}
+Phillip Isola, Jun{-}Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
+\newblock Image-to-image translation with conditional adversarial networks.
+\newblock {\em CoRR}, abs/1611.07004, 2016.
 
 \bibitem[LHH16]{syb3r2016}
 Andreas Ley, Ronny H{\"a}nsch, and Olaf Hellwich.
@@ -32,5 +38,11 @@ Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
 \newblock In Bastian Leibe, Jiri Matas, Nicu Sebe, and Max Welling, editors,
   {\em European Conference on Computer Vision (ECCV)}, volume 9906 of {\em
   LNCS}, pages 102--118. Springer International Publishing, 2016.
+
+\bibitem[ZPIE17]{DBLP:journals/corr/ZhuPIE17}
+Jun{-}Yan Zhu, Taesung Park, Phillip Isola, and Alexei~A. Efros.
+\newblock Unpaired image-to-image translation using cycle-consistent
+  adversarial networks.
+\newblock {\em CoRR}, abs/1703.10593, 2017.
 
 \end{thebibliography}

@@ -1,26 +1,34 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  22 MAY 2019 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.17)  22 MAY 2019 11:40
 entering extended mode
 **./bachelorarbeit.tex
 (bachelorarbeit.tex
 LaTeX2e <2018-12-01>
-(/home/peete/.miktex/texmfs/install/tex/latex/koma-script/scrbook.cls
+
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrbo
+ok.cls"
 Document Class: scrbook 2019/02/01 v3.26b KOMA-Script document class (book)
-(/home/peete/.miktex/texmfs/install/tex/latex/koma-script/scrkbase.sty
+
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrkb
+ase.sty"
 Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent 
 basics and keyval usage)
 
-(/home/peete/.miktex/texmfs/install/tex/latex/koma-script/scrbase.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrba
+se.sty"
 Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent
  basics and keyval usage)
 
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.s
+ty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/koma-script/scrlfile.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlf
+ile.sty"
 Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
 )))
-(/home/peete/.miktex/texmfs/install/tex/latex/koma-script/tocbasic.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\tocba
+sic.sty"
 Package: tocbasic 2019/02/01 v3.26b KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box27
@@ -53,11 +61,14 @@ Class scrbook Warning: deprecated option `enabledeprecatedfontcommands'.
 Class scrbook Info: File `scrsize11pt.clo' used instead of
 (scrbook)           file `scrsize11.clo' to setup font sizes on input line 2376
 .
-(/home/peete/.miktex/texmfs/install/tex/latex/koma-script/scrsize11pt.clo
+
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrsi
+ze11pt.clo"
 File: scrsize11pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (11p
 t)
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/koma-script/typearea.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\typea
+rea.sty"
 Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count80
@@ -157,7 +168,8 @@ Class scrbook Info: Using old \@makefntext due to compatibility level
 Class scrbook Info: Redefining `\numberline' on input line 6811.
 \bibindent=\dimen102
 ) (header.tex
-(/home/peete/.miktex/texmfs/install/tex/latex/psnfss/mathptmx.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\mathptmx.s
+ty"
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -193,30 +205,37 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx
+.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics
+.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
+"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\grap
+hics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdft
+ex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics/color.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.st
+y"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(/home/peete/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\colo
+r.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
@@ -229,51 +248,67 @@ Class scrbook Warning: Usage of package `parskip' together
 (scrbook)              Nevertheless, using requested
 (scrbook)              package `parskip' on input line 21.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/parskip/parskip.sty
+
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/parskip\parskip.s
+ty"
 Package: parskip 2019-01-16 v2.0c non-zero parskip adjustments
 
-(/home/peete/.miktex/texmfs/install/tex/latex/oberdiek/kvoptions.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoption
+s.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/ltxcmds.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmd
+s.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetk
+eys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/infwarerr.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwar
+err.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/etexcmds.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcm
+ds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/ifluatex.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluat
+ex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 ))))
-(/home/peete/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox
+.sty"
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count90
 )
 Couldn't patch \@startsection
-) (/home/peete/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+)
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.s
+ty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
-(/home/peete/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.s
+ty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/home/peete/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.st
+y"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen105
 ))
-(/home/peete/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.st
+y"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen106
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
+y"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count91
@@ -314,7 +349,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/pxfonts.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\pxfonts.s
+ty"
 Package: pxfonts 2008/01/22 v1.1.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -394,14 +430,13 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 (Font)                  U/pxexa/m/n --> U/pxexa/bx/n on input line 129.
 LaTeX Info: Redefining \not on input line 997.
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
-
-(/home/peete/.miktex/texmfs/install/tex/latex/base/t1enc.def
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/home/peete/.miktex/texmfs/install/tex/latex/base/textcomp.sty
+)) ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.
+sty"
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -415,13 +450,11 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
-(/home/peete/.miktex/texmfs/install/tex/latex/base/ts1enc.def
+ ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
-(/home/peete/.miktex/texmfs/install/tex/latex/base/ts1enc.dfu
+ ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
 File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -572,7 +605,9 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              Nevertheless, using requested
 (scrbook)              package `fancyhdr' on input line 35.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr
+.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip61
@@ -585,25 +620,23 @@ s
 \f@nch@O@olf=\skip68
 \f@nch@O@orf=\skip69
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
-
-(/home/peete/.miktex/texmfs/install/tex/latex/base/t1enc.def
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/home/peete/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+)) ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.
+sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks20
 \inpenc@posthook=\toks21
-
-(/home/peete/.miktex/texmfs/install/tex/latex/ucs/utf8x.def
+ ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\utf8x.def"
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-))
-(/home/peete/.miktex/texmfs/install/tex/latex/ucs/ucs.sty
+)) ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\ucs.sty"
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 
-(/home/peete/.miktex/texmfs/install/tex/latex/ucs/uni-global.def
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\uni-global.de
+f"
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count103
@@ -611,7 +644,8 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \uc@combtoksb=\toks23
 \uc@temptokena=\toks24
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/microtype/microtype.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microty
+pe.sty"
 Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 \MT@toks=\toks25
 \MT@count=\count104
@@ -620,7 +654,8 @@ LaTeX Info: Redefining \textls on input line 790.
 LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
 \MT@listname@count=\count105
 
-(/home/peete/.miktex/texmfs/install/tex/latex/microtype/microtype-pdftex.def
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microty
+pe-pdftex.def"
 File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 914.
@@ -629,22 +664,24 @@ LaTeX Info: Redefining \lslig on input line 914.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/microtype/microtype.cfg
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microty
+pe.cfg"
 File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 ))
-(/home/peete/.miktex/texmfs/install/tex/latex/tools/theorem.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\theorem.sty
+"
 Package: theorem 2014/10/28 v2.2c Theorem extension package (FMi)
 \theorem@style=\toks26
 \theorem@bodyfont=\toks27
 \theorempreskipamount=\skip71
 \theorempostskipamount=\skip72
-
-(/home/peete/.miktex/texmfs/install/tex/latex/tools/thp.sty
+ ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\thp.sty"
 File: thp.sty 2014/10/28 v2.2c Theorem extension package (FMi)
 ))
 \c@definition=\count106
 
-(/home/peete/.miktex/texmfs/install/tex/latex/listings/listings.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
+.sty"
 \lst@mode=\count107
 \lst@gtempboxa=\box31
 \lst@token=\toks28
@@ -658,43 +695,51 @@ File: thp.sty 2014/10/28 v2.2c Theorem extension package (FMi)
 \lst@lineno=\count112
 \lst@maxwidth=\dimen118
 
-(/home/peete/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.
+sty"
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 \c@lstnumber=\count113
 \lst@skipnumbers=\count114
 \lst@framebox=\box32
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/listings/listings.cfg
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
+.cfg"
 File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
 
-(/home/peete/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1
+.sty"
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1
+.sty"
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.
+sty"
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/algorithm2e/algorithm2e.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithm2e\algor
+ithm2e.sty"
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
 \c@AlgoLine=\count115
 
-(/home/peete/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \algocf@hangindent=\skip73
 
-(/home/peete/.miktex/texmfs/install/tex/latex/ifoddpage/ifoddpage.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\ifoddpa
+ge.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 \c@checkoddpage=\count116
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/tools/xspace.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/relsize/relsize.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/relsize\relsize.s
+ty"
 Package: relsize 2013/03/29 ver 4.1
 )
 \skiptotal=\skip74
@@ -732,18 +777,20 @@ Package: relsize 2013/03/29 ver 4.1
 \c@algocf=\count119
 \algocf@algoframe=\box39
 \algocf@algobox=\box40
-)
-(/home/peete/.miktex/texmfs/install/tex/latex/url/url.sty
+) ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/subfig/subfig.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty
+"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-(/home/peete/.miktex/texmfs/install/tex/latex/caption/caption.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.s
+ty"
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-(/home/peete/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.
+sty"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen125
@@ -772,14 +819,14 @@ Package caption Info: listings package is loaded.
 \c@lotdepth=\count128
 \sf@top=\skip95
 \sf@bottom=\skip96
-))
-(bachelorarbeit.aux)
+)) (bachelorarbeit.aux)
 \openout1 = `bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/pxmi/m/it on input line 7.
 LaTeX Font Info:    Try loading font information for OML+pxmi on input line 7.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/omlpxmi.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\omlpxmi.f
+d"
 File: omlpxmi.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 7.
@@ -790,37 +837,40 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for OMS/pxsy/m/n on input line 7.
 LaTeX Font Info:    Try loading font information for OMS+pxsy on input line 7.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/omspxsy.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\omspxsy.f
+d"
 File: omspxsy.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for OMX/pxex/m/n on input line 7.
 LaTeX Font Info:    Try loading font information for OMX+pxex on input line 7.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/omxpxex.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\omxpxex.f
+d"
 File: omxpxex.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/pxexa/m/n on input line 7.
 LaTeX Font Info:    Try loading font information for U+pxexa on input line 7.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxexa.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\upxexa.fd
+"
 File: upxexa.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 7.
-
-(/home/peete/.miktex/texmfs/install/tex/latex/base/ts1cmr.fd
+ ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Try loading font information for T1+pxr on input line 7.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/t1pxr.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\t1pxr.fd"
 File: t1pxr.fd 2000/12/14 v1.0
 )
-(/home/peete/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-
+pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count129
 \scratchdimen=\dimen133
@@ -833,20 +883,26 @@ File: t1pxr.fd 2000/12/14 v1.0
 \MPnumerator=\count133
 \makeMPintoPDFobject=\count134
 \everyMPtoPDFconversion=\toks30
-) (/home/peete/.miktex/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
+)
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf
+-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/home/peete/.miktex/texmfs/install/tex/latex/oberdiek/grfext.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.s
+ty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/kvdefinekeys.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefi
+nekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/pdftexcmds.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftex
+cmds.sty"
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/home/peete/.miktex/texmfs/install/tex/generic/oberdiek/ifpdf.sty
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.
+sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -861,7 +917,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-(/home/peete/.miktex/texmfs/install/tex/latex/ucs/ucsencs.def
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 LaTeX Info: Redefining \microtypecontext on input line 7.
@@ -875,7 +931,8 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/microtype/mt-ppl.cfg
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-ppl.
+cfg"
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 \c@lstlisting=\count135
@@ -884,18 +941,21 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
  (teaser.tex
 LaTeX Font Info:    Try loading font information for OT1+pxr on input line 1.
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/ot1pxr.fd
+
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\ot1pxr.fd
+"
 File: ot1pxr.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 1.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/psnfss/ot1ptm.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/microtype/mt-ptm.cfg
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-ptm.
+cfg"
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
@@ -904,22 +964,26 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Try loading font information for U+pxmia on input line 1.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxmia.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\upxmia.fd
+"
 File: upxmia.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+pxsya on input line 1.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxsya.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\upxsya.fd
+"
 File: upxsya.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+pxsyb on input line 1.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxsyb.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\upxsyb.fd
+"
 File: utxsyb.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+pxsyc on input line 1.
 
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxsyc.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\upxsyc.fd
+"
 File: upxsyc.fd 2000/12/14 v1.0
 )
 <./images/UT_WBMW_Rot_4C.pdf, id=1, 554.82881pt x 142.26349pt>
@@ -950,15 +1014,15 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\normalfont \bfseries ' on input line 9.
 
 LaTeX Font Info:    Try loading font information for T1+pxss on input line 9.
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/t1pxss.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\t1pxss.fd
+"
 File: t1pxss.fd 2000/12/14 v1.0
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pxss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-(/home/peete/.miktex/texmfs/install/tex/latex/ucs/uni-0.def
+ ("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 Underfull \hbox (badness 10000) in paragraph at lines 9--9
@@ -992,7 +1056,8 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\normalfont \bfseries ' on input line 15.
 
 LaTeX Font Info:    Try loading font information for T1+pxtt on input line 23.
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/t1pxtt.fd
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\t1pxtt.fd
+"
 File: t1pxtt.fd 2000/12/14 v1.0
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1001,9 +1066,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [1
 
-{/home/peete/.miktex/texmfs/data/pdftex/config/pdftex.map} <./images/UT_WBMW_Ro
-t_4C.pdf>]
-[2
+{C:/Users/Peetee/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/U
+T_WBMW_Rot_4C.pdf>] [2
 
 
 ]) [3] [4
@@ -1022,7 +1086,8 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 17
 \tf@toc=\write3
 \openout3 = `bachelorarbeit.toc'.
 
- [9] [10
+
+[9] [10
 
 
 ]
@@ -1050,7 +1115,7 @@ chapter 2.
 <images/sintel_images.png, id=64, 1440.38126pt x 976.64874pt>
 File: images/sintel_images.png Graphic file (type png)
 <use images/sintel_images.png>
-Package pdftex.def Info: images/sintel_images.png  used on input line 36.
+Package pdftex.def Info: images/sintel_images.png  used on input line 35.
 (pdftex.def)             Requested size: 398.33864pt x 270.09183pt.
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1071,28 +1136,29 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 45.
+(scrbook)              `\normalfont \bfseries ' on input line 44.
 
 
-Overfull \hbox (21.27647pt too wide) in paragraph at lines 44--47
+Overfull \hbox (21.27647pt too wide) in paragraph at lines 43--46
 \T1/pxr/m/n/10.95 (-20) open source 3D an-i-mated short film Sin-tel []\T1/pxr/
 bx/n/10.95 TODO: cite Sin-tel: https://durian.blender.org/[]\T1/pxr/m/n/10.95 (
 -20) .
  []
 
 [13 <./images/sintel_images.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+pxr on input line 51.
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/ts1pxr.fd
+LaTeX Font Info:    Try loading font information for TS1+pxr on input line 50.
+("C:\Users\Peetee\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pxfonts\ts1pxr.fd
+"
 File: ts1pxr.fd 2000/12/14 v1.0
 ) [14]
 <images/P4D.png, id=77, 1061.9675pt x 888.31876pt>
 File: images/P4D.png Graphic file (type png)
 <use images/P4D.png>
-Package pdftex.def Info: images/P4D.png  used on input line 70.
+Package pdftex.def Info: images/P4D.png  used on input line 69.
 (pdftex.def)             Requested size: 398.33864pt x 333.20004pt.
  [15 <./images/P4D.png>]
 
@@ -1114,7 +1180,7 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 80.
+(scrbook)              `\normalfont \bfseries ' on input line 79.
 
 [16]
 
@@ -1136,28 +1202,28 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 89.
+(scrbook)              `\normalfont \bfseries ' on input line 88.
 
 <images/SYNTHIA_seasons.png, id=85, 1186.4325pt x 706.64pt>
 File: images/SYNTHIA_seasons.png Graphic file (type png)
 <use images/SYNTHIA_seasons.png>
-Package pdftex.def Info: images/SYNTHIA_seasons.png  used on input line 93.
+Package pdftex.def Info: images/SYNTHIA_seasons.png  used on input line 92.
 (pdftex.def)             Requested size: 398.33864pt x 237.24611pt.
 [17 <./images/SYNTHIA_seasons.png>]
 <images/SYNTHIA_depth.png, id=90, 1597.97pt x 374.39874pt>
 File: images/SYNTHIA_depth.png Graphic file (type png)
 <use images/SYNTHIA_depth.png>
-Package pdftex.def Info: images/SYNTHIA_depth.png  used on input line 103.
+Package pdftex.def Info: images/SYNTHIA_depth.png  used on input line 102.
 (pdftex.def)             Requested size: 398.33864pt x 93.33095pt.
  [18 <./images/SYNTHIA_depth.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
 <images/SyB3R.png, id=95, 1628.0825pt x 493.845pt>
 File: images/SyB3R.png Graphic file (type png)
 <use images/SyB3R.png>
-Package pdftex.def Info: images/SyB3R.png  used on input line 117.
+Package pdftex.def Info: images/SyB3R.png  used on input line 116.
 (pdftex.def)             Requested size: 398.33864pt x 120.82353pt.
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1178,14 +1244,14 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 123.
+(scrbook)              `\normalfont \bfseries ' on input line 122.
 
 <images/SyB3R_pp.png, id=96, 1435.3625pt x 113.42375pt>
 File: images/SyB3R_pp.png Graphic file (type png)
 <use images/SyB3R_pp.png>
-Package pdftex.def Info: images/SyB3R_pp.png  used on input line 130.
+Package pdftex.def Info: images/SyB3R_pp.png  used on input line 129.
 (pdftex.def)             Requested size: 398.33864pt x 31.47632pt.
-[19 <./images/SyB3R.png>] [20 <./images/SyB3R_pp.png>]
+[19 <./images/SyB3R.png>] [20 <./images/SyB3R_pp.png>] [21]
 
 Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -1205,14 +1271,14 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 139.
+(scrbook)              `\normalfont \bfseries ' on input line 151.
 
-(content/conclusion.tex [21] [22
-
-
-]
+(content/conclusion.tex [22]
 chapter 3.
-) [23] [24
+) [23
+
+
+] [24
 
 
 ]
@@ -1222,23 +1288,25 @@ chapter A.
 
 ]) [27] (bachelorarbeit.aux) ) 
 Here is how much of TeX's memory you used:
- 12622 strings out of 492903
- 202585 string characters out of 3130412
+ 12630 strings out of 492902
+ 205838 string characters out of 3123339
  551984 words of memory out of 3000000
- 16113 multiletter control sequences out of 15000+200000
- 47077 words of font info for 190 fonts, out of 3000000 for 9000
+ 16115 multiletter control sequences out of 15000+200000
+ 47381 words of font info for 195 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,11n,66p,9109b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/home/peete/.miktex/texmfs/install/fonts/enc/dvi
-ps/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/r
-pcxr.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxb.pf
-b></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></hom
-e/peete/.miktex/texmfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peet
-e/.miktex/texmfs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.mikt
-ex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texm
-fs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/inst
-all/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on bachelorarbeit.pdf (27 pages, 7035423 bytes).
+{C:/Users/Peetee/AppData/Local/Programs/MiKTeX 2.
+9/fonts/enc/dvips/base/8r.enc}<C:/Users/Peetee/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/pxfonts/rpcxr.pfb><C:/Users/Peetee/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/pxfonts/rpxb.pfb><C:/Users/Peetee/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/pxfonts/rpxr.pfb><C:/Users/Peetee/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Peete
+e/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Use
+rs/Peetee/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb
+><C:/Users/Peetee/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/up
+lr8a.pfb><C:/Users/Peetee/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/pal
+atino/uplri8a.pfb>
+Output written on bachelorarbeit.pdf (27 pages, 7038048 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
