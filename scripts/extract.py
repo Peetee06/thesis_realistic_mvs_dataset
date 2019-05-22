@@ -94,7 +94,6 @@ def process(fileName):
     cap.Shutdown()
 
 def main():
-    # todo skip files that have already been processed
     for f in os.listdir(config['file_dir']):
         print(f)
         process(f)
