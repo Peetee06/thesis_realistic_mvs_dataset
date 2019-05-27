@@ -239,8 +239,11 @@ Eberhard Karls Universität Tübingen \\ % Your institution for the title page
 \end{frame}
 
 \begin{frame}
-	\frametitle{DeepMVS: Learning Multi-view Stereopsis}
-	
+\frametitle{Generative Adversarial Networks}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{../images/GAN.png}
+		\caption{schematic overview of how GANs work (source: \href{http://www.lherranz.org/2018/08/07/imagetranslation/}{http://www.lherranz.org/2018/08/07/imagetranslation/})}
+	\end{figure}
 \end{frame}
 
 \subsection{Generative Adversarial Networks}
@@ -258,7 +261,7 @@ Eberhard Karls Universität Tübingen \\ % Your institution for the title page
 \frametitle{Image-to-Image Translation with Conditional Adversarial Networks}
 \begin{figure}
 	\includegraphics[width=\linewidth]{../images/i2i_GAN.png}
-	\caption{schematic overview of how GANs work}
+	\caption{schematic overview of how cGANs work}
 \end{figure}
 \end{frame}
 
@@ -268,14 +271,6 @@ Eberhard Karls Universität Tübingen \\ % Your institution for the title page
 	\includegraphics[width=\linewidth]{../images/i2i_unet.png}
 	\caption{encoder-decoder and U-Net networks}
 \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Image-to-Image Translation with Conditional Adversarial Networks}
-
-\begin{itemize}
-	\item TODO
-\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -294,15 +289,6 @@ Eberhard Karls Universität Tübingen \\ % Your institution for the title page
 	\includegraphics[width=\linewidth]{../images/ui2i_cycleGAN.png}
 	\caption{schematic overview of full cycleGAN with domains X and Y, discriminators $D_X$ and $D_Y$ and Generators G and F}
 \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Unpaired Image-to-Image Translation	using Cycle-Consistent Adversarial Networks}
-
-\begin{itemize}
-	\item TODO
-\end{itemize}
-
 \end{frame}
 
 %\begin{frame}
@@ -390,6 +376,38 @@ Eberhard Karls Universität Tübingen \\ % Your institution for the title page
 
 \subsection{GANs}
 
+\begin{frame}
+	\frametitle{training a cycleGAN}
+	\begin{itemize}
+		\item sourcecode from: \href{https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix}{https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix}
+		\item datasets used are GTAV540 from MVS-Synth (available at \href{https://phuang17.github.io/DeepMVS/mvs-synth.html}{https://phuang17.github.io/DeepMVS/mvs-synth.html})
+		\\
+		and leftImg8bit from Cityscapes (available at \href{https://www.cityscapes-dataset.com/}{https://www.cityscapes-dataset.com/})
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{training a cycleGAN}
+	Training options:
+	\begin{itemize}
+		\item images scaled to 143x143
+		\item cropped to 128x128
+		\item trained for 10,900 iterations
+		\item 12,000 images
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{results}
+Results after about 16hrs of training:
+\href{file:///media/peete/My\%20Passport/thesis/cycleGAN_results/experiment_name/test_latest/index.html}{link}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\textbf{Thank you}
+	\end{center}
+\end{frame}
 
 \section{References}
 

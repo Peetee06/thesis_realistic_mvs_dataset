@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  22 MAY 2019 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  24 MAY 2019 09:17
 entering extended mode
 **./presentation.tex
 (presentation.tex
@@ -865,7 +865,7 @@ p}
 ] (presentation.toc) [4
 
 ]
-<../images/sintel_small.png, id=316, 206.6922pt x 59.0205pt>
+<../images/sintel_small.png, id=286, 206.6922pt x 59.0205pt>
 File: ../images/sintel_small.png Graphic file (type png)
 <use ../images/sintel_small.png>
 Package pdftex.def Info: ../images/sintel_small.png  used on input line 155.
@@ -876,7 +876,7 @@ Package pdftex.def Info: ../images/sintel_small.png  used on input line 155.
  <../images/sintel_small.png>] [6
 
 ]
-<../images/P4D.png, id=413, 1061.9675pt x 888.31876pt>
+<../images/P4D.png, id=373, 1061.9675pt x 888.31876pt>
 File: ../images/P4D.png Graphic file (type png)
 <use ../images/P4D.png>
 Package pdftex.def Info: ../images/P4D.png  used on input line 174.
@@ -886,7 +886,7 @@ Package pdftex.def Info: ../images/P4D.png  used on input line 174.
  <../images/P4D.png>] [8
 
 ]
-<../images/SYNTHIA_depth_half.png, id=508, 191.5155pt x 89.8557pt>
+<../images/SYNTHIA_depth_half.png, id=458, 191.5155pt x 89.8557pt>
 File: ../images/SYNTHIA_depth_half.png Graphic file (type png)
 <use ../images/SYNTHIA_depth_half.png>
 Package pdftex.def Info: ../images/SYNTHIA_depth_half.png  used on input line 2
@@ -909,7 +909,7 @@ line 203.
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<../images/SYNTHIA_seasons.png, id=509, 1186.4325pt x 706.64pt>
+<../images/SYNTHIA_seasons.png, id=459, 1186.4325pt x 706.64pt>
 File: ../images/SYNTHIA_seasons.png Graphic file (type png)
 <use ../images/SYNTHIA_seasons.png>
 Package pdftex.def Info: ../images/SYNTHIA_seasons.png  used on input line 203.
@@ -921,7 +921,7 @@ Package pdftex.def Info: ../images/SYNTHIA_seasons.png  used on input line 203.
 [10
 
 ]
-<../images/SyB3R.png, id=604, 1628.0825pt x 493.845pt>
+<../images/SyB3R.png, id=544, 1628.0825pt x 493.845pt>
 File: ../images/SyB3R.png Graphic file (type png)
 <use ../images/SyB3R.png>
 Package pdftex.def Info: ../images/SyB3R.png  used on input line 224.
@@ -929,104 +929,112 @@ Package pdftex.def Info: ../images/SyB3R.png  used on input line 224.
  [11
 
  <../images/SyB3R.png>]
-<../images/SyB3R_pp.png, id=652, 1435.3625pt x 113.42375pt>
+<../images/SyB3R_pp.png, id=587, 1435.3625pt x 113.42375pt>
 File: ../images/SyB3R_pp.png Graphic file (type png)
 <use ../images/SyB3R_pp.png>
 Package pdftex.def Info: ../images/SyB3R_pp.png  used on input line 239.
 (pdftex.def)             Requested size: 307.28987pt x 24.28178pt.
  [12
 
- <../images/SyB3R_pp.png>] [13
+ <../images/SyB3R_pp.png>]
+<../images/GAN.png, id=629, 385.44pt x 192.2382pt>
+File: ../images/GAN.png Graphic file (type png)
+<use ../images/GAN.png>
+Package pdftex.def Info: ../images/GAN.png  used on input line 247.
+(pdftex.def)             Requested size: 276.559pt x 137.93326pt.
+ [13
+
+ <../images/GAN.png (PNG copy)>] (presentation.toc) [14
 
 ]
-(presentation.toc) [14
-
-]
-<../images/i2i.png, id=798, 1386.17876pt x 883.3pt>
+<../images/i2i.png, id=721, 1386.17876pt x 883.3pt>
 File: ../images/i2i.png Graphic file (type png)
 <use ../images/i2i.png>
-Package pdftex.def Info: ../images/i2i.png  used on input line 255.
+Package pdftex.def Info: ../images/i2i.png  used on input line 258.
 (pdftex.def)             Requested size: 184.3758pt x 117.47473pt.
  [15
 
  <../images/i2i.png>]
-<../images/i2i_GAN.png, id=846, 1294.8375pt x 425.59pt>
+<../images/i2i_GAN.png, id=764, 1294.8375pt x 425.59pt>
 File: ../images/i2i_GAN.png Graphic file (type png)
 <use ../images/i2i_GAN.png>
-Package pdftex.def Info: ../images/i2i_GAN.png  used on input line 263.
+Package pdftex.def Info: ../images/i2i_GAN.png  used on input line 266.
 (pdftex.def)             Requested size: 307.28987pt x 101.00073pt.
  [16
 
  <../images/i2i_GAN.png>]
-<../images/i2i_unet.png, id=893, 1314.9125pt x 473.77pt>
+<../images/i2i_unet.png, id=806, 1314.9125pt x 473.77pt>
 File: ../images/i2i_unet.png Graphic file (type png)
 <use ../images/i2i_unet.png>
-Package pdftex.def Info: ../images/i2i_unet.png  used on input line 271.
+Package pdftex.def Info: ../images/i2i_unet.png  used on input line 274.
 (pdftex.def)             Requested size: 307.28987pt x 110.71425pt.
+ [17
 
-[17
-
- <../images/i2i_unet.png>] [18
-
-]
-<../images/ui2i.png, id=986, 220.6644pt x 96.8418pt>
+ <../images/i2i_unet.png>]
+<../images/ui2i.png, id=849, 220.6644pt x 96.8418pt>
 File: ../images/ui2i.png Graphic file (type png)
 <use ../images/ui2i.png>
-Package pdftex.def Info: ../images/ui2i.png  used on input line 288.
+Package pdftex.def Info: ../images/ui2i.png  used on input line 283.
 (pdftex.def)             Requested size: 276.559pt x 121.37553pt.
 
-Overfull \vbox (4.01662pt too high) detected at line 288
+Overfull \vbox (4.01662pt too high) detected at line 283
  []
 
-[19
+[18
 
  <../images/ui2i.png>]
-<../images/ui2i_cycleGAN.png, id=1036, 1405.25pt x 373.395pt>
+<../images/ui2i_cycleGAN.png, id=893, 1405.25pt x 373.395pt>
 File: ../images/ui2i_cycleGAN.png Graphic file (type png)
 <use ../images/ui2i_cycleGAN.png>
-Package pdftex.def Info: ../images/ui2i_cycleGAN.png  used on input line 297.
+Package pdftex.def Info: ../images/ui2i_cycleGAN.png  used on input line 292.
 (pdftex.def)             Requested size: 307.28987pt x 81.65146pt.
- [20
+ [19
 
- <../images/ui2i_cycleGAN.png>] [21
+ <../images/ui2i_cycleGAN.png>] (presentation.toc) [20
 
-]
-(presentation.toc) [22
-
-] [23
+] [21
 
 ]
-<../images/renderdoc.PNG, id=1230, 1443.89438pt x 783.67781pt>
+<../images/renderdoc.PNG, id=1028, 1443.89438pt x 783.67781pt>
 File: ../images/renderdoc.PNG Graphic file (type png)
 <use ../images/renderdoc.PNG>
-Package pdftex.def Info: ../images/renderdoc.PNG  used on input line 351.
+Package pdftex.def Info: ../images/renderdoc.PNG  used on input line 337.
 (pdftex.def)             Requested size: 276.559pt x 150.09612pt.
 
-Overfull \vbox (0.99977pt too high) detected at line 351
+Overfull \vbox (0.99977pt too high) detected at line 337
  []
 
-[24
+[22
 
- <../images/renderdoc.PNG>] [25
+ <../images/renderdoc.PNG>] [23
+
+] [24
+
+] [25
 
 ] [26
 
-] [27
-
-] [28
-
-] (presentation.toc) [29
+] (presentation.toc) [27
 
 ]
-Overfull \vbox (5.60884pt too high) detected at line 423
+[28
+
+] [29
+
+] [30
+
+] [31
+
+]
+Overfull \vbox (5.60884pt too high) detected at line 441
  []
 
-[30
+[32
 
  </home/peete/.miktex/texmfs/install/tex/latex/beamer/beamericonarticle.pdf>] [
-31
+33
 
-] [32
+] [34
 
 ]
 \tf@nav=\write6
@@ -1038,54 +1046,34 @@ Overfull \vbox (5.60884pt too high) detected at line 423
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 474.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 474.
  (presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 474.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 474.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: D69315F5A6C38FF9FE957C38998CBE9E;402.
+(rerunfilecheck)             Checksum: A4EA6B3CDB0393BF17110CA7562BECA3;402.
  ) 
 Here is how much of TeX's memory you used:
- 17753 strings out of 492903
- 342366 string characters out of 3130412
- 451640 words of memory out of 3000000
- 21148 multiletter control sequences out of 15000+200000
- 15554 words of font info for 56 fonts, out of 3000000 for 9000
+ 17747 strings out of 492903
+ 342360 string characters out of 3130412
+ 445567 words of memory out of 3000000
+ 21143 multiletter control sequences out of 15000+200000
+ 15848 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,62p,781b,773s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Navigation39} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation38} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation37} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation36} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation35} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation34} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation33} has been referenced but does not exis
-t, replaced by a fixed one
-
-</home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss12.pfb></
-home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss8.pfb></ho
-me/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss9.pfb></home
-/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi10.pfb></home
-/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi8.pfb></home/
-peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi9.pfb></home/p
-eete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on presentation.pdf (32 pages, 8507941 bytes).
+</home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+</home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss8.pfb></
+home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss9.pfb></ho
+me/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></h
+ome/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi10.pfb></h
+ome/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi8.pfb></ho
+me/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi9.pfb></hom
+e/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on presentation.pdf (34 pages, 8621505 bytes).
 PDF statistics:
- 1704 PDF objects out of 1728 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1624 PDF objects out of 1728 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 
