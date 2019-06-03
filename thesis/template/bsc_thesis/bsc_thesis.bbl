@@ -1,0 +1,12 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{GPAM{\etalchar{+}}14}
+
+\bibitem[GPAM{\etalchar{+}}14]{NIPS2014_5423}
+Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
+  Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
+\newblock Generative adversarial nets.
+\newblock In Z.~Ghahramani, M.~Welling, C.~Cortes, N.~D. Lawrence, and K.~Q.
+  Weinberger, editors, {\em Advances in Neural Information Processing Systems
+  27}, pages 2672--2680. Curran Associates, Inc., 2014.
+
+\end{thebibliography}
