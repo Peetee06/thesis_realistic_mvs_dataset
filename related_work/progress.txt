@@ -1,0 +1,29 @@
+Iteration	Name
+1 		Adapting Visual Category Models to New Domains.pdf
+		Adversarial Discriminative Domain Adaptation.pdf
+		ADVERSARIAL DROPOUT REGULARIZATION.pdf
+		ADVERSARIAL FEATURE LEARNING.pdf
+		CARLA.pdf
+		Correlation Alignment for Unsupervised Domain Adaptation.pdf
+		Cross-Domain Image Manipulation by Demonstration.pdf
+		CyCADA_Cycle-Consistent Adversarial Domain Adaptation.pdf
+		Domain Adaptation of Deformable Part-based Models.pdf
+		Domain Adaptation of Virtual and Real Worlds for Pedestrian Detection.pdf
+		Efficient Learning of Domain-invariant Image Representations.pdf
+		FCNs in the Wild.pdf
+		From Virtual to Real World Visual Perception using Domain Adaptation – The DPM as Example.pdf
+		Gradient-free policy architecture search and adaptation.pdf
+		Hierarchical Adaptive Structural SVM for Domain Adaptation.pdf
+		Is the Pedestrian going to Cross- Answering by 2D Pose Estimation.pdf
+		Large-Scale Study of Curiosity-Driven Learning.pdf
+		Node-Adapt, Path-Adapt and Tree-Adapt.pdf
+		Proposal for Sustainable Dynamic Lighting in Sport Facilities to Decrease Violence among Spectators.pdf
+		Return of Frustratingly Easy Domain Adaptation.pdf
+		Semantic Segmentation of Urban Scenes via Domain Adaptation of SYNTHIA.pdf
+		Semi-supervised Domain Adaptation via Minimax Entropy.pdf
+Syn2Real.pdf
+		The Reasonable Effectiveness of Synthetic Visual Data.pdf
+		Unsupervised Domain Adaptation for Semantic Segmentation via Class-Balanced Self-Training.pdf
+		Unsupervised Video-to-Video Translation.pdf
+		VisDA.pdf
+		What You Saw is Not What You Get.pdf
