@@ -1,7 +1,7 @@
 Iteration	Name
 1 		Adapting Visual Category Models to New Domains.pdf
-		Adversarial Discriminative Domain Adaptation.pdf
-		ADVERSARIAL DROPOUT REGULARIZATION.pdf
+1		Adversarial Discriminative Domain Adaptation.pdf
+1		ADVERSARIAL DROPOUT REGULARIZATION.pdf
 		ADVERSARIAL FEATURE LEARNING.pdf
 		CARLA.pdf
 		Correlation Alignment for Unsupervised Domain Adaptation.pdf

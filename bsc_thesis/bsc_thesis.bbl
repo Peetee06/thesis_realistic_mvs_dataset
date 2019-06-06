@@ -1,6 +1,11 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{GPAM{\etalchar{+}}14}
 
+\bibitem[DKD16]{DBLP:journals/corr/DonahueKD16}
+Jeff Donahue, Philipp Kr{\"{a}}henb{\"{u}}hl, and Trevor Darrell.
+\newblock Adversarial feature learning.
+\newblock {\em CoRR}, abs/1605.09782, 2016.
+
 \bibitem[GPAM{\etalchar{+}}14]{NIPS2014_5423}
 Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
   Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
@@ -15,5 +20,15 @@ Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
 \newblock In Kostas Daniilidis, Petros Maragos, and Nikos Paragios, editors,
   {\em Computer Vision -- ECCV 2010}, pages 213--226, Berlin, Heidelberg, 2010.
   Springer Berlin Heidelberg.
+
+\bibitem[SUHS17]{DBLP:journals/corr/abs-1711-01575}
+Kuniaki Saito, Yoshitaka Ushiku, Tatsuya Harada, and Kate Saenko.
+\newblock Adversarial dropout regularization.
+\newblock {\em CoRR}, abs/1711.01575, 2017.
+
+\bibitem[THSD17]{DBLP:journals/corr/TzengHSD17}
+Eric Tzeng, Judy Hoffman, Kate Saenko, and Trevor Darrell.
+\newblock Adversarial discriminative domain adaptation.
+\newblock {\em CoRR}, abs/1702.05464, 2017.
 
 \end{thebibliography}
