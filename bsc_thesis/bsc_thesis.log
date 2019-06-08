@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  5 JUN 2019 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000) (preloaded format=pdflatex 2019.4.18)  6 JUN 2019 12:25
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1270,7 +1270,28 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 57.
 
-) (content/datasets.tex [14] [15] [16
+
+Class scrbook Warning: deprecated old font command `\bf' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\bf' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\bf' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \bfseries ' on input line 63.
+
+[14]) (content/datasets.tex [15] [16
 
 
 ]
@@ -1295,13 +1316,13 @@ chapter A.
 
 ]) [25] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12554 strings out of 492903
- 202374 string characters out of 3130412
+ 12559 strings out of 492903
+ 202428 string characters out of 3130412
  552077 words of memory out of 3000000
- 16107 multiletter control sequences out of 15000+200000
- 47798 words of font info for 143 fonts, out of 3000000 for 9000
+ 16108 multiletter control sequences out of 15000+200000
+ 47995 words of font info for 146 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,11n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 53i,12n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dvips/b
 ase/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsy.
 pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpcxr.pfb></
@@ -1312,7 +1333,7 @@ texmfs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/
 install/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install
 /fonts/type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/
 type1/urw/palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (25 pages, 332430 bytes).
+Output written on bsc_thesis.pdf (25 pages, 333790 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

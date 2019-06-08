@@ -1,6 +1,12 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{GPAM{\etalchar{+}}14}
 
+\bibitem[DBP{\etalchar{+}}16]{dumoulin2016adversarially}
+Vincent Dumoulin, Ishmael Belghazi, Ben Poole, Olivier Mastropietro, Alex Lamb,
+  Martin Arjovsky, and Aaron Courville.
+\newblock Adversarially learned inference.
+\newblock {\em arXiv preprint arXiv:1606.00704}, 2016.
+
 \bibitem[DKD16]{DBLP:journals/corr/DonahueKD16}
 Jeff Donahue, Philipp Kr{\"{a}}henb{\"{u}}hl, and Trevor Darrell.
 \newblock Adversarial feature learning.
