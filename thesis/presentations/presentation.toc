@@ -1,7 +1,0 @@
-\beamer@sectionintoc {1}{Related Work}{4}{0}{1}
-\beamer@subsectionintoc {1}{1}{synthetic datasets}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Generative Adversarial Networks}{14}{0}{1}
-\beamer@sectionintoc {2}{Current Progress}{20}{0}{2}
-\beamer@subsectionintoc {2}{1}{dataset}{20}{0}{2}
-\beamer@subsectionintoc {2}{2}{GANs}{27}{0}{2}
-\beamer@sectionintoc {3}{References}{32}{0}{3}
