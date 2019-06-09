@@ -1,0 +1,18 @@
+singularity exec cyclegan_image python3 ../pytorch-CycleGAN-and-pix2pix/train.py --gpu_ids -1 --dataroot '/media/peete/My Passport/thesis/cycleGAN_data/' --display_id -1 --no_html --load_size 143 --crop_size 128
+
+python test.py --dataroot /media/peete/My\ Passport/thesis/cycleGAN_test/ --name cycleGAN --gpu_ids -1 --model cycle_gan
+
+
+change singularity image:
+1. open image shell
+sudo singularity shell *path to image*
+2. install requiered packages
+####
+3. test image
+see first line of this document
+4. if successfull move sandbox directory to external drive (necessary because local machine doesn't have enough storage space
+5. build image
+sudo singularity build *image name* *path to sandbox*
+6. mount cluster
+mounttcmlcluster
+7. cp image to cluster
