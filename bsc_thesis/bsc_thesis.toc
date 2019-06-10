@@ -9,6 +9,7 @@
 \contentsline {section}{\numberline {2.3}Adversarial Dropout Regularization}{14}% 
 \contentsline {section}{\numberline {2.4}Adversarial Feature Learning}{15}% 
 \contentsline {section}{\numberline {2.5}Adversarially Learned Inference}{15}% 
+\contentsline {section}{\numberline {2.6}CyCADA: Cycle Consistent Adversarial Domain Adaptation}{15}% 
 \contentsline {chapter}{\numberline {3}Datasets}{17}% 
 \contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{19}% 
 \contentsline {chapter}{\numberline {5}Conclusion}{21}% 
