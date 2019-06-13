@@ -43,4 +43,10 @@ Eric Tzeng, Judy Hoffman, Kate Saenko, and Trevor Darrell.
 \newblock Adversarial discriminative domain adaptation.
 \newblock {\em CoRR}, abs/1702.05464, 2017.
 
+\bibitem[ZPIE17]{DBLP:journals/corr/ZhuPIE17}
+Jun{-}Yan Zhu, Taesung Park, Phillip Isola, and Alexei~A. Efros.
+\newblock Unpaired image-to-image translation using cycle-consistent
+  adversarial networks.
+\newblock {\em CoRR}, abs/1703.10593, 2017.
+
 \end{thebibliography}

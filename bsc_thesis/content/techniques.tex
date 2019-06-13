@@ -1,3 +1,23 @@
 \chapter{Domain Adaptation Techniques}
 \label{sec:techniques}
 
+\section{Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}
+see \cite{DBLP:journals/corr/ZhuPIE17}
+
+\begin{itemize}
+	\item image-to-image translation: extracting characteristics of an image and translating it to another style while preserving the characteristics (rgb to greyscale, painting to photo,..)
+	\item special in this approach: no paired images necessary (datasets with paired images are far more expensive)
+	\item create mapping $G: X \rightarrow Y$ from source domain $X$ to target domain $Y$
+	\item The Generator has to trick the discriminator into believing $G(x), x \in X$ is actually a real sample $y$ from the target domain $Y$ (matches distribution $p_{\text{data}}(y)$)
+	\item problem of mode collapse: any inputimage will be translated to the same output image
+	\item add cycle-consistency constraint: create mapping $F: Y \rightarrow X$ and add contraint $F(G(x)) \overset{!}{\approx} x$ 
+	\item objective for mapping/generator G and discriminator $D_Y$: \\
+	$\mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) = \mathbb{E}_{y~p_{\text{data}}(y)}[\log D_Y(y)] + \mathbb{E}_{x~p_{\text{data}}(x)}[1 - \log D_Y(G(x))]$
+	\item analogous for mapping/generator F and discriminator $D_X$
+	\item generators try to minimize the objective, discriminators try to maximize it
+	\item cycle consistency loss:\\
+	$\mathcal{L}_{\text{cyc}}(G, F) =  \mathbb{E}_{x~p_{\text{data}}(x)} [\lVert F(G(x))- x \rVert_1] + \mathbb{E}_{y~p_{\text{data}}(y)} [\lVert G(F(y))- y \rVert_1]$
+	\item full objective:\\
+	$\mathcal{L}(G,F,D_X,D_Y) = \mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) + \mathcal{L}_{\text{GAN}}(F, D_X, Y, X) + \lambda \mathcal{L}_{\text{cyc}}(G, F)$
+	\item solve: $G^*, F^* = \arg \underset{G,F}{\min}\underset{D_X, D_Y}{\max} \mathcal{L}(G,F,D_X,D_Y)$
+\end{itemize}
