@@ -12,12 +12,131 @@ see \cite{DBLP:journals/corr/ZhuPIE17}
 	\item problem of mode collapse: any inputimage will be translated to the same output image
 	\item add cycle-consistency constraint: create mapping $F: Y \rightarrow X$ and add contraint $F(G(x)) \overset{!}{\approx} x$ 
 	\item objective for mapping/generator G and discriminator $D_Y$: \\
-	$\mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) = \mathbb{E}_{y~p_{\text{data}}(y)}[\log D_Y(y)] + \mathbb{E}_{x~p_{\text{data}}(x)}[1 - \log D_Y(G(x))]$
+	$\mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) = \mathbb{E}_{y\sim p_{\text{data}}(y)}[\log D_Y(y)] + \mathbb{E}_{x\sim p_{\text{data}}(x)}[1 - \log D_Y(G(x))]$
 	\item analogous for mapping/generator F and discriminator $D_X$
 	\item generators try to minimize the objective, discriminators try to maximize it
 	\item cycle consistency loss:\\
-	$\mathcal{L}_{\text{cyc}}(G, F) =  \mathbb{E}_{x~p_{\text{data}}(x)} [\lVert F(G(x))- x \rVert_1] + \mathbb{E}_{y~p_{\text{data}}(y)} [\lVert G(F(y))- y \rVert_1]$
+	$\mathcal{L}_{\text{cyc}}(G, F) =  \mathbb{E}_{x\sim p_{\text{data}}(x)} [\lVert F(G(x))- x \rVert_1] + \mathbb{E}_{y\sim p_{\text{data}}(y)} [\lVert G(F(y))- y \rVert_1]$
 	\item full objective:\\
 	$\mathcal{L}(G,F,D_X,D_Y) = \mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) + \mathcal{L}_{\text{GAN}}(F, D_X, Y, X) + \lambda \mathcal{L}_{\text{cyc}}(G, F)$
 	\item solve: $G^*, F^* = \arg \underset{G,F}{\min}\underset{D_X, D_Y}{\max} \mathcal{L}(G,F,D_X,D_Y)$
+\end{itemize}
+
+\subsection{Training Details}
+\begin{itemize}
+	\item for $\mathcal{L}_{\text{GAN}}$ replaced negative log-likelihood objective by least-squares loss $\rightarrow$ more stable during training and generates higher quality results
+	\item for GAN loss $\mathcal{L}_{\text{GAN}}(G, D, X, Y)$ they train \\
+	G to minimize $\mathbb{E}_{x\sim p_{\text{data}}(x)}[(D(G(x)) - 1)²]$ \\
+	and D to minimize $\mathbb{E}_{y\sim p_{\text{data}}(y)}[(D(y)-1)²] + \mathbb{E}_{x\sim p_{\text{data}}(x)}[D(G(x))²]$
+	\item reduce model oscillation \todo{add Shrivasta et al.}s method update discriminator using history f generated images instead of the latest ones generated. Use a buffer of 50 images
+	\item set $\lambda = 10$ in \todo{Equation 3}, Adam solver, batchsize 1, trained from scratch with learning rate 0.0002 for the first 100 epochs then decay linearly to 0 in the following 100. 
+\end{itemize}
+
+
+\newpage
+
+\section{CyCADA: Cycle Consistent Adversarial Domain Adaptation}
+
+see \cite{DBLP:journals/corr/abs-1711-03213}
+
+\subsection{Introduction}
+\begin{itemize}
+	\item synthetic datasets cheaper and more accurate in classification than real ones
+	\item per-pixel label accuracy drops from 93\%(real) to 54\%(synthetic)
+	\item while translating from synth to real semantic information might be lost (e.g translating line-drawing of a cat to a picture of a dog)
+	\item CyCADA uses cycle consistency and semantic losses
+	\item apply model to digit recognition and semantic segmentation of urban scenes across domains. 
+	\item improves per-pixel accuracy from 54\% to 82\% on synth-to-real. (\todo{compared to what?})
+	\item shows that domain adaptation benefits greatily from cycle-consistent pixel transformations
+	\item adaptation at both pixel and representation level can offer complementary improvements with joint pixel-space and feature adaptation leading to the highest performing model for digit classification tasks
+\end{itemize}
+
+\subsection{Related Work}
+
+\begin{itemize}
+	\item \todo{cite everything}
+	\item visual domain adaptation introduced along with a pairwise metric transform solution by Seanko et al. 2010
+	\item further popularized by broad study of visual dataset bias (Torralba \& Efros, 2011)
+	\item early deep adaptive works focused on feature space alignment through minimizing distance between first or second order feature space statistics of source and target (Tzeng et al., 2014; Long \& Wand, 2015)
+	\item further improved thorugh use of domain adversarial objectives whereby a domain classifier is trained to distinguish between source and target representations while domain representation is learned so as to maximize error of domain classifier
+	\item representation optimized by using standard minimax objective (Ganin \& Lempitsky, 2015)
+	\item symmetric confusion objective (Tzeng et al., 2015)
+	\item inverted label objective (Tzeng et al., 2017)
+	\item each related to GAN (Goodfellow et al., 2014) and followup trianing procedures for these networks (Salimans et al., 2016b; Arjovsky et al., 2017)
+	\item these feature-space adaptation methods focus on modifications to the discriminative representation space. Other recent methods hav sought adaptation in the pixel-space using various generative approaches
+	\item one advantage of pixel-space adaptation: result may be more human interpretable, since an image from on domain can now be visualized in a new domain
+	\item CoGANs (Liu \& Tuzel, 2016b) jointly learn source and target representation through explicit weight sharing of certain layers, source and target have unique gen adv objective
+	\item Ghifary et al. 2016 use an additional reconstruction objective in target domain to envourage alignment in the unsupervised adaptation setting
+	\item another approach: directly convert target image into a source style image (or vise versa), largely based on GANs (cite Goodfellow..)
+	\item successfully applied GANs to various applications such as image generation (Denton et al., 2015; Radford et al., 2015; Zhao et al., 2016), image editing (Zhu et al., 2016) and feature learning (Salimans et al., 2016a; Donahue et al., 2017). Recent work (Isola et al., 2016; Sangkloy et al., 2016; Karacan et al., 2016) adopt conditional GANs (Mirza \& Osindero, 2014) for these image-to-image translation problems (Isola et al., 2016), but require input-output image pairs for training, which is in general not available in domain adaptation problems
+	\item no training pairs: Yoo et al. 2016 learns source to target encoder-decoder along with a generative adversarial objective on reconstruction which is applied for predicting clothing people are wearing
+	\item Domain Transfer Network (Taigman et al. 2017b) trains generator to transform a source image into a target image by enforccing consistency in embedding space
+	\item Shrivastava et al. 2017 instead use L1 reconstruction loss to force generated target images to be similar to original source images. works well for limited domain shifts where domains are similar in pixel-space, but can be too limiting for setting with larger domain shifts
+	\item Bousmalis et al. 2017b use a content similarity loss to ensure the generated target image is similar to original source image; however this requires prior knowledge about which parts of the image stay the same across domains (e.g. foreground)
+	\item cycada method does not require pre-defining what content is shared between domains and instead simply translates images back to their original domains while ensuring that the remain identical to their original version
+	\item BiGAN (Donahue et al., 2017) and ALI (Dumoulin et al., 2016) take an approach of simultaneously learning the transofmrations between pixel and latent space.
+	\item CycleGAN (Zhu et al., 2017) produced compelling image translation results such as generating photorealistic images from impressionism paintings or transfomring horses into zebras at high resolution using cycle-consistency loss
+	\item this loss was simultaneously proposed by Yi et al. 2017 and Kim et al. 2017 to great effect as well
+	\item adaptation across weather conditions in simple road scenes was first studied by Levinkov \& and Fritz 2013
+	\item convolutional domain adversarial based approach was proposed for more general drive cam scenes and for adaptation from simulated to real environments (Hoffmann et al., 2016)
+	\item Ros et al. 2016b learns a multi-source model through concatenating all available labeled data and learning a single large model and then transfers to a sparsely labeled target domain through distillation (Hinton et al., 2015)
+	\item Chen et al. 2017 use an adversarial objective to align both global and class-specific statistics, while mining additional temporal data from street view datasets to learn static object prior
+	\item Zhang et al. 2017 instead perform segmentation adaptation by aligning label distributions both globally and across superpixels in an image
+\end{itemize}
+
+\subsection{Cycle-consistent adversarial domain adaptation}
+\begin{itemize}
+	\item consider problem of unsupervised adaptation
+	\item provided source data $X_S$, source labels $Y_S$, and target data $X_T$, but no target labels
+	\item goal: learn a model $f$ that can correctly predict label for target data $X_T$
+	\item begin by learning source model $f_S$ that can perform the task on the source data
+	\item for K-way classification with cross-entropy loss:
+	\begin{align}
+	\mathcal{L}_{\text{task}}(f_S, X_S, Y_S) = -\mathbb{E}_{(x_s, y_s)\sim(X_S, Y_S)}\sum_{k=1}^{K}\mathds{1}_{[k=y_s]}\log\Bigl(\sigma(f_S^{(k)}(x_s))\Bigr)
+	\end{align}
+	where $\sigma$ denotes softmax function
+	\item learned model $f_S$ will perform well on source data but typically domain shift between source and target domain leads to reduced performance when evaluating on target data
+	\item by mapping samples into common space, the model can learn on source data while still generalizing to target data
+	\item mapping from source to target $G_{S\rightarrow T}$ trained to produce target samples that fool adversarial discriminator $D_T$
+	\item discriminator attempts to classify real target data from source target data. loss function:
+	\begin{align}
+		\mathcal{L}_{\text{GAN}}(G_{S\rightarrow T}, D_T, X_T, X_S) &= \mathbb{E}_{x_t \sim X_T}\Bigl[\log D_T(x_t)\Bigr] \\
+		&+ \mathbb{E}_{x_s \sim X_S} \Bigl[\log(1-D_T(G_{S\rightarrow T}(x_s)))\Bigr]
+	\end{align}
+	\item this objective ensures that $G_{S\rightarrow T}$, given source samples, produces convincing target samples
+	\item this ability to directly map samples between domains allows to learn target model $f_T$ by minimizing $\mathcal{L}_{\text{task}}(f_T, G_{S\rightarrow T}(X_S), Y_S)$
+	\item previous approaches that optimized similar objectives have shown effetive results but in practice can often be unstable and prone to failure
+	\item although GAN loss ensures $G_{S\rightarrow T}(x_s)$ for some $x_s$ will resemble data drawn from $X_T$ but there is no way to guarantee $G_{S\rightarrow T}(x_s)$ preserves structure or content of original sample $x_s$
+	\item to encourage source content to be preserved during conversion: cycle-consistency constraint (\todo{cite the 3 works that proposed it}). Mapping $G_{T \rightarrow S}$ trained according to GAN loss $\mathcal{L}_{\text{GAN}}(G_{T \rightarrow S}, D_S, X_S, X_T)$
+	\item want $G_{T \rightarrow S}(G_{S \rightarrow T}(x_s)) \approx x_s$ and $G_{S \rightarrow T}(G_{T \rightarrow S}(x_t)) \approx x_t$
+	\item done by imposing L1 penalty on reconstruction error (reffered to as cycle-consistency loss):
+	\begin{align}
+		\mathcal{L}_{\text{cyc}}(G_{S\rightarrow T}, G_{T\rightarrow S}, X_S, X_T) &= \mathbb{E}_{x_s \sim X_S} \Bigl[\lVert G_{T\rightarrow S}(G_{S\rightarrow T}(x_s)) - x_s\rVert_1\Bigr]\\
+		&+ \mathbb{E}_{x_t \sim X_T} \Bigl[\lVert G_{S\rightarrow T}(G_{T\rightarrow S}(x_t)) - x_t\rVert_1\Bigr]
+	\end{align}
+	\item also explicitly encourage high semantic consistency before and after image translation
+	\item pretrain source task model $f_S$, fixing weights and using it as a noisy labeler by which an image to be classified in the same way after translation as it was before translation according to this classifier is encouraged
+	\item define fixed classifier f, predicted label for given input $X$: $p(f,X) = \arg \max(f(X))$
+	\item semantic consistency before and after image translation:
+	\begin{align}
+		\mathcal{L}_{\text{sem}}(G_{S\rightarrow T}, G_{T\rightarrow S}, X_S, X_T, f_S) &= \mathcal{L}_{\text{task}}(f_S, G_{T\rightarrow S}(X_T), p(f_S, X_T))\\
+		&+ \mathcal{L}_{\text{task}}(f_S, G_{S\rightarrow T}(X_S), p(f_S, X_S))
+	\end{align}
+	\item can be viewed analogously to content loss in style transfer (Gatys et al., 2016) or in pixel adaptation (Taigman et al., 2017a), where shared content to preserve is dictated by the source task model $f_S$
+	\item could also consider a feature-level method which discriminates between the features or semantics from two image sets as viewed under a task network $\rightarrow$ additional feature level GAN loss:
+	\begin{align}
+		\mathcal{L}_{\text{GAN}}(f_T, D_{\text{feat}}, f_S(G_{S\rightarrow T}(X_S)), X_T)
+	\end{align}
+	\item together form complete objective:
+	\begin{align}
+		\mathcal{L}_{\text{CyCADA}}&(f_T, X_S, X_T, Y_S, G_{S\rightarrow T}, G_{T\rightarrow S}, D_S, D_T)\\
+		&= \mathcal{L}_{\text{task}}(f_T, G_{S\rightarrow T}(X_S), Y_S)\\
+		&+ \mathcal{L}_{\text{GAN}}(G_{S\rightarrow T}, D_T, X_T, X_S) + \mathcal{L}_{\text{GAN}}(G_{T\rightarrow S}, D_S, X_S, X_T)\\
+		&+ \mathcal{L}_{\text{GAN}}(f_T, D_{\text{feat}}, f_S(G_{S\rightarrow T}(X_S)), X_T)\\
+		&+ \mathcal{L}_{\text{cyc}}(G_{S\rightarrow T}, G_{T\rightarrow S}, X_S, X_T) + \mathcal{L}_{\text{sem}}(G_{S\rightarrow T}, G_{T\rightarrow S}, X_S, X_T, f_S)
+	\end{align}
+	\item ultimately corresponds to solving for a target model $f_T$ according to the optimization problem
+	\begin{align}
+		f^*_T = \underset{f_T}{\arg\min} ~ \underset{\substack{G_{T\rightarrow S} \\ G_{S\rightarrow T}}}{\min} ~ \underset{D_S, D_T}{\max} ~ \mathcal{L}_{\text{CyCADA}}&(f_T, X_S, X_T, Y_S, G_{S\rightarrow T}, G_{T\rightarrow S}, D_S, D_T)
+	\end{align}
 \end{itemize}
