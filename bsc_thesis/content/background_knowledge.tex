@@ -1,0 +1,15 @@
+\chapter{Background Knowledge}
+
+\section{Domain Adaptation}
+Domain Adaptation is the task of transfering a model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. Synthetic meaning that the image was rendered from a virtual scene and real meaning an image taken from a real-world scene. \todo{insert example images}
+
+
+\section{CNNs and GANs}
+
+Convolutional Neural Networks are Deep Neural Networks consisting of convolution layers, that extract features from input data, pooling layers, that \todo{??} and a fully connected network for classification. 
+\todo{add more description and example images}
+
+General Adversarial Networks implement a two-player-game:
+A Discriminator learns from a given data distribution what's ``real''. The Generator generates data. The goal of the generator is to fool the discriminator into believing the generated data is ``real''. The discriminator will label anything as ``fake'' that doesn't resemble the learned ``real'' data distribution. This way GANs can learn to generate realistic looking images of faces, translate image art styles from one to another and improve semantic segmentation.
+
+

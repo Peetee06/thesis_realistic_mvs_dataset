@@ -1,67 +1,114 @@
 \chapter{Related Work}
 \label{sec:related_work}
 
-\section{Adapting Visual Category Models to New Domains}
+\section{Domain Adaptation for Structured Output via Discriminative Patch Representation}
 
-see \cite{10.1007/978-3-642-15561-1_16}
+see \cite{Tsai2019DomainAF}
 
-Notes while reading:
 \subsection{Abstract}
 \begin{itemize}
-	\item one of the first studies of domain shift in context of object recognition
-	\item method that adapts object models acquired in a particular visual domain to new imaging conditions by learning a transformation that minimizes the effect of domain-induced changes in the feature distribution \todo{is copy paste, rephrase this!}
-	\item supervised learning
-	\item no labeled examples in the new domain needed
-	\item could also be applied to non-image data
-	\item authors also contribute a freely available multi-domain object database
+	\item labeling data is expensive
+	\item therefore propose domain adaptation method to adapt labeled source data to unlabeled target domain (e.g. GTA5 (playing for data) to city-scapes)
+	\item learn discriminative feature representations of patches based on label histograms in the source domain, through construction of clustered space
+	\item then use adversarial learning sscheme to push feature representations in target patches to the closer distributions in source ones
+	\item can integrate a global alignment process with this patch-level alignment and achieve state-of-the-art performance on semantic segmentation
+	\item extensive ablation studies on numerous benchmark datasets with various settings (e.g. synth-to-real, cross-city)
 \end{itemize}
 
 \subsection{Introduction}
+
 \begin{itemize}
-	\item kernel-based, nearest-neighbor classifiers (\todo{look these up}) often fail on other visual domains than the one trained on
-	\item often want to label \textit{target} visual domain that doesn't have labels yet while having access to \textit{source} domain that has labeled examples
-	\item insufficient using object classifiers trained on source domain \todo{include Figure 1, look up SVM[-bow] and NBNN}
-	\item domain shift can affect feature distribution and cause the classifier to fail its prediction
-	\item causes of visual domain shift include changes in camera, image resolution, lighting, background, viewpoint, post-processing \todo{rephrase!}
-	\item introduce domain adaptation technique based on cross-domain transformations
-	\item key idea: regularized non-linear transformation that maps points in the source domain (green) closer to those in the target domain (blue) using supervised data from both domains. The input consists of labeled pairs of inter-domain examples that are known to be either similar (black lines) or dissimilar (red lines). The output is the learned transformation, which can be applied to previously unseen test data points. \todo{include Figure 2, rephrase!}
-	\item \todo{look up '[theoretic] metric learning'}
+	\item pixel-level annotation of ground truth expensive. e.g. road-scene iamges of different cities may have various appearance distributions, differences over time and weather
+	\item existing state-of-the-art methods use feature-level or output space adaptation, exploiut global distribution alignment, such as spatial layout, but these might differ significantly between two domains due to differences in camera poses or field of view
+	\item authours instead match patches that are more likely to be shared across domains regardless of where they are located
+	\item consider label histograms as a factor (Kulkarni et al., 2015; Odena et al., 2017) and learn discriminative representations for patches to relax high-variation problem among them
+	\item use this to better align patches between source and target domains
+	\item utilize two adversarial modules to align global/patch-level distributions
+	\item global one based on output space adaptation (Tsai et al. 2018)
+	\item take source domain labels and extract label histogram as a patch-level representation
+	\item then apply K-means clustering to group extracted patch representations into $K$ clusters \todo{read this part again for better understanding (page 2)}
 \end{itemize}
 
-\subsection{Domain Adaptation Using Regularized Cross-Domain Transforms}
+\subsection{domain adaptation for structured output}
 
-general domain adaptation model in linear setting:\\
-let source domain be $\mathcal{A}$ and target domain $\mathcal{B}$. Vectors $\mathbf{x} \in \mathcal{A},~\mathbf{y} \in \mathcal{B}$. Learn transformation $W$ from $\mathcal{B}$ to $\mathcal{A}$ (and $W^T$ from $\mathcal{A}$ to $\mathcal{B}$). Let dimensionality of $\mathbf{x}$ be $d_A$ and of $\mathbf{y}$ be $d_B$ then the transformation matrix $W$ is $d_A \times d_B$. Resulting inner product similarity function between $\mathbf{x}$ and the transformed $\mathbf{y}$ as
-\begin{align*}
-	\text{sim}_W(\mathbf{x}, \mathbf{y}) = \mathbf{x}^T W \mathbf{y}
-\end{align*}
+\begin{itemize}
+	\item given source and target images $I_s,I_t \in \mathbb{R}^{H \times W \times 3}$ and source labels $Y_s$, the goal is to align predicted output distribution $O_t$ of target data with source distribution $O_s$
+	\item use loss function for supervised learning on source data to predict the structured output, adversarial loss is adopted to align the global distribution
+	\item further incorporate classification loss in a clustered space to learn patch-level discriminative representations $F_s$ from source output distribution $O_s$. For target data another adversarial loss is used to align patch-level distributions between $F_s$ and $F_t$, where the goal is to push $F_t$ to be closer to distributon of $F_s$.
+	\item objective function :
+	\begin{align}
+		\mathcal{L}_{\text{total}}(I_s, I_t, Y_s, \Gamma(Y_s)) = \mathcal{L}_s + \lambda_d \mathcal{L}_d + \lambda_{\text{adv}}^g \mathcal{L}_{\text{adv}}^g + \lambda_{\text{adv}}^l  \mathcal{L}_{\text{adv}}^l
+	\end{align}
+	where $\mathcal{L}_s$ and $\mathcal{L}_d$ are supervised loss function for learning structured prediction and discriminative representation on source data. $\Gamma$ denotes clustering process on ground truth label distribution. $\mathcal{L}_{\text{adv}}^g, \mathcal{L}_{\text{adv}}^l$ denote global and patch-level adversarial loss. $\lambda$'s are weights for the different loss function
+	\item $\mathcal{L}_s$ can be optimized by fully-convolutional network $\mathbf{G}$ that predicts the structured output with the loss summed over the spatial map indexed with $h,w$ and number of categories $C$:
+	\begin{align}
+		\mathcal{L}_s(I_s, Y_s;\mathbf{G}) = - \sum_{h,w}\sum_{c \in C} Y_s^{(h,w,c)}\log(O_s^{(h,w,c)})
+	\end{align}
+	where $O_s = \mathbf{G}(I_s) \in (0,1)$ is the predicted output distribution through softmax function and is up-sampled to the size of the input image.
+	\item with discriminator $\mathbf{D}_g$:
+	\begin{align}
+		\mathcal{L}_{\text{adv}}^g(I_s, I_t; \mathbf{G}, \mathbf{D}_g) = \sum_{h,w}\mathbb{E}[\log\mathbf{D}_g(O_s)^{(h,w,1)}] + \mathbb{E}[\log(1- \mathbf{D}_g(O_t)^{(h,w,1)})]
+	\end{align}
+	\item optimize following min-max problem with inputs dropped for simplicity:
+	\begin{align}
+		\underset{\mathbf{G}}{\min} ~ \underset{\mathbf{D}_g}{\max} \mathcal{L}_s(\mathbf{G}) + \lambda_{\text{adv}}^g \mathcal{L}_{\text{adv}}^g(\mathbf{G}, \mathbf{D}_g)
+	\end{align}
+	\item label histograms for patches: first randomly sample patches from source images, using a 2-by-2 grid on patches to extract spatial label histograms, and concatenate them into a vector, each histogram is a $2 \cdot 2 \cdot C$ dimensional vector. Second apply K-means clustering on these histograms, whereby the label for any patch can be assigned as the cluster center with the closest distance on the histogram
+	\item add classification module $\mathbf{H}$ after the predicted output $O_s$, to simulate the procedure of constructin the label histogram and learn a discriminative representation\\
+	learned representation: $F_s = \mathbf{H}(\mathbf{G}(I_s)) \in (0,1)^{U \times V \times K}$ (softmax function, $K$ is number of clusters)
+	\item learning process to construct clustered space formulated as cross-entropy loss:
+	\begin{align}
+		\mathcal{L}_d(I_s, \Gamma(Y_s); \mathbf{G}, \mathbf{H}) = - \sum_{u,v} \sum_{k\in K} \Gamma(Y_s)^{(u,v,k)}\log(F_s^{(u,v,k)})
+	\end{align}
+	\item goal is now to align patches regardless of where they are located in the image (without spatial and neighborhood support)
+	\item reshape $F$ by concatenating the $K$-dimensional vectors along the spatial map, results in $U \cdot V$ independent data points
+	\item this reshaped data is denoted as $\hat{F}$, adversarial objective:
+	\begin{align}
+		\mathcal{L}_{\text{adv}}^l(I_s, I_t; \mathbf{G}, \mathbf{H}, \mathbf{D}_l) = \sum_{u,v}\mathbb{E}[\log \mathbf{D}_l(\hat{F}_s)^{(u,v,1)}] + \mathbb{E} [\log(1- \mathbf{D}_l(\hat{F}_t)^{(u,v,1)})]
+	\end{align}
+	where $\mathbf{D}_l$ is the discriminator to classify whether the feature representation $\hat{F}$ is from source or target domain
+	\item integrate (3.5) and (3.6) into min-max problem in 3.4:
+	\begin{align}
+		\underset{\mathbf{G}, \mathbf{H}}{\min} ~ \underset{\mathbf{D}_g, \mathbf{D}_l}{\max} \mathcal{L}_s(\mathbf{G}) + \lambda_d \mathcal{L}_d (\mathbf{G}, \mathbf{H}) + \lambda_{\text{adv}}^g, \mathcal{L}_{\text{adv}}^g(\mathbf{G}, \mathbf{D}_g) + \lambda_{\text{adv}}^l \mathcal{L}_{\text{adv}}^l(\mathbf{G}, \mathbf{H}, \mathbf{D}_l)
+	\end{align} 
+\end{itemize}
 
-to avoid overfitting use regularization function for $W$ denoted as $r(W)$. 
+\section{Effective Use of Synthetic Data for Urban Scene Semantic Segmentation}
 
-\todo{lookup Mahalanobis metric learning method, information theoretic metric learning (ITML)}
-
-($||W||$: square root of sum of squares of elements)
+see \cite{DBLP:journals/corr/abs-1807-06132}
 
 
-\section{Adversarial Discriminative Domain Adaptation}
+\section{Exemplar Guided Unsupervised Image-to-Image Translation with Semantic Consistency}
 
-see \cite{DBLP:journals/corr/TzengHSD17}
+see \cite{DBLP:journals/corr/abs-1805-11145}
 
-\todo{Look up cross entropy loss}
 
-\section{Adversarial Dropout Regularization}
+\section{Exploiting Semantics in Adversarial Training for Image-Level Domain Adaptation}
 
-see \cite{DBLP:journals/corr/abs-1711-01575}
+see \cite{DBLP:journals/corr/abs-1810-05852}
 
-experiments on p4d dataset and VisDA-classification\\
-\todo{read this again for the benchmarks and comparison of domain adaptation techniques}
 
-\section{Adversarial Feature Learning}
+\section{FCNs in the Wild: Pixel-level Adversarial and Constraint-based Adaptation}
 
-see \cite{DBLP:journals/corr/DonahueKD16}
+see \cite{DBLP:journals/corr/HoffmanWYD16}
 
-\todo{look up jensen-shannon divergence}
 
-\section{Adversarially Learned Inference}
+\section{From Virtual to Real World Visual Perception using Domain Adaptation - The DPM Example}
 
-see \cite{dumoulin2016adversarially}
+see \cite{DBLP:journals/corr/LopezXGVR16}
+
+
+
+\section{Semantic-aware Grad-GAN for Virtual-to-Real Urban Scene Adaption}
+
+see \cite{DBLP:journals/corr/abs-1801-01726}
+
+
+\section{Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation}
+
+see \cite{DBLP:journals/corr/abs-1806-09755}
+
+
+\section{VisDA: The Visual Domain Adaptation Challenge}
+
+see \cite{DBLP:journals/corr/abs-1710-06924}

@@ -1,0 +1,65 @@
+
+\section{Adapting Visual Category Models to New Domains}
+
+see \cite{10.1007/978-3-642-15561-1_16}
+
+Notes while reading:
+\subsection{Abstract}
+\begin{itemize}
+	\item one of the first studies of domain shift in context of object recognition
+	\item method that adapts object models acquired in a particular visual domain to new imaging conditions by learning a transformation that minimizes the effect of domain-induced changes in the feature distribution \todo{is copy paste, rephrase this!}
+	\item supervised learning
+	\item no labeled examples in the new domain needed
+	\item could also be applied to non-image data
+	\item authors also contribute a freely available multi-domain object database
+\end{itemize}
+
+\subsection{Introduction}
+\begin{itemize}
+	\item kernel-based, nearest-neighbor classifiers (\todo{look these up}) often fail on other visual domains than the one trained on
+	\item often want to label \textit{target} visual domain that doesn't have labels yet while having access to \textit{source} domain that has labeled examples
+	\item insufficient using object classifiers trained on source domain \todo{include Figure 1, look up SVM[-bow] and NBNN}
+	\item domain shift can affect feature distribution and cause the classifier to fail its prediction
+	\item causes of visual domain shift include changes in camera, image resolution, lighting, background, viewpoint, post-processing \todo{rephrase!}
+	\item introduce domain adaptation technique based on cross-domain transformations
+	\item key idea: regularized non-linear transformation that maps points in the source domain (green) closer to those in the target domain (blue) using supervised data from both domains. The input consists of labeled pairs of inter-domain examples that are known to be either similar (black lines) or dissimilar (red lines). The output is the learned transformation, which can be applied to previously unseen test data points. \todo{include Figure 2, rephrase!}
+	\item \todo{look up '[theoretic] metric learning'}
+\end{itemize}
+
+\subsection{Domain Adaptation Using Regularized Cross-Domain Transforms}
+
+general domain adaptation model in linear setting:\\
+let source domain be $\mathcal{A}$ and target domain $\mathcal{B}$. Vectors $\mathbf{x} \in \mathcal{A},~\mathbf{y} \in \mathcal{B}$. Learn transformation $W$ from $\mathcal{B}$ to $\mathcal{A}$ (and $W^T$ from $\mathcal{A}$ to $\mathcal{B}$). Let dimensionality of $\mathbf{x}$ be $d_A$ and of $\mathbf{y}$ be $d_B$ then the transformation matrix $W$ is $d_A \times d_B$. Resulting inner product similarity function between $\mathbf{x}$ and the transformed $\mathbf{y}$ as
+\begin{align*}
+	\text{sim}_W(\mathbf{x}, \mathbf{y}) = \mathbf{x}^T W \mathbf{y}
+\end{align*}
+
+to avoid overfitting use regularization function for $W$ denoted as $r(W)$. 
+
+\todo{lookup Mahalanobis metric learning method, information theoretic metric learning (ITML)}
+
+($||W||$: square root of sum of squares of elements)
+
+
+\section{Adversarial Discriminative Domain Adaptation}
+
+see \cite{DBLP:journals/corr/TzengHSD17}
+
+\todo{Look up cross entropy loss}
+
+\section{Adversarial Dropout Regularization}
+
+see \cite{DBLP:journals/corr/abs-1711-01575}
+
+experiments on p4d dataset and VisDA-classification\\
+\todo{read this again for the benchmarks and comparison of domain adaptation techniques}
+
+\section{Adversarial Feature Learning}
+
+see \cite{DBLP:journals/corr/DonahueKD16}
+
+\todo{look up jensen-shannon divergence}
+
+\section{Adversarially Learned Inference}
+
+see \cite{dumoulin2016adversarially}
