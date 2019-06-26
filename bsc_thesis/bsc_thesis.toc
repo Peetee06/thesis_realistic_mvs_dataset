@@ -52,8 +52,8 @@
 \contentsline {subsubsection}{\nonumberline Adversarial loss}{34}% 
 \contentsline {subsubsection}{\nonumberline Cycle consistency loss}{35}% 
 \contentsline {subsubsection}{\nonumberline Soft gradient-sensitive objective}{35}% 
-\contentsline {section}{\numberline {3.8}Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation}{35}% 
-\contentsline {section}{\numberline {3.9}VisDA: The Visual Domain Adaptation Challenge}{35}% 
+\contentsline {section}{\numberline {3.8}Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation}{36}% 
+\contentsline {section}{\numberline {3.9}VisDA: The Visual Domain Adaptation Challenge}{36}% 
 \contentsline {chapter}{\numberline {4}Datasets}{37}% 
 \contentsline {section}{\numberline {4.1}Playing for Data: Ground Truth from Computer Games}{37}% 
 \contentsline {section}{\numberline {4.2}City-scapes}{37}% 
