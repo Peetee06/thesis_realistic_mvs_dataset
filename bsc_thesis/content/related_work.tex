@@ -1,6 +1,9 @@
 \chapter{Related Work}
 \label{sec:related_work}
 
+This chapter will discuss the current state-of-the-art and related work on the topic of \textbf{Domain Adaptation}.
+
+
 \section{Domain Adaptation for Structured Output via Discriminative Patch Representation}
 
 see \cite{Tsai2019DomainAF}
@@ -73,36 +76,466 @@ see \cite{Tsai2019DomainAF}
 	\end{align} 
 \end{itemize}
 
+
+
 \section{Effective Use of Synthetic Data for Urban Scene Semantic Segmentation}
 
 see \cite{DBLP:journals/corr/abs-1807-06132}
+
+\begin{itemize}
+	\item foreground and background classes are not affected the same way by domain shifts
+	\item foreground classes should be treated in a detection based manner as their shape looks natural even though their texture in synthetic images is not photo-realistic
+	\item drawback of deep neural networks is need for massive amount of training data
+	\item training on synthetic only makes models perform bad in the real world
+	\item domain adaptation methods improve this but still require large sets of real images
+	\item model cannot be trained off-line on synthetic data and work well when deployed into a new, real-world environment
+	\item observation: not all classes suffer from the same type and degree of perceptual differences
+	\item background texture looks more realistic than foreground, nevertheless foreground object shape look natural
+	\item therefore should be treated differently
+	\item use semantic segmentation on background classes because of texture realism
+	\item use object detectors for foreground classes
+	\item main discrimination between fore and background objects is shape
+	\item trained seperately a DeepLab and Mask R-CNN \todo{cite} for object detection, followed by binary segmentation and class prediction, on synthetic data
+	\item compare mIoU on foreground classes of Cityscapes
+	\item outperforms semantic segmentation model on every class except \textit{motorcycle}
+	\item from this observation: model that combines foreground masks produced by Mask R-CNN with pixel-wise predictions of DeepLab semantic segmentation network
+	\item outperforms state-of-the-art domain adaptation techniques and can be further improved by making use of unsupervised real images
+	\item \textbf{VEIS} (Virtual Environment for Instance Segmentation) proposed aswell, based on Unity3D
+	\item automatically annotates synthetic images with instance-level segmentation for foreground classes
+	\item when used with the proposed detector-based approach this data allows to boost semantic segmentation performance
+\end{itemize}
+
+\subsection{related work}
+
+\begin{itemize}
+	\item domain adaptation generally aims to reduce the gap between the feature distributions of the two domains (synthetic, real)
+\end{itemize}
+
+\subsection{Method}
+
+\begin{itemize}
+	\item use VGG16-based DeepLab model for background classes (with large field of view and dilated convolution layers)
+	\item train on GTA5 dataset (background classes look photo-realistic)
+	\item cross-entropy loss between network's predictions and ground-truth pixel-wise annotations of the sythetic images
+	\item trained on fore- and background classes but foreground predictions are mostly discarded by the proposed approach
+	\item use standard Mask R-CNN (object detection, binary mask extraction together with object classification) \todo{look at citation}
+	\item fuse fore- and background predictions
+	\item sort predicted segments according to confidence score, if current segment candidate overlaps with previous segment, pixels are removed in the overlapping region
+	\item this yields a semantic segmentation map that only contains foreground classes and has large number of holes where no foreground object was found. Every pixel that is not already assigned to foreground class takes the label with highest probability at that pixel location in the DeepLab result
+	\item remember: NO real data used during training of this method
+	\item to extend approach for unsupervised training on real images: tread predictions of their method as pseudo ground truth for the real images. assign pixels that ware predicted as foreground classes by DeepLab model to an \textit{ignore} label, so that they are not used for training. 
+\end{itemize}
+
+\subsection{Implementation Details}
+\begin{itemize}
+	\item DeepLab: SGD, learning rate starting at $25 \times 10^{-5}$ with decrease factor of 10 every 40k iterations, momentum of 0.9, weight decy of 0.0005, mini-batches of size 1. weights initialized with those of VGG-16 classifier, pre-trained on ImageNet, due to limited GPU memory high resolution images were downsampled by a factor of 2 for training
+	\item Mask R-CNN: implementation provided by Detectron framework \todo{cite}, train an end-to-end Mask R-CNN model with $64 \times $ 4d ResNeXt-101-FPN backbone, pre-trained on ImageNet, on the synthetic VEIS dataset. mini-batch of size 1, train model for 200k iterations, starting learning rate of 0.001, reducing to 0.0001 after 100k iterations
+\end{itemize}
 
 
 \section{Exemplar Guided Unsupervised Image-to-Image Translation with Semantic Consistency}
 
 see \cite{DBLP:journals/corr/abs-1805-11145}
 
+\begin{itemize}
+	\item EGSC-IT network conditions the translation process on an exemplar image in the target domain
+	\item assumption: image comprises of a content component shared across domains, and style component specific to each domain
+	\item under guidance of exemplar from target domain apply Adaptive Instance Normalization to the shared content component, which allows to transfer the style information of the target domain to the source domain
+	\item introduce feature masks that provide coarse semantic guidance without requiring the use of any semantic labels to avoid semantic inconsistencies during translation
+	\item image-to-image (I2I) translation: task of mapping an image from a source domain to a target domain (e.g. semantic maps to real images, grey-scale to color, low-resolution to high-res)
+	\item other approaches assume one-to-one mapping (e.g. cycleGAN) and fail to capture multimodal nature of image distribution within the target domain (many-to-many mapping, e.g. diffferent color and style of shoes in sketch-to-image translation, different seasons in syn2real street view translation)
+	\item assume an image is composed of two disentangled representations: domain-shared representation that models the content in the image, second domain-specific representation that contains the style information
+	\item unclear which style (time-of-day/season) to pick during image translation process, Isola et al. 2017 and Zhu et al. 2017b \todo{cite} show that using random noise for this can lead to mode collapse issues
+	\item instead the image translation process is conditioned on arbitrary image in the target domain (i.e. an exemplar)
+	\item like this EGSC-IT is enabled for multimodal (i.e. many-to-many) image translations, but also allows for explicit control over translation process depending on the exemplars used as guidance
+	\item use weight sharing architecture proposed in UNIT (Liu et al. 2017 \todo{cite}), but instead of single latent space shared by both domains, a two component one is used (domain-shared component that contains semantic information (objects' category, shape, spacial layout), domain-specific style component that contains style information (texture, color)
+	\item adaptive instance normalization (AdaIN) (Huang \& Belongie 2017 \todo{cite}) is applied to the shared content component of the source domain image using AdaIN parameters computed from the target domaoin exemplar
+	\item directly applying AdaIN to the feature maps of the shared content component would mix up all objects and scenes in the image, making the image translation prone to failure when a n image contains diverse objects and scenes, therefore semantic labels as an additional form of supervision is used \todo{cite works that do this}. 
+	\item instead of using data with labor-intensive annotations use computed feature masks
+	\item feature masks: approximately decoupling different semantic categories in an unsupervised way under guidance of perceptual loss and adversarial loss
+\end{itemize}
+
+\subsection{Method}
+\begin{itemize}
+	\item weight sharing: to map image pairs (one from source domain, other target) to shared latent space, the last layer in the encoders ($E_A, E_B$) of the VAE-GAN and the first layer in the generators ($G_A, G_B$)  share their weights. (see \todo{cite UNIT, Liu et al. 2017})
+	\item \todo{exemplar-based AdaIN for domain-specific style}
+	\item \textit{Network architecture}: 1) two encoders $E_A, E_B$, each consisting of serveral strided convolutional layers and serveral residual blocks to compute the shared content component, 2) feature mask network and an AdaIN network, $F_A, F_B$ for $A \rightarrow B$ translation ($B \rightarrow A$ vise versa)have same architecture as the Encoder above \todo{above?} except for weight-sharing layers. 3) Two Generators, $G_A, G_B$, almost symmetric to the Encoders except that the up-sampling is done by transposed convolutional layers. 4) Two Discriminators, $D_A, D_B$ fully-convolutional networks containing a stack of convolutional layers. 5) A VGG sub-network (Simonyan \& Zisserman, 2015 \todo{cite}), VGG, that contains the first few layers (up to relu5\_1) of pre-trained VGG-19 (\todo{cite Simonyan \& Zisserman, 2015}), which is used to calculate perceptual losses. 
+	\item Although UNIT is used as baseline framework, it can be replaced with any baseline framework with similar functionality
+\end{itemize}
+
+\subsection{Learning}
+\begin{itemize}
+	\item learning procedure of EGSC-IT contains VAEs, GANs, cycle-consistecy and perceptual losses.
+	\item for more stable training, the feature mask network and AdaIN network gets pre-trained for each domain seperately within a VAE-GAN architecture, and use encoder part as fixed feature extractors ($F_A, F_B$) for the remaining training
+	\item overall loss: 
+	\begin{align}
+		\mathcal{L}(E_A, G_A, D_A, E_B, G_B, D_B) &= \mathcal{L}_{\text{VAE}_\text{A}}(E_A, G_A) + \mathcal{L}_{\text{GAN}_{\text{A}}}(E_A,G_A,D_A) + \mathcal{L}_{\text{CC}_{\text{A}}}(E_A, G_A, E_B, G_B)\\
+		&+  \mathcal{L}_{\text{VAE}_\text{B}}(E_B, G_B) + \mathcal{L}_{\text{GAN}_{\text{B}}}(E_B,G_B,D_B) + \mathcal{L}_{\text{CC}_{\text{B}}}(E_A, G_A, E_B, G_B)\\
+		&+ \mathcal{L}_{\text{P}}(E_A, G_A, E_B, G_B)
+	\end{align}
+	\item VAEs, GANs and cycle-consistency losses identical to the ones used in \todo{cite Liu et al., 2017}
+	\item \todo{add rest}
+\end{itemize}
+
+\subsection{Experiments}
+\begin{itemize}
+	\item translated between GTA5 and Berkeley Deep Drive (BDD) (\todo{cite both})
+	\item Similar to FCN-score used by \todo{cite isola et al 2017} use the semantic segmentation performance to quantitatively evaluate the image translation quality
+	\item first translate images from GTA5 dataset to arbitrary image in BDD
+	\item only generate images of size $256 \times 512$ due to GPU memory limitations
+	\item then train single-scale Deeplab model (\todo{cite Chen et al. 2018}) on the translated images and test it on BDD test set
+	\item get mIoU scores
+\end{itemize}
+
+\subsection{Discussion}
+since method doesn't use any semantic segmentation labels nor paired data, there are some artifacts in the results for some hard cases.\\
+e.g. night $\rightarrow$ day translation more challenging than day $\rightarrow$ day, therefore sometimes hard for the model to understand semantics in such cases.\\
+In the future it would be interesting to extend the method to semi-supervised setting to benefit from presence of some fully-labeled data
 
 \section{Exploiting Semantics in Adversarial Training for Image-Level Domain Adaptation}
 
 see \cite{DBLP:journals/corr/abs-1810-05852}
 
+\begin{itemize}
+	\item ResNet generator, U-Net discriminator
+	\item 300k training iterations
+	\item Adam optimizer, 0.0001 learning rate, batch size 2
+	\item images cropped to 512x512
+	\item images from GTA+annotations thereof, only images of cityscapes
+\end{itemize}
 
 \section{FCNs in the Wild: Pixel-level Adversarial and Constraint-based Adaptation}
 
 see \cite{DBLP:journals/corr/HoffmanWYD16}
+
+\begin{itemize}
+	\item semantic segmentation is critical visual recognition task for a variety of applications ranging from autonomous agent tasks, such as robotic navigation and self-driving cars, to mapping and categorizing the natural world
+	\item challenges when adapting between visual domains for classification: changes in appearance, lighting, pose
+\end{itemize}
+
+
+\subsection{work includes}
+\begin{itemize}
+	\item first unsupervised domain adaptation method for transferring semantic segmentation FCNs across image domains
+	\item combination of global and local alignment methods, using global and category specific adaptation techniques
+	\item align global statistics of source and target data using a convolutional domain adversarial training technique, using a novel extension of previous image-level classification approaches \todo{look up citations}
+	\item given a domain aligned representation space, introduce generalizable constrained multiple instance loss function, which expands on weak label learning, but can be applied to the target domain without any extra annotations and explicitly transfers category layout information from a labeled source dataset
+	\item use GTA5 and SYNTHIA + CityScapes datasets for synth2real
+	\item cross season adaptation within SYNTHIA
+	\item adaptation across real world cities
+	\item perform detailed quantitative analysis of cross-city adaptation within CityScapes
+	\item contribute BDDS (Berkeley Deep Driving Segmentation), unconstrained drive-cam dataset for semantic segmentation
+	\item show Cityscapes to BDDS
+	\item show that adaptation algorithm improves target semantic segmentation performance without any target annotations
+\end{itemize}
+
+\subsection{Related Work}
+
+\begin{itemize}
+	\item many recent approaches use fully convolutional networks (FCNs) for semantic segmentation, mapping input RGB space to semantic pixel space
+	\item compelling because they allow direct end-to-end function that can be trained using back propagation
+	\item original FCN formulation has been improved using dilated convolution (\todo{look at citation}) and post-processing techniques, such as Markov/conditional random fields
+	\item high cost of collecting pixel level supervision motivates weak labels (typically image-level tags defining presence / absence of each class)
+	\item Multiple instance learning (MIL) \todo{see citations}, reinforce confident predictions udring learning procecss
+	\item improves method suggested by \todo{see citations} who use an EM algorithm to better model global properties of the images segments. Generalized by Pathak et al. who proposed a Constrained CNN, also able to model any linear constraints on the label space (i.e. presence / absence, percent cover)
+	\item Hong et al. used auxiliary segmentation to generalize semantic segmentations to categories where only weak label information was available
+	\item these methods all assume weak labels present during training time for both source and target domain
+	\item authors consider strong supervision available in source domain, no supervision available in target domain
+\end{itemize}
+
+\subsubsection{Domain Adaptation}
+\begin{itemize}
+	\item domain adaptation in computer vision focuses largely on image classification, with much work dedicated to generalizing across domain shift between stock photographs of objects and the same objects photographed in the world
+	\item recent work include \todo{some citations} which all learn a feature representation which encourages maximal confusion between the two domains
+	\item other work \todo{cite }aims to align features by minimizing the distance between their distribtuions in the two domains
+	\item based on GAN Liu et al. proposed coupled GAN to learn a joint distribution of images from both source and target datasets
+	\item other computer vision task detection: Hoffmann et al., domain adaptation system: explicitly modeling the representation shift between classification and detection models, follow-up work which incorporated per-category adaptation using multiple instance learning. later converted into FCNs for evaluating semantic segmentation performance
+\end{itemize}
+
+\subsection{Fully Convolutional Adaptation Models}
+\begin{itemize}
+	\item source domain $S$, images $I_S$, labels $L_S$, trained source only model for semantic segmentation which produces pixel-wise per-category score map $\phi_S(I_S)$
+	\item goal to learn semantic segmentation model which is adapted for use on unlabeled target domain $T$, images $I_T$, no annotations, parameters of such a network $\phi_T(\cdot)$
+	\item if no domain shift: just apply source model directly to target domain
+	\item however: commonly a difference between distribution of source labeled domain and target test domain
+	\item therefore: \textit{unsupervised adaptation} approach
+	\item first main shift: global changes may occur between two domains resulting in marginal distribution shift of corresponding feature space
+	\item can occur in any domain, but most distinct in large domain shifts between very distinct domains (e.g. simulated and real domains)
+	\item second main shift: due to category specific parameter changes. may result from individual categories having specific biases in the two domains (e.g. adapting between different cities: changes in appearance of signs and distribution of cars)
+	\item propose unsupervised domain adaptation framework for adapting semantic segmentation models which directly tackles both the need for minimizing the global and the category specific shifts
+	\item assumptions: source and target domain share same label space, source model achieves performance greater than chance on target domain
+	\item introduce two new semantic segmentation loss objectives, one to minimize the global distribution distance, which operates over both source and target images, $\mathcal{L}_{\text{da}}(I_S, I_T)$, another to adapt category specific parameters using target images and transferring label statistics from source domain $P_{L_S}, \mathcal{L}_{\text{mi}}(I_T,P_{L_S})$
+	\item to ensoure to not diverge too far from source solution, which is known to be effective for final semantic segmentation task, continue to optimize the standard supervised segnmentation objective on source domain $\mathcal{L}_{\text{seg}}(I_S, L_S)$
+	\item goal: optimize joint objective:
+	\begin{align}
+		\mathcal{L}(I_S,L_S,I_T) &= \mathcal{L}_{\text{seg}}(I_S, L_S)\\
+		&+ \mathcal{L}_{\text{da}}(I_S, I_T) + \mathcal{L}_{\text{mi}}(I_T,P_{L_S})
+	\end{align}
+	\item \todo{add illustration Figure 2}
+	\item source domain data to update standard supervised loss objective, trained using source pixel-wise annotations
+	\item both source and target data are used without any category annotations within fully-convolutional domain adversarial training to minimize global distance of feature space between the two domains
+	\item category specific updates using a constrained pixel-wise multiple instance learning objective is performed on the target images, with source category statistics used to determine the constraints
+	\item use front-end dilated FCN \todo{cite 33}, based on VGG16 \todo{cite 31} as base model
+	\item 16 conv layers, last three conv layer converted from fully connected layers, called $f c_6, f c_7, f c_8$, followed by 8 times bilinear up-sample layer to produce segmentation in the same resolution as input images
+\end{itemize}
+
+\subsection{Global Domain Alignment}
+
+\begin{itemize}
+	\item recognition sought at pixel level, alignment of full image representations will marginalize out too much distribution information, limiting the alignment capability of the adversarial learning approach
+	\item instead consider region corresponding to natural receptive field of each spatial unit in final representation layer (e.g. $fc_7$), as individual instances
+	\item in doing so, the adversarial training procedure is supplied with the same information which is used to do final pixel prediction
+	\item provides a more meaningful view of overall source and target pixel-space representation distribution distance which needs to be minimized
+	\item ļet $\phi_{l-1}(\theta, I)$ denote output of last layer before pixel prediction according to network parameters $\theta$
+	\item $\mathcal{L}_{\text{da}}(I_S, I_T)$ consists of alternating minimization objectives
+	\item one concerning parameters $\theta$ of representation space, under which source and target distance $\min d(\phi_{l-1}(\theta, I_S), \phi_{l-1}(\theta, I_T))$ will be minimized for given distance function $d(\cdot)$.
+	\item second: estimating distance function through training domain classifier to distinguish instances of source and target domains
+	\item let $\theta_D$ domain classifier parameters
+	\item learn domain classifier to recognize difference between source and target regions and use that classifier to guide distance iminimization of source and target representations
+	\item let $\sigma (\cdot)$ denote softmax function, domain classifier predictions $p_{\theta_D}(x) = (\sigma(\phi(\theta_{D}, x)))$
+	\item assuming output of layer $l-1$ has $H \times W$ spatial units, we can define domain classifier loss $\mathcal{L}_D$ as:
+	\begin{align}
+		\mathcal{L}_D = &- \sum_{I_S \in S} \sum_{h\in H}\sum_{w \in W} \log ( p_{\theta_D}(R^S_{hw}))\\
+		&- \sum_{I_T \in T} \sum_{h\in H}\sum_{w \in W} \log (1 - p_{\theta_D}(R^T_{hw}))
+	\end{align}
+	where $R^S_{hw} = \phi_{l-1}(\theta, I_S)_{hw}$ and $R^T_{hw} = \phi_{l-1}(\theta, I_T)_{hw}$ denote source and target representation of each units, respectively
+	\item inverse domain loss for convenience:
+	\begin{align}
+		\mathcal{L}_{\text{Dinv}} = &- \sum_{I_S \in S} \sum_{h\in H}\sum_{w \in W} \log (1 - p_{\theta_D}(R^S_{hw}))\\
+		&- \sum_{I_T \in T} \sum_{h\in H}\sum_{w \in W} \log (p_{\theta_D}(R^T_{hw}))\\
+	\end{align}
+	\item alternating minimization procedure
+	$$\begin{array}{cc}
+		\underset{\theta_D}{\min} & \mathcal{L}_D\\
+		\underset{\theta}{\min} &\frac{1}{2} [\mathcal{L}_D + \mathcal{L}_{\text{Dinv}}]
+	\end{array}$$
+	\item optimizing these two objectives iteratively amounts to learning the best possible domain classifier for relevant image regions and then using the loss of that domain classifier to inform the training of the image representations so as to minimize the distance between source and target domains
+\end{itemize}
+
+\subsection{Category Specific Adaptation}
+
+\begin{itemize}
+	\item \todo{cite 25 26?}
+	\item compute by per image labeling statistics in source domain $P_{L_S}$. for each source image which contains class $c$, compute percentage of image pixels which have a ground truth label corresponding to this class. Can then compute histogram over these percentages and denote the lower $10\%$ boundary as $\alpha_c$, average values as $\delta_c$ and upper $10\%$ as $\gamma_c$
+	\item use this to inform target domain size constraints, explicitly transferring scene layout information from source to target domain (e.g. street usually takes much more space in a autonomous driving image than signs).
+	\item constrained MIL for the case where image-level labels are known: for a given target image for which a certain class $c$ is present, impose following constraints on output prediction map $p = \arg \max \phi (\theta, I_T)$
+	\begin{align}
+		\delta_c \leq \sum_{h,w} p_{hw}(c) \leq \gamma_c
+	\end{align}
+	\item encourages to not assign more pixels to class c than expected range observed in source domain
+	\item optimize this objective with lower bound slack to allow for outlier cases wehre $c$ simply occupies less of the image than is average in source domain. Do not allow slack on upper bound constraint as it is important that no single class occupies too much of any given image
+	\item general constraint: can be applied to all classes 
+	\item optimize as in Pathak et al \todo{cite 25}
+	\item modification: to prevent model diverging and over-fitting: use size constraint that if the lower $10\%$ of source class distribution $\alpha_c$ is greater than $0.1$, the down-weight the gradients due to these classes by factor of $0.1$. Can be viewed as re-sampling of the classes so as to come closer to a balanced set, allowing the relatively small classes potential to inform the learning objective
+	\item need image-level labels for this approach, thus complete approach: predicting image-level labels, then optimizing for pixel predictions that satisfy the source transferred class size constraints. (e.g. source semantic segmentation yields: x pixels street, y pixels car, z pixels signs. target image-level labels are street and signs, make sure that semantic segmentation has at max x street and z sign classified pixels)
+	\item \todo{reread last paragraph before experiments}
+	\item given target image $I_T$, compute current output class prediction map $p = \arg \max \phi (\theta, I_T)$
+	\item for each class comput percentage of pixels assigned to it in current prediction $d_c = \frac{1}{H\cdot W} \sum_{h\in H} \sum_{w\in W}(p_{hw} = c)$
+	\item assign image-level label to class $c$ if $d_c > 0.1 \cdot \alpha_c$ (i.e. if currently labeling at least as many pixels as $10\%$ of the expected number for a true class appearing in the image)
+\end{itemize}
+
+\subsection{Experiments}
+	domain adaptation tasks:
+\begin{itemize}
+	\item cities2cities
+	\item season2season
+	\item synth2real
+	\item use front-end dilated FCN (\todo{cite 33}) as both the initialization for our method and as baseline model for comparison
+	\item all code and models trained and evaluated in the Caffe (\todo{cite 16}) framework, available before camera-ready
+	\item use IoU
+	\item for c2c and syn2r follow evaluation protocol of \todo{cite 3} and train models with 19 semantic labels of Cityscapes
+	\item for s2s use 13 semantic labels of SYNTHIA instead
+\end{itemize}
+
+\subsection{Datasets}
+
+\subsubsection{Cityscapes}
+\begin{itemize}
+	\item 34 categories
+	\item high resolution $2048 \times 1024$
+	\item three parts: 2975 training samples, 500 validation samples, 1525 test samples
+	\item split into european cities, different geographic and population distributions
+\end{itemize}
+
+\subsubsection{SYNTHIA}
+\begin{itemize}
+	\item 13 classes with different scenarios and sub-conditions
+	\item for season to season use SYNTHIA-VIDEO-SEQUENCES, different cities, seasons, weathers, illumination, captured by 8 RGB cameras 360$^{\circ}$ visual field, use only dash-cam for this paper
+	\item for synth2real use SYNTHIA-RAND-CITYSCAPES, 9000 random images from all sequences with Cityscapes-compatible annotations, as source domain data
+\end{itemize}
+
+\subsubsection{GTA5}
+\begin{itemize}
+	\item 24966 high quality labeled frames from realistic open-world computer game Grand Theft Auto V (GTA5)
+	\item frames with $1914 \times 1052$ generated from fictional city Los Santos based on Los Angeles, CA.
+	\item use whole dataset with labels compatible to Cityscapes categories for synth2real adaptation
+\end{itemize}
+
+\subsubsection{BDDS}
+\begin{itemize}
+	\item thousands of densely annotated dashcam video frames, hundreds of thousands of unlabeled frames
+	\item $1280 \times 720$, 34 categories compatible to Cityscapes label space
+	\item majority of data from New York and San Francisco (representative for eastern and western coasts)
+	\item different from other existing driving dataset covers more challenging conditions (urban streetview at night, highway scene in rain,..)
+\end{itemize}
+
+\subsection{Quantitative and Qualitative Results}
+\begin{itemize}
+	\item first large distribution shift (synth2real)
+	\item then medium shift (season2season)
+	\item small shift (city2city in Cityscapes)
+\end{itemize}
+
+
+\todo{add import table contents}
+
+\subsubsection{Large Shift: Synthetic to Real Adaptation}
+\begin{itemize}
+	\item for GTA to Cityscapes: compared to performance of source dilation model the domain adversarial training contributes $4.4\%$ raw and $\sim 20\%$ relative percentage mIoU improvement and multiple instance loss another $1.6\%$ raw and $\sim 6 \%$ relative
+	\item for SYNTHIA to Cityscapes also measurable improvement
+	\item raw $0.9\%$ for adversarial, raw $1.5\%$ with additional multiple instance loss
+\end{itemize}
+
+\subsubsection{Medium Shift: Cross Seasons Adaptation}
+\begin{itemize}
+	\item SYNTHIA season2season
+	\item on average $\sim 3 \%$ mIoU improvement. Higher mIoU for 12/13 categories
+	\item no improvement on class \textit{car} (probably because cars have little to no change in appearance through seasons in SYNTHIA)
+	\item largest performance improvements through this method on categories like \textit{road} in shift from fall to winter
+\end{itemize}
+
+\subsubsection{Small Shift: Cross City Adaptation}
+\begin{itemize}
+	\item raw $3.6\%$ mIoU improvement through domain adversarial training, only $0.1\%$ through multiple instance loss
+	\item only noticeable improvement from category specific alignment on \textit{traffic light, rider, train}, probably because domain shift between train and val sets mainly results from change in global appearance due to difference in city, specific category appearance may not change significantly though
+\end{itemize}
+
+\subsection{BDDS Adaptation}
+\todo{find quantitative results}
+
 
 
 \section{From Virtual to Real World Visual Perception using Domain Adaptation - The DPM Example}
 
 see \cite{DBLP:journals/corr/LopezXGVR16}
 
+\subsection{Need for Virtual Worlds}
+\begin{itemize}
+	\item in general best performing machine learning algorithms are \textit{supervised} i.e requiring annotated information (ground truth) for training
+	\item human annotators (e.g. Amazon Mechanical Turk, LabelMe \todo{cite 48 and 53}) used for semantic segmentation but can't for pixel-wise optical flow and depth
+	\item many deep CNNs developed today rely on an ImageNet pre-trained deep CNN which is modified or fine-tuned to solve a new task or operate in a new domain
+	\item key for success of research community are powerful GPU hardware and large dataset with ground truth
+\end{itemize}
 
+\subsection{Need for Domain Adaptation}
+\begin{itemize}
+	\item problem of domain adaptation is not just a virtual-to-real issue but rather a sensor-to-sensor or environment-to-environment one \todo{cite 70, 71}
+	\item \todo{deformable part-based model DPM 17}
+	\item \todo{HOG+LPB/Linear-SVM paradigm 68, Haar+EOH/AdaBoost 69}
+\end{itemize}
+
+\subsection{Domain Adaptation for DPM in a Nutshell}
+\begin{itemize}
+	\item \todo{revisit this later if necessary}
+\end{itemize}
+
+
+\newpage
 
 \section{Semantic-aware Grad-GAN for Virtual-to-Real Urban Scene Adaption}
 
 see \cite{DBLP:journals/corr/abs-1801-01726}
 
+\subsection{Introduction}
+\begin{itemize}
+	\item two main contributions: 
+		\begin{enumerate}
+			\item gradient-sensitive objective, emphasizes the semantic boundary consistencies between virtual images and adapted images. able to regularize the generator render distinct color/texture for each semantic region in order to keep semantic boundaries, which can alleviate the common blurry issues
+			\item previous work often learn a whole image discriminator, makes pixels in image easily collapse into a monotonous pattern. appearance distributions for each semantic region should be regarded differently and purposely (e.g. road: coarse texture of asphalt concrete, vehicle: smooth and reflective)
+		\end{enumerate}
+	\item semantic-aware discriminator learns distinct discriminate parameters for examining regions with respect to each semantic label
+	\item SG-GAN controllable architecture that personalizes texture rendering for different semantic regions and results in adapted images with finer details
+\end{itemize}
+
+\subsection{Related Work}
+\subsubsection{Real-world vs. virtual-world data acquiring}
+\begin{itemize}
+	\item -
+\end{itemize}
+\subsubsection{Domain adaptation}
+\begin{itemize}
+	\item either by adapting scene images or adapting hidden feature representations guided by the targets
+	\item Image-based adaption (aka image-to-image translation) can be summarized into two directions:
+	\begin{enumerate}
+		\item generated through feature matching (e.g. \todo{cite Gatys et al. 10}: combine content of one with style of other images through matching Gram matrix on deep feature maps, at expense of loss of some content information)
+		\item GAN (e.g. \todo{Isola et al. 21} conditional GANs with mapping function for paired data, for unpaired data e.g. regularization term \todo{cite following} 37, cycle structure 24 45 47, weight sharing 29 30)
+	\end{enumerate}
+	\item some make use of both feature matching and adversarial training (5, 44)
+	\item challenge: existing approaches often modify semantic information, e.g. sky adapted to tree structure or road lamp rendered from nothing
+	\item hidden feature based adaption aims at adapting learned models to target domain (\todo{multiple citations}), by sharing weight (12) or incorporating adversarial discriminative setting (39), those mitigate performance degradation caused by domain shifting
+	\item feature based adaption methods require different objectives or architecture for different vision tasks, thus not as widely applicable as image-based adaption
+\end{itemize}
+
+\subsection{Semantic-aware Grad-GAN}
+
+\subsubsection{Semantic-aware cycle objective}
+\begin{itemize}
+	\item based on cycle-structured GAN objective
+	\item unpaired images from virtual-world domain $V$ and real-world domain $R$ as $\{v\}^N_{i=1} \in V$ and $\{r\}^M_{i=1} \in R$
+	\item SG-GAN learns symmetric mappings $G_{V\rightarrow R}$ and $G_{R\Rightarrow V}$ alogn with corresponding semantic-aware discriminators $SD_R, SD_V$
+	\item $SD_R$ distinguishes between real-world images $\{r\}$ and fake real-world images $\{G_{V\rightarrow R}(v)\}$ and vice versa for $SD_V$
+\end{itemize}
+
+\subsubsection{Adversarial loss}
+
+\begin{itemize}
+	\item two sets of adversial losses applied to $(G_{V\Rightarrow R}, SD_R)$ and $(G_{R\Rightarrow V}, SD_V)$ pairs
+	\item adversarial loss:
+	\begin{align}
+		\mathcal{L}_{\text{adv}}(G_{V\rightarrow R}, SD_R, V, R) &= \mathbb{E}_{r\sim p_{\text{data}}(r)}[\log SD_R(r)]\\
+		&+ \mathbb{E}_{v\sim p_{\text{data}}(v)}[\log(1-SD_R(G_{V\rightarrow R}(v)))]
+	\end{align}
+	\item objective
+	\begin{align}
+		G^*_{V\rightarrow R} = \arg \underset{G_{V\rightarrow R}}{\min} \underset{SD_R}{\max} \mathcal{L}_{\text{adv}}(G_{V\rightarrow R}, SD_R, V, R)
+	\end{align}
+	\item analogous for other generator discriminator: $\mathcal{L}_{\text{adv}}(G_{R\rightarrow V}, SD_V, R, V)$
+\end{itemize}
+
+\subsubsection{Cycle consistency loss}
+	\begin{align}
+	\mathcal{L}_{\text{cyc}}(G_{V\rightarrow R}, G_{R\rightarrow V}, V, R) &= \mathbb{E}_{r\sim p_{\text{data}}(r)}[\lVert G_{V\rightarrow R}(G_{R\rightarrow V}(r)) - r \rVert_1]\\
+	&+ \mathbb{E}_{v\sim p_{\text{data}}(v)}[\lVert G_{R\rightarrow V}(G_{V\rightarrow R}(v)) - v \rVert_1]
+\end{align}
+
+\begin{itemize}
+	\item can be seen as introduction of a regularization on positions of image elements
+	\item moving positions of image components is not encouraged
+	\item model only with cycle-consistency can still map sky to tree (not semantic aware)
+\end{itemize}
+
+\subsubsection{Soft gradient-sensitive objective}
+
+\begin{itemize}
+	\item motivation of gradient-sensitive loss: no matter how texture of semantic classes change, there should be some distinguishable visual difference at boundaries of semantic classes
+	\item visual differences for adjacent pixels can be captured through convolving gradient filters upon the image
+	\item typical choice of gradient filter is Sobel filter (\todo{cite 38}) as $\mathbf{C} = \{C_x, C_y\}$:
+	$\begin{array}{cc}
+		C_x = 
+		\begin{pmatrix}
+			-1 & 0 & 1\\
+			-2 & 0 & 2\\
+			-1 & 0 & 1
+		\end{pmatrix},
+		C_y = 
+		\begin{pmatrix}
+			1 & 2 & 1\\
+			0 & 0 & 0\\
+			-1 & -2 & -1
+		\end{pmatrix}
+	\end{array}$
+	\item 
+\end{itemize}
 
 \section{Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation}
 

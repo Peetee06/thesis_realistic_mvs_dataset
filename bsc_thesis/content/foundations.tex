@@ -1,0 +1,47 @@
+\chapter{Foundations}
+\label{sec:foundations}
+
+This chapter will describe and explain the foundations necessary for this work. The term \textbf{Domain Adaptation} will be defined and described. Furthermore all relevant \textbf{Neural Network} architectures will be shown and explained. Specifically \textbf{Convolutional Neural Networks} and \textbf{Generative Adversarial Networks}.
+
+
+\section{Domain Adaptation}
+As described in \cite{DBLP:journals/corr/Csurka17}
+Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. Synthetic meaning that the image was rendered from a virtual scene and real meaning an image taken from a real-world scene. In general there are many more domains, for example an image of a computer monitor from a front view (amazon) and one of a top view of the same monitor. \todo{insert example images}
+
+
+\section{Neural Networks}
+
+\subsection{Convolutional Neural Networks}
+see \cite{wu2017introduction} (Introduction to CNNs)
+Convolutional Neural Networks (CNNs) are Deep Neural Networks consisting of convolution layers, that extract features from input data (e.g. edges, curves, circles), pooling layers, commonly using max-pooling (mapping a subregion of the input to its maxium value) or average pooling (mapping the subregion to the average of the values) and a fully connected network for classification. 
+\todo{add more description and example images}
+
+\todo{convolution layer}
+
+\todo{pooling layer}
+
+\todo{fully connected layer}
+
+\todo{example architectures VGG16, AlexNet,..?}
+
+
+\subsection{Generative Adversarial Networks}
+Generative Adversarial Networks (GANs) implement a two-player-game:\\
+A Discriminator learns from a given data distribution what is ``real''. The Generator generates data. The goal of the generator is to fool the discriminator into believing the generated data is ``real''. The discriminator will label anything as ``fake'' that doesn't resemble the learned ``real'' data distribution. This way GANs can learn to generate realistically looking images of faces, translate images of art from one to another style and improve semantic segmentation.
+The generative model generally uses \textit{maximum likelihood estimation}. Ian Goodfellow describes this in the following way in \cite{DBLP:journals/corr/Goodfellow17}:
+\begin{quote}
+	The basic idea of maximum likelihood is to define a model that provides an estimate of probability distribituion, parametereized by parameters $\theta$. We then refer to the \textbf{likelihood} as the probability that the model assigns to the training data: $\prod_{i=1}^{m}p_{\text{model}}(x^{(i)}; \theta)$
+\end{quote}
+The parameter $\theta$ that maximizes the likelihood of the data is better found in $\log$ space \cite{DBLP:journals/corr/Goodfellow17}
+\begin{align}
+	\theta^* &= \underset{\theta}{\arg \max} \prod_{i = 1}^{m} p_{\text{model}} (x^{(i)}; \theta)\\
+	&= \underset{\theta}{\arg \max} \log \prod_{i=1}^{m} p_{\text{model}}(x^{(i)}; \theta)\\
+	&= \underset{\theta}{\arg \max} \sum_{i = 1}^{m} \log p_{\text{model}}(x^{(i)}; \theta)
+\end{align}
+as the maximum of the function is at the same $\theta$ value and we now have a sum which aswell eliminates the possibility of having underflow by multiplying multiple very small probabilities together.
+
+\todo{explain how discriminator works}
+
+\todo{explain training}
+
+\todo{explain advantages/disadvantages}
