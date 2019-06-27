@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  26 JUN 2019 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  27 JUN 2019 18:13
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -2267,7 +2267,32 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 539.
 
-[35]) (content/datasets.tex [36]
+[35] [36] [37] [38] [39] [40]
+
+Class scrbook Warning: deprecated old font command `\bf' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\bf' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\bf' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \bfseries ' on input line 714.
+
+) (content/datasets.tex [41] [42
+
+
+]
 chapter 4.
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -2332,12 +2357,9 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 21.
 
-[37
-
-
-]) (content/techniques.tex [38]
+[43]) (content/techniques.tex [44]
 chapter 5.
-[39
+[45
 
 
 ]
@@ -2383,7 +2405,7 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 35.
 
-[40]
+[46]
 
 Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -2426,11 +2448,11 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 60.
 
-[41] [42]
+[47] [48]
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 99.
  (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [43]
+) [49]
 
 Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -2458,7 +2480,7 @@ Overfull \hbox (5.17766pt too wide) in paragraph at lines 113--114
 ng con-ver-sion: cycle-consistency
  []
 
-[44] [45]) (content/comparison.tex [46]
+[50] [51]) (content/comparison.tex [52]
 chapter 6.
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -2523,29 +2545,29 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 6.
 
-) (content/conclusion.tex [47
+) (content/conclusion.tex [53
 
 
-] [48
+] [54
 
 
 ]
 chapter 7.
-) [49] [50
+) [55] [56
 
 
 ]
 chapter A.
-(bsc_thesis.bbl [51] [52
+(bsc_thesis.bbl [57] [58
 
 
-] [53]) [54] (bsc_thesis.aux) ) 
+] [59]) [60] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 13416 strings out of 492903
- 211151 string characters out of 3130412
+ 13420 strings out of 492903
+ 211176 string characters out of 3130412
  556077 words of memory out of 3000000
  16739 multiletter control sequences out of 15000+200000
- 60948 words of font info for 309 fonts, out of 3000000 for 9000
+ 61143 words of font info for 312 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,15n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dv
@@ -2563,9 +2585,9 @@ type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/u
 rw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw/pala
 tino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on bsc_thesis.pdf (54 pages, 445676 bytes).
+Output written on bsc_thesis.pdf (60 pages, 458339 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
+ 273 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31750 words of extra memory for PDF output out of 35830 (max. 10000000)
 

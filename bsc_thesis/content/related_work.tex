@@ -570,6 +570,152 @@ see \cite{DBLP:journals/corr/abs-1801-01726}
 	\end{align}
 \end{itemize}
 
+\subsection{Semantic-aware discriminator}
+\begin{itemize}
+	\item introduction of soft gradient-sensitive loss contributes to smoother textures and clearer semantic boundaries
+	\item scene adaption also needs to retain higher-level semantic consistencies (e.g. tone goes dark cause real world less ilumination, but may only want roads to be darker without changing the sky or even making it lighter)
+	\item inappropriate holistic scene adaption because of traditional discriminator judging realism image-wise, regardless of texture difference in semantic-aware manner
+	\item semantic-aware discriminators $SD_V$, $SD_R$
+	\item idea: create separate pipeline for each different semantic class in the discriminator
+	\item can be achieved by transiting number of filters in last layer of standard discriminator to number of semantic classes, then applying semantic masks upon filter to let each of them focus on different semantic classes
+	\item last ($k$-th) layer's feature map of standard discriminator is typically a tensor $\mathbf{T}_k$ with shape $(w_k, h_k, 1)$, where $w_k$ stands for width and $h_k$ stands for height
+	\item $T_k$ then compared with an all-one or all-zero tensor to calculate adversarial objective
+	\item in contrast semantic-aware discriminator will change $\mathbf{T}_k$ as a tensor with shape $(w_k, h_k,s)$ where $s$ is number of semantic classes
+	\item then convert image's semantic labeling to one-hot style and resize to $(w_k, h_k)$ which will result in mask $M$ with shape $(w_k, h_k, s)$ and $\mathbf{M}_{ij} \in \{01\}$
+	\item by multiplying $\mathbf{T}_k$ and $\mathbf{M}$ element-wise, each filter within $\mathbf{T}_k$ will only focus on one particular semantic class
+	\item Finally, by summing up $\mathbf{T}_k$ along the last dimension, tensor with shape $(w_k, h_k, 1)$ will be acquired and adversarial objective can be calculated the same way as standard discriminator
+\end{itemize}
+
+\subsection{Experiments}
+
+\subsection{Experiments - Implementation}
+
+\subsubsection{Dataset}
+\begin{itemize}
+	\item randomyl sample 2k images from GTA5 dataset and Cityscapes training set as training images for $V$ and $R$.
+	\item another 500 each for visual comparison and validation
+	\item Cityscapes validation set will later be used to evaluate semantic segmentation scores
+	\item trained on this, the model's name is \textbf{SG-GAN-2K}
+	\item another training set on full GTA5 dataset and 2k Cityscapes images called \textbf{SG-GAN-25K}
+\end{itemize}
+
+\subsubsection{Network architecture}
+\begin{itemize}
+	\item use $256 \times 512$ images for training due to GPU memory limitation
+	\item for generator adapt Isola et al. 21 (U-Net structure with skip connections between low and high level layers)
+	\item for semantic-aware discriminator use variant of PatchGAN (21,47), which is a FCN consists of multiple layers (leaky-ReLU, instance norm (41), convolution) and helps discriminator identify realism patch-wise
+\end{itemize}
+
+\subsubsection{Training details}
+\begin{itemize}
+	\item to stabilize training use history of refined images (37) for training $SD_V$ and $SD_R$
+	\item apply least square objective instead of log likelihood for adversarial loss, which is shown helpful in stabilizing training and generating higher quality images (Mao et al. 31)
+	\item parameters in 3.32-3.35 set $\lambda_c = 10$, $\lambda_g = 5$, $(\alpha, \beta)$ as $(0,1)$ for first three epochs, then $(0.9, 1)$
+	\item for gradient filters in 3.27-3.29 use Sobel Filter for $\mathbf{C}_i$ and filters 
+	\begin{align}
+		C_x = 
+		\begin{pmatrix}
+		0 & 0 & 0 \\
+		-1 & 0 & 1\\
+		0 & 0 & 0
+		\end{pmatrix}
+		,~
+		C_y =
+		\begin{pmatrix}
+		0 & 1 & 0 \\
+		0 & 0 & 0 \\
+		0 & -1 & 0
+		\end{pmatrix}
+	\end{align}
+	for $\mathbf{C}_s$ to avoid artifacts on image borders caused by reflect padding
+	\item for number of semantic classes in discriminator cluster 30 classes (7) into 8 categories to avoid sparce classes i.e. $s = 8$
+	\item learning rate 0.0002, batch size 1
+	\item implemented based on TensorFlow framework (1) and train with single Nvidia GTX1080
+\end{itemize}
+
+\subsubsection{Testing}
+\begin{itemize}
+	\item semantic information only needed at training time
+	\item at test time SG-GAN only requires images without semantic information
+	\item since generators and discriminators are FCN, can handle high res $(1024 \times 2048)$ at test time
+	\item test time 1.3 seconds/image with the GPU mentioned earlier
+\end{itemize}
+
+\subsection{Comparison with state-of-the-art methods}
+\subsection{Comparison - Baselines}
+\subsubsection{SimGAN}
+\begin{itemize}
+	\item (37)
+	\item introduces self-regularization for GAN and local adversarial loss to train refiner for image adaption
+	\item in experiments use channel-wise mean values as self-regularization term
+	\item use architecture as proposed in 37
+\end{itemize}
+
+\subsubsection{CycleGAN}
+\begin{itemize}
+	\item (47) learns mapping functions through adversarial loss and cycle consistency loss
+	\item uses ResNet (14) architecture for generators and PatchGAN (21) for discriminators
+\end{itemize}
+
+\subsubsection{DualGAN}
+\begin{itemize}
+	\item (45)
+	\item uses U-Net structure for gen that are identical with SG-GAN
+	\item PatchGAN as CycleGAN but follows loss format and training procedure of Wasserstein GAN (2)
+\end{itemize}
+
+\subsubsection{BiGAN}
+\begin{itemize}
+	\item (8,9) learns inverse mapping of standard GANs (13)
+	\item standard GANs learn generators mapping random noises $Z$ to images $X$, i.e., $Z \rightarrow X$, BiGAN also aims at inferring latent noises based on images $X\rightarrow Z$
+	\item By taking Z as image, BiGAN can also be used for unpaired scene adaption
+	\item use code provided in (47)
+\end{itemize}
+
+\subsection{Comparison - Gualitative and quantitative evaluation}
+\begin{itemize}
+	\item generally SG-GAN generates better visualization results (clear boundaries, consistent semantic classes, smooth texture, etc.)
+	\item SG-GAN2K shows its ability for personalized adaption (retains red color of vehicle's headlight but red color of sunset is changed to sunny yellow that is closer to real-world images)
+	\item conduct A/B tests on AMT by comparing SG-GAN-2K and baseline apporaches pairwise
+	\item 500 virtual-world images with $256 \times 512$ as input, present pairs of adapted images generated by different methods to workers for A/B tests
+	\item for each image-image pair workers decide which is more realistic
+	\item 123 workers participated 
+	\item SG-GAN superiority over all other approaches by a high margin
+	\item attribute that to clearer boundaries and smoother textures through soft gradient-sensitive loss, and personalized texture rendering with help of semantic-aware discriminator
+\end{itemize}
+
+\subsection{Ablation studies}
+\subsubsection{Effectiveness of soft gradient-sensitive objective}
+\begin{itemize}
+	\item without: coarse semantic boundaries and rough textures
+\end{itemize}
+
+\subsubsection{.. of semantic-aware discriminator}
+\begin{itemize}
+	\item without SD lacks for details, e.g . color of traffic light, generates coarser textures, e.g. sky
+\end{itemize}
+
+\subsubsection{The effect of virtual training image size}
+\begin{itemize}
+	\item SG-GAN-25K slightly better than -2K
+	\item improved performance may be only notable if dataset difference is in orders of magnitude
+\end{itemize}
+
+\subsubsection{Discussion}
+\begin{itemize}
+	\item very rare cases of unsatisfactory adaption results (e.g. tunnel scene where light looks like sunlight) due to lack of real world data for that situation while training
+	\item investigating trade-off between annotation granularity and dataset size would be a possible next step
+\end{itemize}
+
+\subsection{Application on semantic segmentation}
+\begin{itemize}
+	\item train semantic segmentation model merely by adapted GTA5 dataset and evaluate on Cityscapes validation set
+	\item for semantic segmentation model use architecture of Wu et al. 42 and exactly follow training procedure
+	\item impressive results on Cityscapes \todo{tabel 2}
+	\item SG-GAN $>$ CycleGAN
+	\item further compared with hidden feature representation based adaption method proposed by Huffman et al. 18, achieves high performance margin
+\end{itemize}
+
 \section{Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation}
 
 see \cite{DBLP:journals/corr/abs-1806-09755}
