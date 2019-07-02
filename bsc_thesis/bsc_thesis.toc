@@ -1,92 +1,113 @@
-\contentsline {chapter}{\numberline {1}Introduction}{11}% 
-\contentsline {section}{\numberline {1.1}Problem Statement}{11}% 
-\contentsline {chapter}{\numberline {2}Foundations}{13}% 
-\contentsline {section}{\numberline {2.1}Domain Adaptation}{13}% 
-\contentsline {section}{\numberline {2.2}Neural Networks}{13}% 
-\contentsline {subsection}{\numberline {2.2.1}Convolutional Neural Networks}{13}% 
-\contentsline {subsection}{\numberline {2.2.2}Generative Adversarial Networks}{14}% 
-\contentsline {chapter}{\numberline {3}Related Work}{15}% 
-\contentsline {section}{\numberline {3.1}Domain Adaptation for Structured Output via Discriminative Patch Representation}{15}% 
-\contentsline {subsection}{\numberline {3.1.1}Abstract}{15}% 
-\contentsline {subsection}{\numberline {3.1.2}Introduction}{15}% 
-\contentsline {subsection}{\numberline {3.1.3}domain adaptation for structured output}{16}% 
-\contentsline {section}{\numberline {3.2}Effective Use of Synthetic Data for Urban Scene Semantic Segmentation}{18}% 
-\contentsline {subsection}{\numberline {3.2.1}related work}{19}% 
-\contentsline {subsection}{\numberline {3.2.2}Method}{19}% 
-\contentsline {subsection}{\numberline {3.2.3}Implementation Details}{20}% 
-\contentsline {section}{\numberline {3.3}Exemplar Guided Unsupervised Image-to-Image Translation with Semantic Consistency}{20}% 
-\contentsline {subsection}{\numberline {3.3.1}Method}{21}% 
-\contentsline {subsection}{\numberline {3.3.2}Learning}{22}% 
-\contentsline {subsection}{\numberline {3.3.3}Experiments}{22}% 
-\contentsline {subsection}{\numberline {3.3.4}Discussion}{23}% 
-\contentsline {section}{\numberline {3.4}Exploiting Semantics in Adversarial Training for Image-Level Domain Adaptation}{23}% 
-\contentsline {section}{\numberline {3.5}FCNs in the Wild: Pixel-level Adversarial and Constraint-based Adaptation}{23}% 
-\contentsline {subsection}{\numberline {3.5.1}work includes}{23}% 
-\contentsline {subsection}{\numberline {3.5.2}Related Work}{24}% 
-\contentsline {subsubsection}{\nonumberline Domain Adaptation}{25}% 
-\contentsline {subsection}{\numberline {3.5.3}Fully Convolutional Adaptation Models}{25}% 
-\contentsline {subsection}{\numberline {3.5.4}Global Domain Alignment}{27}% 
-\contentsline {subsection}{\numberline {3.5.5}Category Specific Adaptation}{28}% 
-\contentsline {subsection}{\numberline {3.5.6}Experiments}{29}% 
-\contentsline {subsection}{\numberline {3.5.7}Datasets}{30}% 
-\contentsline {subsubsection}{\nonumberline Cityscapes}{30}% 
-\contentsline {subsubsection}{\nonumberline SYNTHIA}{30}% 
-\contentsline {subsubsection}{\nonumberline GTA5}{30}% 
-\contentsline {subsubsection}{\nonumberline BDDS}{30}% 
-\contentsline {subsection}{\numberline {3.5.8}Quantitative and Qualitative Results}{31}% 
-\contentsline {subsubsection}{\nonumberline Large Shift: Synthetic to Real Adaptation}{31}% 
-\contentsline {subsubsection}{\nonumberline Medium Shift: Cross Seasons Adaptation}{31}% 
-\contentsline {subsubsection}{\nonumberline Small Shift: Cross City Adaptation}{31}% 
-\contentsline {subsection}{\numberline {3.5.9}BDDS Adaptation}{31}% 
-\contentsline {section}{\numberline {3.6}From Virtual to Real World Visual Perception using Domain Adaptation - The DPM Example}{32}% 
-\contentsline {subsection}{\numberline {3.6.1}Need for Virtual Worlds}{32}% 
-\contentsline {subsection}{\numberline {3.6.2}Need for Domain Adaptation}{32}% 
-\contentsline {subsection}{\numberline {3.6.3}Domain Adaptation for DPM in a Nutshell}{32}% 
-\contentsline {section}{\numberline {3.7}Semantic-aware Grad-GAN for Virtual-to-Real Urban Scene Adaption}{33}% 
-\contentsline {subsection}{\numberline {3.7.1}Introduction}{33}% 
-\contentsline {subsection}{\numberline {3.7.2}Related Work}{33}% 
-\contentsline {subsubsection}{\nonumberline Real-world vs. virtual-world data acquiring}{33}% 
-\contentsline {subsubsection}{\nonumberline Domain adaptation}{33}% 
-\contentsline {subsection}{\numberline {3.7.3}Semantic-aware Grad-GAN}{34}% 
-\contentsline {subsubsection}{\nonumberline Semantic-aware cycle objective}{34}% 
-\contentsline {subsubsection}{\nonumberline Adversarial loss}{34}% 
-\contentsline {subsubsection}{\nonumberline Cycle consistency loss}{35}% 
-\contentsline {subsubsection}{\nonumberline Soft gradient-sensitive objective}{35}% 
-\contentsline {subsection}{\numberline {3.7.4}Semantic-aware discriminator}{36}% 
-\contentsline {subsection}{\numberline {3.7.5}Experiments}{37}% 
-\contentsline {subsection}{\numberline {3.7.6}Experiments - Implementation}{37}% 
-\contentsline {subsubsection}{\nonumberline Dataset}{37}% 
-\contentsline {subsubsection}{\nonumberline Network architecture}{37}% 
-\contentsline {subsubsection}{\nonumberline Training details}{38}% 
-\contentsline {subsubsection}{\nonumberline Testing}{38}% 
-\contentsline {subsection}{\numberline {3.7.7}Comparison with state-of-the-art methods}{39}% 
-\contentsline {subsection}{\numberline {3.7.8}Comparison - Baselines}{39}% 
-\contentsline {subsubsection}{\nonumberline SimGAN}{39}% 
-\contentsline {subsubsection}{\nonumberline CycleGAN}{39}% 
-\contentsline {subsubsection}{\nonumberline DualGAN}{39}% 
-\contentsline {subsubsection}{\nonumberline BiGAN}{39}% 
-\contentsline {subsection}{\numberline {3.7.9}Comparison - Gualitative and quantitative evaluation}{39}% 
-\contentsline {subsection}{\numberline {3.7.10}Ablation studies}{40}% 
-\contentsline {subsubsection}{\nonumberline Effectiveness of soft gradient-sensitive objective}{40}% 
-\contentsline {subsubsection}{\nonumberline .. of semantic-aware discriminator}{40}% 
-\contentsline {subsubsection}{\nonumberline The effect of virtual training image size}{40}% 
-\contentsline {subsubsection}{\nonumberline Discussion}{40}% 
-\contentsline {subsection}{\numberline {3.7.11}Application on semantic segmentation}{41}% 
-\contentsline {section}{\numberline {3.8}Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation}{41}% 
-\contentsline {section}{\numberline {3.9}VisDA: The Visual Domain Adaptation Challenge}{41}% 
-\contentsline {chapter}{\numberline {4}Datasets}{43}% 
-\contentsline {section}{\numberline {4.1}Playing for Data: Ground Truth from Computer Games}{43}% 
-\contentsline {section}{\numberline {4.2}City-scapes}{43}% 
-\contentsline {chapter}{\numberline {5}Domain Adaptation Techniques}{45}% 
-\contentsline {section}{\numberline {5.1}Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}{45}% 
-\contentsline {subsection}{\numberline {5.1.1}Training Details}{46}% 
-\contentsline {section}{\numberline {5.2}CyCADA: Cycle Consistent Adversarial Domain Adaptation}{47}% 
-\contentsline {subsection}{\numberline {5.2.1}Introduction}{47}% 
-\contentsline {subsection}{\numberline {5.2.2}Related Work}{47}% 
-\contentsline {subsection}{\numberline {5.2.3}Cycle-consistent adversarial domain adaptation}{49}% 
-\contentsline {section}{\numberline {5.3}Technique 3}{52}% 
-\contentsline {chapter}{\numberline {6}Comparison}{53}% 
-\contentsline {section}{\numberline {6.1}training the nets on tcml cluster}{53}% 
-\contentsline {section}{\numberline {6.2}comparison Benchmark(s)}{53}% 
-\contentsline {chapter}{\numberline {7}Conclusion}{55}% 
-\contentsline {chapter}{\numberline {A}Blub}{57}% 
+\contentsline {chapter}{\numberline {1}Introduction}{13}% 
+\contentsline {section}{\numberline {1.1}Problem Statement}{13}% 
+\contentsline {chapter}{\numberline {2}Foundations}{15}% 
+\contentsline {section}{\numberline {2.1}Domain Adaptation}{15}% 
+\contentsline {section}{\numberline {2.2}Neural Networks}{15}% 
+\contentsline {subsection}{\numberline {2.2.1}Convolutional Neural Networks}{15}% 
+\contentsline {subsection}{\numberline {2.2.2}Generative Adversarial Networks}{16}% 
+\contentsline {chapter}{\numberline {3}Related Work}{17}% 
+\contentsline {section}{\numberline {3.1}Domain Adaptation for Structured Output via Discriminative Patch Representation}{17}% 
+\contentsline {subsection}{\numberline {3.1.1}Abstract}{17}% 
+\contentsline {subsection}{\numberline {3.1.2}Introduction}{17}% 
+\contentsline {subsection}{\numberline {3.1.3}domain adaptation for structured output}{18}% 
+\contentsline {section}{\numberline {3.2}Effective Use of Synthetic Data for Urban Scene Semantic Segmentation}{20}% 
+\contentsline {subsection}{\numberline {3.2.1}related work}{21}% 
+\contentsline {subsection}{\numberline {3.2.2}Method}{21}% 
+\contentsline {subsection}{\numberline {3.2.3}Implementation Details}{22}% 
+\contentsline {section}{\numberline {3.3}Exemplar Guided Unsupervised Image-to-Image Translation with Semantic Consistency}{22}% 
+\contentsline {subsection}{\numberline {3.3.1}Method}{23}% 
+\contentsline {subsection}{\numberline {3.3.2}Learning}{24}% 
+\contentsline {subsection}{\numberline {3.3.3}Experiments}{24}% 
+\contentsline {subsection}{\numberline {3.3.4}Discussion}{25}% 
+\contentsline {section}{\numberline {3.4}Exploiting Semantics in Adversarial Training for Image-Level Domain Adaptation}{25}% 
+\contentsline {section}{\numberline {3.5}FCNs in the Wild: Pixel-level Adversarial and Constraint-based Adaptation}{25}% 
+\contentsline {subsection}{\numberline {3.5.1}work includes}{25}% 
+\contentsline {subsection}{\numberline {3.5.2}Related Work}{26}% 
+\contentsline {subsubsection}{\nonumberline Domain Adaptation}{27}% 
+\contentsline {subsection}{\numberline {3.5.3}Fully Convolutional Adaptation Models}{27}% 
+\contentsline {subsection}{\numberline {3.5.4}Global Domain Alignment}{29}% 
+\contentsline {subsection}{\numberline {3.5.5}Category Specific Adaptation}{30}% 
+\contentsline {subsection}{\numberline {3.5.6}Experiments}{31}% 
+\contentsline {subsection}{\numberline {3.5.7}Datasets}{32}% 
+\contentsline {subsubsection}{\nonumberline Cityscapes}{32}% 
+\contentsline {subsubsection}{\nonumberline SYNTHIA}{32}% 
+\contentsline {subsubsection}{\nonumberline GTA5}{32}% 
+\contentsline {subsubsection}{\nonumberline BDDS}{32}% 
+\contentsline {subsection}{\numberline {3.5.8}Quantitative and Qualitative Results}{33}% 
+\contentsline {subsubsection}{\nonumberline Large Shift: Synthetic to Real Adaptation}{33}% 
+\contentsline {subsubsection}{\nonumberline Medium Shift: Cross Seasons Adaptation}{33}% 
+\contentsline {subsubsection}{\nonumberline Small Shift: Cross City Adaptation}{33}% 
+\contentsline {subsection}{\numberline {3.5.9}BDDS Adaptation}{33}% 
+\contentsline {section}{\numberline {3.6}From Virtual to Real World Visual Perception using Domain Adaptation - The DPM Example}{34}% 
+\contentsline {subsection}{\numberline {3.6.1}Need for Virtual Worlds}{34}% 
+\contentsline {subsection}{\numberline {3.6.2}Need for Domain Adaptation}{34}% 
+\contentsline {subsection}{\numberline {3.6.3}Domain Adaptation for DPM in a Nutshell}{34}% 
+\contentsline {section}{\numberline {3.7}Semantic-aware Grad-GAN for Virtual-to-Real Urban Scene Adaption}{35}% 
+\contentsline {subsection}{\numberline {3.7.1}Introduction}{35}% 
+\contentsline {subsection}{\numberline {3.7.2}Related Work}{35}% 
+\contentsline {subsubsection}{\nonumberline Real-world vs. virtual-world data acquiring}{35}% 
+\contentsline {subsubsection}{\nonumberline Domain adaptation}{35}% 
+\contentsline {subsection}{\numberline {3.7.3}Semantic-aware Grad-GAN}{36}% 
+\contentsline {subsubsection}{\nonumberline Semantic-aware cycle objective}{36}% 
+\contentsline {subsubsection}{\nonumberline Adversarial loss}{36}% 
+\contentsline {subsubsection}{\nonumberline Cycle consistency loss}{37}% 
+\contentsline {subsubsection}{\nonumberline Soft gradient-sensitive objective}{37}% 
+\contentsline {subsection}{\numberline {3.7.4}Semantic-aware discriminator}{38}% 
+\contentsline {subsection}{\numberline {3.7.5}Experiments}{39}% 
+\contentsline {subsection}{\numberline {3.7.6}Experiments - Implementation}{39}% 
+\contentsline {subsubsection}{\nonumberline Dataset}{39}% 
+\contentsline {subsubsection}{\nonumberline Network architecture}{39}% 
+\contentsline {subsubsection}{\nonumberline Training details}{40}% 
+\contentsline {subsubsection}{\nonumberline Testing}{40}% 
+\contentsline {subsection}{\numberline {3.7.7}Comparison with state-of-the-art methods}{41}% 
+\contentsline {subsection}{\numberline {3.7.8}Comparison - Baselines}{41}% 
+\contentsline {subsubsection}{\nonumberline SimGAN}{41}% 
+\contentsline {subsubsection}{\nonumberline CycleGAN}{41}% 
+\contentsline {subsubsection}{\nonumberline DualGAN}{41}% 
+\contentsline {subsubsection}{\nonumberline BiGAN}{41}% 
+\contentsline {subsection}{\numberline {3.7.9}Comparison - Gualitative and quantitative evaluation}{41}% 
+\contentsline {subsection}{\numberline {3.7.10}Ablation studies}{42}% 
+\contentsline {subsubsection}{\nonumberline Effectiveness of soft gradient-sensitive objective}{42}% 
+\contentsline {subsubsection}{\nonumberline .. of semantic-aware discriminator}{42}% 
+\contentsline {subsubsection}{\nonumberline The effect of virtual training image size}{42}% 
+\contentsline {subsubsection}{\nonumberline Discussion}{42}% 
+\contentsline {subsection}{\numberline {3.7.11}Application on semantic segmentation}{43}% 
+\contentsline {section}{\numberline {3.8}VisDA: The Visual Domain Adaptation Challenge}{43}% 
+\contentsline {subsection}{\numberline {3.8.1}Introduction}{43}% 
+\contentsline {subsection}{\numberline {3.8.2}Related Work}{44}% 
+\contentsline {subsubsection}{\nonumberline Classification Datasets}{44}% 
+\contentsline {subsubsection}{\nonumberline Semantic Segmentation Datasets}{45}% 
+\contentsline {subsubsection}{\nonumberline Synthetic Datasets}{45}% 
+\contentsline {subsection}{\numberline {3.8.3}VisDA-C: Classification Dataset}{45}% 
+\contentsline {subsection}{\numberline {3.8.4}Dataset Acquisition}{46}% 
+\contentsline {subsubsection}{\nonumberline Training Domain: CAD-Synthetic Images}{46}% 
+\contentsline {subsubsection}{\nonumberline Validation Domain: MS COCO}{46}% 
+\contentsline {subsubsection}{\nonumberline Testing Domain: YouTube Bounding Boxes}{47}% 
+\contentsline {subsection}{\numberline {3.8.5}Experiments}{47}% 
+\contentsline {subsubsection}{\nonumberline Experimental Setup}{47}% 
+\contentsline {subsubsection}{\nonumberline Domain Adaptation Algorithms}{48}% 
+\contentsline {subsubsection}{\nonumberline Baseline results}{48}% 
+\contentsline {subsection}{\numberline {3.8.6}Increasing Difficulty and Future Research}{49}% 
+\contentsline {subsection}{\numberline {3.8.7}VisDA-S: Semantic Segmentation}{50}% 
+\contentsline {subsubsection}{\nonumberline Training Domain: Synthetic GTA5}{50}% 
+\contentsline {subsubsection}{\nonumberline Validation Domain: Real CityScapes}{50}% 
+\contentsline {subsubsection}{\nonumberline Test Domain: Real DashCam Images}{50}% 
+\contentsline {subsubsection}{\nonumberline Domain Adaptation Algorithms}{50}% 
+\contentsline {subsubsection}{\nonumberline Baseline Results}{51}% 
+\contentsline {subsubsection}{\nonumberline Challenge Results}{51}% 
+\contentsline {chapter}{\numberline {4}Datasets}{53}% 
+\contentsline {section}{\numberline {4.1}Playing for Data: Ground Truth from Computer Games}{53}% 
+\contentsline {section}{\numberline {4.2}City-scapes}{53}% 
+\contentsline {chapter}{\numberline {5}Domain Adaptation Techniques}{55}% 
+\contentsline {section}{\numberline {5.1}Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}{55}% 
+\contentsline {subsection}{\numberline {5.1.1}Training Details}{56}% 
+\contentsline {section}{\numberline {5.2}CyCADA: Cycle Consistent Adversarial Domain Adaptation}{57}% 
+\contentsline {subsection}{\numberline {5.2.1}Introduction}{57}% 
+\contentsline {subsection}{\numberline {5.2.2}Related Work}{57}% 
+\contentsline {subsection}{\numberline {5.2.3}Cycle-consistent adversarial domain adaptation}{59}% 
+\contentsline {section}{\numberline {5.3}Technique 3}{62}% 
+\contentsline {chapter}{\numberline {6}Comparison}{63}% 
+\contentsline {section}{\numberline {6.1}training the nets on tcml cluster}{63}% 
+\contentsline {section}{\numberline {6.2}comparison Benchmark(s)}{63}% 
+\contentsline {chapter}{\numberline {7}Conclusion}{65}% 
+\contentsline {chapter}{\numberline {A}Blub}{67}% 

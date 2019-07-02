@@ -716,11 +716,197 @@ see \cite{DBLP:journals/corr/abs-1801-01726}
 	\item further compared with hidden feature representation based adaption method proposed by Huffman et al. 18, achieves high performance margin
 \end{itemize}
 
-\section{Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation}
-
-see \cite{DBLP:journals/corr/abs-1806-09755}
-
 
 \section{VisDA: The Visual Domain Adaptation Challenge}
 
 see \cite{DBLP:journals/corr/abs-1710-06924}
+
+
+\subsection{Introduction}
+\begin{itemize}
+	\item model performance drops due to dataset shift, dataset bias (31)
+	\item changes in visual domain can include lighting, camera pose, background variation, as well as general changes in how the image data is collected
+	\item existing cross-domain benchmarks (28,36,3,45) created for evaluating domain adaptation algorithms often have limited size, low task diversity and relatively small domain shifts
+	\item large datasets with labeled data expensive and none-existent (e.g. medical)
+	\item synthetic rendering pipeline can produce virtually infinite amounts of labeled data
+	\item CAD models of wide variety of objects available freely in online repos
+	\item VisDA meant to encourage further development of robust domain transfer methods
+	\item goal is to train a model on synthetic source domain and then update it so that its performance improves on a real target domain without using any target annotations
+	\item VisDA focuses on \textit{unsupervised} domain adaptation (UDA) for which the target doman images are not labeled
+	\item unsupervised case is more challenging and often more realistic than supervised (with target labels available)
+	\item for each task provide labeled samples from training domain (source) and unlabeled samples from validation (target) and a different test (target) domain
+	\item UDA problem statement: no target data available, therefore two \textit{different} target domains are provided, one for validation of hyperparameters and one for testing the models
+	\item largest cross-domain synthetic-to-real object classification dataset to date with over 280K images in combined training, validation and testing sets
+	\item use this to hold public challenge, inviting researchers from all over the world to compete on this task, and analyze the performance of the top submitted methods
+\end{itemize}
+
+\subsection{Related Work}
+\begin{itemize}
+	\item most common cross-domain datasets focus on image classification task (e.g. digits of different styles, objects, faces under varying conditions)
+	\item tasks like detection (30), structure prediction (34,7,33) and sequence labeling (15) have been relatively overlooked
+\end{itemize}
+
+\subsubsection{Classification Datasets}
+\begin{itemize}
+	\item one difficulty of reusing existing datasets to create multi-domain benchmakrs is that the same set of categories must be shared among all domains
+	\item most popular digit (ten categories, 0-9) datasets are MNIST (handwritten digits, 22), USPS (handwritten digits, 17), SVHN (street view house numbers, 29)
+	\item digit images sometimes augmented synthetically to create additional domains, e.g. by inverting colors or using randomly chosen backgrounds
+	\item Office dataset popular benchmark for real-world objects, containts 31 object categories captured in three domains: office environment taken with high quality camera (DSLR), same with low quality camera (WEBCAM) and images downloaded from amazon (AMAZON)
+	\item these benchmarks have small size and relatively small domain shift (e.g. shift between two sensors: DSLR vs WEBCAM or between very similar handwritten digit datasets: MNIST vs USPS)
+	\item over time improvements in underlying image representations and adaptation techniques have closed the domain gap on these benchmarks, and more challenging domain shifts are now needed to drive further progress
+	\item due to small scale (e.g. office dataset several hundred images)not usable for modern computer vision methods as they require lots of data
+	\item Cross-Dataset Testbed (45) is a more recent benchmark dataset, ``dense'' version contains 40 classes extracted from Caltech256, Bing, SUN, Imagenet with minimum of 20 images per class in each dataset
+	\item significantly larger than Office, but some domains fairly close as they were collected in a similar way from web search engines
+	\item On Caltech-Imagenet shift, adaptation performance has reached close to $90\%$ accuracy (3)
+\end{itemize}
+
+\subsubsection{Semantic Segmentation Datasets}
+\begin{itemize}
+	\item SYNTHIA,, GTA5, Virtual KITTI
+	\item VisDA benchmark combines GTA5, CityScapes, and data from recently released Berkeley Deep Drive/Nexar dataset
+\end{itemize}
+
+\subsubsection{Synthetic Datasets}
+\begin{itemize}
+	\item 3D models used to generate synthetic images with variable object poses, textures, and backgrounds (30)
+	\item 3D model databases of common objects include ObjectNet3D (52), ShapeNet and ModelNet (4)
+\end{itemize}
+
+\subsection{VisDA-C: Classification Dataset}
+\begin{itemize}
+	\item large-scale testbed for studying unsupervised domain adaptation in image classification 
+	\item contains three splits (domains), each with same 12 object categories:
+	\begin{enumerate}
+		\item training domain (source): synthetic renderings of 3D models from different angles and with different lighting conditions
+		\item validation domain (target): real-image domain consisting of images cropped from Microsoft COCO dataset (25)
+		\item testing domain (target): real-image domain consisting of images cropped from Youtube Bounding Box dataset (32)
+	\end{enumerate}
+	\item use different target domains for validation and test splits to prevent hyper-parameter tuning on test data
+	\item unsupervised domain adaptation is usually done in a \textit{transductive} manner: unlabeled data is actively used to train the model
+	\item can't tune hyperparameters on test data, since it has no labels
+	\item lack of established validation sets often leads to poor experimental protocols where labeled test set is used for this purpose
+	\item provide validation set to mimic more realistic deployment scenario where target domain unkown at training time and test labels are not available for hyper-parameter tuning
+\end{itemize}
+
+\subsection{Dataset Acquisition}
+\subsubsection{Training Domain: CAD-Synthetic Images}
+\begin{itemize}
+	\item synthetic dataset generated by rendering 3D models of same object categories as in real data from different angles and lighting conditions
+	\item optained 1,907 models, generated 152,397 synthetic images
+	\item main sources of models: ShapenetCore (4), NTU 3D (5), SHREC 2010 (49) with some labels retrieved from TSB (44) and own 3D CAD models from 3D Warehouse SketchUp
+	\item 20 different camera yaw and pitch combinations with four different light directions per model
+	\item lighting setup consists of ambient and sun light sources in 1:3 proportion
+	\item Objects were rotated, scaled and translated to match floor plane, duplicate faces and vertives were removed, camera was automatically positioned to cature entire object with a margin around it
+	\item for textured models also rendered untextured version with plain grey albedo
+\end{itemize}
+
+\subsubsection{Validation Domain: MS COCO}
+\begin{itemize}
+	\item validation dataset for classification built from Microsoft COCO (25) \textit{Training} and \textit{validation} splits
+	\item in total $174,011$ images
+	\item used annotations provided to find and crop relevant object in each image
+	\item padded by retaining additional $\sim 50\%$ of its cropped height and width (i.e. by dividing the height and width by $\sqrt{2}$)
+	\item padded image patches below 70 pixels height or width excluded to avoid extreme image transformations on later stages
+	\item in total collected $55,388$ object images of the twelve categories
+	\item ``person'' category reduced to $4,000$ images to keep overall images per category in balance
+\end{itemize}
+
+\subsubsection{Testing Domain: YouTube Bounding Boxes}
+\begin{itemize}
+	\item chose this dataset (32) to construct test domain due to overlap in object category labels with the other two domains
+	\item compared to MS COCO image resolution is much lower, because they are frames extracted from YouTube videos
+	\item original YT-BB dataset contains segments extracted from $240,000$ videos and approx $5.6$ million bounding box annotations for 23 categories of tracked objects
+	\item extracted $72,372$ frame crops that fall into one of the twelve categories and satisfy the size constraints
+\end{itemize}
+
+\subsection{Experiments}
+\subsubsection{Experimental Setup}
+
+\begin{itemize}
+	\item first experiment goal: provide set of baselines for VisDA-C challenge
+	\item perform in-domain (\textit{i.e.} train and test on same domain) experiments to obtain approximate ``oracle'' performance, as well as source-only (\textit{i.e.} train only on the source domain) to obtain lower bound results of no adaptation 
+	\item Total of $152,397$ images as source domain and $55,388$ as target domain for validation
+	\item in in-domain experiments follow $70/30$ split for training and testing, i.e. $106,679$ training images, $45,718$ test images for synthetic domain and $38,772$ training images, $16,616$ test images for real domain
+	\item adopt AlexNet \todo{cite} as base model: last layer replaced with fully connected layer with output size 12, initialized with parameters learned on ImageNet, except for the last layer (random weights from $\mathcal{N}(0, 0.01)$), utilize mini-batch stochastic gradient descent (SGD) and set base learning rate to $10^{-3}$, weight decay $5\times 10^{-4}$ and momentum to $0.9$
+	\item also utilize ResNext-152 (54), output dimension of last fully connected layer changed to 12 and initialized with ``Xavier'' parameter initializer (14), since output layer trained from scratch, set learning rate 10 times higher than of other layers, learning rate adjusted with $\eta_p = \frac{\eta_0}{(1+\alpha p)^\beta}$, p linearly changing from 0 to 1 during training, $\eta_0 = 10^{-4}$, $\alpha = 10$, $\beta = 0.75$
+	\item report accuracy averaged over 40k iterations
+\end{itemize}
+
+\subsubsection{Domain Adaptation Algorithms}
+\begin{itemize}
+	\item evaluate two DA algorithms:
+	\begin{enumerate}
+		\item \textbf{DAN} (Deep Adaptation Network) (26), learns transferable features by training deep models with MMD (maximum mean discrepancy) (37) loss to align feature distribution of source and target domain. Network architecture of \textbf{DAN} extended from AlexNet (20) which consists of 5 conv layers (conv1- conv5) and 3 fully connected layers (fc6-fc8)
+		\item \textbf{Deep CORAL} (Deep Correlation Alignment)(40) performs deep model adaptation by matching second-order statistic of feature distributions. Domain discrepancy is then defined as squared Frobenius norm $d(S,T) = \lVert \text{Cov}_S - \text{Cov}_T \rVert^2_F$, where Cov$_S$, Cov$_T$ are covariance matrices of feature vectors from source and target domain, respectively
+	\end{enumerate}
+\end{itemize}
+
+\subsubsection{Baseline results}
+\begin{itemize}
+	\item in-domain AlexNet performance for training and testing on synthetic domain reaches $99.92\%$ accuracy, training and testing on real validation domain leads to $87.62\%$.
+	\item this supervised learning performance provides a loose upper bound for the used adaptation algorithms
+	\item unadapted source-only results on validation dataset: AlexNet trained on synthetic source domain and testet on real domain optains $28.12\%$ accuracy, significant drop from in-domain performance, provides a measure of how much the domain shift affects the model
+	\item Deep Coral improves cross-domain performance from $28.12\%$ to $45.53\%$ and DAN further boosts to $51.62\%$
+	\item although overall performance not on level of in-domain training, algorithms achieve large relative improvements over base model through unsupervised domain adaptation, improving it by $83.5\%$ and $61.9\%$ respectively
+	\item In-domain oracle and source-only performance of AlexNet was similar on test dataset to the validation dataset
+	\item oracle performance of AlexNet $92.08\%$, ResNext-152 improves that to $93.40\%$
+	\item source AlexNet achieves $30.81\%$ mean accuracy, DAN and Deep CORAL improve to $49.78\%$ and $45.29\%$, respectively
+	\item as base model AlexNet has relatively low performance due to its simpler architecture, compared to more recent CNNs, however: relative improvement of domain adaptation algorithms (i.e. DAN and Deep CORAL) still large
+\end{itemize}
+
+VisDA-C challenge results left out as not relevant for thesis
+
+\subsection{Increasing Difficulty and Future Research}
+\begin{itemize}
+	\item swap \textbf{COCO} and \textbf{YTBB} (test and validation domains) as MS-COCO turns out to be more difficult
+	\item \textbf{VisDA-C Extended}: generated Vista-C-ext by adding smaller images to the real domains (the ones that were excluded due to less than 70px w or h). In total $35,591$ images added to MS-COCO domain and $4,533$ to YT-BB domain. To test if added images affect performance: trained 3 models (AlexNet, ResNext-152 and ResNext-152+JMMD) on VisDA-C training domain and test both on VisDA-C and VisDA-C-ext test domains. All models implemented in Caffe (18) and fine-tuned from models pre-trained on ImageNet 2012 dataset. AlexNet and ResNext-152 setup same as earlier, Joint Maximum Mean Discrepancy (JMMD) (27) is distance between the means of kernelized representations of source and target samples, where sample representations are defined as \textit{combinations of outputs} of multiple layers of a network, therefore taking cross-terms between outputs of different layers into considerations. as in (27), replaced 1000-dimensional fully connected output layer with sequence of 256-dimensional and 12-dimensionals output layers and used combined outputs of these two layers as a feature representation. All three models get worse results on VisDA-C-ext than on VisDA-C. performance degradation on validation domain (MS-COCO) is larger than of testing domain (YT-BB). Hyperparameters of ResNext-152+JMMD are tuned on validation domain as not expected to use labels in testing domain. Drastic variation in reported accuracy therefore important to select proper stopping criteria. no labels in test domain, therefore no way to know how accuracy will behave. conservative strategy: take point where first loss peak occurs (approx 4k iterations). ResNext-152+JMMD gets $64.54\%$ and $58.37\%$ mean accuracy on val and test splits of VisDA-C respectively. Possible to reach $80\%$ accuracy with cross validation on test servers and ensembling top performing models.
+	\item \textbf{No Imagenet Pre-training} important to develop algorithms that can perform well without supervised pre-training on similar domains (e.g. for medical imaging or decision making in robotics)
+	\item \textbf{Variations in background/texture/POV}: release tools, models and required metadata to enable to generate different variations of the dataset to increase difficulty or to check specific hypothesis about domain adaptation, such as robustness of these models to degrees of variations, or to generate datasets for different tasks such as detection	
+\end{itemize}
+
+\subsection{VisDA-S: Semantic Segmentation}
+\begin{itemize}
+	\item goal: test adaptation between synthetic and real dashcam footage for semantic image segmentation
+	\item training data includes pixel-level semantic annotations for 19 classes
+	\item \begin{enumerate}
+		\item training domain (source): GTA5 dataset with semantic segmentation labels
+		\item validation domain (target): CityScapes also with labels
+		\item test domain (target): unlabeled real-world images from Nexar dashcam dataset
+	\end{enumerate}
+	\item training and validation datasets same as used in Hoffman et al. (2016) (16)
+\end{itemize}
+\subsubsection{Training Domain: Synthetic GTA5}
+\begin{itemize}
+	\item same as usual
+\end{itemize}
+
+\subsubsection{Validation Domain: Real CityScapes}
+as usual
+
+\subsubsection{Test Domain: Real DashCam Images}
+\begin{itemize}
+	\item dataset by Berkeley Deep Drive and Nexar (1)
+	\item collected using Nexar dashcam interface and manually annotated
+	\item use 1500 images of size $1280 \times 720$ available with annotations corresponding to the 19 categories matching GTA5 and CityScapes
+	\item part of BDD (Berkley Deep Drive)
+\end{itemize}
+
+\subsubsection{Domain Adaptation Algorithms}
+\begin{itemize}
+	\item use method of (16)
+	\item front-end dilated FCN as baseline model
+	\item method for domain adaptive semantic segmentation consists of both global and category specific adaptation techniques see section 3 in (16) for full information
+	\item in all experiments IoU is used to determine per-category segmentation performance
+\end{itemize}
+
+\subsubsection{Baseline Results}
+\begin{itemize}
+	\item Table 6 and Sec 4.2.1 in (16)
+	\item summary: front-end dilation source achieves mean IoU (mIoU) of 21.6 over all semantic categories on val domain, compared to oracle mIoU of 64.0, the used adaptation method improves mIoU to 25.5
+	\item similar improvement when adapting GTA5 model to challenge test domain of VisDA
+\end{itemize}
+
+\subsubsection{Challenge Results}
+\begin{itemize}
+	\item read again later
+\end{itemize}
