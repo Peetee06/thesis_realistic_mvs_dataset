@@ -96,8 +96,12 @@
 \contentsline {subsubsection}{\nonumberline Baseline Results}{51}% 
 \contentsline {subsubsection}{\nonumberline Challenge Results}{51}% 
 \contentsline {chapter}{\numberline {4}Datasets}{53}% 
-\contentsline {section}{\numberline {4.1}Playing for Data: Ground Truth from Computer Games}{53}% 
-\contentsline {section}{\numberline {4.2}City-scapes}{53}% 
+\contentsline {section}{\numberline {4.1}Outdoor datasets}{53}% 
+\contentsline {subsection}{\numberline {4.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{53}% 
+\contentsline {subsection}{\numberline {4.1.2}Real dataset:\\ Cityscapes}{54}% 
+\contentsline {section}{\numberline {4.2}Indoor datasets}{54}% 
+\contentsline {subsection}{\numberline {4.2.1}Synthetic dataset:\\ SUNCG}{54}% 
+\contentsline {subsection}{\numberline {4.2.2}Real dataset:\\ ScanNet}{54}% 
 \contentsline {chapter}{\numberline {5}Domain Adaptation Techniques}{55}% 
 \contentsline {section}{\numberline {5.1}Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}{55}% 
 \contentsline {subsection}{\numberline {5.1.1}Training Details}{56}% 
@@ -109,5 +113,7 @@
 \contentsline {chapter}{\numberline {6}Comparison}{63}% 
 \contentsline {section}{\numberline {6.1}training the nets on tcml cluster}{63}% 
 \contentsline {section}{\numberline {6.2}comparison Benchmark(s)}{63}% 
+\contentsline {subsection}{\numberline {6.2.1}Intersection over Union (IoU)}{63}% 
+\contentsline {subsection}{\numberline {6.2.2}Perceptual Loss}{63}% 
 \contentsline {chapter}{\numberline {7}Conclusion}{65}% 
 \contentsline {chapter}{\numberline {A}Blub}{67}% 

@@ -16,3 +16,9 @@ sudo singularity build *image name* *path to sandbox*
 6. mount cluster
 mounttcmlcluster
 7. cp image to cluster
+
+
+testing cycada:
+
+python test.py --dataroot /media/peete/My\ Passport/thesis/cycleGAN_test/p4d_city-scapes_dataset/ --name cycada --gpu_ids -1 --model cycle_gan_semantic --resize_or_crop=None --no_flip --batchSize 100 --how_many 100
+
