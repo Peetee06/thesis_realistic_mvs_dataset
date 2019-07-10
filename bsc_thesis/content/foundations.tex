@@ -5,9 +5,14 @@ This chapter will describe and explain the foundations necessary for this work. 
 
 
 \section{Domain Adaptation}
-As described in \cite{DBLP:journals/corr/Csurka17}
-Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. Synthetic meaning that the image was rendered from a virtual scene and real meaning an image taken from a real-world scene. In general there are many more domains, for example an image of a computer monitor from a front view (amazon) and one of a top view of the same monitor. \todo{insert example images}
+As described in \cite{DBLP:journals/corr/Csurka17},
+Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. When talking about a synthetic image we are implying it was rendered from a virtual scene through a rendering engine like for example blender's ''Cycles`` \cite{Cycles} or graphics engine like Unity \cite{Unity}. We define real images as taken from a real-world scene through some kind of camera. In general there are many more domains, for example an image of a painting in the style of a particular artist, images of an object from different viewpoints, and many more.
 
+\begin{figure}
+	\centering
+	 \includegraphics[width=0.8\textwidth]{../images/DA_examples_cityscapes_gta.png}
+	\caption{Example images for the the two domains relevant for this work. A real image from the cityscapes dataset \cite{Cordts_2016_CVPR} (left) and a synthetic image from the GTA5 dataset \cite{Richter_2016_ECCV} (right)}
+\end{figure}
 
 \section{Neural Networks}
 

@@ -13,6 +13,11 @@ Gabriela Csurka.
 \newblock Domain adaptation for visual applications: {A} comprehensive survey.
 \newblock {\em CoRR}, abs/1702.05374, 2017.
 
+\bibitem[Cyc]{Cycles}
+{Cycles} rendering engine.
+\newblock \url{https://www.cycles-renderer.org/}.
+\newblock Accessed: 2019-10-07.
+
 \bibitem[Goo17]{DBLP:journals/corr/Goodfellow17}
 Ian~J. Goodfellow.
 \newblock {NIPS} 2016 tutorial: Generative adversarial networks.
@@ -61,13 +66,6 @@ Xingchao Peng, Ben Usman, Neela Kaushik, Judy Hoffman, Dequan Wang, and Kate
 \newblock Visda: The visual domain adaptation challenge.
 \newblock {\em CoRR}, abs/1710.06924, 2017.
 
-\bibitem[PUS{\etalchar{+}}18]{DBLP:journals/corr/abs-1806-09755}
-Xingchao Peng, Ben Usman, Kuniaki Saito, Neela Kaushik, Judy Hoffman, and Kate
-  Saenko.
-\newblock Syn2real: {A} new benchmark forsynthetic-to-real visual domain
-  adaptation.
-\newblock {\em CoRR}, abs/1806.09755, 2018.
-
 \bibitem[RTdS18]{DBLP:journals/corr/abs-1810-05852}
 Pierluigi~Zama Ramirez, Alessio Tonioni, and Luigi di~Stefano.
 \newblock Exploiting semantics in adversarial training for image-level domain
@@ -93,6 +91,11 @@ Yi-Hsuan Tsai, Kihyuk Sohn, Samuel Schulter, and Manmohan~Krishna Chandraker.
 \newblock Domain adaptation for structured output via discriminative patch
   representations.
 \newblock {\em CoRR}, abs/1901.05427, 2019.
+
+\bibitem[Uni]{Unity}
+{Unity} graphics engine.
+\newblock \url{https://unity.com/}.
+\newblock Accessed: 2019-10-07.
 
 \bibitem[Wu17]{wu2017introduction}
 Jianxin Wu.
