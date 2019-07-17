@@ -1,10 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bsc_thesis.aux
 The style file: alpha.bst
-Illegal, another \bibstyle command---line 181 of file bsc_thesis.aux
+Illegal, another \bibstyle command---line 194 of file bsc_thesis.aux
  : \bibstyle
  :          {alpha}
 I'm skipping whatever remains of this command
 Database file #1: bibliography.bib
 Warning--to sort, need author or key in Cycles
 Warning--to sort, need author or key in Unity
+Warning--to sort, need author or key in Hoffman_cycada2017
+Warning--empty author in Hoffman_cycada2017
 (There was 1 error message)

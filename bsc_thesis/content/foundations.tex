@@ -6,12 +6,13 @@ This chapter will describe and explain the foundations necessary for this work. 
 
 \section{Domain Adaptation}
 As described in \cite{DBLP:journals/corr/Csurka17},
-Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. When talking about a synthetic image we are implying it was rendered from a virtual scene through a rendering engine like for example blender's ''Cycles`` \cite{Cycles} or graphics engine like Unity \cite{Unity}. We define real images as taken from a real-world scene through some kind of camera. In general there are many more domains, for example an image of a painting in the style of a particular artist, images of an object from different viewpoints, and many more.
+Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. When talking about a synthetic image we are implying it was rendered from a virtual scene through a rendering engine like for example blender's ''Cycles`` \cite{Cycles} or graphics engine like Unity \cite{Unity}. We define real images as taken from a real-world scene through some kind of camera. See Figure \ref{fig:DA_examples} for examples. In general there are many more domains, for example an image of a painting in the style of a particular artist, images of an object from different viewpoints, and many more. 
 
 \begin{figure}
 	\centering
 	 \includegraphics[width=0.8\textwidth]{../images/DA_examples_cityscapes_gta.png}
 	\caption{Example images for the the two domains relevant for this work. A real image from the cityscapes dataset \cite{Cordts_2016_CVPR} (left) and a synthetic image from the GTA5 dataset \cite{Richter_2016_ECCV} (right)}
+	\label{fig:DA_examples}
 \end{figure}
 
 \section{Neural Networks}
@@ -57,15 +58,23 @@ The parameter $\theta$ that maximizes the likelihood of the data is better found
 \end{align}
 as the maximum of the function is at the same $\theta$ value and we now have a sum which aswell eliminates the possibility of having underflow by multiplying multiple very small probabilities together.
 Formally GANs are a structured probabilistic model (more info: Chapter 16 of Goodfellow et al. 2016) containing latent variables z and observed variables x.
+The generator is defined by a function G that takes $\mathbf{z}$ as input and uses $\theta^{(G)}$ as parameters, the discriminator by a function D that takes $\mathbf{x}$ as input and uses $\theta^{(D)}$ as parameters. Both players have cost functions that are defined in terms of both players' parameters. The discriminator  wishes to minimize $J^{(D)}(\theta^{(D)}, \theta^{(G)})$ and must do so by controlling only $\theta^{(D)}$. This is analogous for the generator: he tries to minimize $J^{(G)}(\theta^{(D)}, \theta^{(G)})$ while controlling only $\theta^{(G)}$. In contrast to an optimization problem that has a solution that is the (local) minimum (a point in parameter space where all neighboring points have greater or equal cost), the GAN objective is a game. The solution to a game is a Nash equilibrium (\todo{reference john forbes nash jr.}), meaning that each player chooses the best possible option or strategy in respect to what the other player(s) choose. Here the Nash equilibrium is a tuple $(\theta^{(D)}, \theta^{(G)})$ that is a local minimum of $J^{(D)}$ with respect to $\theta^{(D)}$ and a local minimum $J^(G)$ with respect to $\theta^{(G)}$.
+\textbf{The generator} is simply a differentiable function G. When $\mathbf{z}$ is sampled from some simple prior distribution, G(z) yields a sample of $\mathbf{x}$ drawn from $p_{\text{model}}$. Typically a deep neural network is used to represent G. \\
+The game plays out in two scenarios. The first is where the discriminator D is given random training examples $\mathbf{x}$ from the training set. The goal of the discriminator here is for $D(\mathbf{x})$ to be near 1. In the second scenario, inputs $\mathbf{z}$ to the generator are randomly sampled from the model's prior overt the latent variables. The discriminator then receives input $G(\mathbf{z})$, a fake sample by the generator. The discriminator strives to make $D(G(\mathbf{z}))$ approach 0 while the generator tries to make that approach 1. The games Nash equilibrium corresponds to $G(\mathbf{z})$ being drawn from the same distribution as the training data. Under the assumption that the inputs to the discriminator are half real and half fake, this corresponds to $D(\mathbf{x}) = \frac{1}{2}$ for all $\mathbf{x}$.
 
-
-\paragraph{Generators}
-defined by a function G that takes $\mathbf{z}$ as input and uses $\theta^{(G)}$ as parameters
-
-\paragraph{Discriminators}
-defined by a function D that takes $\mathbf{x}$ as input and uses $\theta^{(D)}$ as parameters
-
-Both players have cost functions that are defined in terms of both players' parameters. The discriminator  wishes to minimize $J^{(D)}(\theta^{(D)}, \theta^{(G)})$ and must do so by controlling only $\theta^{(D)}$. This is analogous for the generator: he tries to minimize $J^{(G)}(\theta^{(D)}, \theta^{(G)})$ while controlling only $\theta^{(G)}$. In contrast to an optimization problem that has a solution that is the (local) minimum (a point in parameter space where all neighboring points have greater or equal cost), the GAN objective is a game. The solution to a game is a Nash equilibrium (\todo{reference john forbes nash jr.}), meaning that each player chooses the best possible option or strategy in respect to what the other player(s) choose. Here the Nash equilibrium is a tuple $(\theta^{(D)}, \theta^{(G)})$ that is a local minimum of $J^{(D)}$ with respect to $\theta^{(D)}$ and a local minimum $J^(G)$ with respect to $\theta^{(G)}$.
 \paragraph{Training}
+On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values from the dataset and one of $\mathbf{z}$ values drawn from the model's prior over latent variables. Then two gradient steps are made simultaneously (simultaneous SGD): one updating $\theta^{(D)}$ to reduce $J^{(D)}$ and one updating $\theta^{(G)}$ to reduce $J^{(G)}$.
+
+\paragraph{Cost functions} There are many different cost functions that can be used for GANs. See chapter \ref{sec:techniques} for the ones that the techniques in this work use.
+
 
 \paragraph{Advantages and Disandvantages}
+\paragraph{non-convergence} GANs implement a two player game and in contrast to optimization problems that find a (local) minimum for example by stochastic gradient decent (SGD) and therefore usually make reliable downhill progress, this game has the following disadvantage: Updating one player and making the best current move downhill on the loss curve for that player might mean going uphill for the counterfeit player. Because of this GANs often oscillate in practice.
+
+\paragraph{mode collapse} happens when the generator learns to map different inputs $\mathbf{z}$ to the same output. Partial mode collapse refers to scenarios in which the generator makes multiple images containing the same color or texture themes, or multiple images containing different views of the same dog. See Figure \ref{fig:mode_collapse} for an example.
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{images/metz_et_al_mode_collapse.png}
+	\caption{target data distribution of a toy dataset (right) and the data distribution of generated samples. Mind that the generated sample distribution hops from one mode to the next as the discriminator learns to recognize each mode as fake. Image from \cite{DBLP:journals/corr/MetzPPS16}}
+	\label{fig:mode_collapse}
+\end{figure}

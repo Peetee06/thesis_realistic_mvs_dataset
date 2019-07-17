@@ -31,6 +31,10 @@ Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
   Weinberger, editors, {\em Advances in Neural Information Processing Systems
   27}, pages 2672--2680. Curran Associates, Inc., 2014.
 
+\bibitem[Hof18]{Hoffman_cycada2017}
+Cycada: Cycle consistent adversarial domain adaptation.
+\newblock In {\em International Conference on Machine Learning (ICML)}, 2018.
+
 \bibitem[HTP{\etalchar{+}}17]{DBLP:journals/corr/abs-1711-03213}
 Judy Hoffman, Eric Tzeng, Taesung Park, Jun{-}Yan Zhu, Phillip Isola, Kate
   Saenko, Alexei~A. Efros, and Trevor Darrell.
@@ -42,6 +46,11 @@ Judy Hoffman, Dequan Wang, Fisher Yu, and Trevor Darrell.
 \newblock Fcns in the wild: Pixel-level adversarial and constraint-based
   adaptation.
 \newblock {\em CoRR}, abs/1612.02649, 2016.
+
+\bibitem[IZZE16]{DBLP:journals/corr/IsolaZZE16}
+Phillip Isola, Jun{-}Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
+\newblock Image-to-image translation with conditional adversarial networks.
+\newblock {\em CoRR}, abs/1611.07004, 2016.
 
 \bibitem[LLJX18]{DBLP:journals/corr/abs-1801-01726}
 Peilun Li, Xiaodan Liang, Daoyuan Jia, and Eric~P. Xing.
@@ -59,6 +68,11 @@ Antonio~M. L{\'{o}}pez, Jiaolong Xu, Jose~Luis Gomez, David V{\'{a}}zquez, and
 Liqian Ma, Xu~Jia, Stamatios Georgoulis, Tinne Tuytelaars, and Luc~Van Gool.
 \newblock Exemplar guided unsupervised image-to-image translation.
 \newblock {\em CoRR}, abs/1805.11145, 2018.
+
+\bibitem[MPPS16]{DBLP:journals/corr/MetzPPS16}
+Luke Metz, Ben Poole, David Pfau, and Jascha Sohl{-}Dickstein.
+\newblock Unrolled generative adversarial networks.
+\newblock {\em CoRR}, abs/1611.02163, 2016.
 
 \bibitem[PUK{\etalchar{+}}17]{DBLP:journals/corr/abs-1710-06924}
 Xingchao Peng, Ben Usman, Neela Kaushik, Judy Hoffman, Dequan Wang, and Kate
