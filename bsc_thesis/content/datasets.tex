@@ -6,37 +6,7 @@ This chapter describes the \textbf{datasets} that are used during the \textbf{Co
 
 \section{Outdoor datasets}
 
-\subsection{Synthetic dataset: \\
-	Playing for Data: Ground Truth from Computer Games}
-see \cite{Richter_2016_ECCV}
 
-\begin{itemize}
-	\item contains 24966 images taken from a street view of Grand Theft Auto V (GTA5) in $1914 \times 1052$ pixels
-	\item two orders of magnitude larger thatn CamVid and three orders of magnitude larger than semantic segmentation created for KITTI dataset
-	\item highly realistic with moving cars, objects, pedestrians, bikes, day/night, changing lighting and weather conditions
-	\item includes labels for these images
-	\item labeling process took 49 hours, 3 magnitudes faster than comparable real datasets (normal annotation would've approximately taken 12 person-years)
-	\item annotation took 7 seconds per image on average (514 times faster tahn for CamVid, 771 times faster than for Cityscapes)
-	\item achieved by detouring: injecting a wrapper between game and graphics hardware to log functioncalls and reconstruct 3D scene
-	\item objects in that scene can be assigned an object ID
-	\item labeling an object in one image will then propagate that label to that object in every image that contains it
-\end{itemize}
-\todo{add some image samples}
-\todo{add diversity of collected data graph}
-
-\subsection{Real dataset:\\
-	 Cityscapes}
-see \cite{Cordts_2016_CVPR}
-
-\begin{itemize}
-	\item 30 classes
-	\item 50 citites
-	\item spring, summer, fall
-	\item different weather conditions
-	\item 5000 annotated images with fine annotations
-	\item 20000 annotated images with coarse annotations
-	\item 
-\end{itemize}
 
 \section{Indoor datasets}
 

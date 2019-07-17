@@ -1,0 +1,53 @@
+\chapter{Experiments}
+\label{sec:experiments}
+
+In this chapter the three Domain Adaptation Techniques \textit{Cycle Consistent Adversarial Domain Adaptation}, \textit{Cycle-consistent Generative Adversarial Network} and \todo{add 3rd technique} will be compared by analysing similarities and differences. Furthermore pretrained models of each architecture were tested and the results will be compared on \todo{add benchmark(s)}.
+
+\section{training the nets on tcml cluster} \todo{is this necessary or can we just use provided pre-trained models?}
+To train the models the tcml cluster of uni tübingen was used (\todo{add link to cluster website}). The cluster contains a lot of computing power with multiple compute nodes and a storage node. Each compute node has 4 CPUs and a NVidia 1080 Ti GPU and lots of RAM. In order to run the training code, it is necessary to create an .sbatch file. This file specifies how long a script needs to run, how much memory it needs and includes bash commands to run the script. Depending on what is specified in that .sbatch file the slurm manager system allocates ressources for that job and runs it as soon there are resources ready. While training cycleGAN mode collapse happened and the test images didn't get translated at all. Also to train for the 200 recommended epochs it would take around 2-3 weeks due to training taking a day for around 14 epochs. This is probably due to the fact that training cycleGAN is only possible on batches of size 1 which makes the vast resources available on the cluster not usable to their full potential. Also the student account can only run one job at once which makes it impossible to train different methods (cycleGAN, CyCADA, GradGAN) at the same time. Another issue is that it was not possible to visualize loss of generators and discriminators in order to supervise the training process and check if mode collapse or any other issue appeared. 
+
+\section{Datasets}
+
+\subsection{Synthetic dataset: \\
+	Playing for Data: Ground Truth from Computer Games}
+see \cite{Richter_2016_ECCV}
+
+\begin{itemize}
+	\item contains 24966 images taken from a street view of Grand Theft Auto V (GTA5) in $1914 \times 1052$ pixels
+	\item two orders of magnitude larger thatn CamVid and three orders of magnitude larger than semantic segmentation created for KITTI dataset
+	\item highly realistic with moving cars, objects, pedestrians, bikes, day/night, changing lighting and weather conditions
+	\item includes labels for these images
+	\item labeling process took 49 hours, 3 magnitudes faster than comparable real datasets (normal annotation would've approximately taken 12 person-years)
+	\item annotation took 7 seconds per image on average (514 times faster tahn for CamVid, 771 times faster than for Cityscapes)
+	\item achieved by detouring: injecting a wrapper between game and graphics hardware to log functioncalls and reconstruct 3D scene
+	\item objects in that scene can be assigned an object ID
+	\item labeling an object in one image will then propagate that label to that object in every image that contains it
+\end{itemize}
+\todo{add some image samples}
+\todo{add diversity of collected data graph}
+
+\subsection{Real dataset:\\
+	The Cityscapes Dataset for Semantic Urban Scene Understanding}
+see \cite{Cordts_2016_CVPR}
+
+\begin{itemize}
+	\item dataset of dashcam view images from multiple european cities
+	\item 30 classes
+	\item 50 citites
+	\item spring, summer, fall
+	\item different weather conditions
+	\item 5000 annotated images with fine annotations
+	\item 20000 annotated images with coarse annotations
+\end{itemize}
+
+
+\section{comparison Benchmark(s)}
+\subsection{Intersection over Union (IoU)}
+The Intersection over Union is a metric often used to compare semantic segmentation methods (\todo{add references to works that use it}). It follows following formula:
+\begin{align*}
+	\frac{\text{predicted Pixels} \cap \text{ground truth Pixels}}{\text{predicted Pixels} \cup \text{ground truth Pixels}}
+\end{align*}
+where predicted Pixels are the pixels predicted for a specific class by the semantic segmentation model and ground truth Pixels are the Pixels containing the ground truth for that image. Usually there are multiple different classes to predict and therefore it is common to calculate the mean IoU (mIoU) over all images that have predictions. To compare how well classes themselves are predicted by a model, one can also calculate the class IoU (cIoU).
+
+\subsection{Perceptual Loss}
+
