@@ -8,6 +8,16 @@ Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler,
 \newblock In {\em The IEEE Conference on Computer Vision and Pattern
   Recognition (CVPR)}, June 2016.
 
+\bibitem[CPSA17]{DBLP:journals/corr/ChenPSA17}
+Liang{-}Chieh Chen, George Papandreou, Florian Schroff, and Hartwig Adam.
+\newblock Rethinking atrous convolution for semantic image segmentation.
+\newblock {\em CoRR}, abs/1706.05587, 2017.
+
+\bibitem[CSR]{CSR}
+{Cityscapes} repository.
+\newblock \url{https://github.com/mcordts/cityscapesScripts}.
+\newblock Accessed: 2019-26-07.
+
 \bibitem[Csu17]{DBLP:journals/corr/Csurka17}
 Gabriela Csurka.
 \newblock Domain adaptation for visual applications: {A} comprehensive survey.
@@ -17,6 +27,11 @@ Gabriela Csurka.
 {Cycles} rendering engine.
 \newblock \url{https://www.cycles-renderer.org/}.
 \newblock Accessed: 2019-10-07.
+
+\bibitem[DLR]{DLR}
+{Deeplabv3} repository.
+\newblock \url{https://github.com/fregu856/deeplabv3}.
+\newblock Accessed: 2019-26-07.
 
 \bibitem[Goo17]{DBLP:journals/corr/Goodfellow17}
 Ian~J. Goodfellow.
@@ -31,21 +46,16 @@ Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
   Weinberger, editors, {\em Advances in Neural Information Processing Systems
   27}, pages 2672--2680. Curran Associates, Inc., 2014.
 
-\bibitem[Hof18]{Hoffman_cycada2017}
-Cycada: Cycle consistent adversarial domain adaptation.
-\newblock In {\em International Conference on Machine Learning (ICML)}, 2018.
+\bibitem[GTA]{GTAV}
+{Grand Theft Auto V} website.
+\newblock \url{https://www.rockstargames.com/V/}.
+\newblock Accessed: 2019-26-07.
 
 \bibitem[HTP{\etalchar{+}}17]{DBLP:journals/corr/abs-1711-03213}
 Judy Hoffman, Eric Tzeng, Taesung Park, Jun{-}Yan Zhu, Phillip Isola, Kate
   Saenko, Alexei~A. Efros, and Trevor Darrell.
 \newblock Cycada: Cycle-consistent adversarial domain adaptation.
 \newblock {\em CoRR}, abs/1711.03213, 2017.
-
-\bibitem[HWYD16]{DBLP:journals/corr/HoffmanWYD16}
-Judy Hoffman, Dequan Wang, Fisher Yu, and Trevor Darrell.
-\newblock Fcns in the wild: Pixel-level adversarial and constraint-based
-  adaptation.
-\newblock {\em CoRR}, abs/1612.02649, 2016.
 
 \bibitem[IZZE16]{DBLP:journals/corr/IsolaZZE16}
 Phillip Isola, Jun{-}Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
@@ -57,34 +67,17 @@ Peilun Li, Xiaodan Liang, Daoyuan Jia, and Eric~P. Xing.
 \newblock Semantic-aware grad-gan for virtual-to-real urban scene adaption.
 \newblock {\em CoRR}, abs/1801.01726, 2018.
 
-\bibitem[LXG{\etalchar{+}}16]{DBLP:journals/corr/LopezXGVR16}
-Antonio~M. L{\'{o}}pez, Jiaolong Xu, Jose~Luis Gomez, David V{\'{a}}zquez, and
-  Germ{\'{a}}n Ros.
-\newblock From virtual to real world visual perception using domain adaptation
-  - the {DPM} as example.
-\newblock {\em CoRR}, abs/1612.09134, 2016.
-
-\bibitem[MJG{\etalchar{+}}18]{DBLP:journals/corr/abs-1805-11145}
-Liqian Ma, Xu~Jia, Stamatios Georgoulis, Tinne Tuytelaars, and Luc~Van Gool.
-\newblock Exemplar guided unsupervised image-to-image translation.
-\newblock {\em CoRR}, abs/1805.11145, 2018.
-
 \bibitem[MPPS16]{DBLP:journals/corr/MetzPPS16}
 Luke Metz, Ben Poole, David Pfau, and Jascha Sohl{-}Dickstein.
 \newblock Unrolled generative adversarial networks.
 \newblock {\em CoRR}, abs/1611.02163, 2016.
 
-\bibitem[PUK{\etalchar{+}}17]{DBLP:journals/corr/abs-1710-06924}
-Xingchao Peng, Ben Usman, Neela Kaushik, Judy Hoffman, Dequan Wang, and Kate
-  Saenko.
-\newblock Visda: The visual domain adaptation challenge.
-\newblock {\em CoRR}, abs/1710.06924, 2017.
-
-\bibitem[RTdS18]{DBLP:journals/corr/abs-1810-05852}
-Pierluigi~Zama Ramirez, Alessio Tonioni, and Luigi di~Stefano.
-\newblock Exploiting semantics in adversarial training for image-level domain
-  adaptation.
-\newblock {\em CoRR}, abs/1810.05852, 2018.
+\bibitem[RSM{\etalchar{+}}16]{RosCVPR16}
+German Ros, Laura Sellart, Joanna Materzynska, David Vazquez, and Antonio
+  Lopez.
+\newblock {The SYNTHIA Dataset}: A large collection of synthetic images for
+  semantic segmentation of urban scenes.
+\newblock In {\em CVPR}, 2016.
 
 \bibitem[RVRK16]{Richter_2016_ECCV}
 Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
@@ -92,19 +85,6 @@ Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
 \newblock In Bastian Leibe, Jiri Matas, Nicu Sebe, and Max Welling, editors,
   {\em European Conference on Computer Vision (ECCV)}, volume 9906 of {\em
   LNCS}, pages 102--118. Springer International Publishing, 2016.
-
-\bibitem[SAS{\etalchar{+}}18]{DBLP:journals/corr/abs-1807-06132}
-Fatemeh~Sadat Saleh, Mohammad~Sadegh Aliakbarian, Mathieu Salzmann, Lars
-  Petersson, and Jose~M. Alvarez.
-\newblock Effective use of synthetic data for urban scene semantic
-  segmentation.
-\newblock {\em CoRR}, abs/1807.06132, 2018.
-
-\bibitem[TSSC19]{Tsai2019DomainAF}
-Yi-Hsuan Tsai, Kihyuk Sohn, Samuel Schulter, and Manmohan~Krishna Chandraker.
-\newblock Domain adaptation for structured output via discriminative patch
-  representations.
-\newblock {\em CoRR}, abs/1901.05427, 2019.
 
 \bibitem[Uni]{Unity}
 {Unity} graphics engine.
@@ -116,6 +96,13 @@ Jianxin Wu.
 \newblock Introduction to convolutional neural networks.
 \newblock {\em National Key Lab for Novel Software Technology. Nanjing
   University. China}, pages 5--23, 2017.
+
+\bibitem[YXC{\etalchar{+}}18]{DBLP:journals/corr/abs-1805-04687}
+Fisher Yu, Wenqi Xian, Yingying Chen, Fangchen Liu, Mike Liao, Vashisht
+  Madhavan, and Trevor Darrell.
+\newblock {BDD100K:} {A} diverse driving video database with scalable
+  annotation tooling.
+\newblock {\em CoRR}, abs/1805.04687, 2018.
 
 \bibitem[ZPIE17]{DBLP:journals/corr/ZhuPIE17}
 Jun{-}Yan Zhu, Taesung Park, Phillip Isola, and Alexei~A. Efros.
