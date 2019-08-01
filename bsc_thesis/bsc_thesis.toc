@@ -1,42 +1,43 @@
-\contentsline {chapter}{\numberline {1}Introduction}{11}
-\contentsline {chapter}{\numberline {2}Foundations}{13}
-\contentsline {section}{\numberline {2.1}Domain Adaptation}{13}
-\contentsline {section}{\numberline {2.2}Neural Networks}{14}
-\contentsline {subsection}{\numberline {2.2.1}Convolutional Neural Networks}{14}
-\contentsline {paragraph}{\nonumberline Convolutional Layer.}{14}
-\contentsline {paragraph}{\nonumberline Pooling Layer}{14}
-\contentsline {paragraph}{\nonumberline Fully Connected Layer}{14}
-\contentsline {subsection}{\numberline {2.2.2}Generative Adversarial Networks}{14}
-\contentsline {paragraph}{\nonumberline Training}{16}
-\contentsline {paragraph}{\nonumberline Cost functions}{16}
-\contentsline {paragraph}{\nonumberline Advantages and Disandvantages}{16}
-\contentsline {paragraph}{\nonumberline non-convergence}{16}
-\contentsline {paragraph}{\nonumberline mode collapse}{16}
-\contentsline {chapter}{\numberline {3}Related Work}{17}
-\contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{19}
-\contentsline {section}{\numberline {4.1}Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}{19}
-\contentsline {subsection}{\numberline {4.1.1}Training Details}{20}
-\contentsline {section}{\numberline {4.2}CyCADA: Cycle Consistent Adversarial Domain Adaptation}{21}
-\contentsline {subsection}{\numberline {4.2.1}Introduction}{21}
-\contentsline {subsection}{\numberline {4.2.2}Related Work}{21}
-\contentsline {subsection}{\numberline {4.2.3}Cycle-consistent adversarial domain adaptation}{23}
-\contentsline {section}{\numberline {4.3}Semantic-aware Grad-GAN for Virtual-to-Real Urban Scene Adaption}{26}
-\contentsline {subsection}{\numberline {4.3.1}Introduction}{26}
-\contentsline {subsection}{\numberline {4.3.2}Related Work}{26}
-\contentsline {subsubsection}{\nonumberline Real-world vs. virtual-world data acquiring}{26}
-\contentsline {subsubsection}{\nonumberline Domain adaptation}{26}
-\contentsline {subsection}{\numberline {4.3.3}Semantic-aware Grad-GAN}{27}
-\contentsline {subsubsection}{\nonumberline Semantic-aware cycle objective}{27}
-\contentsline {subsubsection}{\nonumberline Adversarial loss}{27}
-\contentsline {subsubsection}{\nonumberline Cycle consistency loss}{28}
-\contentsline {subsubsection}{\nonumberline Soft gradient-sensitive objective}{28}
-\contentsline {subsection}{\numberline {4.3.4}Semantic-aware discriminator}{29}
-\contentsline {chapter}{\numberline {5}Experiments}{31}
-\contentsline {section}{\numberline {5.1}Datasets}{31}
-\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{31}
-\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{31}
-\contentsline {section}{\numberline {5.2}comparison Benchmark(s)}{32}
-\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{32}
-\contentsline {subsection}{\numberline {5.2.2}Perceptual Loss}{32}
-\contentsline {chapter}{\numberline {6}Conclusion}{33}
-\contentsline {chapter}{\numberline {A}Blub}{35}
+\contentsline {chapter}{\numberline {1}Introduction}{11}% 
+\contentsline {chapter}{\numberline {2}Foundations}{13}% 
+\contentsline {section}{\numberline {2.1}Domain Adaptation}{13}% 
+\contentsline {section}{\numberline {2.2}Neural Networks}{14}% 
+\contentsline {subsection}{\numberline {2.2.1}Convolutional Neural Networks}{14}% 
+\contentsline {paragraph}{\nonumberline Convolutional Layer.}{14}% 
+\contentsline {paragraph}{\nonumberline Pooling Layer}{14}% 
+\contentsline {paragraph}{\nonumberline Fully Connected Layer}{14}% 
+\contentsline {subsection}{\numberline {2.2.2}Generative Adversarial Networks}{14}% 
+\contentsline {paragraph}{\nonumberline Training}{16}% 
+\contentsline {paragraph}{\nonumberline Cost functions}{16}% 
+\contentsline {paragraph}{\nonumberline Advantages and Disandvantages}{16}% 
+\contentsline {paragraph}{\nonumberline non-convergence}{16}% 
+\contentsline {paragraph}{\nonumberline mode collapse}{16}% 
+\contentsline {chapter}{\numberline {3}Related Work}{17}% 
+\contentsline {section}{\numberline {3.1}section}{17}% 
+\contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{19}% 
+\contentsline {section}{\numberline {4.1}Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}{20}% 
+\contentsline {subsection}{\numberline {4.1.1}Training Details}{20}% 
+\contentsline {section}{\numberline {4.2}CyCADA: Cycle Consistent Adversarial Domain Adaptation}{22}% 
+\contentsline {subsection}{\numberline {4.2.1}Introduction}{22}% 
+\contentsline {subsection}{\numberline {4.2.2}Related Work}{22}% 
+\contentsline {subsection}{\numberline {4.2.3}Cycle-consistent adversarial domain adaptation}{24}% 
+\contentsline {section}{\numberline {4.3}Semantic-aware Grad-GAN for Virtual-to-Real Urban Scene Adaption}{27}% 
+\contentsline {subsection}{\numberline {4.3.1}Introduction}{27}% 
+\contentsline {subsection}{\numberline {4.3.2}Related Work}{27}% 
+\contentsline {subsubsection}{\nonumberline Real-world vs. virtual-world data acquiring}{27}% 
+\contentsline {subsubsection}{\nonumberline Domain adaptation}{27}% 
+\contentsline {subsection}{\numberline {4.3.3}Semantic-aware Grad-GAN}{28}% 
+\contentsline {subsubsection}{\nonumberline Semantic-aware cycle objective}{28}% 
+\contentsline {subsubsection}{\nonumberline Adversarial loss}{28}% 
+\contentsline {subsubsection}{\nonumberline Cycle consistency loss}{29}% 
+\contentsline {subsubsection}{\nonumberline Soft gradient-sensitive objective}{29}% 
+\contentsline {subsection}{\numberline {4.3.4}Semantic-aware discriminator}{30}% 
+\contentsline {chapter}{\numberline {5}Experiments}{33}% 
+\contentsline {section}{\numberline {5.1}Datasets}{33}% 
+\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{33}% 
+\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{33}% 
+\contentsline {section}{\numberline {5.2}comparison Benchmark(s)}{34}% 
+\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{34}% 
+\contentsline {subsection}{\numberline {5.2.2}Methodology}{34}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{35}% 
+\contentsline {chapter}{\numberline {A}Blub}{37}% 

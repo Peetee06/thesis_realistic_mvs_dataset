@@ -23,7 +23,17 @@ Gabriela Csurka.
 \newblock Domain adaptation for visual applications: {A} comprehensive survey.
 \newblock {\em CoRR}, abs/1702.05374, 2017.
 
-\bibitem[Cyc]{Cycles}
+\bibitem[CyCa]{CyCADA}
+{CyCADA} repository.
+\newblock \url{https://github.com/jhoffman/cycada_release}.
+\newblock Accessed: 2019-01-08.
+
+\bibitem[Cycb]{Cycle}
+{CycleGAN} lua repository.
+\newblock \url{https://github.com/junyanz/CycleGAN}.
+\newblock Accessed: 2019-01-08.
+
+\bibitem[Cycc]{Cycles}
 {Cycles} rendering engine.
 \newblock \url{https://www.cycles-renderer.org/}.
 \newblock Accessed: 2019-10-07.
@@ -85,6 +95,17 @@ Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
 \newblock In Bastian Leibe, Jiri Matas, Nicu Sebe, and Max Welling, editors,
   {\em European Conference on Computer Vision (ECCV)}, volume 9906 of {\em
   LNCS}, pages 102--118. Springer International Publishing, 2016.
+
+\bibitem[SG]{SG}
+{SG-GAN} repository.
+\newblock \url{https://github.com/Peilun-Li/SG-GAN}.
+\newblock Accessed: 2019-01-08.
+
+\bibitem[tcm]{tcml}
+{tcml} cluster universität tübingen.
+\newblock
+  \url{https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/kognitive-systeme/projects/tcml-cluster/}.
+\newblock Accessed: 2019-01-08.
 
 \bibitem[Uni]{Unity}
 {Unity} graphics engine.
