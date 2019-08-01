@@ -82,6 +82,12 @@ Luke Metz, Ben Poole, David Pfau, and Jascha Sohl{-}Dickstein.
 \newblock Unrolled generative adversarial networks.
 \newblock {\em CoRR}, abs/1611.02163, 2016.
 
+\bibitem[Nas50]{Nash48}
+John~F. Nash.
+\newblock Equilibrium points in n-person games.
+\newblock {\em Proceedings of the National Academy of Sciences}, 36(1):48--49,
+  1950.
+
 \bibitem[RSM{\etalchar{+}}16]{RosCVPR16}
 German Ros, Laura Sellart, Joanna Materzynska, David Vazquez, and Antonio
   Lopez.

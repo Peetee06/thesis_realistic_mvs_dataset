@@ -1,31 +1,49 @@
 \chapter{Domain Adaptation Techniques}
 \label{sec:techniques}
 
-This chapter will give an overview over the three \textbf{Domain Adaptation Techniques} that will be compared in this work, namely CycleGAN \cite{DBLP:journals/corr/ZhuPIE17}, CyCADA \cite{DBLP:journals/corr/abs-1711-03213} and SG-GAN \cite{DBLP:journals/corr/abs-1801-01726}. It will explain how these techniques work, what kind of Network Architecture they use and how training these Nets was approached.
+This chapter will give an overview over the three \textbf{Domain Adaptation Techniques} that will be compared in this work, namely \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}. It will explain how these techniques work, what kind of Network Architecture they use and how training these Nets was approached.
 
-All of the methods compared in this work are based on Generative Adversarial Networks which were initially proposed in \cite{NIPS2014_5423} and are explained in Section \ref{sec:foundations}. CycleGAN \cite{DBLP:journals/corr/ZhuPIE17} adds a cycle-consistency loss which consists of an additional generator/discriminator pair with the idea that translating a previously translated image back to the source domain should yield the original image again. Mathematically speaking let G be the function of the Generator translating an image from the source to the target domain. Now add function F for the second generator's translation from target back to source domain. The goal of cycle-consistency is that for any image $x$ from the source domain, $F(G(x)) \approx x$ holds. This analogously also has to hold for any image $y$ of the target domain with $G(F(y)) \approx y$. CyCADA \cite{DBLP:journals/corr/abs-1711-03213} adds a semantic loss to the CycleGAN approach to enforce semantic consistency (no more translating cats to dogs or drawing trees into the sky). This is achieved by doing semantic segmentation on the source image, then translating that image and doing semantic segmentation on the target image. The loss describes the difference between the two resulting label maps. SG-GAN \cite{DBLP:journals/corr/abs-1801-01726} expands this by including a gradient-sensitive objective that emphasizes semantic boundaries by regularizing the generator to render distinct color/texture for each semantic region, and a patch-level discriminator that better understands differences in appearance distributions of different semantic regions (e.g. coarse texture of asphalt vs smooth and reflective of a vehicle). Prior to \cite{DBLP:journals/corr/ZhuPIE17} some works used paired images of the source and the target domain to train the networks. For example edgedrawings of shoes with a picture of the same shoe (see \cite{DBLP:journals/corr/IsolaZZE16}). The cycle-consistency loss of CycleGAN makes it possible use datasets without paired images. This makes data acquisition easier and reduces costs which results in more training data and therefore makes better models possible. As CyCADA and SG-GAN are both based on CycleGAN they aswell don't require paired images.
+All of the methods compared in this work are based on Generative Adversarial Networks which were initially proposed in \cite{NIPS2014_5423} and are explained in Section \ref{sec:foundations}. \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17} adds a cycle-consistency loss which consists of an additional generator/discriminator pair with the idea that translating a previously translated image back to the source domain should yield the original image again. Formally: let $G: X \rightarrow Y$ be the mapping function of the Generator translating an image from the source $X$ to the target domain $Y$. Now add mapping function $F: Y \rightarrow X$ for the second generator's translation from target back to source domain. The goal of cycle-consistency is that for any image $x\in X$ from the source domain, $F(G(x)) \approx x$ holds. This analogously also has to hold for any image $y \in Y$ of the target domain with $G(F(y)) \approx y$. As described in chapter \ref{sec:foundations}, GANs implement a two player game. The loss function of this game for CycleGAN is described as
+\begin{align}
+	\mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) = \mathbb{E}_{y\sim p_{\text{data}}(y)}[\log D_Y(y)] + \mathbb{E}_{x\sim p_{\text{data}}(x)}[1 - \log D_Y(G(x))]
+\end{align}
+with $D_Y$ being the discriminator that classifies samples $y \in Y$ as real or fake. This loss function is analogous for generator $F$ and discriminator $D_X$. The cycle-consistency loss is defined as follow:
+\begin{align}
+	\mathcal{L}_{\text{cyc}}(G, F) =  \mathbb{E}_{x\sim p_{\text{data}}(x)} [\lVert F(G(x))- x \rVert_1] + \mathbb{E}_{y\sim p_{\text{data}}(y)} [\lVert G(F(y))- y \rVert_1] \label{GAN_loss}
+\end{align}\\
+with $\lVert \cdot \rVert_1$ being the L1-norm, which is the sum of absolute deviations between $x$ and $F(G(x))$ and $y$ and $G(F(y))$ with $x \in X$ and $y \in Y$, respectively. The full objective for the CycleGAN method is therefore:
+\begin{align}
+	\mathcal{L}(G,F,D_X,D_Y) = \mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) + \mathcal{L}_{\text{GAN}}(F, D_X, Y, X) + \lambda \mathcal{L}_{\text{cyc}}(G, F)
+\end{align}
+The discriminators' goal is to label the samples generated by the generators as fake while the generator tries to generate samples that the discriminator will label as real. This results in the goal of discriminators to maximize equation \ref{GAN_loss} and generators to minimize it. This leads to the goal for CycleGAN: 
+\begin{align}
+	G^*, F^* = \arg \underset{G,F}{\min}\underset{D_X, D_Y}{\max} \mathcal{L}(G,F,D_X,D_Y) \label{GAN_goal}
+\end{align}
+\textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} adds a semantic loss to the CycleGAN approach to enforce semantic consistency (no more translating cats to dogs or drawing trees into the sky). This is achieved by doing semantic segmentation on the source image, then translating that image and doing semantic segmentation on the target image. The loss describes the difference between the two resulting label maps. \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726} expands this by including a gradient-sensitive objective that emphasizes semantic boundaries by regularizing the generator to render distinct color/texture for each semantic region, and a patch-level discriminator that better understands differences in appearance distributions of different semantic regions (e.g. coarse texture of asphalt vs smooth and reflective of a vehicle). Prior to \cite{DBLP:journals/corr/ZhuPIE17} some works used paired images of the source and the target domain to train the networks. For example edgedrawings of shoes with a picture of the same shoe (see \cite{DBLP:journals/corr/IsolaZZE16}). The cycle-consistency loss of CycleGAN makes it possible use datasets without paired images. This makes data acquisition easier and reduces costs which results in more training data and therefore makes better models possible. As CyCADA and SG-GAN are both based on CycleGAN they aswell don't require paired images.
+
+
 
 
 \section{Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}
 see \cite{DBLP:journals/corr/ZhuPIE17}
 
-\begin{itemize}
-	\item image-to-image translation: extracting characteristics of an image and translating it to another style while preserving the characteristics (rgb to greyscale, painting to photo,..)
-	\item special in this approach: no paired images necessary (datasets with paired images are far more expensive)
-	\item create mapping $G: X \rightarrow Y$ from source domain $X$ to target domain $Y$
-	\item The Generator has to trick the discriminator into believing $G(x), x \in X$ is actually a real sample $y$ from the target domain $Y$ (matches distribution $p_{\text{data}}(y)$)
-	\item problem of mode collapse: any inputimage will be translated to the same output image
-	\item add cycle-consistency constraint: create mapping $F: Y \rightarrow X$ and add contraint $F(G(x)) \overset{!}{\approx} x$ 
-	\item objective for mapping/generator G and discriminator $D_Y$: \\
-	$\mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) = \mathbb{E}_{y\sim p_{\text{data}}(y)}[\log D_Y(y)] + \mathbb{E}_{x\sim p_{\text{data}}(x)}[1 - \log D_Y(G(x))]$
-	\item analogous for mapping/generator F and discriminator $D_X$
-	\item generators try to minimize the objective, discriminators try to maximize it
-	\item cycle consistency loss:\\
-	$\mathcal{L}_{\text{cyc}}(G, F) =  \mathbb{E}_{x\sim p_{\text{data}}(x)} [\lVert F(G(x))- x \rVert_1] + \mathbb{E}_{y\sim p_{\text{data}}(y)} [\lVert G(F(y))- y \rVert_1]$
-	\item full objective:\\
-	$\mathcal{L}(G,F,D_X,D_Y) = \mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) + \mathcal{L}_{\text{GAN}}(F, D_X, Y, X) + \lambda \mathcal{L}_{\text{cyc}}(G, F)$
-	\item solve: $G^*, F^* = \arg \underset{G,F}{\min}\underset{D_X, D_Y}{\max} \mathcal{L}(G,F,D_X,D_Y)$
-\end{itemize}
+%\begin{itemize}
+%	\item image-to-image translation: extracting characteristics of an image and translating it to another style while preserving the characteristics (rgb to greyscale, painting to photo,..)
+%	\item special in this approach: no paired images necessary (datasets with paired images are far more expensive)
+%	\item create mapping $G: X \rightarrow Y$ from source domain $X$ to target domain $Y$
+%	\item The Generator has to trick the discriminator into believing $G(x), x \in X$ is actually a real sample $y$ from the target domain $Y$ (matches distribution $p_{\text{data}}(y)$)
+%	\item problem of mode collapse: any inputimage will be translated to the same output image
+%	\item add cycle-consistency constraint: create mapping $F: Y \rightarrow X$ and add contraint $F(G(x)) \overset{!}{\approx} x$ 
+%	\item objective for mapping/generator G and discriminator $D_Y$: \\
+%	$\mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) = \mathbb{E}_{y\sim p_{\text{data}}(y)}[\log D_Y(y)] + \mathbb{E}_{x\sim p_{\text{data}}(x)}[1 - \log D_Y(G(x))]$
+%	\item analogous for mapping/generator F and discriminator $D_X$
+%	\item generators try to minimize the objective, discriminators try to maximize it
+%	\item cycle consistency loss:\\
+%	$\mathcal{L}_{\text{cyc}}(G, F) =  \mathbb{E}_{x\sim p_{\text{data}}(x)} [\lVert F(G(x))- x \rVert_1] + \mathbb{E}_{y\sim p_{\text{data}}(y)} [\lVert G(F(y))- y \rVert_1]$
+%	\item full objective:\\
+%	$\mathcal{L}(G,F,D_X,D_Y) = \mathcal{L}_{\text{GAN}}(G, D_Y, X, Y) + \mathcal{L}_{\text{GAN}}(F, D_X, Y, X) + \lambda \mathcal{L}_{\text{cyc}}(G, F)$
+%	\item solve: $G^*, F^* = \arg \underset{G,F}{\min}\underset{D_X, D_Y}{\max} \mathcal{L}(G,F,D_X,D_Y)$
+%\end{itemize}
 
 \subsection{Training Details}
 \begin{itemize}
