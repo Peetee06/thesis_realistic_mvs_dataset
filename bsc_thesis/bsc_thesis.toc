@@ -15,29 +15,12 @@
 \contentsline {chapter}{\numberline {3}Related Work}{17}% 
 \contentsline {section}{\numberline {3.1}section}{17}% 
 \contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{19}% 
-\contentsline {section}{\numberline {4.1}Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}{20}% 
-\contentsline {subsection}{\numberline {4.1.1}Training Details}{20}% 
-\contentsline {section}{\numberline {4.2}CyCADA: Cycle Consistent Adversarial Domain Adaptation}{21}% 
-\contentsline {subsection}{\numberline {4.2.1}Introduction}{21}% 
-\contentsline {subsection}{\numberline {4.2.2}Related Work}{21}% 
-\contentsline {subsection}{\numberline {4.2.3}Cycle-consistent adversarial domain adaptation}{23}% 
-\contentsline {section}{\numberline {4.3}Semantic-aware Grad-GAN for Virtual-to-Real Urban Scene Adaption}{26}% 
-\contentsline {subsection}{\numberline {4.3.1}Introduction}{26}% 
-\contentsline {subsection}{\numberline {4.3.2}Related Work}{26}% 
-\contentsline {subsubsection}{\nonumberline Real-world vs. virtual-world data acquiring}{26}% 
-\contentsline {subsubsection}{\nonumberline Domain adaptation}{26}% 
-\contentsline {subsection}{\numberline {4.3.3}Semantic-aware Grad-GAN}{27}% 
-\contentsline {subsubsection}{\nonumberline Semantic-aware cycle objective}{27}% 
-\contentsline {subsubsection}{\nonumberline Adversarial loss}{27}% 
-\contentsline {subsubsection}{\nonumberline Cycle consistency loss}{28}% 
-\contentsline {subsubsection}{\nonumberline Soft gradient-sensitive objective}{28}% 
-\contentsline {subsection}{\numberline {4.3.4}Semantic-aware discriminator}{29}% 
-\contentsline {chapter}{\numberline {5}Experiments}{31}% 
-\contentsline {section}{\numberline {5.1}Datasets}{31}% 
-\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{31}% 
-\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{31}% 
-\contentsline {section}{\numberline {5.2}comparison Benchmark}{32}% 
-\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{32}% 
-\contentsline {subsection}{\numberline {5.2.2}Methodology}{32}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{33}% 
-\contentsline {chapter}{\numberline {A}Blub}{35}% 
+\contentsline {chapter}{\numberline {5}Experiments}{21}% 
+\contentsline {section}{\numberline {5.1}Datasets}{21}% 
+\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{21}% 
+\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{21}% 
+\contentsline {section}{\numberline {5.2}comparison Benchmark}{22}% 
+\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{22}% 
+\contentsline {subsection}{\numberline {5.2.2}Methodology}{22}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{23}% 
+\contentsline {chapter}{\numberline {A}Blub}{25}% 
