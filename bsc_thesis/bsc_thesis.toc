@@ -19,8 +19,9 @@
 \contentsline {section}{\numberline {5.1}Datasets}{21}% 
 \contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{21}% 
 \contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{21}% 
-\contentsline {section}{\numberline {5.2}comparison Benchmark}{22}% 
+\contentsline {section}{\numberline {5.2}Comparison Benchmark}{22}% 
 \contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{22}% 
-\contentsline {subsection}{\numberline {5.2.2}Methodology}{22}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{23}% 
-\contentsline {chapter}{\numberline {A}Blub}{25}% 
+\contentsline {section}{\numberline {5.3}Methodology}{22}% 
+\contentsline {section}{\numberline {5.4}Results}{23}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{25}% 
+\contentsline {chapter}{\numberline {A}Blub}{27}% 
