@@ -15,35 +15,19 @@ Domain Adaptation is the task of transfering a machine learning model that is wo
 	\label{fig:DA_examples}
 \end{figure}
 
-\section{Neural Networks}
+\section{Semantic Segmentation}
+Semantic Segmentation is one of the most important aspects in autonomous driving. It is the task of semantically segmentating objects in an image, i.e. labeling each pixel according to what object it belongs to. See Figure \ref{fig:semseg} for examples.
 
-\subsection{Convolutional Neural Networks}
-see \cite{wu2017introduction} (Introduction to CNNs)
-Convolutional Neural Networks (CNNs) are Deep Neural Networks mostly used with images as input, consisting of convolutional layers, that extract features from input data (e.g. edges, curves, circles), pooling layers, commonly using max-pooling (mapping a subregion of the input to its maxium value) or average pooling (mapping the subregion to the average of the values) and a fully connected network often used for classification. 
-\todo{add more description and example images}
-
-\paragraph{Convolutional Layer.}
-In this layer a so called kernel iterates over the input. The kernel is a matrix of fixed size depending on the method used. A 3x3 kernel is commonly used. These kernels are used to extract features like diagonal lines, horizontal lines, curves and more. For example to extract a diagonal line a kernel could look like this:
-$$
-\begin{pmatrix}
-	1 & 0 & 0\\
-	0 & 1 & 0\\
-	0 & 0 & 1
-\end{pmatrix}
-$$
-
-\paragraph{Pooling Layer}
-This layer reduces the size of the image by mapping an area to its maximum or average value in order to focus on the important features and save computing time.
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{../images/semseg.png}
+	\caption{Examples of a semantic segmentation images. Image taken from the GTA5 dataset \cite{Richter_2016_ECCV} (left) and same image mapped to Cityscapes Id values (pixel values 0-19, adapted to brighter values here to improve visibility). Streets in purple, sidewalks in pink, pedestrians red, cars, blue in the left image, which is mainly for visualization purposes. The right image is used for processing.}
+	\label{fig:semseg}
+\end{figure}
 
 
-\paragraph{Fully Connected Layer}
-The last type of layers is a standard feed forward network that has one output node for each class the net has to be able to predict. It is used to classify the input of the net given the features exracted by the preceeding layers. 
 
-
-\todo{example architectures VGG16, AlexNet,..?}
-
-
-\subsection{Generative Adversarial Networks}
+\section{Generative Adversarial Networks}
 Generative Adversarial Networks (GANs) implement a two-player-game:\\
 A Discriminator learns from a given data distribution what is ``real''. The Generator generates data. The goal of the generator is to fool the discriminator into believing the generated data is ``real'' i.e. tries to create samples coming from the same distribution as the ``real'' data. The discriminator will label anything as ``fake'' that doesn't resemble the learned ``real'' data distribution. This can be described as a 2 classes classification, with classes real and fake). This way GANs can learn to generate realistically looking images of faces, translate images of art from one style to another and improve semantic segmentation.
 The generative model generally uses \textit{maximum likelihood estimation}. In \cite{DBLP:journals/corr/Goodfellow17} it is described in the following way:
@@ -71,7 +55,7 @@ On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values fr
 \paragraph{Advantages and Disandvantages}
 \paragraph{non-convergence} When training GANs, while updating one player so that he makes the best possible current move and goes downhill the loss curve it is possible that the counterfeit player gets updated into going uphill the loss curve. This is in contrast to optimization problems where one tries to find a (local) minimum of the loss curve for example through stochastic gradient decent (SGD). Because there is only one gradient instead of the two in GAN objectives, the model generally makes reliable downhill progress during training. The result is that GANs often oscillate in practice due to the nature of having two players playing against each other, each trying to achieve the optimal outcome for themselves.
 
-\paragraph{mode collapse} happens when the generator learns to map different inputs to the same output. This results in generated data that is missing diversity. A solution is proposed in \todo{cite the right paper}: Using a batch history of 50 images so that the discriminator also learns the distribution of images of the training data and can therefore make sure that the generator can't just generate the same small set of images. Partial mode collapse refers to scenarios in which the generator makes multiple images containing the same color or texture themes, or multiple images containing different views of the same dog. See Figure \ref{fig:mode_collapse} for an example.
+\paragraph{mode collapse} occurs when the generator learns to map different inputs to the same output. This results in generated data that is missing diversity. A solution is proposed in \cite{DBLP:journals/corr/ZhuPIE17}: Using a batch history of 50 images so that the discriminator also learns the distribution of images of the training data and can therefore make sure that the generator will not generate the same small set of images. Partial mode collapse refers to scenarios in which the generator makes multiple images containing the same color or texture themes, or multiple images containing different views of the same dog. See Figure \ref{fig:mode_collapse} for an example.
 
 
 \begin{figure}
