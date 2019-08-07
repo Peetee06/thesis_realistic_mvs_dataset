@@ -6,7 +6,7 @@
 \contentsline {paragraph}{\nonumberline Training}{15}% 
 \contentsline {paragraph}{\nonumberline Cost functions}{16}% 
 \contentsline {subsection}{\numberline {2.3.1}Disadvantages}{16}% 
-\contentsline {paragraph}{\nonumberline non-convergence}{16}% 
+\contentsline {paragraph}{\nonumberline non-convergence.}{16}% 
 \contentsline {paragraph}{\nonumberline mode collapse}{16}% 
 \contentsline {subsection}{\numberline {2.3.2}Advantages}{17}% 
 \contentsline {paragraph}{\nonumberline unsupervised.}{17}% 
