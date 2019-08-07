@@ -5,19 +5,24 @@
 \contentsline {section}{\numberline {2.3}Generative Adversarial Networks}{14}% 
 \contentsline {paragraph}{\nonumberline Training}{15}% 
 \contentsline {paragraph}{\nonumberline Cost functions}{16}% 
-\contentsline {paragraph}{\nonumberline Advantages and Disandvantages}{16}% 
+\contentsline {subsection}{\numberline {2.3.1}Disadvantages}{16}% 
 \contentsline {paragraph}{\nonumberline non-convergence}{16}% 
 \contentsline {paragraph}{\nonumberline mode collapse}{16}% 
-\contentsline {chapter}{\numberline {3}Related Work}{17}% 
-\contentsline {section}{\numberline {3.1}Domain Adaptation with Generative Adversarial Networks}{17}% 
-\contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{19}% 
-\contentsline {chapter}{\numberline {5}Experiments}{23}% 
-\contentsline {section}{\numberline {5.1}Datasets}{23}% 
-\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{23}% 
-\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{23}% 
-\contentsline {section}{\numberline {5.2}Comparison Benchmark}{24}% 
-\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{24}% 
-\contentsline {section}{\numberline {5.3}Methodology}{24}% 
-\contentsline {section}{\numberline {5.4}Results}{25}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{27}% 
-\contentsline {chapter}{\numberline {A}Blub}{29}% 
+\contentsline {subsection}{\numberline {2.3.2}Advantages}{17}% 
+\contentsline {paragraph}{\nonumberline unsupervised.}{17}% 
+\contentsline {paragraph}{\nonumberline data generation.}{17}% 
+\contentsline {paragraph}{\nonumberline learn density distribution.}{17}% 
+\contentsline {paragraph}{\nonumberline discriminator is a classifier.}{17}% 
+\contentsline {chapter}{\numberline {3}Related Work}{19}% 
+\contentsline {section}{\numberline {3.1}Domain Adaptation with Generative Adversarial Networks}{19}% 
+\contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{21}% 
+\contentsline {chapter}{\numberline {5}Experiments}{25}% 
+\contentsline {section}{\numberline {5.1}Datasets}{25}% 
+\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{25}% 
+\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{25}% 
+\contentsline {section}{\numberline {5.2}Comparison Benchmark}{26}% 
+\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{26}% 
+\contentsline {section}{\numberline {5.3}Methodology}{26}% 
+\contentsline {section}{\numberline {5.4}Results}{27}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{29}% 
+\contentsline {chapter}{\numberline {A}Blub}{31}% 

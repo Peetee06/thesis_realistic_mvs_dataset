@@ -52,11 +52,10 @@ On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values fr
 \paragraph{Cost functions} There are many different cost functions that can be used for GANs. See chapter \ref{sec:techniques} for the ones that the techniques in this work use.
 
 
-\paragraph{Advantages and Disandvantages}
+\subsection{Disadvantages}
 \paragraph{non-convergence} When training GANs, while updating one player so that he makes the best possible current move and goes downhill the loss curve it is possible that the counterfeit player gets updated into going uphill the loss curve. This is in contrast to optimization problems where one tries to find a (local) minimum of the loss curve for example through stochastic gradient decent (SGD). Because there is only one gradient instead of the two in GAN objectives, the model generally makes reliable downhill progress during training. The result is that GANs often oscillate in practice due to the nature of having two players playing against each other, each trying to achieve the optimal outcome for themselves.
 
 \paragraph{mode collapse} occurs when the generator learns to map different inputs to the same output. This results in generated data that is missing diversity. A solution is proposed in \cite{DBLP:journals/corr/ZhuPIE17}: Using a batch history of 50 images so that the discriminator also learns the distribution of images of the training data and can therefore make sure that the generator will not generate the same small set of images. Partial mode collapse refers to scenarios in which the generator makes multiple images containing the same color or texture themes, or multiple images containing different views of the same dog. See Figure \ref{fig:mode_collapse} for an example.
-
 
 \begin{figure}
 	\centering
@@ -64,3 +63,14 @@ On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values fr
 	\caption{target data distribution of a toy dataset (right) and the data distribution of generated samples. Mind that the generated sample distribution hops from one mode to the next as the discriminator learns to recognize each mode as fake. Image from \cite{DBLP:journals/corr/MetzPPS16}}
 	\label{fig:mode_collapse}
 \end{figure}
+
+\newpage
+
+\subsection{Advantages} (From \cite{GAN_Projects})
+\paragraph{unsupervised.} GANs are trained in an unsupervised manner. There is no ground truth (i.e. labeled data) or an external true or false feedback (reinforcement learning) necessary to train the network. This makes acquiring data cheaper and easier and therefore training GANs aswell. 
+
+\paragraph{data generation.} GANs learn to generate data that is indistinguishable from real data. This is useful for many applications such as generating images that can be used by artists to quickly generate a few samples of an idea, generate text that can then be adjusted to a specific purpose, aswell as for audo and video.
+
+\paragraph{learn density distribution.} GANs learn density distribution of data. In contrast to other models that can learn specific distributions, GANs can learn diverse, complex data distributions.
+
+\paragraph{discriminator is a classifier.} The trained discriminator of GANs is a binary classifier and can be used as such. For example if the discriminator learns that images from real data contain a dog it can be used as to classify if an image contains a dog or not. 

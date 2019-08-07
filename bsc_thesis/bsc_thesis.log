@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  6 AUG 2019 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  7 AUG 2019 09:42
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1080,24 +1080,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/metz_et_al_mode_collapse.png Graphic file (type png)
 <use images/metz_et_al_mode_collapse.png>
 Package pdftex.def Info: images/metz_et_al_mode_collapse.png  used on input lin
-e 63.
+e 62.
 (pdftex.def)             Requested size: 398.33864pt x 45.0942pt.
-) (content/related_work.tex [16 <./images/metz_et_al_mode_collapse.png>]
+ [16 <./images/metz_et_al_mode_collapse.png>])
+(content/related_work.tex [17] [18
+
+
+]
 chapter 3.
-) (content/techniques.tex [17
-
-
-] [18
+) (content/techniques.tex [19] [20
 
 
 ]
 chapter 4.
-[19]
+[21]
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 25.
  (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-[20]
+[22]
 
 Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -1119,55 +1120,55 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 99.
 
-[21]) (content/experiments.tex [22]
+[23]) (content/experiments.tex [24]
 chapter 5.
-[23
+[25
 
 
-] [24]) (content/conclusion.tex [25] [26]
+] [26]) (content/conclusion.tex [27] [28]
 chapter 6.
-) [27
+) [29
 
 
-] [28
+] [30
 
 
 ]
 chapter A.
-(bsc_thesis.bbl [29] [30
+(bsc_thesis.bbl [31] [32
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 17--20
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
 []\T1/pxr/m/n/10.95 (+20) Cityscapes repos-i-tory.  $\T1/pxtt/m/n/10.95 https :
  / / github . com / mcordts /
  []
 
 
-Underfull \hbox (badness 4403) in paragraph at lines 27--30
+Underfull \hbox (badness 4403) in paragraph at lines 32--35
 []\T1/pxr/m/n/10.95 (+20) CyCADA repos-i-tory.  $\T1/pxtt/m/n/10.95 https : / /
  github . com / jhoffman / cycada _
  []
 
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 116--120
 \T1/pxtt/m/n/10.95 fakultaeten / mathematisch-[]naturwissenschaftliche-[]fakult
 aet /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--115
+Underfull \hbox (badness 10000) in paragraph at lines 116--120
 \T1/pxtt/m/n/10.95 fachbereiche / informatik / lehrstuehle / kognitive-[]system
 e /
  []
 
-) [32] (bsc_thesis.aux) ) 
+) [34] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12751 strings out of 492903
- 204690 string characters out of 3130412
+ 12743 strings out of 492903
+ 204620 string characters out of 3130412
  563077 words of memory out of 3000000
  16136 multiletter control sequences out of 15000+200000
- 56698 words of font info for 263 fonts, out of 3000000 for 9000
+ 56308 words of font info for 257 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dvips/ba
@@ -1182,9 +1183,9 @@ install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install
 /fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/
 type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (32 pages, 2383517 bytes).
+Output written on bsc_thesis.pdf (34 pages, 2385426 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
+ 184 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31253 words of extra memory for PDF output out of 35830 (max. 10000000)
 

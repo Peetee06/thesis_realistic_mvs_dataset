@@ -1,6 +1,11 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{GPAM{\etalchar{+}}14}
 
+\bibitem[Ahi19]{GAN_Projects}
+Kailash Ahirwar.
+\newblock {\em Generative Adversarial Networks Projects}.
+\newblock 2019.
+
 \bibitem[COR{\etalchar{+}}16]{Cordts_2016_CVPR}
 Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler,
   Rodrigo Benenson, Uwe Franke, Stefan Roth, and Bernt Schiele.
@@ -117,12 +122,6 @@ Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
 {Unity} graphics engine.
 \newblock \url{https://unity.com/}.
 \newblock Accessed: 2019-10-07.
-
-\bibitem[Wu17]{wu2017introduction}
-Jianxin Wu.
-\newblock Introduction to convolutional neural networks.
-\newblock {\em National Key Lab for Novel Software Technology. Nanjing
-  University. China}, pages 5--23, 2017.
 
 \bibitem[YXC{\etalchar{+}}18]{DBLP:journals/corr/abs-1805-04687}
 Fisher Yu, Wenqi Xian, Yingying Chen, Fangchen Liu, Mike Liao, Vashisht
