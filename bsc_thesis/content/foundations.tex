@@ -1,17 +1,17 @@
 \chapter{Foundations}
 \label{sec:foundations}
 
-This chapter will show and explain the foundations necessary for this work. The term \textbf{Domain Adaptation} aswell as what \textbf{synthetic} and \textbf{real} means in the context of this work, will be defined and some examples shown. Furthermore the relevant \textbf{Neural Network} architectures will be shown and explained. Specifically \textbf{Convolutional Neural Networks} and \textbf{Generative Adversarial Networks}.
+This chapter will show and explain the foundations necessary for this work. The term \textbf{Domain Adaptation} aswell as what \textbf{synthetic} and \textbf{real} is referred to in the context of this work, will be defined and some examples shown. Furthermore the relevant Neural Network architecture \textbf{Generative Adversarial Networks} (GAN) will be described in detail.
 
 
 \section{Domain Adaptation}
 As described in \cite{DBLP:journals/corr/Csurka17},
-Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. When talking about a synthetic image we are implying it was rendered from a virtual scene through a rendering engine like for example blender's ''Cycles`` \cite{Cycles} or graphics engine like Unity \cite{Unity}. We define real images as taken from a real-world scene through some kind of camera. See Figure \ref{fig:DA_examples} for an example of synthetic and real images. Other examples of domains are an image of a painting in the style of a particular artist, images of an object from different viewpoints, and many more. 
+Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. When talking about a synthetic image we are implying it was rendered from a virtual scene through a rendering engine like blender's ''Cycles`` \cite{Cycles} or graphics engine like Unity \cite{Unity}. We define real images as taken from a real-world scene through some kind of camera. See Figure \ref{fig:DA_examples} for an example of synthetic and real images. Other examples of domains are an image of a painting in the style of a particular artist, images of an object from different viewpoints. 
 
 \begin{figure}
 	\centering
 	 \includegraphics[width=0.8\textwidth]{../images/DA_examples_cityscapes_gta.png}
-	\caption{Example images for the the two domains relevant for this work. A real image from the cityscapes dataset \cite{Cordts_2016_CVPR} (left) and a synthetic image from the GTA5 dataset \cite{Richter_2016_ECCV} (right)}
+	\caption{Example images for the the two domains relevant for this work. A real image from the Cityscapes dataset \cite{Cordts_2016_CVPR} (left) and a synthetic image from the GTA5 dataset \cite{Richter_2016_ECCV} (right)}
 	\label{fig:DA_examples}
 \end{figure}
 
@@ -21,7 +21,7 @@ Semantic Segmentation is one of the most important aspects in autonomous driving
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../images/semseg.png}
-	\caption{Examples of a semantic segmentation images. Image taken from the GTA5 dataset \cite{Richter_2016_ECCV} (left) and same image mapped to Cityscapes Id values (pixel values 0-19, adapted to brighter values here to improve visibility). Streets in purple, sidewalks in pink, pedestrians red, cars, blue in the left image, which is mainly for visualization purposes. The right image is used for processing.}
+	\caption{Examples of semantic segmentation images. Image taken from the GTA5 dataset \cite{Richter_2016_ECCV} (left) and the same image mapped to Cityscapes Id values (pixel values 0-19, adapted to brighter values to improve visibility). Streets in purple, sidewalks in pink, pedestrians red, cars blue in the left image which is mainly for visualization purposes. The right image is used for processing.}
 	\label{fig:semseg}
 \end{figure}
 
@@ -29,10 +29,10 @@ Semantic Segmentation is one of the most important aspects in autonomous driving
 
 \section{Generative Adversarial Networks}
 Generative Adversarial Networks (GANs) implement a two-player-game:\\
-A Discriminator learns from a given data distribution what is ``real''. The Generator generates data. The goal of the generator is to fool the discriminator into believing the generated data is ``real'' i.e. tries to create samples coming from the same distribution as the ``real'' data. The discriminator will label anything as ``fake'' that doesn't resemble the learned ``real'' data distribution. This can be described as a 2 classes classification, with classes real and fake). This way GANs can learn to generate realistically looking images of faces, translate images of art from one style to another and improve semantic segmentation.
+A \textbf{Discriminator} learns from a given data distribution what is ``real''. The \textbf{Generator} generates data. The goal of the generator is to fool the discriminator into believing the generated data is ``real'' i.e. tries to create samples coming from the same distribution as the ``real'' data. The discriminator will label anything as ``fake'' that doesn't resemble the learned ``real'' data distribution. This can be described as a 2 classes classification, with classes real and fake or 1 and 0. This way GANs can learn to generate realistically looking images of faces, translate images of art from one style to another and improve semantic segmentation.
 The generative model generally uses \textit{maximum likelihood estimation}. In \cite{DBLP:journals/corr/Goodfellow17} it is described in the following way:
 \begin{quote}
-	The basic idea of maximum likelihood is to define a model that provides an estimate of probability distribituion, parametereized by parameters $\theta$. We then refer to the \textbf{likelihood} as the probability that the model assigns to the training data: $\prod_{i=1}^{m}p_{\text{model}}(x^{(i)}; \theta)$
+	The basic idea of maximum likelihood is to define a model that provides an estimate of probability distribution, parameterized by parameters $\theta$. We then refer to the \textbf{likelihood} as the probability that the model assigns to the training data: $\prod_{i=1}^{m}p_{\text{model}}(x^{(i)}; \theta)$
 \end{quote}
 The parameter $\theta$ that maximizes the likelihood of the data is better found in $\log$ space
 \begin{align}
@@ -40,14 +40,14 @@ The parameter $\theta$ that maximizes the likelihood of the data is better found
 	&= \underset{\theta}{\arg \max} \log \prod_{i=1}^{m} p_{\text{model}}(x^{(i)}; \theta)\\
 	&= \underset{\theta}{\arg \max} \sum_{i = 1}^{m} \log p_{\text{model}}(x^{(i)}; \theta)
 \end{align}
-as the maximum of the function is at the same $\theta$ value and we now have a sum which aswell eliminates the possibility of having underflow by multiplying multiple very small probabilities together.
-Formally GANs are a structured probabilistic model (more info: Chapter 16 of Goodfellow et al. 2016) containing latent variables z and observed variables x.
-The generator is defined by a function G that takes $\mathbf{z}$ as input and uses $\theta^{(G)}$ as parameters, the discriminator by a function D that takes $\mathbf{x}$ as input and uses $\theta^{(D)}$ as parameters. Both players have cost functions that are defined in terms of both players' parameters. The discriminator  wishes to minimize $J^{(D)}(\theta^{(D)}, \theta^{(G)})$ and must do so by controlling only $\theta^{(D)}$. This is analogous for the generator: he tries to minimize $J^{(G)}(\theta^{(D)}, \theta^{(G)})$ while controlling only $\theta^{(G)}$. In contrast to an optimization problem that has a solution that is the (local) minimum (a point in parameter space where all neighboring points have greater or equal cost), the GAN objective is a game. The solution to a game is a Nash equilibrium \cite{Nash48}, meaning that each player chooses the best possible option or strategy in respect to what the other player(s) choose. Here the Nash equilibrium is a tuple $(\theta^{(D)}, \theta^{(G)})$ that is a local minimum of $J^{(D)}$ with respect to $\theta^{(D)}$ and a local minimum $J^{(G)}$ with respect to $\theta^{(G)}$.
-\textbf{The generator} is simply a differentiable function G. When $\mathbf{z}$ is sampled from some simple prior distribution, G(z) yields a sample of $\mathbf{x}$ drawn from $p_{\text{model}}$. Typically a deep neural network is used to represent G. \\
-The game plays out in two scenarios. The first is where the discriminator D is given random training examples $\mathbf{x}$ from the training set. The goal of the discriminator here is for $D(\mathbf{x})$ to be near 1. In the second scenario, random noise $\mathbf{z}$ is input to the generator. The discriminator then receives input $G(\mathbf{z})$, a fake sample by the generator. The discriminator strives to make $D(G(\mathbf{z}))$ approach 0 while the generator tries to make that approach 1. The games Nash equilibrium corresponds to $G(\mathbf{z})$ being drawn from the same distribution as the training data. Under the assumption that the inputs to the discriminator are half real and half fake, this corresponds to $D(\mathbf{x}) = \frac{1}{2}$ for all $\mathbf{x}$.
+as the maximum of the function is at the same $\theta$ value and the now obtained sum aswell eliminates the possibility of having underflow by multiplying multiple very small probabilities together.
+Formally GANs are a structured probabilistic model containing latent variables $\mathbf{z}$ and observed variables $\mathbf{x}$.
+The generator is defined by a function G with input $\mathbf{z}$ and $\theta^{(G)}$ as parameters, the discriminator by a function D with input $\mathbf{x}$ and $\theta^{(D)}$ as parameters. The discriminator tries to minimize its cost function $J^{(D)}(\theta^{(D)}, \theta^{(G)})$ while only controlling $\theta^{(D)}$. This is analogous for the generator: he tries to minimize $J^{(G)}(\theta^{(D)}, \theta^{(G)})$ while controlling only $\theta^{(G)}$. In contrast to an optimization problem that has a solution that is the (local) minimum (a point in parameter space where all neighboring points have greater or equal cost), the GAN objective is a game. The solution to a game is a Nash equilibrium \cite{Nash48}, meaning that each player chooses the best possible option or strategy in respect to what the other player(s) choose. For GANs the Nash equilibrium is a tuple $(\theta^{(D)}, \theta^{(G)})$ that is a local minimum of $J^{(D)}$ with respect to $\theta^{(D)}$ and a local minimum $J^{(G)}$ with respect to $\theta^{(G)}$.
+The generator is a differentiable function G. When inputting a random noise sample $\mathbf{z}$ to the generator, G(z) yields a sample of $\mathbf{x}$ drawn from $p_{\text{model}}$. Typically a deep neural network is used to represent G. \\
+The game plays out in two scenarios. The first is where the discriminator D is given random training examples $\mathbf{x}$ from the training set. The goal of the discriminator here is for $D(\mathbf{x})$ to be near 1. In the second scenario, random noise $\mathbf{z}$ is input to the generator. The discriminator then receives input $G(\mathbf{z})$, a fake sample by the generator. The discriminator strives to make $D(G(\mathbf{z}))$ approach 0 while the generator tries to make that same value approach 1. The game's Nash equilibrium corresponds to the generators output $G(\mathbf{z})$ being drawn from the same distribution as the training data. Under the assumption that the inputs to the discriminator are half real and half fake, this corresponds to $D(\mathbf{x}) = \frac{1}{2}$ for all $\mathbf{x}$.
 
 \paragraph{Training}
-On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values from the dataset and one of random noise $\mathbf{z}$. Then two gradient steps are made simultaneously (simultaneous SGD): one updating $\theta^{(D)}$ to reduce $J^{(D)}$ and one updating $\theta^{(G)}$ to reduce $J^{(G)}$.
+On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values from the dataset and one of random noise $\mathbf{z}$. Then two gradient steps are made simultaneously (simultaneous stochastic gradient descent): one updating $\theta^{(D)}$ to reduce $J^{(D)}$ and one updating $\theta^{(G)}$ to reduce $J^{(G)}$.
 
 \paragraph{Cost functions} There are many different cost functions that can be used for GANs. See chapter \ref{sec:techniques} for the ones that the techniques in this work use.
 
