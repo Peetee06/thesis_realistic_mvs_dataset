@@ -14,26 +14,27 @@
 % \newcommand{\todo}[1]{\marginpar{\bf{#1}}}
 \newcommand{\todo}[1]{{\color{red}\bf{TODO: #1}}}
 
-\usepackage{mathptmx}
+%\usepackage{mathptmx} % this fucked up mathcal H for H divergence
 \usepackage[pdftex]{graphicx}
 \usepackage[pdftex]{color}
 \definecolor{rot}{RGB}{165,30,55} %rote Farbe
 \graphicspath{{./images/}}
 \usepackage{parskip}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb}
 \usepackage{dsfont}
-\usepackage{pxfonts}
+% \usepackage{pxfonts}
 
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{textcomp}
 
 % comment these two lines out if you don't want minion/myriad fonts.
 % \usepackage[minionint,mathlf]{MinionPro}
 % \renewcommand{\sfdefault}{Myriad-LF}
 %\usepackage{Myriad}
-
 % no page number on float pages, fixes problems with overlarge diagrams.
 \usepackage{fancyhdr}
+
 \pagestyle{fancy}
 %\lhead{}
 %\chead{}
@@ -61,7 +62,7 @@
 
 % use for german line breaking:
 %\usepackage[ngerman]{babel}
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
 
 % avoid us-style text color destruction:
@@ -533,6 +534,7 @@ see \cite{DBLP:journals/corr/LopezXGVR16}
 
 \newpage
 
+\subsection{---This is SG-GAN}
 \subsection{Experiments}
 
 \subsection{Experiments - Implementation}
@@ -619,7 +621,7 @@ see \cite{DBLP:journals/corr/LopezXGVR16}
 	\item use code provided in (47)
 \end{itemize}
 
-\subsection{Comparison - Gualitative and quantitative evaluation}
+\subsection{Comparison - Qualitative and quantitative evaluation}
 \begin{itemize}
 	\item generally SG-GAN generates better visualization results (clear boundaries, consistent semantic classes, smooth texture, etc.)
 	\item SG-GAN2K shows its ability for personalized adaption (retains red color of vehicle's headlight but red color of sunset is changed to sunny yellow that is closer to real-world images)
@@ -857,5 +859,54 @@ as usual
 \begin{itemize}
 	\item read again later
 \end{itemize}
+
+
+\section{Deep Visual Domain Adaptation - A Survey}
+
+\begin{itemize}
+	\item one-step and multi-step domain adaptation (see Figure \ref{fig:overview_DA_settings})
+	\item homogeneous DA: feature spaces between source and target domains are identical with same dimension. Source and target datasets are generally different in terms of data distributions. Can further categorize homogeneous DA into
+	\begin{enumerate}
+		\item supervised DA: small amount of labeled data, but commonly not sufficient for tasks
+		\item semi-supervised DA: limited labeled data and redundant unlabeled data in target domain available in training stage. allows networks to learn structure information of the target domain
+		\item unsupervised DA: no labeled but sufficient unlabeled target domain data observable when training the network
+	\end{enumerate}
+	\item heterogeneous DA: feature space between source and target domains are nonequivalent and dimensions may also generally differ. Can be divided similarly as homogeneous DA.
+	\item \todo{define deep DA}
+	\item one-step deep DA approaches can be summarized in three cases:
+	\begin{enumerate}
+		\item discrepancy-based: fine-tuning the deep network with labeled or unlabeled target data to diminish the domain shift. Four major techniques:
+		\begin{enumerate}
+			\item class criterion: uses class label information as a guide for transferring knowledge between different domains. When labeled samples from target domain are available in supervised DA, soft label and metric learning are always effective, if not available, pseudo labels and attribute representation can be used
+			\item statistic criterion: aligns statistical distribution shift between source and target domains using some mechanisms. Most commonly used methods for comparing and reducing distribution shift are maximum mean discrepancy (MMD), correlation alignment (CORAL), Kullback-Leibler (KL) divergence and $\mathcal{H}$ divergence, among others
+			\item architecture criterion: improving ability of learning more transferable features by adjusting architecture of DNN (deep neural networks). Techniques proven cost effective include adaptive batch normalization (BN), weak-related weight, domain-guided dropout
+			\item geometric criterion: bridges source and target domains according to their geometrical properties. This criterion assumes that the relationship of geometric structures can reduce the domain shift
+		\end{enumerate}
+		\item adversarial-based: using domain discriminators to encourage domain confusion through an adversarial objective
+		\begin{enumerate}
+			\item generative models: GANs
+			\item non-generative models: feature extractor learns discriminative representation using labels in source domain and maps the target data to same space through domain-confusion loss, thus resulting in domain-invariant representations
+		\end{enumerate}
+		\item reconstruction-based: using the data reconstruction as an auxiliary task to ensure feature invariance
+		\begin{enumerate}
+			\item encoder-decoder reconstruction: using stacked autoencoders (SAEs) to combine encoder network for representation learning with a decoder network for data reconstruction
+			\item adversarial reconstruction: recunstruction error. cyclic mapping (dualGAN, CycleGAN, discoGAN)
+		\end{enumerate}
+	\end{enumerate}
+	\item in multi-step DA first determine intermediate domains that are more related with source and target domains than their direct connection. Second the knowledge transfer process will be performed between source, intermediate and target domains by one-step DA with less information loss. -> key to multi-step DA is how to select and utilize intermediate domains. Three selection mechanisms:
+	\begin{enumerate}
+		\item hand-crafted: users determine intermediate domains based on experience
+		\item instance-based: selecting certain parts of data from auxiliary datasets to compose intermediate domains to train the deep network
+		\item representation-based: transferis enabled via freezing previously trained network and using their intermediate representations as input to the new one
+	\end{enumerate}
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{../images/overview_DA_settings.png}
+	\caption{overview of different settings of domain adaptation}
+	\label{fig:overview_DA_settings}
+\end{figure}
+
 
 \end{document}
