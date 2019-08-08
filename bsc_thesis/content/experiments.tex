@@ -11,13 +11,27 @@ In this chapter the three Domain Adaptation Techniques \textit{Cycle-consistent 
 \subsection{Synthetic dataset: \\
 	Playing for Data: Ground Truth from Computer Games}
 
-The GTA5 (Grand Theft Auto V) dataset is proposed in \cite{Richter_2016_ECCV}. It contains 24966 images taken from a street view in the game Grand Theft Auto V by Rockstar Games \cite{GTAV}. The images are provided with $1914 \times 1052$ pixels and are containing moving cars, objects, pedestrians, bikes, have changing lighting and weather conditions aswell as day and night scenes. For all of these images the authors provide label images that are compatible with those of the Cityscapes dataset \cite{Cordts_2016_CVPR}. Detouring, i.e. injecting a wrapper between the game and the graphics hardware to log function calls and reconstruct the 3D scene is used to create the images. This also enables a faster labeling process as objects in a scene can be assigned an object ID through which assigned labels are propagated to other images containing this same object. Due to being more realistic than other existing synthetic street view datasets (e.g. SYNTHIA \cite{RosCVPR16}) the GTA5 dataset is very popular for training machine learning models related to autonomous driving and is therefore used in this work.
+The GTA5 (Grand Theft Auto V) dataset is proposed in \cite{Richter_2016_ECCV}. It contains 24966 images taken from a street view in the game Grand Theft Auto V by Rockstar Games \cite{GTAV}. The images are provided with $1914 \times 1052$ pixels and are containing moving cars, objects, pedestrians, bikes, have changing lighting and weather conditions aswell as day and night scenes. For all of these images the authors provide ground-truth semantic label maps that are compatible with the classes of the Cityscapes dataset \cite{Cordts_2016_CVPR}. Detouring, i.e. injecting a wrapper between the game and the graphics hardware to log function calls and reconstruct the 3D scene is used to create the images. This also enables a faster labeling process as objects in a scene can be assigned an object ID through which assigned labels are propagated to other images containing this same object. Due to being more realistic than other existing synthetic street view datasets (e.g. SYNTHIA \cite{RosCVPR16}) the GTA5 dataset is very popular for training machine learning models related to autonomous driving and is therefore used in this work. Example images and corresponding label maps are shown in Figure \ref{fig:p4d_examples} 
 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{images/p4d_example.png}
+	\caption{Example images (left) and corresponding ground-truth semantic label maps (right) provided in the GTA5 dataset \cite{Richter_2016_ECCV}.}
+	\label{fig:p4d_examples}
+\end{figure}
 
 \subsection{Real dataset:\\
 	The Cityscapes Dataset for Semantic Urban Scene Understanding}
 
-The Cityscapes dataset \cite{Cordts_2016_CVPR} is a large scale dataset containing car dashcam view images from 50 european cities. It includes 30 classes relevant for autonomous driving. The images include scenes in spring, summer and fall seasons and under different weather conditions. There are 5000 images provided together with fine annotations and 20000 together with coarse annotations. Due to the large amount of labeled data from a dashcam view and the inclusion of scenes with different weather and lighting conditions this dataset is often used to train deep neural networks that are related to autonomous driving. Due to the popularity and the GTA5 dataset containing compatible labeling maps, this work uses Cityscapes as the real dataset for the experiments.
+The Cityscapes dataset \cite{Cordts_2016_CVPR} is a large scale dataset containing car dashcam view images from 50 european cities. It includes 30 classes relevant for autonomous driving. The images include scenes in spring, summer and fall seasons and under different weather conditions. There are 5000 images provided together with fine annotations and 20000 together with coarse annotations. Due to the large amount of labeled data from a dashcam view and the inclusion of scenes with different weather and lighting conditions this dataset is often used to train deep neural networks that are related to autonomous driving. Due to the popularity and the GTA5 dataset containing compatible label maps, this work uses Cityscapes as the real dataset for the experiments. See Figure \ref{fig:cityscapes_examples} for Example images.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{images/cityscapes_example.png}
+	\caption{Example images (left) and corresponding ground-truth semantic label maps (right) provided in the Cityscapes dataset \cite{Cordts_2016_CVPR}.}
+	\label{fig:cityscapes_examples}
+\end{figure}
 
 \section{Comparison Benchmark}
 \subsection{Intersection over Union (IoU)}

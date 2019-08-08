@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  7 AUG 2019 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  8 AUG 2019 17:04
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1121,20 +1121,34 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 [22] [23]) (content/experiments.tex [24]
 chapter 5.
+<images/p4d_example.png, id=116, 1533.73pt x 1287.81125pt>
+File: images/p4d_example.png Graphic file (type png)
+<use images/p4d_example.png>
+Package pdftex.def Info: images/p4d_example.png  used on input line 19.
+(pdftex.def)             Requested size: 398.33864pt x 334.46933pt.
 [25
 
 
-] [26]) (content/conclusion.tex [27] [28]
+] [26 <./images/p4d_example.png>]
+<images/cityscapes_example.png, id=125, 1538.74875pt x 1163.34625pt>
+File: images/cityscapes_example.png Graphic file (type png)
+<use images/cityscapes_example.png>
+Package pdftex.def Info: images/cityscapes_example.png  used on input line 31.
+(pdftex.def)             Requested size: 398.33864pt x 301.1493pt.
+
+Underfull \vbox (badness 5036) has occurred while \output is active []
+
+ [27 <./images/cityscapes_example.png>]) (content/conclusion.tex [28] [29] [30
+
+
+]
 chapter 6.
-) [29
-
-
-] [30
+) [31] [32
 
 
 ]
 chapter A.
-(bsc_thesis.bbl [31] [32
+(bsc_thesis.bbl [33] [34
 
 
 ]
@@ -1149,7 +1163,7 @@ Underfull \hbox (badness 4403) in paragraph at lines 32--35
  github . com / jhoffman / cycada _
  []
 
-[33]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 116--120
 \T1/pxtt/m/n/10.95 fakultaeten / mathematisch-[]naturwissenschaftliche-[]fakult
 aet /
@@ -1161,12 +1175,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--120
 e /
  []
 
-) [34] (bsc_thesis.aux) ) 
+) [36] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12780 strings out of 492903
- 204899 string characters out of 3130412
- 563077 words of memory out of 3000000
- 16137 multiletter control sequences out of 15000+200000
+ 12792 strings out of 492903
+ 205221 string characters out of 3130412
+ 562077 words of memory out of 3000000
+ 16147 multiletter control sequences out of 15000+200000
  58067 words of font info for 284 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1182,9 +1196,9 @@ install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install
 /fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/
 type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (34 pages, 2386728 bytes).
+Output written on bsc_thesis.pdf (36 pages, 5887269 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
+ 194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31253 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 31263 words of extra memory for PDF output out of 35830 (max. 10000000)
 

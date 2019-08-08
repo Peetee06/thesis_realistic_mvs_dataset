@@ -872,7 +872,7 @@ as usual
 		\item unsupervised DA: no labeled but sufficient unlabeled target domain data observable when training the network
 	\end{enumerate}
 	\item heterogeneous DA: feature space between source and target domains are nonequivalent and dimensions may also generally differ. Can be divided similarly as homogeneous DA.
-	\item \todo{define deep DA}
+	\item deep DA is a method that utilizes a deep network to enhance the performance of DA
 	\item one-step deep DA approaches can be summarized in three cases:
 	\begin{enumerate}
 		\item discrepancy-based: fine-tuning the deep network with labeled or unlabeled target data to diminish the domain shift. Four major techniques:
@@ -893,11 +893,11 @@ as usual
 			\item adversarial reconstruction: recunstruction error. cyclic mapping (dualGAN, CycleGAN, discoGAN)
 		\end{enumerate}
 	\end{enumerate}
-	\item in multi-step DA first determine intermediate domains that are more related with source and target domains than their direct connection. Second the knowledge transfer process will be performed between source, intermediate and target domains by one-step DA with less information loss. -> key to multi-step DA is how to select and utilize intermediate domains. Three selection mechanisms:
+	\item in multi-step DA first determine intermediate domains that are more related with source and target domains than their direct connection. Second the knowledge transfer process will be performed between source, intermediate and target domains by one-step DA with less information loss. $\rightarrow$ key to multi-step DA is how to select and utilize intermediate domains. Three selection mechanisms:
 	\begin{enumerate}
 		\item hand-crafted: users determine intermediate domains based on experience
 		\item instance-based: selecting certain parts of data from auxiliary datasets to compose intermediate domains to train the deep network
-		\item representation-based: transferis enabled via freezing previously trained network and using their intermediate representations as input to the new one
+		\item representation-based: transfers enabled via freezing previously trained network and using their intermediate representations as input to the new one
 	\end{enumerate}
 \end{itemize}
 
@@ -907,6 +907,8 @@ as usual
 	\caption{overview of different settings of domain adaptation}
 	\label{fig:overview_DA_settings}
 \end{figure}
+
+
 
 
 \end{document}
