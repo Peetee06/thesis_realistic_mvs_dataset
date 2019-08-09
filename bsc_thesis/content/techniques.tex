@@ -22,6 +22,13 @@ with $\lambda$ controlling how much focus lies on the cycle-consistency. The dis
 \begin{align}
 	G^*, F^* = \arg \underset{G,F}{\min}\underset{D_X, D_Y}{\max} \mathcal{L}(G,F,D_X,D_Y) \label{eq:GAN_goal}
 \end{align}
+
+\subsection{Loss Functions}
+\subsection{Implementation}
+\subsubsection{Network Architecture}
+\subsubsection{Training Details}
+
+
 \section{CyCADA} 
 CyCADA \cite{DBLP:journals/corr/abs-1711-03213} adds a semantic loss to the CycleGAN approach to enforce semantic consistency (no more translating cats to dogs or drawing trees into the sky). This is achieved by doing semantic segmentation on the source image, then translating that image and doing semantic segmentation on the target image. The loss describes the difference between the two resulting label maps. Formally they begin by learning a source model $f_X$ that does semantic segmentation on the source data. For K-way classification with cross-entropy loss this results in the following loss for the classification with $L_X$ being the source labels:
 \begin{align}
@@ -48,6 +55,12 @@ And ultimately optimizing for a target model $f_Y$ with:
 \begin{align}
 	f^*_Y = \underset{f_Y}{\arg\min} ~ \underset{F,G}{\min} ~ \underset{D_X, D_Y}{\max} ~ \mathcal{L}_{\text{CyCADA}}&(f_X, X, Y, L_X, G, F, D_X, D_Y)
 \end{align}
+
+\subsection{Loss Functions}
+\subsection{Implementation}
+\subsubsection{Network Architecture}
+\subsubsection{Training Details}
+
 \section{SG-GAN}
 Finally SG-GAN \cite{DBLP:journals/corr/abs-1801-01726} expands this by including a gradient-sensitive objective that emphasizes semantic boundaries by regularizing the generator to render distinct color/texture for each semantic region, and a patch-level discriminator that better understands differences in appearance distributions of different semantic regions (e.g. coarse texture of asphalt vs smooth and reflective of a vehicle). The soft gradient-sensitive objective is achieved by convolving gradient filters each upon an image and its semantic labeling. Typically Sobel filters are used:
 \begin{align}
@@ -102,7 +115,15 @@ Which results in the optimization target:
 \begin{align}
 	G^*_{V\rightarrow R}, G^*_{R\rightarrow V} &= \arg \underset{\substack{G_{V\rightarrow R}\\ G_{R\rightarrow V}}}{\min}~ \underset{\substack{SD_R\\SD_V}}{\max}\mathcal{L}(G_{V\rightarrow R}, G_{R\rightarrow V}, SD_V, SD_R)
 \end{align}
-The above mentioned semantic-aware discriminator enforces higher-level semantic consistencies. For example compared to the virtual world, real world may have less illumination. Instead of darkening the tone of the whole image it is instead more accurate to keep the sky bright and only darken e.g. the road. To achieve this semantic-aware judgement of realism, the discriminators' last layers' number of filters is transited to the number of semantic classes. Semantic masks are then applied upon these filters in order to make them focus on different semantic classes. Usually the last layer's feature map of the discriminator is a tensor $\mathbf{T}$ with shape $(w,h,1)$ with $w$ being the width and $h$ being the height. The SG-GAN approach changes this to $(w,h,s)$ where $s$ is the number of semantic classes. The semantic labeling of the image is converted to one-hot style and resized to $(w,h)$. This results in a mask $\mathbf{M}$ with shape $(w,h,s)$. Now multiplying $\mathbf{T}$ and $\mathbf{M}$ element-wise will result in each filter within $\mathbf{T}$ only focussing on one particular semantic class. Summing up $\mathbf{T}$ along the last dimension will result in a tensor of shape $(w,h,1)$ which then can be further processed as in the standard discriminator. As all of these techniques use a cycle-consistency loss, it is possible to use unpaired datasets which makes data acquisition easier and reduces costs. This results in more training data and therefore makes better models possible. 
+The above mentioned semantic-aware discriminator enforces higher-level semantic consistencies. For example compared to the virtual world, real world may have less illumination. Instead of darkening the tone of the whole image it is instead more accurate to keep the sky bright and only darken e.g. the road. To achieve this semantic-aware judgement of realism, the discriminators' last layers' number of filters is transited to the number of semantic classes. Semantic masks are then applied upon these filters in order to make them focus on different semantic classes. Usually the last layer's feature map of the discriminator is a tensor $\mathbf{T}$ with shape $(w,h,1)$ with $w$ being the width and $h$ being the height. The SG-GAN approach changes this to $(w,h,s)$ where $s$ is the number of semantic classes. The semantic labeling of the image is converted to one-hot style and resized to $(w,h)$. This results in a mask $\mathbf{M}$ with shape $(w,h,s)$. Now multiplying $\mathbf{T}$ and $\mathbf{M}$ element-wise will result in each filter within $\mathbf{T}$ only focussing on one particular semantic class. Summing up $\mathbf{T}$ along the last dimension will result in a tensor of shape $(w,h,1)$ which then can be further processed as in the standard discriminator. 
+
+\subsection{Loss Functions}
+\subsection{Implementation}
+\subsubsection{Network Architecture}
+\subsubsection{Training Details}
+
+
+As all of these techniques use a cycle-consistency loss, it is possible to use unpaired datasets which makes data acquisition easier and reduces costs. This results in more training data and therefore makes better models possible. 
 
 
 

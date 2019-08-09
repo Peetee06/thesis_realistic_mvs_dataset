@@ -1,32 +1,64 @@
 \contentsline {chapter}{\numberline {1}Introduction}{11}% 
 \contentsline {chapter}{\numberline {2}Foundations}{13}% 
 \contentsline {section}{\numberline {2.1}Domain Adaptation}{13}% 
+\contentsline {subsection}{\numberline {2.1.1}One-Step Domain Adaptation}{14}% 
+\contentsline {subsubsection}{\nonumberline Discrepancy based}{14}% 
+\contentsline {subsubsection}{\nonumberline Adversarial based}{14}% 
+\contentsline {subsubsection}{\nonumberline Reconstruction based}{14}% 
+\contentsline {subsection}{\numberline {2.1.2}Multi-Step Domain Adaptation}{14}% 
 \contentsline {section}{\numberline {2.2}Semantic Segmentation}{14}% 
 \contentsline {section}{\numberline {2.3}Generative Adversarial Networks}{14}% 
-\contentsline {paragraph}{\nonumberline Training}{15}% 
+\contentsline {paragraph}{\nonumberline Training}{16}% 
 \contentsline {paragraph}{\nonumberline Loss functions}{16}% 
-\contentsline {subsection}{\numberline {2.3.1}Advantages and Disadvantages}{16}% 
+\contentsline {subsection}{\numberline {2.3.1}The Generator}{16}% 
+\contentsline {subsection}{\numberline {2.3.2}The Discriminator}{16}% 
+\contentsline {subsection}{\numberline {2.3.3}Training}{16}% 
+\contentsline {subsubsection}{\nonumberline Optimization}{16}% 
+\contentsline {subsubsection}{\nonumberline Loss functions}{16}% 
+\contentsline {subsection}{\numberline {2.3.4}Advantages and Disadvantages}{16}% 
 \contentsline {paragraph}{\nonumberline Disadvantages}{16}% 
 \contentsline {paragraph}{\nonumberline non-convergence.}{16}% 
-\contentsline {paragraph}{\nonumberline mode collapse}{16}% 
-\contentsline {paragraph}{\nonumberline Advantages}{17}% 
-\contentsline {paragraph}{\nonumberline unsupervised.}{17}% 
-\contentsline {paragraph}{\nonumberline data generation.}{17}% 
-\contentsline {paragraph}{\nonumberline learn density distribution.}{17}% 
-\contentsline {paragraph}{\nonumberline discriminator is a classifier.}{17}% 
+\contentsline {paragraph}{\nonumberline mode collapse}{17}% 
+\contentsline {paragraph}{\nonumberline Advantages}{18}% 
+\contentsline {paragraph}{\nonumberline unsupervised.}{18}% 
+\contentsline {paragraph}{\nonumberline data generation.}{18}% 
+\contentsline {paragraph}{\nonumberline learn density distribution.}{18}% 
+\contentsline {paragraph}{\nonumberline discriminator is a classifier.}{18}% 
 \contentsline {chapter}{\numberline {3}Related Work}{19}% 
-\contentsline {section}{\numberline {3.1}Domain Adaptation with Generative Adversarial Networks}{19}% 
+\contentsline {section}{\numberline {3.1}Other Domain Adaptation Methods}{19}% 
+\contentsline {section}{\numberline {3.2}Domain Adaptation with Generative Adversarial Networks}{19}% 
+\contentsline {subsection}{\numberline {3.2.1}Method 1}{19}% 
+\contentsline {subsection}{\numberline {3.2.2}Method 2}{19}% 
+\contentsline {subsection}{\numberline {3.2.3}Method 3}{19}% 
+\contentsline {subsection}{\numberline {3.2.4}Method 4}{19}% 
+\contentsline {subsection}{\numberline {3.2.5}Method 5}{19}% 
 \contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{21}% 
 \contentsline {section}{\numberline {4.1}CycleGAN}{21}% 
+\contentsline {subsection}{\numberline {4.1.1}Loss Functions}{22}% 
+\contentsline {subsection}{\numberline {4.1.2}Implementation}{22}% 
+\contentsline {subsubsection}{\nonumberline Network Architecture}{22}% 
+\contentsline {subsubsection}{\nonumberline Training Details}{22}% 
 \contentsline {section}{\numberline {4.2}CyCADA}{22}% 
+\contentsline {subsection}{\numberline {4.2.1}Loss Functions}{23}% 
+\contentsline {subsection}{\numberline {4.2.2}Implementation}{23}% 
+\contentsline {subsubsection}{\nonumberline Network Architecture}{23}% 
+\contentsline {subsubsection}{\nonumberline Training Details}{23}% 
 \contentsline {section}{\numberline {4.3}SG-GAN}{23}% 
-\contentsline {chapter}{\numberline {5}Experiments}{25}% 
-\contentsline {section}{\numberline {5.1}Datasets}{25}% 
-\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{25}% 
-\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{25}% 
-\contentsline {section}{\numberline {5.2}Comparison Benchmark}{27}% 
-\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{27}% 
-\contentsline {section}{\numberline {5.3}Methodology}{28}% 
-\contentsline {section}{\numberline {5.4}Results}{28}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{31}% 
-\contentsline {chapter}{\numberline {A}Blub}{33}% 
+\contentsline {subsection}{\numberline {4.3.1}Loss Functions}{25}% 
+\contentsline {subsection}{\numberline {4.3.2}Implementation}{25}% 
+\contentsline {subsubsection}{\nonumberline Network Architecture}{25}% 
+\contentsline {subsubsection}{\nonumberline Training Details}{25}% 
+\contentsline {chapter}{\numberline {5}Experiments}{27}% 
+\contentsline {section}{\numberline {5.1}Datasets}{27}% 
+\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{27}% 
+\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{27}% 
+\contentsline {section}{\numberline {5.2}Comparison Benchmark}{29}% 
+\contentsline {subsection}{\numberline {5.2.1}Intersection over Union (IoU)}{29}% 
+\contentsline {section}{\numberline {5.3}Methodology}{30}% 
+\contentsline {section}{\numberline {5.4}Results}{30}% 
+\contentsline {subsection}{\numberline {5.4.1}Quantitative}{30}% 
+\contentsline {subsection}{\numberline {5.4.2}Qualitative}{30}% 
+\contentsline {section}{\numberline {5.5}Discussion}{30}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{33}% 
+\contentsline {section}{\numberline {6.1}Outlook and Future Work}{33}% 
+\contentsline {chapter}{\numberline {A}Blub}{35}% 

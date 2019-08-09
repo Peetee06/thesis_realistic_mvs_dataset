@@ -1,7 +1,7 @@
 \chapter{Experiments}
 \label{sec:experiments}
 
-In this chapter the three Domain Adaptation Techniques \textit{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textit{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textit{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726} will be compared by analysing similarities and differences. Furthermore pretrained models of each architecture were used to generate translated images on which a pretrained DeepLabv3 \cite{DBLP:journals/corr/ChenPSA17} model then was used to perform semantic segmentation and the results will be compared on their Intersection over Union scores.
+In this chapter the three Domain Adaptation Techniques \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726} will be compared by analysing similarities and differences. Furthermore pretrained models of each architecture were used to generate translated images on which a pretrained DeepLabv3 \cite{DBLP:journals/corr/ChenPSA17} model then was used to perform semantic segmentation and the results will be compared on their Intersection over Union scores.
 
 %\section{training the nets on tcml cluster} \todo{is this necessary or can we just use provided pre-trained models?}
 %To train the models the tcml cluster of uni tübingen was used (\todo{add link to cluster website}). The cluster contains a lot of computing power with multiple compute nodes and a storage node. Each compute node has 4 CPUs and a NVidia 1080 Ti GPU and lots of RAM. In order to run the training code, it is necessary to create an .sbatch file. This file specifies how long a script needs to run, how much memory it needs and includes bash commands to run the script. Depending on what is specified in that .sbatch file the slurm manager system allocates ressources for that job and runs it as soon there are resources ready. While training cycleGAN mode collapse happened and the test images didn't get translated at all. Also to train for the 200 recommended epochs it would take around 2-3 weeks due to training taking a day for around 14 epochs. This is probably due to the fact that training cycleGAN is only possible on batches of size 1 which makes the vast resources available on the cluster not usable to their full potential. Also the student account can only run one job at once which makes it impossible to train different methods (cycleGAN, CyCADA, GradGAN) at the same time. Another issue is that it was not possible to visualize loss of generators and discriminators in order to supervise the training process and check if mode collapse or any other issue appeared. 
@@ -117,4 +117,10 @@ The results are not as expected. As seen in Table \ref{table:results} semantic s
 	\caption{Intersection over Union results for evaluation on untranslated GTA5 images and translated images by CyCADA and SG-GAN respectively. Rounded to 3 decimal places}
 	\label{table:results}
 \end{table}
+
+\subsection{Quantitative}
+
+\subsection{Qualitative}
+
+\section{Discussion}
 

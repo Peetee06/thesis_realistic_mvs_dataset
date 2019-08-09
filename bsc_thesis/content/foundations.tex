@@ -15,6 +15,31 @@ Domain Adaptation is the task of transfering a machine learning model that is wo
 	\label{fig:DA_examples}
 \end{figure}
 
+\subsection{One-Step Domain Adaptation}
+
+\subsubsection{Discrepancy based}
+\begin{enumerate}
+	\item \textbf{Class Criterion}
+	\item \textbf{Statistic Criterion}
+	\item \textbf{Architecture Criterion}
+	\item \textbf{Geometric Criterion}
+\end{enumerate}
+
+\subsubsection{Adversarial based}
+\begin{enumerate}
+	\item \textbf{Generative models}
+	\item \textbf{Non-generative models}
+\end{enumerate}
+
+\subsubsection{Reconstruction based}
+\begin{enumerate}
+	\item \textbf{Encoder-Decoder Reconstruction}
+	\item \textbf{Adversarial Reconstruction}
+\end{enumerate}
+
+\subsection{Multi-Step Domain Adaptation}
+
+
 \section{Semantic Segmentation}
 Semantic Segmentation is one of the most important aspects in autonomous driving. It is the task of semantically segmentating objects in an image, i.e. labeling each pixel according to what object it belongs to. See Figure \ref{fig:semseg} for examples.
 
@@ -49,6 +74,15 @@ The game plays out in two scenarios. The first is where the discriminator D is g
 On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values from the dataset and one of random noise $\mathbf{z}$. Then two gradient steps are made simultaneously (simultaneous stochastic gradient descent): one updating $\theta^{(D)}$ to reduce $J^{(D)}$ and one updating $\theta^{(G)}$ to reduce $J^{(G)}$.
 
 \paragraph{Loss functions} There are many different loss functions that can be used for GANs. See chapter \ref{sec:techniques} for the ones that the techniques in this work use.
+
+\subsection{The Generator}
+
+\subsection{The Discriminator}
+
+\subsection{Training}
+\subsubsection{Optimization}
+\subsubsection{Loss functions}
+
 
 \subsection{Advantages and Disadvantages}
 \paragraph{Disadvantages}
