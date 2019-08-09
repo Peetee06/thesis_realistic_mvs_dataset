@@ -4,11 +4,12 @@
 \contentsline {section}{\numberline {2.2}Semantic Segmentation}{14}% 
 \contentsline {section}{\numberline {2.3}Generative Adversarial Networks}{14}% 
 \contentsline {paragraph}{\nonumberline Training}{15}% 
-\contentsline {paragraph}{\nonumberline Cost functions}{16}% 
-\contentsline {subsection}{\numberline {2.3.1}Disadvantages}{16}% 
+\contentsline {paragraph}{\nonumberline Loss functions}{16}% 
+\contentsline {subsection}{\numberline {2.3.1}Advantages and Disadvantages}{16}% 
+\contentsline {paragraph}{\nonumberline Disadvantages}{16}% 
 \contentsline {paragraph}{\nonumberline non-convergence.}{16}% 
 \contentsline {paragraph}{\nonumberline mode collapse}{16}% 
-\contentsline {subsection}{\numberline {2.3.2}Advantages}{17}% 
+\contentsline {paragraph}{\nonumberline Advantages}{17}% 
 \contentsline {paragraph}{\nonumberline unsupervised.}{17}% 
 \contentsline {paragraph}{\nonumberline data generation.}{17}% 
 \contentsline {paragraph}{\nonumberline learn density distribution.}{17}% 
@@ -16,6 +17,9 @@
 \contentsline {chapter}{\numberline {3}Related Work}{19}% 
 \contentsline {section}{\numberline {3.1}Domain Adaptation with Generative Adversarial Networks}{19}% 
 \contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{21}% 
+\contentsline {section}{\numberline {4.1}CycleGAN}{21}% 
+\contentsline {section}{\numberline {4.2}CyCADA}{22}% 
+\contentsline {section}{\numberline {4.3}SG-GAN}{23}% 
 \contentsline {chapter}{\numberline {5}Experiments}{25}% 
 \contentsline {section}{\numberline {5.1}Datasets}{25}% 
 \contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{25}% 

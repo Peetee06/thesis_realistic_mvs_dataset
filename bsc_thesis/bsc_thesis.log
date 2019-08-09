@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  8 AUG 2019 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  9 AUG 2019 10:31
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1080,7 +1080,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: images/metz_et_al_mode_collapse.png Graphic file (type png)
 <use images/metz_et_al_mode_collapse.png>
 Package pdftex.def Info: images/metz_et_al_mode_collapse.png  used on input lin
-e 62.
+e 61.
 (pdftex.def)             Requested size: 398.33864pt x 45.0942pt.
  [16 <./images/metz_et_al_mode_collapse.png>])
 (content/related_work.tex [17] [18
@@ -1114,8 +1114,13 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 
 ]
 chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
 [21]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 26.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 29.
  (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
@@ -1135,10 +1140,8 @@ File: images/cityscapes_example.png Graphic file (type png)
 <use images/cityscapes_example.png>
 Package pdftex.def Info: images/cityscapes_example.png  used on input line 31.
 (pdftex.def)             Requested size: 398.33864pt x 301.1493pt.
-
-Underfull \vbox (badness 5036) has occurred while \output is active []
-
- [27 <./images/cityscapes_example.png>]) (content/conclusion.tex [28] [29] [30
+ [27 <./images/cityscapes_example.png>])
+(content/conclusion.tex [28] [29] [30
 
 
 ]
@@ -1177,11 +1180,11 @@ e /
 
 ) [36] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12792 strings out of 492903
- 205221 string characters out of 3130412
+ 12780 strings out of 492903
+ 205132 string characters out of 3130412
  562077 words of memory out of 3000000
  16147 multiletter control sequences out of 15000+200000
- 58067 words of font info for 284 fonts, out of 3000000 for 9000
+ 57480 words of font info for 275 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dvips/ba
@@ -1196,7 +1199,7 @@ install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install
 /fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/
 type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (36 pages, 5887269 bytes).
+Output written on bsc_thesis.pdf (36 pages, 5887201 bytes).
 PDF statistics:
  194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
