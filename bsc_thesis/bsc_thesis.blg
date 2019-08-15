@@ -1,15 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bsc_thesis.aux
 The style file: alpha.bst
-Illegal, another \bibstyle command---line 187 of file bsc_thesis.aux
+Illegal, another \bibstyle command---line 205 of file bsc_thesis.aux
  : \bibstyle
  :          {alpha}
 I'm skipping whatever remains of this command
 Database file #1: bibliography.bib
-I was expecting a `,' or a `}'---line 416 of file bibliography.bib
- : 
- : PUBLISHER = {Packt},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in DLR
 Warning--to sort, need author or key in CSR
 Warning--to sort, need author or key in Cycles
@@ -18,6 +13,4 @@ Warning--to sort, need author or key in GTAV
 Warning--to sort, need author or key in CyCADA
 Warning--to sort, need author or key in SG
 Warning--to sort, need author or key in Cycle
-Warning--to sort, need author or key in tcml
-Warning--empty publisher in GAN_Projects
-(There were 2 error messages)
+(There was 1 error message)

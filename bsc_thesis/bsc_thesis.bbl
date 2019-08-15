@@ -4,7 +4,14 @@
 \bibitem[Ahi19]{GAN_Projects}
 Kailash Ahirwar.
 \newblock {\em Generative Adversarial Networks Projects}.
-\newblock 2019.
+\newblock Packt, 2019.
+
+\bibitem[BSD{\etalchar{+}}16]{DBLP:journals/corr/BousmalisSDEK16}
+Konstantinos Bousmalis, Nathan Silberman, David Dohan, Dumitru Erhan, and Dilip
+  Krishnan.
+\newblock Unsupervised pixel-level domain adaptation with generative
+  adversarial networks.
+\newblock {\em CoRR}, abs/1612.05424, 2016.
 
 \bibitem[COR{\etalchar{+}}16]{Cordts_2016_CVPR}
 Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler,
@@ -72,15 +79,30 @@ Judy Hoffman, Eric Tzeng, Taesung Park, Jun{-}Yan Zhu, Phillip Isola, Kate
 \newblock Cycada: Cycle-consistent adversarial domain adaptation.
 \newblock {\em CoRR}, abs/1711.03213, 2017.
 
+\bibitem[HZRS15]{DBLP:journals/corr/HeZRS15}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock {\em CoRR}, abs/1512.03385, 2015.
+
 \bibitem[IZZE16]{DBLP:journals/corr/IsolaZZE16}
 Phillip Isola, Jun{-}Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
 \newblock Image-to-image translation with conditional adversarial networks.
 \newblock {\em CoRR}, abs/1611.07004, 2016.
 
+\bibitem[JAL16]{DBLP:journals/corr/JohnsonAL16}
+Justin Johnson, Alexandre Alahi, and Fei{-}Fei Li.
+\newblock Perceptual losses for real-time style transfer and super-resolution.
+\newblock {\em CoRR}, abs/1603.08155, 2016.
+
 \bibitem[LLJX18]{DBLP:journals/corr/abs-1801-01726}
 Peilun Li, Xiaodan Liang, Daoyuan Jia, and Eric~P. Xing.
 \newblock Semantic-aware grad-gan for virtual-to-real urban scene adaption.
 \newblock {\em CoRR}, abs/1801.01726, 2018.
+
+\bibitem[LT16]{DBLP:journals/corr/0001T16}
+Ming{-}Yu Liu and Oncel Tuzel.
+\newblock Coupled generative adversarial networks.
+\newblock {\em CoRR}, abs/1606.07536, 2016.
 
 \bibitem[MPPS16]{DBLP:journals/corr/MetzPPS16}
 Luke Metz, Ben Poole, David Pfau, and Jascha Sohl{-}Dickstein.
@@ -118,12 +140,6 @@ Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
 \newblock In Kostas Daniilidis, Petros Maragos, and Nikos Paragios, editors,
   {\em Computer Vision -- ECCV 2010}, pages 213--226, Berlin, Heidelberg, 2010.
   Springer Berlin Heidelberg.
-
-\bibitem[tcm]{tcml}
-{tcml} cluster universität tübingen.
-\newblock
-  \url{https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/kognitive-systeme/projects/tcml-cluster/}.
-\newblock Accessed: 2019-01-08.
 
 \bibitem[Uni]{Unity}
 {Unity} graphics engine.

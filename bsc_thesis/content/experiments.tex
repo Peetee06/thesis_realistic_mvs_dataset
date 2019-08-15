@@ -8,7 +8,7 @@ In this chapter the three Domain Adaptation Techniques \textbf{CycleGAN} \cite{D
 
 \section{Datasets}
 
-\subsection{Synthetic dataset: \\
+\subsection{Synthetic dataset:\\
 	Playing for Data: Ground Truth from Computer Games}
 
 The GTA5 (Grand Theft Auto V) dataset is proposed in \cite{Richter_2016_ECCV}. It contains 24966 images taken from a street view in the game Grand Theft Auto V by Rockstar Games \cite{GTAV}. The images are provided with $1914 \times 1052$ pixels and are containing moving cars, objects, pedestrians, bikes, have changing lighting and weather conditions aswell as day and night scenes. For all of these images the authors provide ground-truth semantic label maps that are compatible with the classes of the Cityscapes dataset \cite{Cordts_2016_CVPR}. Detouring, i.e. injecting a wrapper between the game and the graphics hardware to log function calls and reconstruct the 3D scene is used to create the images. This also enables a faster labeling process as objects in a scene can be assigned an object ID through which assigned labels are propagated to other images containing this same object. Due to being more realistic than other existing synthetic street view datasets (e.g. SYNTHIA \cite{RosCVPR16}) the GTA5 dataset is very popular for training machine learning models related to autonomous driving and is therefore used in this work. Example images and corresponding label maps are shown in Figure \ref{fig:p4d_examples} 
@@ -42,89 +42,89 @@ As this work is focused on datasets containing driving scenes the methods compar
 where predicted pixels are the pixels predicted for a specific class by the semantic segmentation model and ground truth pixels are the pixels containing the ground truth for that image. Usually there are multiple different classes to predict and therefore it is common to calculate the mean IoU (mIoU) over all images that have predictions. To compare how well classes themselves are predicted by a model, one can also calculate the class IoU (cIoU).
 
 \section{Methodology}
-For the comparison each technique was used to translate a sample of 500 images from the GTA dataset to the Cityscapes domain. For CycleGAN and SG-GAN each, the authors provided pre-trained models. For CyCADA pretranslated images are provided in the project repository \cite{CyCADA}. Due to CyCADA only providing 22k translated images instead of the full 25k images provided in the GTA dataset, from the randomly chosen 500 images only 450 are available here. This has to be regarded in the following comparison. To translate images with SG-GAN and CycleGAN the provided code \cite{SG},\cite{Cycle} and for the semantic segmentation task an implementation \cite{DLR} of deeplabv3 \cite{DBLP:journals/corr/ChenPSA17} was used. To compute the IoU values the deeplabv3 implementation uses the benchmark code provided by Cityscapes \cite{CSR}. All computations were run on Ubuntu 18.04 using CPU only in VirtualBox on a Windows Machine due to issues with dependencies while running the code on the tcml cluster of the university of tuebingen \cite{tcml}, a cluster for machine learning applications.
+For the comparison each technique was used to translate a sample of 500 images from the GTA dataset to the Cityscapes domain. For CycleGAN and SG-GAN each, the authors provided pre-trained models. For CyCADA pretranslated images are provided in the project repository \cite{CyCADA}. To translate images with SG-GAN and CycleGAN the provided code \cite{SG},\cite{Cycle}, respectively and for the semantic segmentation task an implementation \cite{DLR} of DeepLabv3 \cite{DBLP:journals/corr/ChenPSA17} was used. To compute the IoU values the DeepLabv3 implementation uses the benchmark code provided by Cityscapes \cite{CSR}. All computations were run on a machine with Ubuntu 18.04 using an NVIDIA Geforce GTX 1070 with 8GB RAM. The images were scaled down to $512 \times 256$ pixels due to memory limitations while computing the CycleGAN samples.
 
 \section{Results}
-The results are not as expected. As seen in Table \ref{table:results} semantic segmentation on CyCADA-translated images is just approximately 0.9 \% points more accurate than untranslated GTA images. SG-GAN is around 10 \% points less accurate than CyCADA and GTA5. Translating the images with SG-GAN worsened semantic segmentation results of the Deeplabv3 model. 
-\begin{table}
-	\centering
-	\begin{tabular}{|c|c|c|c|}
-		\multicolumn{4}{c}{\textbf{category Scores}}\\
-		\hline
-		\multicolumn{1}{c}{} & \multicolumn{3}{c}{Methods}\\
-		\cline{2-4}
-		\multicolumn{1}{c|}{category} & GTA5 & CyCADA & SG-GAN \\ 
-		\hline
-		construction & \textbf{0.740} & 0.719 & 0.651 \\ 
-		\hline 
-		flat & 0.709 & \textbf{0.894} & 0.639 \\ 
-		\hline 
-		human & \textbf{0.522} & 0.438 & 0.475 \\ 
-		\hline 
-		nature & 0.606 & \textbf{0.617} & 0.584 \\ 
-		\hline 
-		object & \textbf{0.100} & 0.077 & 0.085 \\ 
-		\hline 
-		sky & \textbf{0.894} & 0.841 & 0.518 \\ 
-		\hline 
-		vehicle & 0.661 & \textbf{0.694} & 0.641 \\ 
-		\hline \hline
-		average & 0.604 & \textbf{0.611} & 0.513\\
-		\hline
-		\multicolumn{4}{c}{}\\
-		\multicolumn{4}{c}{\textbf{class Scores}}\\
-		\hline
-		\multicolumn{1}{c}{} & \multicolumn{3}{c}{Methods}\\
-		\cline{2-4}
-		\multicolumn{1}{c|}{class} & GTA5 & CyCADA & SG-GAN \\ 
-		\hline
-		bicycle & \textbf{0.127} & 0.055 & 0.062 \\ 
-		\hline 
-		building & \textbf{0.732} & 0.669 & 0.608 \\ 
-		\hline 
-		bus & 0.224 & \textbf{0.345} & 0.276 \\ 
-		\hline 
-		car & 0.652 & \textbf{0.665} & 0.620 \\ 
-		\hline 
-		fence & \textbf{0.201} & 0.186 & 0.169 \\ 
-		\hline 
-		motorcycle & 0.304 & 0.365 & \textbf{0.383} \\ 
-		\hline 
-		person & \textbf{0.501} & 0.419 & 0.455 \\ 
-		\hline 
-		pole & 0.0 & 0.0 & 0.0 \\ 
-		\hline 
-		rider & \textbf{0.460} & 0.314 & 0.366 \\ 
-		\hline 
-		road & 0.657 & \textbf{0.781} & 0.582 \\ 
-		\hline 
-		sidewalk & \textbf{0.370} & 0.314 & 0.315 \\ 
-		\hline 
-		sky & \textbf{0.894} & 0.841 & 0.518 \\ 
-		\hline 
-		terrain & \textbf{0.304} & 0.299 & 0.260 \\ 
-		\hline 
-		traffic light & \textbf{0.197} & 0.174 & 0.181 \\ 
-		\hline 
-		traffic sign & \textbf{0.156} & 0.108 & 0.143 \\ 
-		\hline 
-		train & 0.013 & 0.002 & \textbf{0.024} \\ 
-		\hline 
-		truck & 0.267 & \textbf{0.364} & 0.286 \\ 
-		\hline 
-		vegetation & 0.657 & 0.606 & \textbf{0.663} \\ 
-		\hline 
-		wall & 0.222 & \textbf{0.298} & 0.260 \\ 
-		\hline \hline 
-		average & \textbf{0.365} & 0.358 & 0.325\\
-		\hline
-	\end{tabular} 
-	\caption{Intersection over Union results for evaluation on untranslated GTA5 images and translated images by CyCADA and SG-GAN respectively. Rounded to 3 decimal places}
-	\label{table:results}
-\end{table}
 
 \subsection{Quantitative}
+As seen in Table \ref{table:results} CyCADA is the only method that improved average values for category and class semantic segmentation of the DeepLabv3 model. CyCADA improved the performance on per category average compared to untranslated GTA data by $2.2\%$ points, CycleGAN decreased it by $2\%$ points and SG-GAN by $4.2\%$ points. While SG-GAN was only able to improve the ``nature'' category and CycleGAN additionaly improved flat aswell, CyCADA was able to improve 4 of the 7 categories tested. For per class average values, CycleGAN and SG-GAN decreased performance by $2.6\%$ points and $1.1\&$ point, respectively while CyCADA improved it by $1.6\%$ points. For the per class comparison, CycleGAN improved performance for 7 of the 19 tested classes compared to untranslated GTA5. SG-GAN was able to improve the scores for 8 out of 19 classes while having the best values for ``bus'', ``building'', ``traffic sign'' and ``vegetation''. CyCADA improves performance for 10 classes while performing approximately the same as untranslated GTA images for ``vegetation''. It holds the top values for ``building'', ``fence'', ``motorcycle'', ``road'', ``terrain'', ``train'', ``truck'' and ``wall''. The biggest improvement for CyCADA is category ``rain'' where it improves semantic segmentation accuracy by $25.5\%$ points compared to GTA.
 
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\multicolumn{5}{c}{\textbf{category Scores}}\\
+		\hline
+		\multicolumn{1}{c}{} & \multicolumn{4}{c}{Methods}\\
+		\cline{2-5}
+		\multicolumn{1}{c|}{category} & GTA5 & CycleGAN & CyCADA & SG-GAN\\ 
+		\hline
+		construction & 0.636 & 0.598 & \textbf{0.674} & 0.628\\ 
+		\hline 
+		flat & 0.740 & 0.861 & \textbf{0.894} & 0.735\\ 
+		\hline 
+		human & \textbf{0.546} & 0.402 & 0.440 & 0.487\\ 
+		\hline 
+		nature & 0.543 & 0.615 & \textbf{0.622} & 0.585\\ 
+		\hline 
+		object & \textbf{0.085} & 0.067 & 0.073 & 0.080\\ 
+		\hline 
+		sky & \textbf{0.872} & 0.822 & 0.832 & 0.644\\ 
+		\hline 
+		vehicle & 0.641 & 0.557 & \textbf{0.680} & 0.609\\ 
+		\hline \hline
+		average & 0.580 & 0.560 & \textbf{0.602} & 0.538\\
+		\hline
+		\multicolumn{5}{c}{}\\
+		\multicolumn{5}{c}{\textbf{class Scores}}\\
+		\hline
+		\multicolumn{1}{c}{} & \multicolumn{4}{c}{Methods}\\
+		\cline{2-5}
+		\multicolumn{1}{c|}{class} & GTA5 & CycleGAN & CyCADA & SG-GAN\\ 
+		\hline
+		bicycle & \textbf{0.100} & 0.038 & 0.041 & 0.051\\ 
+		\hline 
+		building & 0.620 & 0.509 & \textbf{0.634} & 0.513\\ 
+		\hline 
+		bus & 0.209 & 0.136 & 0.190 & \textbf{0.257}\\ 
+		\hline 
+		car & 0.627 & 0.570 & 0.640 & \textbf{0.642}\\ 
+		\hline 
+		fence & 0.100 & 0.102 & \textbf{0.125} & 0.083\\ 
+		\hline 
+		motorcycle & 0.195 & 0.125 & \textbf{0.297} & 0.256\\ 
+		\hline 
+		person & \textbf{0.524} & 0.369 & 0.398 & 0.461\\ 
+		\hline 
+		pole & 0.0 & 0.0 & 0.0 & 0.0\\ 
+		\hline 
+		rider & \textbf{0.312} & 0.160 & 0.144 & 0.247\\ 
+		\hline 
+		road & 0.658 & 0.752 & \textbf{0.775} & 0.631\\ 
+		\hline 
+		sidewalk & \textbf{0.434} & 0.365 & 0.339 & 0.381\\ 
+		\hline 
+		sky & \textbf{0.872} & 0.822 & 0.832 & 0.644\\ 
+		\hline 
+		terrain & 0.282 & 0.361 & \textbf{0.374} & 0.292\\ 
+		\hline 
+		traffic light & \textbf{0.210} & 0.178 & 0.187 & 0.185\\ 
+		\hline 
+		traffic sign & 0.090 & 0.126 & 0.120 & \textbf{0.158}\\ 
+		\hline 
+		train & 0.025 & 0.115 & \textbf{0.280} & 0.222\\ 
+		\hline 
+		truck & 0.387 & 0.371 & \textbf{0.511} & 0.332\\ 
+		\hline 
+		vegetation & 0.595 & 0.620 & 0.595 & \textbf{0.653}\\ 
+		\hline 
+		wall & 0.162 & 0.186 & \textbf{0.225} & 0.186\\ 
+		\hline \hline 
+		average & 0.337 & 0.311 & \textbf{0.353} & 0.326\\
+		\hline
+	\end{tabular} 
+	\caption{Intersection over Union results for evaluation on untranslated GTA5 images and translated images by CycleGAN, CyCADA and SG-GAN respectively. Rounded to 3 decimal places. Maximum value per row is written in big font.}
+	\label{table:results}
+\end{table}
 \subsection{Qualitative}
 
 \section{Discussion}

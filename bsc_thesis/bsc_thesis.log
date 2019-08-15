@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  15 AUG 2019 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  15 AUG 2019 17:53
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1050,7 +1050,7 @@ t_4C.pdf>] [2
 Package tocbasic Info: character protrusion at toc deactivated on input line 18
 .
  (bsc_thesis.toc
-Underfull \vbox (badness 4819) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9])
 \tf@toc=\write3
@@ -1139,19 +1139,18 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 12.
+(scrbook)              `\normalfont \bfseries ' on input line 15.
 
 ) (content/techniques.tex [21] [22
 
 
 ]
 chapter 4.
-[23]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 55.
+[23] [24]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 68.
  (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-[24] [25] [26]) (content/experiments.tex [27] [28
+) [25] [26]) (content/experiments.tex [27] [28
 
 
 ]
@@ -1170,12 +1169,13 @@ Package pdftex.def Info: images/cityscapes_example.png  used on input line 31.
 
 Underfull \vbox (badness 1521) has occurred while \output is active []
 
- [31 <./images/cityscapes_example.png>]) (content/conclusion.tex [32] [33] [34
+ [31 <./images/cityscapes_example.png>] [32]) (content/conclusion.tex [33] [34]
 
-
-]
 chapter 6.
-) [35] [36
+) [35
+
+
+] [36
 
 
 ]
@@ -1184,52 +1184,40 @@ chapter A.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 []\T1/pxr/m/n/10.95 (+20) Cityscapes repos-i-tory.  $\T1/pxtt/m/n/10.95 https :
  / / github . com / mcordts /
  []
 
 
-Underfull \hbox (badness 4403) in paragraph at lines 32--35
+Underfull \hbox (badness 4403) in paragraph at lines 39--42
 []\T1/pxr/m/n/10.95 (+20) CyCADA repos-i-tory.  $\T1/pxtt/m/n/10.95 https : / /
  github . com / jhoffman / cycada _
  []
 
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
-\T1/pxtt/m/n/10.95 fakultaeten / mathematisch-[]naturwissenschaftliche-[]fakult
-aet /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
-\T1/pxtt/m/n/10.95 fachbereiche / informatik / lehrstuehle / kognitive-[]system
-e /
- []
-
-[40]) [41] (bsc_thesis.aux) ) 
+[39] [40]) [41] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12836 strings out of 492903
- 206456 string characters out of 3130412
- 563498 words of memory out of 3000000
- 16207 multiletter control sequences out of 15000+200000
- 60881 words of font info for 278 fonts, out of 3000000 for 9000
+ 12863 strings out of 492903
+ 206734 string characters out of 3130412
+ 562498 words of memory out of 3000000
+ 16210 multiletter control sequences out of 15000+200000
+ 62053 words of font info for 296 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/home/peete/.miktex/texmfs/install/fonts/enc/dvip
-s/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/doublestro
-ke/dsrom10.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/p
-xex.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsy.pfb
-></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsya.pfb></hom
-e/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsyb.pfb></home/peet
-e/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxmi.pfb></home/peete/.mik
-tex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></home/peete/.miktex/tex
-mfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peete/.miktex/texmfs/in
-stall/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/f
-onts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/ty
-pe1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw
-/palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (41 pages, 7545706 bytes).
+{/home/peete/.miktex/texmfs/install/fonts/enc
+/dvips/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/doubl
+estroke/dsrom10.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfo
+nts/pxex.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxs
+y.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsya.pfb>
+</home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsyb.pfb></home
+/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxmi.pfb></home/peete
+/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></home/peete/.mikte
+x/texmfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peete/.miktex/texm
+fs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/inst
+all/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fon
+ts/type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type
+1/urw/palatino/uplri8a.pfb>
+Output written on bsc_thesis.pdf (41 pages, 7549756 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

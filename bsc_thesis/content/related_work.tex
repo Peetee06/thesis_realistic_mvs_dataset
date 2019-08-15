@@ -1,22 +1,24 @@
 \chapter{Related Work}
 \label{sec:related_work}
-
-There are many approaches of adapting images from one domain to a different one. After the initial release of the GAN paper \cite{NIPS2014_5423} a lot of research focused on using and improving the GAN architecture and creating Benchmarks to evaluate the diverse approaches. This chapter will show some of these approaches.
+Following the initial GAN paper \cite{NIPS2014_5423}, many additions and alterations have been made to improve and stabilize the training process of GANs and creating better results. While some approaches use additional objectives like a conditional input to generate specific outputs \cite{DBLP:journals/corr/IsolaZZE16} on paired data, others use a cycle-consistency loss first proposed in \cite{DBLP:journals/corr/ZhuPIE17} making unpaired data possible aswell. This chapter shows some of these improved methods and will also go over a few ``classical'' domain adaptation methods that don't use GANs.
 
 \section{Classical Domain Adaptation Methods}
 
+\subsection{Adapting Visual Category Models to New Domains}
+\cite{10.1007/978-3-642-15561-1_16}
+
+
 
 \section{Domain Adaptation with Generative Adversarial Networks}
-Following the initial GAN paper \cite{NIPS2014_5423}, many additions and alterations have been made to improve and stabilize the training process and creating better results. While some approaches use additional objectives like a conditional input to generate specific outputs \cite{DBLP:journals/corr/IsolaZZE16} on paired data, others use a cycle-consistency loss first proposed in \cite{DBLP:journals/corr/ZhuPIE17} making unpaired data possible aswell. 
+
 
 \todo{add info from ''Deep Visual Domain Adaptation - A Survey``-paper}
 
-\subsection{Method 1}
+\subsection{CoGAN}
+\cite{DBLP:journals/corr/0001T16}
 
-\subsection{Method 2}
+\subsection{cGAN}
+\cite{DBLP:journals/corr/IsolaZZE16}
 
-\subsection{Method 3}
-
-\subsection{Method 4}
-
-\subsection{Method 5}
+\subsection{PixelDA}
+\cite{DBLP:journals/corr/BousmalisSDEK16}

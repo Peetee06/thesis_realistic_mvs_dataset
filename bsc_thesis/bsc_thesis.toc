@@ -29,39 +29,38 @@
 \contentsline {paragraph}{\nonumberline discriminator is a classifier.}{19}% 
 \contentsline {chapter}{\numberline {3}Related Work}{21}% 
 \contentsline {section}{\numberline {3.1}Classical Domain Adaptation Methods}{21}% 
+\contentsline {subsection}{\numberline {3.1.1}Adapting Visual Category Models to New Domains}{21}% 
 \contentsline {section}{\numberline {3.2}Domain Adaptation with Generative Adversarial Networks}{21}% 
-\contentsline {subsection}{\numberline {3.2.1}Method 1}{21}% 
-\contentsline {subsection}{\numberline {3.2.2}Method 2}{21}% 
-\contentsline {subsection}{\numberline {3.2.3}Method 3}{21}% 
-\contentsline {subsection}{\numberline {3.2.4}Method 4}{21}% 
-\contentsline {subsection}{\numberline {3.2.5}Method 5}{21}% 
+\contentsline {subsection}{\numberline {3.2.1}CoGAN}{21}% 
+\contentsline {subsection}{\numberline {3.2.2}cGAN}{21}% 
+\contentsline {subsection}{\numberline {3.2.3}PixelDA}{21}% 
 \contentsline {chapter}{\numberline {4}Domain Adaptation Techniques}{23}% 
 \contentsline {section}{\numberline {4.1}CycleGAN}{23}% 
-\contentsline {subsection}{\numberline {4.1.1}Loss Functions}{24}% 
+\contentsline {subsection}{\numberline {4.1.1}Loss Functions}{23}% 
 \contentsline {subsection}{\numberline {4.1.2}Implementation}{24}% 
 \contentsline {subsubsection}{\nonumberline Network Architecture}{24}% 
 \contentsline {subsubsection}{\nonumberline Training Details}{24}% 
-\contentsline {section}{\numberline {4.2}CyCADA}{24}% 
+\contentsline {section}{\numberline {4.2}CyCADA}{25}% 
 \contentsline {subsection}{\numberline {4.2.1}Loss Functions}{25}% 
-\contentsline {subsection}{\numberline {4.2.2}Implementation}{25}% 
-\contentsline {subsubsection}{\nonumberline Network Architecture}{25}% 
-\contentsline {subsubsection}{\nonumberline Training Details}{25}% 
-\contentsline {section}{\numberline {4.3}SG-GAN}{25}% 
-\contentsline {subsection}{\numberline {4.3.1}Loss Functions}{27}% 
+\contentsline {subsection}{\numberline {4.2.2}Implementation}{26}% 
+\contentsline {subsubsection}{\nonumberline Network Architecture}{26}% 
+\contentsline {subsubsection}{\nonumberline Training Details}{26}% 
+\contentsline {section}{\numberline {4.3}SG-GAN}{26}% 
+\contentsline {subsection}{\numberline {4.3.1}Loss Functions}{26}% 
 \contentsline {subsection}{\numberline {4.3.2}Implementation}{27}% 
 \contentsline {subsubsection}{\nonumberline Network Architecture}{27}% 
 \contentsline {subsubsection}{\nonumberline Training Details}{27}% 
 \contentsline {chapter}{\numberline {5}Experiments}{29}% 
 \contentsline {section}{\numberline {5.1}Datasets}{29}% 
-\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{29}% 
+\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset:\\ Playing for Data: Ground Truth from Computer Games}{29}% 
 \contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{29}% 
 \contentsline {section}{\numberline {5.2}Comparison Benchmark}{31}% 
 \contentsline {subsection}{\numberline {5.2.1}Semantic Segmentation}{31}% 
 \contentsline {section}{\numberline {5.3}Methodology}{32}% 
 \contentsline {section}{\numberline {5.4}Results}{32}% 
 \contentsline {subsection}{\numberline {5.4.1}Quantitative}{32}% 
-\contentsline {subsection}{\numberline {5.4.2}Qualitative}{32}% 
-\contentsline {section}{\numberline {5.5}Discussion}{32}% 
+\contentsline {subsection}{\numberline {5.4.2}Qualitative}{33}% 
+\contentsline {section}{\numberline {5.5}Discussion}{33}% 
 \contentsline {chapter}{\numberline {6}Conclusion}{35}% 
 \contentsline {section}{\numberline {6.1}Outlook and Future Work}{35}% 
 \contentsline {chapter}{\numberline {A}Blub}{37}% 

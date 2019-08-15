@@ -93,9 +93,12 @@
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline learn density distribution.}{19}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline discriminator is a classifier.}{19}\protected@file@percent }
 \citation{NIPS2014_5423}
-\citation{NIPS2014_5423}
 \citation{DBLP:journals/corr/IsolaZZE16}
 \citation{DBLP:journals/corr/ZhuPIE17}
+\citation{10.1007/978-3-642-15561-1_16}
+\citation{DBLP:journals/corr/0001T16}
+\citation{DBLP:journals/corr/IsolaZZE16}
+\citation{DBLP:journals/corr/BousmalisSDEK16}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Related Work}{21}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -103,12 +106,11 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{sec:related_work}{{3}{21}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Classical Domain Adaptation Methods}{21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Adapting Visual Category Models to New Domains}{21}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Domain Adaptation with Generative Adversarial Networks}{21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Method 1}{21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Method 2}{21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Method 3}{21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Method 4}{21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Method 5}{21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}CoGAN}{21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}cGAN}{21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}PixelDA}{21}\protected@file@percent }
 \citation{DBLP:journals/corr/ZhuPIE17}
 \citation{DBLP:journals/corr/abs-1711-03213}
 \citation{DBLP:journals/corr/abs-1801-01726}
@@ -127,26 +129,28 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{sec:techniques}{{4}{23}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}CycleGAN}{23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Loss Functions}{23}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of loss functions ofDomain Adaptation Techniques \textbf  {CycleGAN} \cite  {DBLP:journals/corr/ZhuPIE17}, \textbf  {CyCADA} \cite  {DBLP:journals/corr/abs-1711-03213} and \textbf  {SG-GAN} \cite  {DBLP:journals/corr/abs-1801-01726}\relax }}{23}\protected@file@percent }
 \newlabel{table:DA_comparison}{{4.1}{23}}
-\citation{DBLP:journals/corr/abs-1711-03213}
+\citation{DBLP:journals/corr/JohnsonAL16}
+\citation{DBLP:journals/corr/HeZRS15}
 \newlabel{eq:GAN_loss}{{4.2}{24}}
 \newlabel{eq:CycleGAN_loss}{{4.3}{24}}
 \newlabel{eq:GAN_goal}{{4.4}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Loss Functions}{24}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Implementation}{24}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Network Architecture}{24}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Training Details}{24}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}CyCADA}{24}\protected@file@percent }
-\newlabel{eq:task_loss}{{4.5}{24}}
+\citation{DBLP:journals/corr/abs-1711-03213}
 \citation{DBLP:journals/corr/abs-1801-01726}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}CyCADA}{25}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Loss Functions}{25}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Implementation}{25}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Network Architecture}{25}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Training Details}{25}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}SG-GAN}{25}\protected@file@percent }
+\newlabel{eq:task_loss}{{4.5}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Implementation}{26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Network Architecture}{26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Training Details}{26}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}SG-GAN}{26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Loss Functions}{26}\protected@file@percent }
 \newlabel{eq:soft-grad}{{4.12}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Loss Functions}{27}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Implementation}{27}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Network Architecture}{27}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Training Details}{27}\protected@file@percent }
@@ -168,7 +172,7 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{sec:experiments}{{5}{29}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Datasets}{29}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset: \\ Playing for Data: Ground Truth from Computer Games}{29}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Synthetic dataset:\\ Playing for Data: Ground Truth from Computer Games}{29}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{29}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Example images (left) and corresponding ground-truth semantic label maps (right) provided in the GTA5 dataset \cite  {Richter_2016_ECCV}.\relax }}{30}\protected@file@percent }
 \newlabel{fig:p4d_examples}{{5.1}{30}}
@@ -184,14 +188,13 @@
 \citation{DLR}
 \citation{DBLP:journals/corr/ChenPSA17}
 \citation{CSR}
-\citation{tcml}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Methodology}{32}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Results}{32}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Quantitative}{32}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Qualitative}{32}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Discussion}{32}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Intersection over Union results for evaluation on untranslated GTA5 images and translated images by CyCADA and SG-GAN respectively. Rounded to 3 decimal places\relax }}{33}\protected@file@percent }
-\newlabel{table:results}{{5.1}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Qualitative}{33}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Discussion}{33}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Intersection over Union results for evaluation on untranslated GTA5 images and translated images by CycleGAN, CyCADA and SG-GAN respectively. Rounded to 3 decimal places. Maximum value per row is written in big font.\relax }}{34}\protected@file@percent }
+\newlabel{table:results}{{5.1}{34}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{35}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -207,6 +210,7 @@
 \@writefile{lol}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \bibcite{GAN_Projects}{Ahi19}
+\bibcite{DBLP:journals/corr/BousmalisSDEK16}{BSD{$^{+}$}16}
 \bibcite{Cordts_2016_CVPR}{COR{$^{+}$}16}
 \bibcite{DBLP:journals/corr/ChenPSA17}{CPSA17}
 \bibcite{CSR}{CSR}
@@ -219,15 +223,17 @@
 \bibcite{NIPS2014_5423}{GPAM{$^{+}$}14}
 \bibcite{GTAV}{GTA}
 \bibcite{DBLP:journals/corr/abs-1711-03213}{HTP{$^{+}$}17}
+\bibcite{DBLP:journals/corr/HeZRS15}{HZRS15}
 \bibcite{DBLP:journals/corr/IsolaZZE16}{IZZE16}
+\bibcite{DBLP:journals/corr/JohnsonAL16}{JAL16}
 \bibcite{DBLP:journals/corr/abs-1801-01726}{LLJX18}
+\bibcite{DBLP:journals/corr/0001T16}{LT16}
 \bibcite{DBLP:journals/corr/MetzPPS16}{MPPS16}
 \bibcite{Nash48}{Nas50}
 \bibcite{RosCVPR16}{RSM{$^{+}$}16}
 \bibcite{Richter_2016_ECCV}{RVRK16}
 \bibcite{SG}{SG}
 \bibcite{10.1007/978-3-642-15561-1_16}{SKFD10}
-\bibcite{tcml}{tcm}
 \bibcite{Unity}{Uni}
 \bibcite{DBLP:journals/corr/abs-1805-04687}{YXC{$^{+}$}18}
 \bibcite{DBLP:journals/corr/ZhuPIE17}{ZPIE17}
