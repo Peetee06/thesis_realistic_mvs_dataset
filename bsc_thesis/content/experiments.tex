@@ -34,12 +34,12 @@ The Cityscapes dataset \cite{Cordts_2016_CVPR} is a large scale dataset containi
 \end{figure}
 
 \section{Comparison Benchmark}
-\subsection{Intersection over Union (IoU)}
-The Intersection over Union is a metric often used to compare semantic segmentation methods. All of the compared techniques were evaluated using IoU. It follows the following formula:
+\subsection{Semantic Segmentation}
+As this work is focused on datasets containing driving scenes the methods compared are applied to images that will then be performed semantic segmentation on. For the comparison Intersection over Union (IoU) is used. Intersection over Union is a metric often used to compare semantic segmentation methods' performance. All of the compared techniques were evaluated using IoU. It follows the following formula:
 \begin{align*}
-	\frac{\text{predicted Pixels} \cap \text{ground truth Pixels}}{\text{predicted Pixels} \cup \text{ground truth Pixels}}
+	\frac{\text{predicted pixels} \cap \text{ground truth pixels}}{\text{predicted pixels} \cup \text{ground truth pixels}}
 \end{align*}
-where predicted Pixels are the pixels predicted for a specific class by the semantic segmentation model and ground truth Pixels are the Pixels containing the ground truth for that image. Usually there are multiple different classes to predict and therefore it is common to calculate the mean IoU (mIoU) over all images that have predictions. To compare how well classes themselves are predicted by a model, one can also calculate the class IoU (cIoU).
+where predicted pixels are the pixels predicted for a specific class by the semantic segmentation model and ground truth pixels are the pixels containing the ground truth for that image. Usually there are multiple different classes to predict and therefore it is common to calculate the mean IoU (mIoU) over all images that have predictions. To compare how well classes themselves are predicted by a model, one can also calculate the class IoU (cIoU).
 
 \section{Methodology}
 For the comparison each technique was used to translate a sample of 500 images from the GTA dataset to the Cityscapes domain. For CycleGAN and SG-GAN each, the authors provided pre-trained models. For CyCADA pretranslated images are provided in the project repository \cite{CyCADA}. Due to CyCADA only providing 22k translated images instead of the full 25k images provided in the GTA dataset, from the randomly chosen 500 images only 450 are available here. This has to be regarded in the following comparison. To translate images with SG-GAN and CycleGAN the provided code \cite{SG},\cite{Cycle} and for the semantic segmentation task an implementation \cite{DLR} of deeplabv3 \cite{DBLP:journals/corr/ChenPSA17} was used. To compute the IoU values the deeplabv3 implementation uses the benchmark code provided by Cityscapes \cite{CSR}. All computations were run on Ubuntu 18.04 using CPU only in VirtualBox on a Windows Machine due to issues with dependencies while running the code on the tcml cluster of the university of tuebingen \cite{tcml}, a cluster for machine learning applications.
@@ -49,11 +49,11 @@ The results are not as expected. As seen in Table \ref{table:results} semantic s
 \begin{table}
 	\centering
 	\begin{tabular}{|c|c|c|c|}
+		\multicolumn{4}{c}{\textbf{category Scores}}\\
+		\hline
 		\multicolumn{1}{c}{} & \multicolumn{3}{c}{Methods}\\
 		\cline{2-4}
-		\multicolumn{1}{c|}{}& GTA5 & CyCADA & SG-GAN \\ 
-		\cline{2-4}
-		\multicolumn{4}{l}{category Scores}\\
+		\multicolumn{1}{c|}{category} & GTA5 & CyCADA & SG-GAN \\ 
 		\hline
 		construction & \textbf{0.740} & 0.719 & 0.651 \\ 
 		\hline 
@@ -71,7 +71,12 @@ The results are not as expected. As seen in Table \ref{table:results} semantic s
 		\hline \hline
 		average & 0.604 & \textbf{0.611} & 0.513\\
 		\hline
-		\multicolumn{4}{l}{class Scores}\\
+		\multicolumn{4}{c}{}\\
+		\multicolumn{4}{c}{\textbf{class Scores}}\\
+		\hline
+		\multicolumn{1}{c}{} & \multicolumn{3}{c}{Methods}\\
+		\cline{2-4}
+		\multicolumn{1}{c|}{class} & GTA5 & CyCADA & SG-GAN \\ 
 		\hline
 		bicycle & \textbf{0.127} & 0.055 & 0.062 \\ 
 		\hline 

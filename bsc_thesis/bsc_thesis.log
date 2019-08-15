@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  9 AUG 2019 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  15 AUG 2019 12:28
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -314,6 +314,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
+(/home/peete/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/home/peete/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
@@ -366,9 +376,10 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 (Font)                  OML/ztmcm/m/it --> OML/pxmi/m/it on input line 58.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 (Font)                  OML/pxmi/m/it --> OML/pxmi/bx/it on input line 59.
-\symlettersA=\mathgroup6
+\symlettersA=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
 (Font)                  U/pxmia/m/it --> U/pxmia/bx/it on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 70.
 LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 77.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/ztmcm/m/n --> OMS/pxsy/m/n on input line 77.
@@ -376,10 +387,18 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/ztmcm/m/n --> OMS/pxsy/m/n on input line 77.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/pxsy/m/n --> OMS/pxsy/bx/n on input line 78.
-\symAMSa=\mathgroup7
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 93.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
+(Font)                  U/msa/m/n --> U/pxsya/m/n on input line 93.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/msa/m/n --> U/pxsya/m/n on input line 93.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
 (Font)                  U/pxsya/m/n --> U/pxsya/bx/n on input line 94.
-\symAMSb=\mathgroup8
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 102.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
+(Font)                  U/msb/m/n --> U/pxsyb/m/n on input line 102.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/msb/m/n --> U/pxsyb/m/n on input line 102.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
 (Font)                  U/pxsyb/m/n --> U/pxsyb/bx/n on input line 103.
 \symsymbolsC=\mathgroup9
@@ -573,7 +592,7 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              `\addtokomafont' for the page style elements need
 (scrbook)              explicite user intervention to work.
 (scrbook)              Nevertheless, using requested
-(scrbook)              package `fancyhdr' on input line 35.
+(scrbook)              package `fancyhdr' on input line 36.
 
 (/home/peete/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
@@ -905,11 +924,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for U+pxmia on input line 1.
-
-(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxmia.fd
-File: upxmia.fd 2000/12/14 v1.0
-)
 LaTeX Font Info:    Try loading font information for U+pxsya on input line 1.
 
 (/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxsya.fd
@@ -919,6 +933,11 @@ LaTeX Font Info:    Try loading font information for U+pxsyb on input line 1.
 
 (/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxsyb.fd
 File: utxsyb.fd 2000/12/14 v1.0
+)
+LaTeX Font Info:    Try loading font information for U+pxmia on input line 1.
+
+(/home/peete/.miktex/texmfs/install/tex/latex/pxfonts/upxmia.fd
+File: upxmia.fd 2000/12/14 v1.0
 )
 LaTeX Font Info:    Try loading font information for U+pxsyc on input line 1.
 
@@ -1031,7 +1050,7 @@ t_4C.pdf>] [2
 Package tocbasic Info: character protrusion at toc deactivated on input line 18
 .
  (bsc_thesis.toc
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4819) has occurred while \output is active []
 
  [9])
 \tf@toc=\write3
@@ -1071,24 +1090,35 @@ File: ./images/../images/DA_examples_cityscapes_gta.png Graphic file (type png)
 Package pdftex.def Info: ./images/../images/DA_examples_cityscapes_gta.png  use
 d on input line 13.
 (pdftex.def)             Requested size: 318.67212pt x 100.66017pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13 <./images/../images/DA_examples_cityscapes_gta.png>]
-<./images/../images/semseg.png, id=72, 1884.03876pt x 493.845pt>
+[13] [14 <./images/../images/DA_examples_cityscapes_gta.png>]
+<./images/../images/semseg.png, id=75, 1884.03876pt x 493.845pt>
 File: ./images/../images/semseg.png Graphic file (type png)
 <use ./images/../images/semseg.png>
-Package pdftex.def Info: ./images/../images/semseg.png  used on input line 48.
+Package pdftex.def Info: ./images/../images/semseg.png  used on input line 51.
 (pdftex.def)             Requested size: 398.33864pt x 104.4113pt.
- [14] [15 <./images/../images/semseg.png>] [16]
-<images/metz_et_al_mode_collapse.png, id=87, 1595.9625pt x 180.675pt>
+
+Underfull \vbox (badness 7203) has occurred while \output is active []
+
+ [15 <./images/../images/semseg.png>] [16]
+<./images/../images/I2I_examples.png, id=87, 1511.6475pt x 960.58875pt>
+File: ./images/../images/I2I_examples.png Graphic file (type png)
+<use ./images/../images/I2I_examples.png>
+Package pdftex.def Info: ./images/../images/I2I_examples.png  used on input lin
+e 90.
+(pdftex.def)             Requested size: 318.67212pt x 202.49178pt.
+ [17 <./images/../images/I2I_examples.png>]
+<images/metz_et_al_mode_collapse.png, id=92, 1595.9625pt x 180.675pt>
 File: images/metz_et_al_mode_collapse.png Graphic file (type png)
 <use images/metz_et_al_mode_collapse.png>
 Package pdftex.def Info: images/metz_et_al_mode_collapse.png  used on input lin
-e 95.
+e 109.
 (pdftex.def)             Requested size: 398.33864pt x 45.0942pt.
- [17 <./images/metz_et_al_mode_collapse.png>])
-(content/related_work.tex [18]
+
+[18 <./images/metz_et_al_mode_collapse.png>]) (content/related_work.tex
+[19] [20
+
+
+]
 chapter 3.
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1111,52 +1141,46 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              `\bf' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \bfseries ' on input line 12.
 
-) (content/techniques.tex [19
-
-
-] [20
+) (content/techniques.tex [21] [22
 
 
 ]
 chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
-
-[21]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 36.
+[23]
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 55.
  (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-[22] [23] [24]) (content/experiments.tex [25] [26
+[24] [25] [26]) (content/experiments.tex [27] [28
 
 
 ]
 chapter 5.
-<images/p4d_example.png, id=123, 1533.73pt x 1287.81125pt>
+<images/p4d_example.png, id=132, 1533.73pt x 1287.81125pt>
 File: images/p4d_example.png Graphic file (type png)
 <use images/p4d_example.png>
 Package pdftex.def Info: images/p4d_example.png  used on input line 19.
 (pdftex.def)             Requested size: 398.33864pt x 334.46933pt.
-[27] [28 <./images/p4d_example.png>]
-<images/cityscapes_example.png, id=131, 1538.74875pt x 1163.34625pt>
+[29] [30 <./images/p4d_example.png>]
+<images/cityscapes_example.png, id=140, 1538.74875pt x 1163.34625pt>
 File: images/cityscapes_example.png Graphic file (type png)
 <use images/cityscapes_example.png>
 Package pdftex.def Info: images/cityscapes_example.png  used on input line 31.
 (pdftex.def)             Requested size: 398.33864pt x 301.1493pt.
- [29 <./images/cityscapes_example.png>])
-(content/conclusion.tex [30] [31] [32
+
+Underfull \vbox (badness 1521) has occurred while \output is active []
+
+ [31 <./images/cityscapes_example.png>]) (content/conclusion.tex [32] [33] [34
 
 
 ]
 chapter 6.
-) [33] [34
+) [35] [36
 
 
 ]
 chapter A.
-(bsc_thesis.bbl [35] [36
+(bsc_thesis.bbl [37] [38
 
 
 ]
@@ -1171,42 +1195,43 @@ Underfull \hbox (badness 4403) in paragraph at lines 32--35
  github . com / jhoffman / cycada _
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 116--120
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
 \T1/pxtt/m/n/10.95 fakultaeten / mathematisch-[]naturwissenschaftliche-[]fakult
 aet /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--120
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
 \T1/pxtt/m/n/10.95 fachbereiche / informatik / lehrstuehle / kognitive-[]system
 e /
  []
 
-) [38] (bsc_thesis.aux) ) 
+[40]) [41] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12768 strings out of 492903
- 205050 string characters out of 3130412
- 562077 words of memory out of 3000000
- 16147 multiletter control sequences out of 15000+200000
- 56895 words of font info for 266 fonts, out of 3000000 for 9000
+ 12836 strings out of 492903
+ 206456 string characters out of 3130412
+ 563498 words of memory out of 3000000
+ 16207 multiletter control sequences out of 15000+200000
+ 60881 words of font info for 278 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,19n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/home/peete/.miktex/texmfs/install/fonts/enc/dvips/ba
-se/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/doublestroke/d
-srom10.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxex.
-pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsy.pfb></h
-ome/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsyb.pfb></home/pe
-ete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxmi.pfb></home/peete/.m
-iktex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></home/peete/.miktex/t
-exmfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peete/.miktex/texmfs/
-install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install
-/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/
-type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/u
-rw/palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (38 pages, 5891717 bytes).
+{/home/peete/.miktex/texmfs/install/fonts/enc/dvip
+s/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/doublestro
+ke/dsrom10.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/p
+xex.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsy.pfb
+></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsya.pfb></hom
+e/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsyb.pfb></home/peet
+e/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxmi.pfb></home/peete/.mik
+tex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></home/peete/.miktex/tex
+mfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peete/.miktex/texmfs/in
+stall/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/f
+onts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/ty
+pe1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw
+/palatino/uplri8a.pfb>
+Output written on bsc_thesis.pdf (41 pages, 7545706 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
+ 218 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31263 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 33316 words of extra memory for PDF output out of 35830 (max. 10000000)
 

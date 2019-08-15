@@ -112,6 +112,13 @@ Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
 \newblock \url{https://github.com/Peilun-Li/SG-GAN}.
 \newblock Accessed: 2019-01-08.
 
+\bibitem[SKFD10]{10.1007/978-3-642-15561-1_16}
+Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
+\newblock Adapting visual category models to new domains.
+\newblock In Kostas Daniilidis, Petros Maragos, and Nikos Paragios, editors,
+  {\em Computer Vision -- ECCV 2010}, pages 213--226, Berlin, Heidelberg, 2010.
+  Springer Berlin Heidelberg.
+
 \bibitem[tcm]{tcml}
 {tcml} cluster universität tübingen.
 \newblock

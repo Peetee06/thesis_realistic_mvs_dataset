@@ -5,8 +5,8 @@ This chapter will show and explain the foundations necessary for this work. The 
 
 
 \section{Domain Adaptation}
-As described in \cite{DBLP:journals/corr/Csurka17},
-Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. In this work we will focus on the adaptation from synthetic to real images. When talking about a synthetic image we are implying it was rendered from a virtual scene through a rendering engine like blender's ''Cycles`` \cite{Cycles} or graphics engine like Unity \cite{Unity}. We define real images as taken from a real-world scene through some kind of camera. See Figure \ref{fig:DA_examples} for an example of synthetic and real images. Other examples of domains are an image of a painting in the style of a particular artist, images of an object from different viewpoints. 
+Collecting labeled data in the real world is expensive aswell as potentially inaccurate due to pixel level annotations being challenging for human annotators to do in a very detailed way. This is in contrast to synthetic data for which data collection and annotation can be highly automated. Examples for such synthetically generated datasets are the GTA dataset \cite{Richter_2016_ECCV} and the SYNTHIA dataset \cite{RosCVPR16}. The synthetic domain is different than the real domain (e.g. changes in texture, lighting, ...) though, which makes models trained on the synthetic data perform worse when applied in the real world. The research field of Domain Adaptation tackles this problem. As described in \cite{DBLP:journals/corr/Csurka17},
+Domain Adaptation is the task of transfering a machine learning model that is working well on a source data distribution to a related target data distribution. This work focuses on the adaptation from synthetic-to-real images. Where synthetic images are images rendered from a virtual scene through a rendering engine like blender's ''Cycles`` \cite{Cycles} or graphics engine like Unity \cite{Unity}. While real images are defined as taken from a real-world scene through some kind of camera. See Figure \ref{fig:DA_examples} for an example of synthetic and real images. Other examples of domains are an image of a painting in the style of a particular artist, images of an object from different viewpoints. A major challenge in synthetic-to-real Domain Adaptation is that there is generally no paired data (in contrast to works like \cite{DBLP:journals/corr/IsolaZZE16} that work with domains that allow the use of paired data). Therefore synthetic-to-real Domain Adaptation methods have to be able to work with unpaired data. 
 
 \begin{figure}
 	\centering
@@ -39,9 +39,12 @@ Domain Adaptation is the task of transfering a machine learning model that is wo
 
 \subsection{Multi-Step Domain Adaptation}
 
+\subsection{Example Applications}
+\subsubsection{Semantic Segmentation}
+Semantic Segmentation is one of the most important aspects in autonomous driving. It is the task of semantically segmentating objects in an image, i.e. labeling each pixel according to what object it belongs to. See Figure \ref{fig:semseg} for examples. Adapting semantic segmentation models is one application of Domain Adaptation and the one focused on in this work. 
 
-\section{Semantic Segmentation}
-Semantic Segmentation is one of the most important aspects in autonomous driving. It is the task of semantically segmentating objects in an image, i.e. labeling each pixel according to what object it belongs to. See Figure \ref{fig:semseg} for examples.
+\subsubsection{Classification}
+Classification models or data that is fed into a classification model can also be adapted through Domain Adaptation. For example when adapting a model trained on classification of objects in pictures taken from a frontal view of that object to pictures taken from a side view (e.g. in \cite{10.1007/978-3-642-15561-1_16})
 
 \begin{figure}
 	\centering
@@ -78,6 +81,17 @@ On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values fr
 \subsection{The Generator}
 
 \subsection{The Discriminator}
+
+\subsection{Conditional GANs}
+Instead of having random noise as input to the Net, conditional GANs get a conditional input that determines the output. \cite{DBLP:journals/corr/IsolaZZE16} generated images of shoes depending on drawn sketches thereof, translated grayscale images to color images and more (See Figure \ref{fig:I2I_examples} for examples). This is the same for the methods compared in this work: They use a synthetic image as conditional input and generate an image that looks more realistic while preserving features and image elements of the original image.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{../images/I2I_examples.png}
+	\caption{Examples of conditional inputs and generated images (output) of conditional GANs as described in \cite{DBLP:journals/corr/IsolaZZE16}}
+	\label{fig:I2I_examples}
+\end{figure}
+
 
 \subsection{Training}
 \subsubsection{Optimization}

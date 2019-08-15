@@ -863,6 +863,69 @@ as usual
 
 \section{Deep Visual Domain Adaptation - A Survey}
 
+\paragraph{Definitions \& Notations}
+\begin{itemize}
+	\item domain $\mathcal{D}$ consists of 
+	\item feature space $\mathcal{X}$ and 
+	\item marginal probability distribution $P(X)$ where
+	\item $X = \{x_1, ..., x_n\} \in \mathcal{X}$
+	\item given a specific domain $\mathcal{D} = \{\mathcal{X}, P(X)\}$, a 
+	\item Task $\mathcal{T}$ consists of 
+	\item feature space $\mathcal{Y}$ and an
+	\item objective predictive function $f(\cdot)$ which can also be viewed as a
+	\item conditional probability distribution $P(Y|X)$ from a probabilistic perspective
+	\item in general: can learn $P(X|Y)$ in a supervised manner from the labeled data $\{x_i, y_i\}$, where $x_i \in \mathcal{X}$ and $y_i \in \mathcal{Y}$
+	\item training dataset with sufficient labeled data is source domain $\mathcal{D}^s = \{\mathcal{X}^s, P(X)^s\}$ and 
+	\item test dataset with small amound of labeled data or no labeled data is target domain $\mathcal{D}^t = \{\mathcal{X}^t, P(X)^t\}$
+	\item partially labeled part $\mathcal{D}^{tl}$ and
+	\item unlabeled parts $\mathcal{D}^{tu}$ form entire target domain
+	\item $\mathcal{D}^t = \mathcal{D}^{tl} \cup \mathcal{D}^{tu}$
+	\item Each domain together with its task: 
+	\item source domain task: $\mathcal{T}^s = \{\mathcal{Y}^s, P(Y^s|X^s)\}$
+	\item target domain task: $\mathcal{T}^t = \{\mathcal{Y}^t, P(Y^t|X^t)\}$
+	\item $P(Y^s|X^s)$ can be learned from the source labeled data $\{x_i^s, y_i^s\}$ while
+	\item $P(Y^t|X^t)$ can be learned from labeled target data $\{x_i^{tl}, y_i^{tl}\}$ and 
+	\item unlabeled data $\{x_i^{tu}\}$
+\end{itemize}
+
+\paragraph{Different Settings of Domain Adaptation}
+\begin{itemize}
+	\item case of traditional machine learning: $\mathcal{D}^s = \mathcal{D}^t$ and $\mathcal{T}^s = \mathcal{T}^t$
+	\item for transfer learning (TL) Pan et al. (83 in survey paper) summarized that
+	\item difference between datasets can be caused by domain divergence $\mathcal{D}^s \neq \mathcal{D}^t$ (i.e. distribution shift or feature space difference)
+	\item or task divergence $\mathcal{T}^s \neq \mathcal{T}^t$ (i.e., conditional distribution shift or label space difference)
+	\item or both
+	\item categorized TL into three main groups:
+	\begin{itemize}
+		\item inductive
+		\item transductive
+		\item unsupervised
+	\end{itemize}
+	transfer learning
+	\item according to this, DA methods are transductive TL solutions with the assumption that 
+	\item the tasks are the same, i.e. $\mathcal{T}^s = \mathcal{T}^t$ and
+	\item the differences are only caused by domain divergence $\mathcal{D}^s = \mathcal{D}^t$ 
+	\item therefore DA can be split into two main categories based on different domain divergences:
+	\begin{itemize}
+		\item homogeneous (distribution shift difference)
+		\item heterogeneous (feature space difference)
+	\end{itemize}
+	domain adaptation
+	\item can further categorize DA into
+	\begin{itemize}
+		\item supervised
+		\item semi-supervised
+		\item unsupervised
+	\end{itemize}
+	DA, in consideration of labeled data of target domain (classification see Figure \ref{fig:overview_DA_settings})
+	\item in \textbf{homogeneous DA} setting, feature spaces between source and target domains are identical ($\mathcal{X}^s = \mathcal{X}^t$) with same dimension ($d^s = d^t$). Hence source and target datasets are generally different in terms of data distributions ($P(X)^s \neq P(X)^t$)
+	\item in \textbf{heterogeneous DA} setting the feature spaces between the source and target domains are nonequivalent ($\mathcal{X}^s \neq \mathcal{X}^t$), and the dimensions may also generally differ ($d^s = d^t$).
+	\item all above DA settings assumed that source and target domains are directly related $\rightarrow$ transferring knowledge can be accomplished in one step
+\end{itemize}
+	
+
+
+\paragraph{A Categorization of One-Step DA}
 \begin{itemize}
 	\item one-step and multi-step domain adaptation (see Figure \ref{fig:overview_DA_settings})
 	\item homogeneous DA: feature spaces between source and target domains are identical with same dimension. Source and target datasets are generally different in terms of data distributions. Can further categorize homogeneous DA into
@@ -877,20 +940,20 @@ as usual
 	\begin{enumerate}
 		\item discrepancy-based: fine-tuning the deep network with labeled or unlabeled target data to diminish the domain shift. Four major techniques:
 		\begin{enumerate}
-			\item class criterion: uses class label information as a guide for transferring knowledge between different domains. When labeled samples from target domain are available in supervised DA, soft label and metric learning are always effective, if not available, pseudo labels and attribute representation can be used
-			\item statistic criterion: aligns statistical distribution shift between source and target domains using some mechanisms. Most commonly used methods for comparing and reducing distribution shift are maximum mean discrepancy (MMD), correlation alignment (CORAL), Kullback-Leibler (KL) divergence and $\mathcal{H}$ divergence, among others
-			\item architecture criterion: improving ability of learning more transferable features by adjusting architecture of DNN (deep neural networks). Techniques proven cost effective include adaptive batch normalization (BN), weak-related weight, domain-guided dropout
-			\item geometric criterion: bridges source and target domains according to their geometrical properties. This criterion assumes that the relationship of geometric structures can reduce the domain shift
+			\item class criterion: uses class label information as a guide for transferring knowledge between different domains. When labeled samples from target domain are available in supervised DA, soft label and metric learning are always effective, if not available, pseudo labels and attribute representation can be used (CITATIONS: 118, 86, 79, 98, 53, 45, 75, 139, 130, 29, 28)
+			\item statistic criterion: aligns statistical distribution shift between source and target domains using some mechanisms. Most commonly used methods for comparing and reducing distribution shift are maximum mean discrepancy (MMD), correlation alignment (CORAL), Kullback-Leibler (KL) divergence and $\mathcal{H}$ divergence, among others (74, 130, 73, 75, 120, 32, 109, 87, 144)
+			\item architecture criterion: improving ability of learning more transferable features by adjusting architecture of DNN (deep neural networks). Techniques proven cost effective include adaptive batch normalization (BN), weak-related weight, domain-guided dropout (69, 54, 68, 95, 128, 89)
+			\item geometric criterion: bridges source and target domains according to their geometrical properties. This criterion assumes that the relationship of geometric structures can reduce the domain shift (16)
 		\end{enumerate}
 		\item adversarial-based: using domain discriminators to encourage domain confusion through an adversarial objective
 		\begin{enumerate}
-			\item generative models: GANs
-			\item non-generative models: feature extractor learns discriminative representation using labels in source domain and maps the target data to same space through domain-confusion loss, thus resulting in domain-invariant representations
+			\item generative models: GANs (70, 4, 57)
+			\item non-generative models: feature extractor learns discriminative representation using labels in source domain and maps the target data to same space through domain-confusion loss, thus resulting in domain-invariant representations (119, 118, 26, 25, 117, 85)
 		\end{enumerate}
 		\item reconstruction-based: using the data reconstruction as an auxiliary task to ensure feature invariance
 		\begin{enumerate}
-			\item encoder-decoder reconstruction: using stacked autoencoders (SAEs) to combine encoder network for representation learning with a decoder network for data reconstruction
-			\item adversarial reconstruction: recunstruction error. cyclic mapping (dualGAN, CycleGAN, discoGAN)
+			\item encoder-decoder reconstruction: using stacked autoencoders (SAEs) to combine encoder network for representation learning with a decoder network for data reconstruction (5, 33, 31, 144)
+			\item adversarial reconstruction: recunstruction error. cyclic mapping (dualGAN, CycleGAN, discoGAN) (131, 143, 59)
 		\end{enumerate}
 	\end{enumerate}
 	\item in multi-step DA first determine intermediate domains that are more related with source and target domains than their direct connection. Second the knowledge transfer process will be performed between source, intermediate and target domains by one-step DA with less information loss. $\rightarrow$ key to multi-step DA is how to select and utilize intermediate domains. Three selection mechanisms:

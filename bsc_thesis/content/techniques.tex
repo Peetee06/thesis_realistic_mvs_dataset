@@ -1,9 +1,28 @@
 \chapter{Domain Adaptation Techniques}
 \label{sec:techniques}
 
-This chapter will give an overview over the three \textbf{Domain Adaptation Techniques} that will be compared in this work, namely \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}. It will explain how these techniques work, what kind of Network Architecture they use and how training these Nets was approached.
+This chapter will give an overview over the three \textbf{Domain Adaptation Techniques} that will be compared in this work, namely \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}. It will explain how these techniques work, what kind of Network Architecture they use and how training these Nets was approached. See table \ref{table:DA_comparison}
 
-All of the methods compared in this work are based on Generative Adversarial Networks which were initially proposed in \cite{NIPS2014_5423} and are explained in Section \ref{sec:foundations}.\\
+All of the methods compared in this work are based on Generative Adversarial Networks which were initially proposed in \cite{NIPS2014_5423} and are all designed to be able to train on unpaired data which is necessary for the synthetic-to-real task focused on in this work. See chapter \ref{sec:foundations} for more context and details.
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\multicolumn{1}{c}{} & \multicolumn{3}{c}{Methods}\\
+		\cline{2-4}
+		\multicolumn{1}{c|}{} & CycleGAN & CyCADA & SG-GAN\\
+		\hline
+		cycle-consistency loss & $\checkmark$ & $\checkmark$ & $\checkmark$\\
+		\hline
+		semantic loss & - & $\checkmark$ & $(\checkmark)$\\
+		\hline 
+		soft-gradient loss & - & - & $\checkmark$\\
+		\hline
+	\end{tabular} 
+	\caption{Comparison of loss functions ofDomain Adaptation Techniques \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}}
+	\label{table:DA_comparison}
+\end{table}
+
 \section{CycleGAN} 
 As proposed in \cite{DBLP:journals/corr/ZhuPIE17}, CycleGAN adds a cycle-consistency loss which consists of an additional generator/discriminator pair with the idea that translating a previously translated image back to the source domain should yield the original image again. Formally: let $G: X \rightarrow Y$ be the mapping function of the Generator translating an image from the source $X$ to the target domain $Y$. Now add mapping function $F: Y \rightarrow X$ for the second generator's translation from target back to the source domain. The goal of cycle-consistency is that for any given image $x\in X$ from the source domain, $F(G(x)) \approx x$ holds. This analogously also has to hold for any image $y \in Y$ of the target domain with $G(F(y)) \approx y$. As described in chapter \ref{sec:foundations}, GANs implement a two player game. The loss function of this game for CycleGAN is described as
 \begin{align}

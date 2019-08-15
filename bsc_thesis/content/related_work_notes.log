@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  8 AUG 2019 10:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  14 AUG 2019 14:35
 entering extended mode
 **./related_work_notes.tex
 (related_work_notes.tex
@@ -523,19 +523,19 @@ Overfull \hbox (2.63731pt too wide) in paragraph at lines 721--722
 -Net3D (52), ShapeNet
  []
 
-[24] [25] [26] [27] [28] [29] [30]
-Overfull \hbox (4.51158pt too wide) in paragraph at lines 892--893
+[24] [25] [26] [27] [28] [29] [30] [31] [32]
+Overfull \hbox (4.51158pt too wide) in paragraph at lines 955--956
 []\OT1/cmr/m/n/10 (-20) encoder-decoder re-con-struc-tion: us-ing stacked au-to
 en-coders (SAEs)
  []
 
-<../images/overview_DA_settings.png, id=111, 1102.1175pt x 296.10625pt>
+<../images/overview_DA_settings.png, id=118, 1102.1175pt x 296.10625pt>
 File: ../images/overview_DA_settings.png Graphic file (type png)
 <use ../images/overview_DA_settings.png>
 Package pdftex.def Info: ../images/overview_DA_settings.png  used on input line
- 906.
+ 969.
 (pdftex.def)             Requested size: 345.0pt x 92.6911pt.
-[31] [32 <../images/overview_DA_settings.png>] (related_work_notes.aux)
+[33] [34 <../images/overview_DA_settings.png>] (related_work_notes.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -563,9 +563,9 @@ ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/peete/.mikte
 x/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/peete/.miktex/
 texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/peete/.miktex/t
 exmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on related_work_notes.pdf (32 pages, 352260 bytes).
+Output written on related_work_notes.pdf (34 pages, 359511 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
+ 174 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13318 words of extra memory for PDF output out of 14400 (max. 10000000)
 

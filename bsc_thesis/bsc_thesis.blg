@@ -1,31 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: bsc_thesis.aux
 The style file: alpha.bst
-Illegal, another \bibstyle command---line 140 of file bsc_thesis.aux
+Illegal, another \bibstyle command---line 187 of file bsc_thesis.aux
  : \bibstyle
  :          {alpha}
 I'm skipping whatever remains of this command
 Database file #1: bibliography.bib
-I was expecting a `,' or a `}'---line 377 of file bibliography.bib
- : 
- : @misc{SG,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 383 of file bibliography.bib
- : 
- : @misc{Cycle,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 388 of file bibliography.bib
- : 
- : @misc{tcml,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 393 of file bibliography.bib
- : 
- : @article {Nash48,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 429 of file bibliography.bib
+I was expecting a `,' or a `}'---line 416 of file bibliography.bib
  : 
  : PUBLISHER = {Packt},
 (Error may have been on previous line)
@@ -40,4 +20,4 @@ Warning--to sort, need author or key in SG
 Warning--to sort, need author or key in Cycle
 Warning--to sort, need author or key in tcml
 Warning--empty publisher in GAN_Projects
-(There were 6 error messages)
+(There were 2 error messages)
