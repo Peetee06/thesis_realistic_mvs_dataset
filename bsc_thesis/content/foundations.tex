@@ -15,30 +15,6 @@ Domain Adaptation is the task of transfering a machine learning model that is wo
 	\label{fig:DA_examples}
 \end{figure}
 
-\subsection{One-Step Domain Adaptation}
-
-\subsubsection{Discrepancy based}
-\begin{enumerate}
-	\item \textbf{Class Criterion}
-	\item \textbf{Statistic Criterion}
-	\item \textbf{Architecture Criterion}
-	\item \textbf{Geometric Criterion}
-\end{enumerate}
-
-\subsubsection{Adversarial based}
-\begin{enumerate}
-	\item \textbf{Generative models}
-	\item \textbf{Non-generative models}
-\end{enumerate}
-
-\subsubsection{Reconstruction based}
-\begin{enumerate}
-	\item \textbf{Encoder-Decoder Reconstruction}
-	\item \textbf{Adversarial Reconstruction}
-\end{enumerate}
-
-\subsection{Multi-Step Domain Adaptation}
-
 \subsection{Example Applications}
 \subsubsection{Semantic Segmentation}
 Semantic Segmentation is one of the most important aspects in autonomous driving. It is the task of semantically segmentating objects in an image, i.e. labeling each pixel according to what object it belongs to. See Figure \ref{fig:semseg} for examples. Adapting semantic segmentation models is one application of Domain Adaptation and the one focused on in this work. 
@@ -94,8 +70,7 @@ Instead of having random noise as input to the Net, conditional GANs get a condi
 
 
 \subsection{Training}
-\subsubsection{Optimization}
-\subsubsection{Loss functions}
+There are many different approaches on training GANs. Training details of the Techniques that this work focuses on can be found in Section \ref{sec:techniques}.
 
 
 \subsection{Advantages and Disadvantages}

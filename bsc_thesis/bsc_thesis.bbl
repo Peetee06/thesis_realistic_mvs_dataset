@@ -25,33 +25,32 @@ Liang{-}Chieh Chen, George Papandreou, Florian Schroff, and Hartwig Adam.
 \newblock Rethinking atrous convolution for semantic image segmentation.
 \newblock {\em CoRR}, abs/1706.05587, 2017.
 
-\bibitem[CSR]{CSR}
-{Cityscapes} repository.
-\newblock \url{https://github.com/mcordts/cityscapesScripts}.
-\newblock Accessed: 2019-26-07.
-
 \bibitem[Csu17]{DBLP:journals/corr/Csurka17}
 Gabriela Csurka.
 \newblock Domain adaptation for visual applications: {A} comprehensive survey.
 \newblock {\em CoRR}, abs/1702.05374, 2017.
 
-\bibitem[CyCa]{CyCADA}
-{CyCADA} repository.
-\newblock \url{https://github.com/jhoffman/cycada_release}.
-\newblock Accessed: 2019-01-08.
-
-\bibitem[Cycb]{Cycle}
-{CycleGAN} lua repository.
+\bibitem[eaa]{Cycle}
+Jun-Yan~Zhu et~al.
+\newblock {CycleGAN} lua repository.
 \newblock \url{https://github.com/junyanz/CycleGAN}.
 \newblock Accessed: 2019-01-08.
 
-\bibitem[Cycc]{Cycles}
-{Cycles} rendering engine.
-\newblock \url{https://www.cycles-renderer.org/}.
-\newblock Accessed: 2019-10-07.
+\bibitem[eab]{CSR}
+Marius~Cordts et~al.
+\newblock {Cityscapes} repository.
+\newblock \url{https://github.com/mcordts/cityscapesScripts}.
+\newblock Accessed: 2019-26-07.
 
-\bibitem[DLR]{DLR}
-{Deeplabv3} repository.
+\bibitem[Gam]{GTAV}
+Rockstar Games.
+\newblock {Grand Theft Auto V} website.
+\newblock \url{https://www.rockstargames.com/V/}.
+\newblock Accessed: 2019-26-07.
+
+\bibitem[GK]{DLR}
+Fredrik Gustafsson and Erjan Kalybek.
+\newblock {Deeplabv3} repository.
 \newblock \url{https://github.com/fregu856/deeplabv3}.
 \newblock Accessed: 2019-26-07.
 
@@ -68,16 +67,17 @@ Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
   Weinberger, editors, {\em Advances in Neural Information Processing Systems
   27}, pages 2672--2680. Curran Associates, Inc., 2014.
 
-\bibitem[GTA]{GTAV}
-{Grand Theft Auto V} website.
-\newblock \url{https://www.rockstargames.com/V/}.
-\newblock Accessed: 2019-26-07.
-
 \bibitem[HTP{\etalchar{+}}17]{DBLP:journals/corr/abs-1711-03213}
 Judy Hoffman, Eric Tzeng, Taesung Park, Jun{-}Yan Zhu, Phillip Isola, Kate
   Saenko, Alexei~A. Efros, and Trevor Darrell.
 \newblock Cycada: Cycle-consistent adversarial domain adaptation.
 \newblock {\em CoRR}, abs/1711.03213, 2017.
+
+\bibitem[HX]{CyCADA}
+Judy Hoffman and Xian Xu.
+\newblock {CyCADA} repository.
+\newblock \url{https://github.com/jhoffman/cycada_release}.
+\newblock Accessed: 2019-01-08.
 
 \bibitem[HZRS15]{DBLP:journals/corr/HeZRS15}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
@@ -93,6 +93,12 @@ Phillip Isola, Jun{-}Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
 Justin Johnson, Alexandre Alahi, and Fei{-}Fei Li.
 \newblock Perceptual losses for real-time style transfer and super-resolution.
 \newblock {\em CoRR}, abs/1603.08155, 2016.
+
+\bibitem[Li]{SG}
+Peilun Li.
+\newblock {SG-GAN} repository.
+\newblock \url{https://github.com/Peilun-Li/SG-GAN}.
+\newblock Accessed: 2019-01-08.
 
 \bibitem[LLJX18]{DBLP:journals/corr/abs-1801-01726}
 Peilun Li, Xiaodan Liang, Daoyuan Jia, and Eric~P. Xing.
@@ -115,6 +121,12 @@ John~F. Nash.
 \newblock {\em Proceedings of the National Academy of Sciences}, 36(1):48--49,
   1950.
 
+\bibitem[Pro]{Cycles}
+Blender Project.
+\newblock {Cycles} rendering engine.
+\newblock \url{https://www.cycles-renderer.org/}.
+\newblock Accessed: 2019-10-07.
+
 \bibitem[RSM{\etalchar{+}}16]{RosCVPR16}
 German Ros, Laura Sellart, Joanna Materzynska, David Vazquez, and Antonio
   Lopez.
@@ -129,11 +141,6 @@ Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
   {\em European Conference on Computer Vision (ECCV)}, volume 9906 of {\em
   LNCS}, pages 102--118. Springer International Publishing, 2016.
 
-\bibitem[SG]{SG}
-{SG-GAN} repository.
-\newblock \url{https://github.com/Peilun-Li/SG-GAN}.
-\newblock Accessed: 2019-01-08.
-
 \bibitem[SKFD10]{10.1007/978-3-642-15561-1_16}
 Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
 \newblock Adapting visual category models to new domains.
@@ -141,10 +148,16 @@ Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
   {\em Computer Vision -- ECCV 2010}, pages 213--226, Berlin, Heidelberg, 2010.
   Springer Berlin Heidelberg.
 
-\bibitem[Uni]{Unity}
-{Unity} graphics engine.
+\bibitem[Tec]{Unity}
+Unity Technologies.
+\newblock {Unity} graphics engine.
 \newblock \url{https://unity.com/}.
 \newblock Accessed: 2019-10-07.
+
+\bibitem[WD18]{DBLP:journals/corr/abs-1802-03601}
+Mei Wang and Weihong Deng.
+\newblock Deep visual domain adaptation: {A} survey.
+\newblock {\em CoRR}, abs/1802.03601, 2018.
 
 \bibitem[YXC{\etalchar{+}}18]{DBLP:journals/corr/abs-1805-04687}
 Fisher Yu, Wenqi Xian, Yingying Chen, Fangchen Liu, Mike Liao, Vashisht

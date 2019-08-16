@@ -47,7 +47,7 @@ For the comparison each technique was used to translate a sample of 500 images f
 \section{Results}
 
 \subsection{Quantitative}
-As seen in Table \ref{table:results} CyCADA is the only method that improved average values for category and class semantic segmentation of the DeepLabv3 model. CyCADA improved the performance on per category average compared to untranslated GTA data by $2.2\%$ points, CycleGAN decreased it by $2\%$ points and SG-GAN by $4.2\%$ points. While SG-GAN was only able to improve the ``nature'' category and CycleGAN additionaly improved flat aswell, CyCADA was able to improve 4 of the 7 categories tested. For per class average values, CycleGAN and SG-GAN decreased performance by $2.6\%$ points and $1.1\&$ point, respectively while CyCADA improved it by $1.6\%$ points. For the per class comparison, CycleGAN improved performance for 7 of the 19 tested classes compared to untranslated GTA5. SG-GAN was able to improve the scores for 8 out of 19 classes while having the best values for ``bus'', ``building'', ``traffic sign'' and ``vegetation''. CyCADA improves performance for 10 classes while performing approximately the same as untranslated GTA images for ``vegetation''. It holds the top values for ``building'', ``fence'', ``motorcycle'', ``road'', ``terrain'', ``train'', ``truck'' and ``wall''. The biggest improvement for CyCADA is category ``rain'' where it improves semantic segmentation accuracy by $25.5\%$ points compared to GTA.
+As seen in Table \ref{table:results_quant}, CyCADA is the only method that improved average values for category and class semantic segmentation of the DeepLabv3 model. CyCADA improved the performance on per category average compared to untranslated GTA data by $2.2\%$ points, CycleGAN decreased it by $2\%$ points and SG-GAN by $4.2\%$ points. While SG-GAN was only able to improve the ``nature'' category and CycleGAN additionaly improved flat aswell, CyCADA was able to improve 4 of the 7 categories tested. For per class average values, CycleGAN and SG-GAN decreased performance by $2.6\%$ points and $1.1\&$ point, respectively while CyCADA improved it by $1.6\%$ points. For the per class comparison, CycleGAN improved performance for 7 of the 19 tested classes compared to untranslated GTA5. SG-GAN was able to improve the scores for 8 out of 19 classes while having the best values for ``bus'', ``building'', ``traffic sign'' and ``vegetation''. CyCADA improves performance for 10 classes while performing approximately the same as untranslated GTA images for ``vegetation''. It holds the top values for ``building'', ``fence'', ``motorcycle'', ``road'', ``terrain'', ``train'', ``truck'' and ``wall''. The biggest improvement for CyCADA is category ``rain'' where it improves semantic segmentation accuracy by $25.5\%$ points compared to GTA.
 
 \begin{table}
 	\centering
@@ -123,9 +123,115 @@ As seen in Table \ref{table:results} CyCADA is the only method that improved ave
 		\hline
 	\end{tabular} 
 	\caption{Intersection over Union results for evaluation on untranslated GTA5 images and translated images by CycleGAN, CyCADA and SG-GAN respectively. Rounded to 3 decimal places. Maximum value per row is written in big font.}
-	\label{table:results}
+	\label{table:results_quant}
 \end{table}
-\subsection{Qualitative}
 
+\subsection{Qualitative}
+See Table \ref{table:results_qual}. 
+
+% void
+\definecolor{black}{rgb}{0, 0, 0} % unlabeled, ego vehicle, rectification border, out of roi, static
+
+%flat
+\definecolor{purple}{rgb}{0.5, 0.25, 0.5} %road
+\definecolor{lightpurple}{rgb}{0.96, 0.14, 0.91} %sidewalk
+
+% construction
+\definecolor{grey}{rgb}{0.27, 0.27, 0.27} % building
+\definecolor{bluepurple}{rgb}{0.4, 0.4, 0.61} % wall
+\definecolor{darkerskin}{rgb}{0.75, 0.6, 0.6} % fence
+
+%object
+\definecolor{grey2}{rgb}{0.6, 0.6, 0.6} % pole
+\definecolor{orange}{rgb}{0.98, 0.67, 0.12} % traffic light
+\definecolor{lightgreen}{rgb}{0.86, 0.86, 0} % traffic sign
+
+%nature
+\definecolor{green}{rgb}{0.42, 0.56, 0.14} % vegetation
+\definecolor{brightgreen}{rgb}{0.60, 0.98, 0.60} % terrain
+
+%sky
+\definecolor{blue}{rgb}{0.27, 0.51, 0.71} % sky
+
+%human
+\definecolor{red}{rgb}{0.86, 0.08, 0.24} % person
+\definecolor{fullred}{rgb}{1, 0, 0} % rider
+
+%vehicle
+\definecolor{darkblue}{rgb}{0, 0, 0.56} % car
+\definecolor{blueblack}{rgb}{0, 0, 0.27} % truck
+\definecolor{paleblue}{rgb}{0, 0.24, 0.39} % bus
+\definecolor{palegreenblue}{rgb}{0, 0.31, 0.39} % train
+\definecolor{brightblue}{rgb}{0, 0, 0.90} % motorcycle
+\definecolor{brownred}{rgb}{0.47, 0.04, 0.13} % bicycle
+
+\begin{table}
+	\centering
+	\begin{tabular}{cc}
+		\raisebox{-.25\height}{\textcolor{black}{\rule{0.5cm}{0.5cm}}} & void \\
+		\raisebox{-.25\height}{\textcolor{purple}{\rule{0.5cm}{0.5cm}}} & road \\
+		\raisebox{-.25\height}{\textcolor{lightpurple}{\rule{0.5cm}{0.5cm}}} & sidewalk \\
+		\raisebox{-.25\height}{\textcolor{grey}{\rule{0.5cm}{0.5cm}}} & building \\
+		\raisebox{-.25\height}{\textcolor{bluepurple}{\rule{0.5cm}{0.5cm}}} & wall \\
+		\raisebox{-.25\height}{\textcolor{darkerskin}{\rule{0.5cm}{0.5cm}}} & fence \\
+		\raisebox{-.25\height}{\textcolor{grey2}{\rule{0.5cm}{0.5cm}}} & pole \\
+		\raisebox{-.25\height}{\textcolor{orange}{\rule{0.5cm}{0.5cm}}} & traffic light \\
+		\raisebox{-.25\height}{\textcolor{lightgreen}{\rule{0.5cm}{0.5cm}}} & traffic sign \\
+		\raisebox{-.25\height}{\textcolor{green}{\rule{0.5cm}{0.5cm}}} & vegetation \\
+		\raisebox{-.25\height}{\textcolor{brightgreen}{\rule{0.5cm}{0.5cm}}} & terrain \\
+		\raisebox{-.25\height}{\textcolor{blue}{\rule{0.5cm}{0.5cm}}} & sky \\
+		\raisebox{-.25\height}{\textcolor{red}{\rule{0.5cm}{0.5cm}}} & person \\
+		\raisebox{-.25\height}{\textcolor{fullred}{\rule{0.5cm}{0.5cm}}} & rider \\
+		\raisebox{-.25\height}{\textcolor{darkblue}{\rule{0.5cm}{0.5cm}}} & car \\
+		\raisebox{-.25\height}{\textcolor{blueblack}{\rule{0.5cm}{0.5cm}}} & truck \\
+		\raisebox{-.25\height}{\textcolor{paleblue}{\rule{0.5cm}{0.5cm}}} & bus \\
+		\raisebox{-.25\height}{\textcolor{palegreenblue}{\rule{0.5cm}{0.5cm}}} & train \\
+		\raisebox{-.25\height}{\textcolor{brightblue}{\rule{0.5cm}{0.5cm}}} & motorcycle\\
+		\raisebox{-.25\height}{\textcolor{brownred}{\rule{0.5cm}{0.5cm}}} & bicycle
+	\end{tabular} 
+	\caption{}
+	\label{table:semseg_colors}
+\end{table}
+
+
+\begin{table}
+	\centering
+	\begin{tabular}{ccc}
+		\rotatebox[origin=c]{90}{\thead{GTA \\ (Ground Truth)}} & 
+		\begin{minipage}[c]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/00991_leftImg8bit.png}
+		\end{minipage} & 
+		\begin{minipage}[c]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/00991_gtFine_labelIds.png}
+		\end{minipage}\\
+		\rotatebox[origin=c]{90}{GTA} &
+		\multicolumn{1}{c}{} &
+		\begin{minipage}[c]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/gta_00991_pred_label_img.png}
+		\end{minipage}\\
+		\rotatebox[origin=c]{90}{CycleGAN} &
+		\begin{minipage}[c]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_00991_leftImg8bit.png}
+		\end{minipage} &
+		\begin{minipage}[c]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_00991_pred_label_img.png}
+		\end{minipage}\\
+		\rotatebox[origin=c]{90}{CyCADA} &
+		\begin{minipage}[c]{0.5\textwidth} \includegraphics[width=\textwidth]{images/evaluation/CyCADA_00991_leftImg8bit.png} 
+		\end{minipage}& 
+		\begin{minipage}[c]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/CyCADA_00991_pred_label_img.png}
+		\end{minipage}\\
+		\rotatebox[origin=c]{90}{SG-GAN} &
+		\begin{minipage}[c]{0.5\textwidth} \includegraphics[width=\textwidth]{images/evaluation/SG-GAN_00991_leftImg8bit.png}
+		\end{minipage} & 
+		\begin{minipage}[c]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/SG-GAN_00991_pred_label_img.png}
+		\end{minipage} \\
+		\multicolumn{1}{c}{} & (translated) Image & (predicted) Labelmap
+	\end{tabular} 
+	\caption{}
+	\label{table:results_qual}
+\end{table}
 \section{Discussion}
 

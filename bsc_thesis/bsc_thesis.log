@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  15 AUG 2019 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  16 AUG 2019 16:18
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -794,7 +794,74 @@ Package caption Info: listings package is loaded.
 \c@lotdepth=\count128
 \sf@top=\skip95
 \sf@bottom=\skip96
+)
+(/home/peete/.miktex/texmfs/install/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+
+(/home/peete/.miktex/texmfs/install/tex/latex/tools/array.sty
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen133
+\ar@mcellbox=\box41
+\extrarowheight=\dimen134
+\NC@list=\toks29
+\extratabsurround=\skip97
+\backup@length=\skip98
+\ar@cellbox=\box42
+)
+\rotheadsize=\dimen135
+\c@nlinenum=\count129
+\TeXr@lab=\toks30
+)
+(/home/peete/.miktex/texmfs/install/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+(/home/peete/.miktex/texmfs/install/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/home/peete/.miktex/texmfs/install/tex/generic/xkeyval/xkeyval.tex
+(/home/peete/.miktex/texmfs/install/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks31
+\XKV@tempa@toks=\toks32
+)
+\XKV@depth=\count130
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
+(/home/peete/.miktex/texmfs/install/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/home/peete/.miktex/texmfs/install/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+(/home/peete/.miktex/texmfs/install/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box43
+)
+\tc@llx=\dimen136
+\tc@lly=\dimen137
+\tc@urx=\dimen138
+\tc@ury=\dimen139
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/home/peete/.miktex/texmfs/install/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen140
+\adjbox@Height=\dimen141
+\adjbox@Depth=\dimen142
+\adjbox@Totalheight=\dimen143
+\adjbox@pwidth=\dimen144
+\adjbox@pheight=\dimen145
+\adjbox@pdepth=\dimen146
+\adjbox@ptotalheight=\dimen147
+
+(/home/peete/.miktex/texmfs/install/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box44
+\sift@deathcycles=\count131
+\@vwid@loff=\dimen148
+\@vwid@roff=\dimen149
+)))
 (bsc_thesis.aux)
 \openout1 = `bsc_thesis.aux'.
 
@@ -844,17 +911,17 @@ File: t1pxr.fd 2000/12/14 v1.0
 )
 (/home/peete/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
-\scratchdimen=\dimen133
-\scratchbox=\box41
-\nofMPsegments=\count130
-\nofMParguments=\count131
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count132
-\MPscratchDim=\dimen134
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count132
+\scratchdimen=\dimen150
+\scratchbox=\box45
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen151
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks34
 ) (/home/peete/.miktex/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -900,7 +967,7 @@ Package microtype Info: No adjustment of character kerning.
 (/home/peete/.miktex/texmfs/install/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-\c@lstlisting=\count135
+\c@lstlisting=\count138
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1090,78 +1157,58 @@ File: ./images/../images/DA_examples_cityscapes_gta.png Graphic file (type png)
 Package pdftex.def Info: ./images/../images/DA_examples_cityscapes_gta.png  use
 d on input line 13.
 (pdftex.def)             Requested size: 318.67212pt x 100.66017pt.
-[13] [14 <./images/../images/DA_examples_cityscapes_gta.png>]
-<./images/../images/semseg.png, id=75, 1884.03876pt x 493.845pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+<./images/../images/semseg.png, id=71, 1884.03876pt x 493.845pt>
 File: ./images/../images/semseg.png Graphic file (type png)
 <use ./images/../images/semseg.png>
-Package pdftex.def Info: ./images/../images/semseg.png  used on input line 51.
+Package pdftex.def Info: ./images/../images/semseg.png  used on input line 27.
 (pdftex.def)             Requested size: 398.33864pt x 104.4113pt.
 
-Underfull \vbox (badness 7203) has occurred while \output is active []
-
- [15 <./images/../images/semseg.png>] [16]
-<./images/../images/I2I_examples.png, id=87, 1511.6475pt x 960.58875pt>
+[14 <./images/../images/DA_examples_cityscapes_gta.png> <./images/../images/sem
+seg.png>] [15]
+<./images/../images/I2I_examples.png, id=84, 1511.6475pt x 960.58875pt>
 File: ./images/../images/I2I_examples.png Graphic file (type png)
 <use ./images/../images/I2I_examples.png>
 Package pdftex.def Info: ./images/../images/I2I_examples.png  used on input lin
-e 90.
+e 66.
 (pdftex.def)             Requested size: 318.67212pt x 202.49178pt.
- [17 <./images/../images/I2I_examples.png>]
-<images/metz_et_al_mode_collapse.png, id=92, 1595.9625pt x 180.675pt>
+ [16]
+<images/metz_et_al_mode_collapse.png, id=88, 1595.9625pt x 180.675pt>
 File: images/metz_et_al_mode_collapse.png Graphic file (type png)
 <use images/metz_et_al_mode_collapse.png>
 Package pdftex.def Info: images/metz_et_al_mode_collapse.png  used on input lin
-e 109.
+e 84.
 (pdftex.def)             Requested size: 398.33864pt x 45.0942pt.
-
-[18 <./images/metz_et_al_mode_collapse.png>]) (content/related_work.tex
-[19] [20
-
-
-]
+ [17 <./images/../images/I2I_examples.png>])
+(content/related_work.tex [18 <./images/metz_et_al_mode_collapse.png>]
 chapter 3.
-
-Class scrbook Warning: deprecated old font command `\bf' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\bf' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 15.
-
-) (content/techniques.tex [21] [22
+[19
 
 
-]
+]) (content/techniques.tex [20]
 chapter 4.
-[23] [24]
+[21
+
+
+] [22]
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 68.
  (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [25] [26]) (content/experiments.tex [27] [28
+) [23] [24]) (content/experiments.tex [25] [26
 
 
 ]
 chapter 5.
-<images/p4d_example.png, id=132, 1533.73pt x 1287.81125pt>
+<images/p4d_example.png, id=126, 1533.73pt x 1287.81125pt>
 File: images/p4d_example.png Graphic file (type png)
 <use images/p4d_example.png>
 Package pdftex.def Info: images/p4d_example.png  used on input line 19.
 (pdftex.def)             Requested size: 398.33864pt x 334.46933pt.
-[29] [30 <./images/p4d_example.png>]
-<images/cityscapes_example.png, id=140, 1538.74875pt x 1163.34625pt>
+[27] [28 <./images/p4d_example.png>]
+<images/cityscapes_example.png, id=134, 1538.74875pt x 1163.34625pt>
 File: images/cityscapes_example.png Graphic file (type png)
 <use images/cityscapes_example.png>
 Package pdftex.def Info: images/cityscapes_example.png  used on input line 31.
@@ -1169,8 +1216,90 @@ Package pdftex.def Info: images/cityscapes_example.png  used on input line 31.
 
 Underfull \vbox (badness 1521) has occurred while \output is active []
 
- [31 <./images/cityscapes_example.png>] [32]) (content/conclusion.tex [33] [34]
+ [29 <./images/cityscapes_example.png>] [30]
+Package color Info: Redefining color black on input line 133.
+Package color Info: Redefining color green on input line 150.
+Package color Info: Redefining color blue on input line 154.
+Package color Info: Redefining color red on input line 157.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 200.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 200.
+<images/evaluation/00991_leftImg8bit.png, id=142, 513.92pt x 256.96pt>
+File: images/evaluation/00991_leftImg8bit.png Graphic file (type png)
+<use images/evaluation/00991_leftImg8bit.png>
+Package pdftex.def Info: images/evaluation/00991_leftImg8bit.png  used on input
+ line 202.
+(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
+<images/evaluation/00991_gtFine_labelIds.png, id=143, 513.92pt x 256.96pt>
+File: images/evaluation/00991_gtFine_labelIds.png Graphic file (type png)
+<use images/evaluation/00991_gtFine_labelIds.png>
+Package pdftex.def Info: images/evaluation/00991_gtFine_labelIds.png  used on i
+nput line 205.
+(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
+<images/evaluation/gta_00991_pred_label_img.png, id=144, 2055.68pt x 1027.84pt>
 
+File: images/evaluation/gta_00991_pred_label_img.png Graphic file (type png)
+<use images/evaluation/gta_00991_pred_label_img.png>
+Package pdftex.def Info: images/evaluation/gta_00991_pred_label_img.png  used o
+n input line 210.
+(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
+<images/evaluation/CycleGAN_00991_leftImg8bit.png, id=145, 513.92pt x 256.96pt>
+
+File: images/evaluation/CycleGAN_00991_leftImg8bit.png Graphic file (type png)
+<use images/evaluation/CycleGAN_00991_leftImg8bit.png>
+Package pdftex.def Info: images/evaluation/CycleGAN_00991_leftImg8bit.png  used
+ on input line 214.
+(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
+<images/evaluation/CycleGAN_00991_pred_label_img.png, id=146, 2055.68pt x 1027.
+84pt>
+File: images/evaluation/CycleGAN_00991_pred_label_img.png Graphic file (type pn
+g)
+<use images/evaluation/CycleGAN_00991_pred_label_img.png>
+Package pdftex.def Info: images/evaluation/CycleGAN_00991_pred_label_img.png  u
+sed on input line 217.
+(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
+<images/evaluation/CyCADA_00991_leftImg8bit.png, id=147, 513.92pt x 256.96pt>
+File: images/evaluation/CyCADA_00991_leftImg8bit.png Graphic file (type png)
+<use images/evaluation/CyCADA_00991_leftImg8bit.png>
+Package pdftex.def Info: images/evaluation/CyCADA_00991_leftImg8bit.png  used o
+n input line 220.
+(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
+<images/evaluation/CyCADA_00991_pred_label_img.png, id=148, 2055.68pt x 1027.84
+pt>
+File: images/evaluation/CyCADA_00991_pred_label_img.png Graphic file (type png)
+
+<use images/evaluation/CyCADA_00991_pred_label_img.png>
+Package pdftex.def Info: images/evaluation/CyCADA_00991_pred_label_img.png  use
+d on input line 223.
+(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
+<images/evaluation/SG-GAN_00991_leftImg8bit.png, id=149, 513.92pt x 256.96pt>
+File: images/evaluation/SG-GAN_00991_leftImg8bit.png Graphic file (type png)
+<use images/evaluation/SG-GAN_00991_leftImg8bit.png>
+Package pdftex.def Info: images/evaluation/SG-GAN_00991_leftImg8bit.png  used o
+n input line 226.
+(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
+<images/evaluation/SG-GAN_00991_pred_label_img.png, id=150, 2055.68pt x 1027.84
+pt>
+File: images/evaluation/SG-GAN_00991_pred_label_img.png Graphic file (type png)
+
+<use images/evaluation/SG-GAN_00991_pred_label_img.png>
+Package pdftex.def Info: images/evaluation/SG-GAN_00991_pred_label_img.png  use
+d on input line 229.
+(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
+
+Overfull \hbox (64.00003pt too wide) in paragraph at lines 199--233
+ [][] 
+ []
+
+) (content/conclusion.tex [31] [32] [33] [34 <./images/evaluation/00991_leftImg
+8bit.png (PNG copy)> <./images/evaluation/00991_gtFine_labelIds.png> <./images/
+evaluation/gta_00991_pred_label_img.png (PNG copy)> <./images/evaluation/CycleG
+AN_00991_leftImg8bit.png (PNG copy)> <./images/evaluation/CycleGAN_00991_pred_l
+abel_img.png (PNG copy)> <./images/evaluation/CyCADA_00991_leftImg8bit.png (PNG
+ copy)> <./images/evaluation/CyCADA_00991_pred_label_img.png (PNG copy)> <./ima
+ges/evaluation/SG-GAN_00991_leftImg8bit.png (PNG copy)> <./images/evaluation/SG
+-GAN_00991_pred_label_img.png (PNG copy)>]
 chapter 6.
 ) [35
 
@@ -1183,43 +1312,37 @@ chapter A.
 (bsc_thesis.bbl [37] [38
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
-[]\T1/pxr/m/n/10.95 (+20) Cityscapes repos-i-tory.  $\T1/pxtt/m/n/10.95 https :
- / / github . com / mcordts /
+] [39]
+Underfull \hbox (badness 4144) in paragraph at lines 125--129
+[]\T1/pxr/m/n/10.95 (+20) Blender Project.  Cy-cles ren-der-ing en-gine.  $\T1/
+pxtt/m/n/10.95 https : / / www .
  []
 
-
-Underfull \hbox (badness 4403) in paragraph at lines 39--42
-[]\T1/pxr/m/n/10.95 (+20) CyCADA repos-i-tory.  $\T1/pxtt/m/n/10.95 https : / /
- github . com / jhoffman / cycada _
- []
-
-[39] [40]) [41] (bsc_thesis.aux) ) 
+[40]) [41] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 12863 strings out of 492903
- 206734 string characters out of 3130412
- 562498 words of memory out of 3000000
- 16210 multiletter control sequences out of 15000+200000
- 62053 words of font info for 296 fonts, out of 3000000 for 9000
+ 14211 strings out of 492903
+ 229436 string characters out of 3130412
+ 567482 words of memory out of 3000000
+ 17493 multiletter control sequences out of 15000+200000
+ 72702 words of font info for 333 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,19n,66p,9105b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/home/peete/.miktex/texmfs/install/fonts/enc
-/dvips/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/doubl
-estroke/dsrom10.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfo
-nts/pxex.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxs
-y.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsya.pfb>
-</home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsyb.pfb></home
-/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxmi.pfb></home/peete
-/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></home/peete/.mikte
-x/texmfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peete/.miktex/texm
-fs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/inst
-all/fonts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fon
-ts/type1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type
-1/urw/palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (41 pages, 7549756 bytes).
+ 53i,18n,77p,9105b,669s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/home/peete/.miktex/texmfs/install/fonts/enc/dvip
+s/base/8r.enc}</home/peete/.miktex/texmfs/install/fonts/type1/public/doublestro
+ke/dsrom10.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/p
+xex.pfb></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsy.pfb
+></home/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsya.pfb></hom
+e/peete/.miktex/texmfs/install/fonts/type1/public/pxfonts/pxsyb.pfb></home/peet
+e/.miktex/texmfs/install/fonts/type1/public/pxfonts/rpxmi.pfb></home/peete/.mik
+tex/texmfs/install/fonts/type1/public/pxfonts/rpxr.pfb></home/peete/.miktex/tex
+mfs/install/fonts/type1/public/txfonts/t1xtt.pfb></home/peete/.miktex/texmfs/in
+stall/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/f
+onts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/ty
+pe1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw
+/palatino/uplri8a.pfb>
+Output written on bsc_thesis.pdf (41 pages, 8724387 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
+ 228 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33316 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 46673 words of extra memory for PDF output out of 51595 (max. 10000000)
 

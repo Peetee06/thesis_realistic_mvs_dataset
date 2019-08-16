@@ -1,19 +1,43 @@
 \chapter{Related Work}
 \label{sec:related_work}
-Following the initial GAN paper \cite{NIPS2014_5423}, many additions and alterations have been made to improve and stabilize the training process of GANs and creating better results. While some approaches use additional objectives like a conditional input to generate specific outputs \cite{DBLP:journals/corr/IsolaZZE16} on paired data, others use a cycle-consistency loss first proposed in \cite{DBLP:journals/corr/ZhuPIE17} making unpaired data possible aswell. This chapter shows some of these improved methods and will also go over a few ``classical'' domain adaptation methods that don't use GANs.
+Following the initial GAN paper \cite{NIPS2014_5423}, many additions and alterations have been made to improve and stabilize the training process of GANs and creating better results. While some approaches use additional objectives like a conditional input to generate specific outputs \cite{DBLP:journals/corr/IsolaZZE16} on paired data, others use a cycle-consistency loss first proposed in \cite{DBLP:journals/corr/ZhuPIE17} making unpaired data possible aswell. This chapter shows some of these improved methods while first putting them into context of other methods of Domain Adaptation. 
 
-\section{Classical Domain Adaptation Methods}
+\section{Approaches of Domain Adaptation}
+Domain Adaptation can be subcategorized according to \cite{DBLP:journals/corr/Csurka17} and \cite{DBLP:journals/corr/abs-1802-03601}. The following sections specify these subcategories and will give example works each.
 
-\subsection{Adapting Visual Category Models to New Domains}
-\cite{10.1007/978-3-642-15561-1_16}
+\subsection{Discrepancy based}
+Discrepancy based techniques try to adapt domains by fine-tuning the deep network with labeled or unlabeled target data. Discrepancy based techniques can further be subdivided in following categories:
+\subsubsection{Class Criterion}
+
+\subsubsection{Statistic Criterion}
+
+\subsubsection{Architecture Criterion}
+
+\subsubsection{Geometric Criterion}
+
+\subsection{Adversarial based}
+
+\subsubsection{Generative models}
+Also known as GANs. Section \ref{sec:DA_with_GANs} shows a few examples of interesting GAN techniques.
+
+\subsubsection{Non-generative models}
+
+
+\subsection{Reconstruction based}
+
+\subsubsection{Encoder-Decoder Reconstruction}
+
+\subsubsection{Adversarial Reconstruction}
+Includes techniques that use a reconstruction error such as the cycle-consistency loss in CycleGAN (see Chapter \ref{sec:techniques} for more details).
+
+
+%\subsection{Adapting Visual Category Models to New Domains}
+%\cite{10.1007/978-3-642-15561-1_16}
 
 
 
 \section{Domain Adaptation with Generative Adversarial Networks}
-
-
-\todo{add info from ''Deep Visual Domain Adaptation - A Survey``-paper}
-
+\label{sec:DA_with_GANs}
 \subsection{CoGAN}
 \cite{DBLP:journals/corr/0001T16}
 
