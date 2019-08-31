@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  16 AUG 2019 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  26 AUG 2019 19:04
 entering extended mode
 **./related_work_notes.tex
 (related_work_notes.tex
@@ -535,7 +535,7 @@ File: ../images/overview_DA_settings.png Graphic file (type png)
 Package pdftex.def Info: ../images/overview_DA_settings.png  used on input line
  969.
 (pdftex.def)             Requested size: 345.0pt x 92.6911pt.
-[33] [34 <../images/overview_DA_settings.png>] (related_work_notes.aux)
+[33] [34 <../images/overview_DA_settings.png>] [35] (related_work_notes.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -563,9 +563,9 @@ ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/peete/.mikte
 x/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/peete/.miktex/
 texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/peete/.miktex/t
 exmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on related_work_notes.pdf (34 pages, 359527 bytes).
+Output written on related_work_notes.pdf (35 pages, 361310 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
+ 177 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13318 words of extra memory for PDF output out of 14400 (max. 10000000)
 

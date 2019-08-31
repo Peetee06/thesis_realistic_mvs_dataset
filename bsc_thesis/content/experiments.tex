@@ -127,7 +127,7 @@ As seen in Table \ref{table:results_quant}, CyCADA is the only method that impro
 \end{table}
 
 \subsection{Qualitative}
-See Table \ref{table:results_qual}. 
+Table \ref{table:results_qual}. 
 
 % void
 \definecolor{black}{rgb}{0, 0, 0} % unlabeled, ego vehicle, rectification border, out of roi, static
@@ -189,8 +189,19 @@ See Table \ref{table:results_qual}.
 		\raisebox{-.25\height}{\textcolor{brightblue}{\rule{0.5cm}{0.5cm}}} & motorcycle\\
 		\raisebox{-.25\height}{\textcolor{brownred}{\rule{0.5cm}{0.5cm}}} & bicycle
 	\end{tabular} 
-	\caption{}
+	\caption{Color coding of semantic classes used in semantic segmentation labelmaps.}
 	\label{table:semseg_colors}
+\end{table}
+
+
+\begin{table}
+	\centering
+	\begin{tabular}{ccc} 			
+		\textcolor{brownred}{\rule{0.5cm}{0.5cm}} & \textcolor{brownred}{\rule{0.5cm}{0.5cm}} & \textcolor{brownred}{\rule{0.5cm}{0.5cm}} \\
+		\rotatebox[origin=c]{90}{test} & \rotatebox[origin=c]{90}{test} &
+		\rotatebox[origin=c]{90}{test}
+	\end{tabular}
+	\caption{\todo{change Table \ref{table:semseg_colors} to this format with less distance between columns.}}
 \end{table}
 
 
@@ -204,6 +215,8 @@ See Table \ref{table:results_qual}.
 		\begin{minipage}[c]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{images/evaluation/00991_gtFine_labelIds.png}
 		\end{minipage}\\
+		\hline
+		\hline
 		\rotatebox[origin=c]{90}{GTA} &
 		\multicolumn{1}{c}{} &
 		\begin{minipage}[c]{0.5\textwidth}
@@ -228,9 +241,10 @@ See Table \ref{table:results_qual}.
 		\begin{minipage}[c]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{images/evaluation/SG-GAN_00991_pred_label_img.png}
 		\end{minipage} \\
+		\multicolumn{2}{c}{} \\
 		\multicolumn{1}{c}{} & (translated) Image & (predicted) Labelmap
 	\end{tabular} 
-	\caption{}
+	\caption{Ground Truth image and corresponding Ground Truth labelmap from the GTA dataset (top) and the images translated by the different techniques (left side) with their corresponding predicted labelmaps (right side)}
 	\label{table:results_qual}
 \end{table}
 \section{Discussion}

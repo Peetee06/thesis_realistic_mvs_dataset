@@ -3,32 +3,42 @@
 Following the initial GAN paper \cite{NIPS2014_5423}, many additions and alterations have been made to improve and stabilize the training process of GANs and creating better results. While some approaches use additional objectives like a conditional input to generate specific outputs \cite{DBLP:journals/corr/IsolaZZE16} on paired data, others use a cycle-consistency loss first proposed in \cite{DBLP:journals/corr/ZhuPIE17} making unpaired data possible aswell. This chapter shows some of these improved methods while first putting them into context of other methods of Domain Adaptation. 
 
 \section{Approaches of Domain Adaptation}
-Domain Adaptation can be subcategorized according to \cite{DBLP:journals/corr/Csurka17} and \cite{DBLP:journals/corr/abs-1802-03601}. The following sections specify these subcategories and will give example works each.
+Domain Adaptation can be subcategorized and defined according to \cite{DBLP:journals/corr/Csurka17} and \cite{DBLP:journals/corr/abs-1802-03601}. The following subsections specify these subcategories, will give a definition as stated in \cite{DBLP:journals/corr/abs-1802-03601} and example works each.
 
 \subsection{Discrepancy based}
-Discrepancy based techniques try to adapt domains by fine-tuning the deep network with labeled or unlabeled target data. Discrepancy based techniques can further be subdivided in following categories:
+Discrepancy based techniques try to adapt domains by fine-tuning the deep network with labeled or unlabeled target data. They can further be subdivided in following categories:
+\todo{ACHTUNG PLAGIATGEFAHR: rewrite this!}
+\todo{add relevant formulas}
+
 \subsubsection{Class Criterion}
+Uses the class label information as a guide for transferring knowledge between domains. Soft label and metric learning are effective approaches when labeled target domain samples are available (\todo{citations 118, 86, 53, 45, 79 survey}). Otherwise pseudo labels (\todo{citations 75, 139, 130, 98}) and attribute representation (\todo{citations 29, 118}) among other techniques can be adopted to substitute for labeled target data. 
 
 \subsubsection{Statistic Criterion}
+Uses mechanisms like maximum mean discrepancy (MMD) (\todo{citations 74, 130, 73, 75, 120, 32}), correlation alignment (CORAL) (\todo{citations  109, 87}), Kullback-Leibler (KL) divergence (\todo{citation 144}) and $\mathcal{H}$ divergence among others to align the statistical distribution shift between the source and target domains. 
 
 \subsubsection{Architecture Criterion}
+adapts the archticture of the deep network in order to make it able to learn more transferable features. Techniques proven to be cost effective inlcude batch normalization (BN) (\todo{citations 69, 54, 68}), weak-related weight (\todo{95}), domain-guided dropout (\todo{citation 128}) and others. 
 
 \subsubsection{Geometric Criterion}
+Assumes that the relationship of geometric structures in source and target domain can reduce the domain shift and bridges these domains according to their geometrical properties. (\todo{citation 16})
 
 \subsection{Adversarial based}
+Uses a discriminator as described in Section \ref{sec:foundations} to distinguish between samples from source and target domain. With it an adversarial objective to minimize the distance between empirical source and target mapping distributions is used to encourage domain confusion. Adversarial based techniques can be further subcategorized according to if generative models are used or not.
 
 \subsubsection{Generative models}
 Also known as GANs. Section \ref{sec:DA_with_GANs} shows a few examples of interesting GAN techniques.
 
 \subsubsection{Non-generative models}
-
+The feature extractor learns a discriminative representation using the labels of the source domain and maps the target to the same space through a domain-confusion loss, thus resulting in domain-invariant representations (\todo{citations 119, 118, 26, 25, 117}). 
 
 \subsection{Reconstruction based}
+Assumes that the data reconstruction of source and target data can be helpful for improving the performance of DA. The reconstructor can ensure both specificity of intra-domain representations and indistinguishability of inter-domain representations.
 
 \subsubsection{Encoder-Decoder Reconstruction}
+Encoder-decoder techniques use stacked autoencoders (SAEs) to combine the encoder network for representation learning with a decoder network for data reconstruction (\todo{citations 5, 33, 31, 144}).
 
 \subsubsection{Adversarial Reconstruction}
-Includes techniques that use a reconstruction error such as the cycle-consistency loss in CycleGAN (see Chapter \ref{sec:techniques} for more details).
+Includes techniques that use a reconstruction error such as the cycle-consistency loss in CycleGAN (see Chapter \ref{sec:techniques} for more details) which measures the distance between the original and reconstructed images within each domain. 
 
 
 %\subsection{Adapting Visual Category Models to New Domains}
