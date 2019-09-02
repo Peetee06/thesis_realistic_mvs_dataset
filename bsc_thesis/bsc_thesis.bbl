@@ -6,12 +6,11 @@ Kailash Ahirwar.
 \newblock {\em Generative Adversarial Networks Projects}.
 \newblock Packt, 2019.
 
-\bibitem[BSD{\etalchar{+}}16]{DBLP:journals/corr/BousmalisSDEK16}
-Konstantinos Bousmalis, Nathan Silberman, David Dohan, Dumitru Erhan, and Dilip
-  Krishnan.
-\newblock Unsupervised pixel-level domain adaptation with generative
-  adversarial networks.
-\newblock {\em CoRR}, abs/1612.05424, 2016.
+\bibitem[CBG13]{Chopra2013DLIDDL}
+Sumit Chopra, Suhrid Balakrishnan, and Raghuraman Gopalan.
+\newblock Dlid: Deep learning for domain adaptation by interpolating between
+  domains.
+\newblock 2013.
 
 \bibitem[COR{\etalchar{+}}16]{Cordts_2016_CVPR}
 Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler,
@@ -54,6 +53,13 @@ Fredrik Gustafsson and Erjan Kalybek.
 \newblock \url{https://github.com/fregu856/deeplabv3}.
 \newblock Accessed: 2019-26-07.
 
+\bibitem[GKZ{\etalchar{+}}16]{DBLP:journals/corr/GhifaryKZBL16}
+Muhammad Ghifary, W.~Bastiaan Kleijn, Mengjie Zhang, David Balduzzi, and Wen
+  Li.
+\newblock Deep reconstruction-classification networks for unsupervised domain
+  adaptation.
+\newblock {\em CoRR}, abs/1607.03516, 2016.
+
 \bibitem[Goo17]{DBLP:journals/corr/Goodfellow17}
 Ian~J. Goodfellow.
 \newblock {NIPS} 2016 tutorial: Generative adversarial networks.
@@ -73,6 +79,12 @@ Judy Hoffman, Eric Tzeng, Taesung Park, Jun{-}Yan Zhu, Phillip Isola, Kate
 \newblock Cycada: Cycle-consistent adversarial domain adaptation.
 \newblock {\em CoRR}, abs/1711.03213, 2017.
 
+\bibitem[HWYD16]{DBLP:journals/corr/HoffmanWYD16}
+Judy Hoffman, Dequan Wang, Fisher Yu, and Trevor Darrell.
+\newblock Fcns in the wild: Pixel-level adversarial and constraint-based
+  adaptation.
+\newblock {\em CoRR}, abs/1612.02649, 2016.
+
 \bibitem[HX]{CyCADA}
 Judy Hoffman and Xian Xu.
 \newblock {CyCADA} repository.
@@ -83,6 +95,12 @@ Judy Hoffman and Xian Xu.
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
 \newblock Deep residual learning for image recognition.
 \newblock {\em CoRR}, abs/1512.03385, 2015.
+
+\bibitem[IS15]{DBLP:journals/corr/IoffeS15}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock {\em CoRR}, abs/1502.03167, 2015.
 
 \bibitem[IZZE16]{DBLP:journals/corr/IsolaZZE16}
 Phillip Isola, Jun{-}Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
@@ -105,10 +123,12 @@ Peilun Li, Xiaodan Liang, Daoyuan Jia, and Eric~P. Xing.
 \newblock Semantic-aware grad-gan for virtual-to-real urban scene adaption.
 \newblock {\em CoRR}, abs/1801.01726, 2018.
 
-\bibitem[LT16]{DBLP:journals/corr/0001T16}
-Ming{-}Yu Liu and Oncel Tuzel.
-\newblock Coupled generative adversarial networks.
-\newblock {\em CoRR}, abs/1606.07536, 2016.
+\bibitem[LXG{\etalchar{+}}16]{DBLP:journals/corr/LopezXGVR16}
+Antonio~M. L{\'{o}}pez, Jiaolong Xu, Jose~Luis Gomez, David V{\'{a}}zquez, and
+  Germ{\'{a}}n Ros.
+\newblock From virtual to real world visual perception using domain adaptation
+  - the {DPM} as example.
+\newblock {\em CoRR}, abs/1612.09134, 2016.
 
 \bibitem[MPPS16]{DBLP:journals/corr/MetzPPS16}
 Luke Metz, Ben Poole, David Pfau, and Jascha Sohl{-}Dickstein.
@@ -141,6 +161,11 @@ Stephan~R. Richter, Vibhav Vineet, Stefan Roth, and Vladlen Koltun.
   {\em European Conference on Computer Vision (ECCV)}, volume 9906 of {\em
   LNCS}, pages 102--118. Springer International Publishing, 2016.
 
+\bibitem[SFS15]{DBLP:journals/corr/SunFS15}
+Baochen Sun, Jiashi Feng, and Kate Saenko.
+\newblock Return of frustratingly easy domain adaptation.
+\newblock {\em CoRR}, abs/1511.05547, 2015.
+
 \bibitem[SKFD10]{10.1007/978-3-642-15561-1_16}
 Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
 \newblock Adapting visual category models to new domains.
@@ -148,11 +173,21 @@ Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
   {\em Computer Vision -- ECCV 2010}, pages 213--226, Berlin, Heidelberg, 2010.
   Springer Berlin Heidelberg.
 
+\bibitem[SS16]{DBLP:journals/corr/SunS16a}
+Baochen Sun and Kate Saenko.
+\newblock Deep {CORAL:} correlation alignment for deep domain adaptation.
+\newblock {\em CoRR}, abs/1607.01719, 2016.
+
 \bibitem[Tec]{Unity}
 Unity Technologies.
 \newblock {Unity} graphics engine.
 \newblock \url{https://unity.com/}.
 \newblock Accessed: 2019-10-07.
+
+\bibitem[THDS15]{DBLP:journals/corr/TzengHDS15}
+Eric Tzeng, Judy Hoffman, Trevor Darrell, and Kate Saenko.
+\newblock Simultaneous deep transfer across domains and tasks.
+\newblock {\em CoRR}, abs/1510.02192, 2015.
 
 \bibitem[WD18]{DBLP:journals/corr/abs-1802-03601}
 Mei Wang and Weihong Deng.
@@ -171,5 +206,10 @@ Jun{-}Yan Zhu, Taesung Park, Phillip Isola, and Alexei~A. Efros.
 \newblock Unpaired image-to-image translation using cycle-consistent
   adversarial networks.
 \newblock {\em CoRR}, abs/1703.10593, 2017.
+
+\bibitem[ZYCW15]{DBLP:journals/corr/ZhangYCW15}
+Xu~Zhang, Felix~X. Yu, Shih{-}Fu Chang, and Shengjin Wang.
+\newblock Deep transfer network: Unsupervised domain adaptation.
+\newblock {\em CoRR}, abs/1503.00591, 2015.
 
 \end{thebibliography}

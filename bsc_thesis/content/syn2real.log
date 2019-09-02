@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  27 AUG 2019 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  31 AUG 2019 16:40
 entering extended mode
 **./syn2real.tex
 (syn2real.tex
@@ -499,32 +499,29 @@ LaTeX Warning: Citation `DBLP:journals/corr/abs-1810-05852' on page 8 undefined
 LaTeX Warning: Citation `DBLP:journals/corr/HoffmanWYD16' on page 10 undefined 
 on input line 329.
 
-[10] [11] [12] (/home/peete/.miktex/texmfs/install/tex/latex/ucs/uni-1.def
-File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-)
-[13] [14] [15] [16] [17]
+[10] [11] [12] [13] [14] [15] [16] [17]
 
 LaTeX Warning: Citation `DBLP:journals/corr/LopezXGVR16' on page 18 undefined o
 n input line 538.
 
-
-Overfull \hbox (29.86949pt too wide) in paragraph at lines 552--553
+[18]
+Overfull \hbox (29.86949pt too wide) in paragraph at lines 572--573
 []\OT1/cmr/bx/n/10 TODO: HOG+LPB/Linear-SVM paradigm 68, Haar+EOH/AdaBoost
  []
 
-[18] [19] (syn2real.aux)
+[19] [20] [21] (syn2real.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 9122 strings out of 492903
- 137659 string characters out of 3130412
+ 8532 strings out of 492903
+ 131724 string characters out of 3130412
  392636 words of memory out of 3000000
- 12790 multiletter control sequences out of 15000+200000
- 15087 words of font info for 95 fonts, out of 3000000 for 9000
+ 12195 multiletter control sequences out of 15000+200000
+ 17025 words of font info for 102 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,58p,922b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,12n,58p,922b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
@@ -532,17 +529,19 @@ home/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></h
 ome/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></ho
 me/peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home
 /peete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/p
+eete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmib10.pfb></home/p
 eete/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/pee
 te/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/peete
 /.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></home/peete/.m
 iktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/peete/.mikt
 ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/peete/.mikte
-x/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/peete/.miktex/
-texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/peete/.miktex/t
-exmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on syn2real.pdf (19 pages, 242554 bytes).
+x/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb></home/peete/.miktex/
+texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/peete/.miktex/te
+xmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/peete/.miktex/tex
+mfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on syn2real.pdf (21 pages, 269349 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13313 words of extra memory for PDF output out of 14400 (max. 10000000)
 

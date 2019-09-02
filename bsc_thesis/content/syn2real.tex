@@ -356,7 +356,7 @@ see \cite{DBLP:journals/corr/HoffmanWYD16}
 	\item compelling because they allow direct end-to-end function that can be trained using back propagation
 	\item original FCN formulation has been improved using dilated convolution (\todo{look at citation}) and post-processing techniques, such as Markov/conditional random fields
 	\item high cost of collecting pixel level supervision motivates weak labels (typically image-level tags defining presence / absence of each class)
-	\item Multiple instance learning (MIL) \todo{see citations}, reinforce confident predictions udring learning procecss
+	\item Multiple instance learning (MIL) \todo{see citations}, reinforce confident predictions during learning process
 	\item improves method suggested by \todo{see citations} who use an EM algorithm to better model global properties of the images segments. Generalized by Pathak et al. who proposed a Constrained CNN, also able to model any linear constraints on the label space (i.e. presence / absence, percent cover)
 	\item Hong et al. used auxiliary segmentation to generalize semantic segmentations to categories where only weak label information was available
 	\item these methods all assume weak labels present during training time for both source and target domain
@@ -385,7 +385,7 @@ see \cite{DBLP:journals/corr/HoffmanWYD16}
 	\item propose unsupervised domain adaptation framework for adapting semantic segmentation models which directly tackles both the need for minimizing the global and the category specific shifts
 	\item assumptions: source and target domain share same label space, source model achieves performance greater than chance on target domain
 	\item introduce two new semantic segmentation loss objectives, one to minimize the global distribution distance, which operates over both source and target images, $\mathcal{L}_{\text{da}}(I_S, I_T)$, another to adapt category specific parameters using target images and transferring label statistics from source domain $P_{L_S}, \mathcal{L}_{\text{mi}}(I_T,P_{L_S})$
-	\item to ensoure to not diverge too far from source solution, which is known to be effective for final semantic segmentation task, continue to optimize the standard supervised segnmentation objective on source domain $\mathcal{L}_{\text{seg}}(I_S, L_S)$
+	\item to ensure to not diverge too far from source solution, which is known to be effective for final semantic segmentation task, continue to optimize the standard supervised segmentation objective on source domain $\mathcal{L}_{\text{seg}}(I_S, L_S)$
 	\item goal: optimize joint objective:
 	\begin{align}
 	\mathcal{L}(I_S,L_S,I_T) &= \mathcal{L}_{\text{seg}}(I_S, L_S)\\
@@ -406,12 +406,12 @@ see \cite{DBLP:journals/corr/HoffmanWYD16}
 	\item instead consider region corresponding to natural receptive field of each spatial unit in final representation layer (e.g. $fc_7$), as individual instances
 	\item in doing so, the adversarial training procedure is supplied with the same information which is used to do final pixel prediction
 	\item provides a more meaningful view of overall source and target pixel-space representation distribution distance which needs to be minimized
-	\item ļet $\phi_{l-1}(\theta, I)$ denote output of last layer before pixel prediction according to network parameters $\theta$
+	\item let $\phi_{l-1}(\theta, I)$ denote output of last layer before pixel prediction according to network parameters $\theta$
 	\item $\mathcal{L}_{\text{da}}(I_S, I_T)$ consists of alternating minimization objectives
 	\item one concerning parameters $\theta$ of representation space, under which source and target distance $\min d(\phi_{l-1}(\theta, I_S), \phi_{l-1}(\theta, I_T))$ will be minimized for given distance function $d(\cdot)$.
 	\item second: estimating distance function through training domain classifier to distinguish instances of source and target domains
 	\item let $\theta_D$ domain classifier parameters
-	\item learn domain classifier to recognize difference between source and target regions and use that classifier to guide distance iminimization of source and target representations
+	\item learn domain classifier to recognize difference between source and target regions and use that classifier to guide distance minimization of source and target representations
 	\item let $\sigma (\cdot)$ denote softmax function, domain classifier predictions $p_{\theta_D}(x) = (\sigma(\phi(\theta_{D}, x)))$
 	\item assuming output of layer $l-1$ has $H \times W$ spatial units, we can define domain classifier loss $\mathcal{L}_D$ as:
 	\begin{align}
@@ -541,20 +541,70 @@ see \cite{DBLP:journals/corr/LopezXGVR16}
 \begin{itemize}
 	\item in general best performing machine learning algorithms are \textit{supervised} i.e requiring annotated information (ground truth) for training
 	\item human annotators (e.g. Amazon Mechanical Turk, LabelMe \todo{cite 48 and 53}) used for semantic segmentation but can't for pixel-wise optical flow and depth
+	\item ImageNet Large-Scale Visual Recognition Challenge (ILSVRC)
+	\item ImageNet contains over 15 million of humal-labeled (using Mechanical Turk) high-resolution images of roughly 22,000 categories. (gigantic human annotation effort)
+	\item ILSVRC uses subset thereof containing 1k images of 1k categories, 1.2M for training, 50k for validation, 150k for testing
 	\item many deep CNNs developed today rely on an ImageNet pre-trained deep CNN which is modified or fine-tuned to solve a new task or operate in a new domain
 	\item key for success of research community are powerful GPU hardware and large dataset with ground truth
+	\item Cityscapes dataset: driving through 50 cities covering several months and weather conditions
+	\item getting ground truth like in Cityscapes can take 30 to 90 minutes per image for a human in case of fine-grained annotations and depending on image content.
+	\item pixel-wise optical flow and depth are very hard or impossible to obtain by human annotators without active sensors
+	\item work on using realistic virtual worlds for training vision-based perception modules roughly since 2008 due to difficulty of optaining and relevance of having large amounts of data with ground truth for training, debugging and testing
+	\item advantages:
+	\begin{enumerate}
+		\item forcing driving and data acquisition situations needed
+		\item optaining different types of pixel-wise ground truth (class ID, instance ID, depth, optical flow)
+		\item generating such data relatively fast (SYNTHIA environment can generate 10k images per hour with such ground truths using standard consumer hardware)
+	\end{enumerate}
+	\item questions of such a proposal were:
+	\begin{itemize}
+		\item can a visual model learned on virtual worlds perform well in real-world environments?
+		\item does this depend on the degree of photo-realism?
+	\end{itemize}
+	\item \todo{reread last paragraph before Need for DA (page 4) for citations and examples of other syn2real proposals}
+	
 \end{itemize}
 
 \subsection{Need for Domain Adaptation}
 \begin{itemize}
 	\item problem of domain adaptation is not just a virtual-to-real issue but rather a sensor-to-sensor or environment-to-environment one \todo{cite 70, 71}
-	\item \todo{deformable part-based model DPM 17}
+	\item citations 32, 33, 63, 43 for other syn2real DA
 	\item \todo{HOG+LPB/Linear-SVM paradigm 68, Haar+EOH/AdaBoost 69}
+	\item \todo{deformable part-based model DPM 17}
+	\item focused on supervised domain adaptation in most cases (relatively few amount of annotated target-domain data used to adapt the model learned with source-domain data)
+	\item for holistic models focused on mixing source and target data collected via active learning for model adaptation (term corresponding feature space as \textit{cool world}) (\textit{mixing source and target data in the mini-batches})
+	\item for DPM focus on using just source-domain model together with target-domain data (\textit{fine-tuning})
+	\item DPM was state of the art before breakthrough of deep CNNs
+	\item being based on HOG-style features, training data in order of a few thousands is sufficient as more data doesn not really translate to better accuracy \todo{cite 81}
+	\item DPM can be reformulated as a deep CNN for end-to-end learning
+	\item use own DA method for DPM termed as \textit{Structureaware Adaptive Structural SVM} (SA-SSVM)
 \end{itemize}
 
 \subsection{Domain Adaptation for DPM in a Nutshell}
 \begin{itemize}
-	\item \todo{revisit this later if necessary}
+	\item DPM encodes the \textit{appearance} of objects' constituent \textit{parts} together with a \textit{holistic} object representation termed as \textit{root}.
+		\item allows parts to be located at different positions with respect to the root
+	\item plausible relative locations (\textit{deformations}) are also encoded
+	\item both appearance and deformations are learned
+	\item appearance of parts is learned at double resolution than the root
+	\item the triplet root-parts-deformations is known as \textit{component}
+	\item to avoid too blurred models, DPM allows to learn a mixture of components
+	\item different components correspond to very different object views or poses, specially when this implies very different aspect ratios of corresponding root Bounding Box (BB)
+	\item in practice a DPM is encoded as a vector \textbf{w} which has to be learned
+	\item let $\mathbf{w}^S$ model learned with source-domain data
+	\item SA-SSVM DA method takes $\mathbf{w}^S$ and relatively few target-domain data to learn new $\mathbf{w}$ model which is expected to perform better in the target domain
+	\item \todo{see citation 77 for mathematical technical details of SA-SSVM}
+	\item see Fig. 3 page 6 for reference of following explanations
+	\item $\mathbf{w}^S$ consists of components: half body and full body, as well as persons seen from different viewpoints
+	\item each component consists of root and parts (head, torso, etc.)
+	\item to adapt this DPM to a target domain, decompose it as $\mathbf{w}^S = [\mathbf{w}_1^{S'}, ..., \mathbf{w}_P^{S'}]$ where P is number of structures and $u'$ stands for transpose of $u$
+	\item each component $\mathbf{w}_p^S$ may contain both appearance and deformation parameters (for roots only appearance)
+	\item the decomposed model parameters are adapted to the target domain by different weights, denoted by $\beta_p, \quad p \in \{1, P\}$
+	\item i.e. the SA-SSVM procedure allows domain adaptation for each of such structures seperately by defining $\Delta \mathbf{w}_p = \mathbf{w}_p - \beta_p \mathbf{w}_p^S, \quad p \in \{1, P\}$
+	\item in order to learn these adaptation weights introcude regularization term $\lVert \mbox{\boldmath$\beta$} \rVert^2$ in the objective function where $\mbox{\boldmath$\beta$} = [\beta_1, ..., \beta_P]'$
+	\item and use a scalar parameter $\gamma$ to control its relative penalty
+	\item Finally, C and $\xi_i$ are just the standard terms of a SVM objective function and $N$ the number of target-domain samples used for the adaptation
+	\item after optimizing the objective function, $\mathbf{w} = [\mathbf{w}_1',..., \mathbf{w}_P']'$ is the domain adapted DPM
 \end{itemize}
 
 \end{document}
