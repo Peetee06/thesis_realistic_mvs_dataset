@@ -123,12 +123,23 @@ Peilun Li, Xiaodan Liang, Daoyuan Jia, and Eric~P. Xing.
 \newblock Semantic-aware grad-gan for virtual-to-real urban scene adaption.
 \newblock {\em CoRR}, abs/1801.01726, 2018.
 
+\bibitem[LSD14]{DBLP:journals/corr/LongSD14}
+Jonathan Long, Evan Shelhamer, and Trevor Darrell.
+\newblock Fully convolutional networks for semantic segmentation.
+\newblock {\em CoRR}, abs/1411.4038, 2014.
+
 \bibitem[LXG{\etalchar{+}}16]{DBLP:journals/corr/LopezXGVR16}
 Antonio~M. L{\'{o}}pez, Jiaolong Xu, Jose~Luis Gomez, David V{\'{a}}zquez, and
   Germ{\'{a}}n Ros.
 \newblock From virtual to real world visual perception using domain adaptation
   - the {DPM} as example.
 \newblock {\em CoRR}, abs/1612.09134, 2016.
+
+\bibitem[MLX{\etalchar{+}}16]{DBLP:journals/corr/MaoLXLW16}
+Xudong Mao, Qing Li, Haoran Xie, Raymond Y.~K. Lau, and Zhen Wang.
+\newblock Multi-class generative adversarial networks with the {L2} loss
+  function.
+\newblock {\em CoRR}, abs/1611.04076, 2016.
 
 \bibitem[MPPS16]{DBLP:journals/corr/MetzPPS16}
 Luke Metz, Ben Poole, David Pfau, and Jascha Sohl{-}Dickstein.
@@ -173,6 +184,13 @@ Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell.
   {\em Computer Vision -- ECCV 2010}, pages 213--226, Berlin, Heidelberg, 2010.
   Springer Berlin Heidelberg.
 
+\bibitem[SPT{\etalchar{+}}16]{DBLP:journals/corr/ShrivastavaPTSW16}
+Ashish Shrivastava, Tomas Pfister, Oncel Tuzel, Josh Susskind, Wenda Wang, and
+  Russell Webb.
+\newblock Learning from simulated and unsupervised images through adversarial
+  training.
+\newblock {\em CoRR}, abs/1612.07828, 2016.
+
 \bibitem[SS16]{DBLP:journals/corr/SunS16a}
 Baochen Sun and Kate Saenko.
 \newblock Deep {CORAL:} correlation alignment for deep domain adaptation.
@@ -193,6 +211,11 @@ Eric Tzeng, Judy Hoffman, Trevor Darrell, and Kate Saenko.
 Mei Wang and Weihong Deng.
 \newblock Deep visual domain adaptation: {A} survey.
 \newblock {\em CoRR}, abs/1802.03601, 2018.
+
+\bibitem[YKF17]{DBLP:journals/corr/YuKF17}
+Fisher Yu, Vladlen Koltun, and Thomas~A. Funkhouser.
+\newblock Dilated residual networks.
+\newblock {\em CoRR}, abs/1705.09914, 2017.
 
 \bibitem[YXC{\etalchar{+}}18]{DBLP:journals/corr/abs-1805-04687}
 Fisher Yu, Wenqi Xian, Yingying Chen, Fangchen Liu, Mike Liao, Vashisht

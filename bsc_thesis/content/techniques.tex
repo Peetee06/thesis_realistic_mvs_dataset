@@ -89,8 +89,14 @@ And ultimately optimizing for a target model $f_Y$ with:
 \end{align}
 
 \subsection{Implementation}
+The authors use the task loss on labeled source data to pretrain the source task model $f_X$ that performs semantic segmentation on the source images. Then they combine their image space GAN losses with semantic segmentation consistency and cycle consistency losses to perform pixel-level adaptation of the images. From this the parameters for the translations $G$ and $F$ and the discriminators $D_X$ and $D_Y$ are obtained. Additionaly an initial version of the the task model $f_Y$ trained on translated source images and their corresponding source labels is learned. To conclude training the authors learn a feature discriminator $D_{\text{feat}}$ which guides the representation update of $f_Y$. This is done in order to adapt the feature space of $f_Y$ to obtain features that are aligned between translated source images and real target images. The generator and discriminator losses are weighted equally for all feature space adaptation. If the discriminator's accuracy exceeds $60\%$ over the last 100 iterations the generator is updated to reduce volatile training. 
+
 \subsubsection{Network Architecture}
+The authors use VGG16-FCN8s \cite{DBLP:journals/corr/LongSD14} as well as DRN-26 \cite{DBLP:journals/corr/YuKF17} during their experiments. 
+
 \subsubsection{Training Details}
+Using the FCN8s architecture the authors train their source semantic segmentation model for 100k iterations using SGD, a learning rate of 0.001 and momentum of 0.9. For DRN-26 they use SGD aswell with the same hyper-parameters but for 115k iterations. Both times they crop the images to $600 \times 600$ and train on batches of 8 images. They used the original hyper-parameters and network architecture of CycleGAN \cite{DBLP:journals/corr/ZhuPIE17} for cycle-consistent image adaptation. The images were scaled to 1024 pixels width and randomly cropped to patches of $400 \times 400$ for training. They trained for 20 epochs. The authors used SGD with momentum 0.99 and learning rate 0.00001 for feature level adaptation training. %TODO check last few sentences and D_feat again if time
+
 
 \section{SG-GAN}
 
@@ -111,6 +117,7 @@ SG-GAN \cite{DBLP:journals/corr/abs-1801-01726} further expands the above-mentio
 			-1 & -2 & -1
 		\end{pmatrix}
 	\end{array}
+	\label{eq:sobel}
 \end{align}
 These filters extract vertical (y-direction) and horizontal (x-direction) edges in an image. To get the gradient $C$ at each position, following formula is used:
 \begin{align}
@@ -126,7 +133,8 @@ where $C_i$ is the gradient filter for the image and $C_s$ the one for its seman
 		l_{s-\text{grad}}(v, s_v, G_{V\rightarrow R}, \alpha, \beta) &= \lVert(|(|C_i*v|-|C_i*G_{V\rightarrow R}(v)|)|)\\
 		&\odot (\alpha \times |sgn(C_s*s_v)|+\beta)\rVert_1\\
 		&s.t. \quad \alpha + \beta = 1 \quad \alpha, \beta \geq 0
-	\end{split} \label{eq:soft-grad}
+	\end{split} 
+	\label{eq:soft-grad}
 \end{align}
 With Equation \ref{eq:soft-grad} define the full soft gradient-sensitive loss with generator $G_{R\rightarrow V}$ from real to virtual and semantic labeling for real images $R$ as $S_R$ and $S_V$ for virtual images $V$:
 \begin{align}
@@ -143,6 +151,7 @@ The final objective with $\lambda_c, ~ \lambda_g$ controlling importance of cycl
 		&+ \lambda_c \mathcal{L}_{\text{cyc}}(G_{V\rightarrow R}, G_{R\rightarrow V}, V, R)\\
 		&+ \lambda_g \mathcal{L}_{\text{grad}}(G_{V\rightarrow R}, G_{R\rightarrow V}, V, R, S_V, S_R, \alpha, \beta)
 	\end{split}
+	\label{eq:final_obj_SG-GAN}
 \end{align}
 Which results in the optimization target:
 \begin{align}
@@ -151,10 +160,30 @@ Which results in the optimization target:
 
 \subsection{Implementation}
 The above mentioned semantic-aware discriminator enforces higher-level semantic consistencies. For example compared to the virtual world, real world may have less illumination. Instead of darkening the tone of the whole image it is instead more accurate to keep the sky bright and only darken e.g. the road. To achieve this semantic-aware judgement of realism, the discriminators' last layers' number of filters is transited to the number of semantic classes. Semantic masks are then applied upon these filters in order to make them focus on different semantic classes. Usually the last layer's feature map of the discriminator is a tensor $\mathbf{T}$ with shape $(w,h,1)$ with $w$ being the width and $h$ being the height. The SG-GAN approach changes this to $(w,h,s)$ where $s$ is the number of semantic classes. The semantic labeling of the image is converted to one-hot style and resized to $(w,h)$. This results in a mask $\mathbf{M}$ with shape $(w,h,s)$. Now multiplying $\mathbf{T}$ and $\mathbf{M}$ element-wise will result in each filter within $\mathbf{T}$ only focussing on one particular semantic class. Summing up $\mathbf{T}$ along the last dimension will result in a tensor of shape $(w,h,1)$ which then can be further processed as in the standard discriminator. 
+
 \subsubsection{Network Architecture}
+The images are resized to $256 \times 512$. The authors adapt the architecture from \cite{DBLP:journals/corr/IsolaZZE16} for the generator aswell as the PatchGAN from the same work for the semantic-aware discriminator. 
+
+
 \subsubsection{Training Details}
-
-
+To stabilize training of their semantic aware discriminators $SD_R$ and $SD_V$, they use a history of refined images as proposed in \cite{DBLP:journals/corr/ShrivastavaPTSW16}. To generate higher quality images and stabilize training further the authors use least square objective for adversarial loss instead of log likelihood as proposed by \cite{DBLP:journals/corr/MaoLXLW16}. They set $\lambda_c = 10$, $\lambda_g = 5$ and $\alpha, \beta$ as $(1,0)$ for the first three epochs and change it to $(0.9, 0.1)$ after that in equation \ref{eq:final_obj_SG-GAN}. The sobel filters in equation \ref{eq:sobel} are used as gradient filters $\mathbf{C}_i$ in equation \ref{eq:soft-grad} and 
+\begin{align}
+		\begin{array}{cc}
+		C_x = 
+		\begin{pmatrix}
+			0 & 0 & 0\\
+			-1 & 0 & 1\\
+			0 & 0 & 0
+		\end{pmatrix},
+		C_y = 
+		\begin{pmatrix}
+			0 & 1 & 0\\
+			0 & 0 & 0\\
+			0 & -1 & 0
+		\end{pmatrix}
+	\end{array}
+\end{align}
+for $\mathbf{C}_s$. In order to avoid sparse classes the authors cluster 30 \cite{Cordts_2016_CVPR} into 8 categories. Training is done with a batch size of 1 and learning rate 0.0002. 
 
 
 \paragraph{Unpaired data.} As all of these techniques use a cycle-consistency loss, it is possible to use unpaired datasets which makes data acquisition easier and reduces costs. This results in more training data and therefore makes better models possible. 
