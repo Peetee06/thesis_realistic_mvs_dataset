@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  4 SEP 2019 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  8 SEP 2019 14:31
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1166,42 +1166,21 @@ Package pdftex.def Info: ./images/../images/semseg.png  used on input line 27.
 
 [14 <./images/../images/DA_examples_cityscapes_gta.png> <./images/../images/sem
 seg.png>] [15]
-
-Class scrbook Warning: deprecated old font command `\bf' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\bf' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 58.
-
 <./images/../images/I2I_examples.png, id=84, 1511.6475pt x 960.58875pt>
 File: ./images/../images/I2I_examples.png Graphic file (type png)
 <use ./images/../images/I2I_examples.png>
 Package pdftex.def Info: ./images/../images/I2I_examples.png  used on input lin
-e 68.
+e 62.
 (pdftex.def)             Requested size: 318.67212pt x 202.49178pt.
-[16]
+ [16]
 <images/metz_et_al_mode_collapse.png, id=88, 1595.9625pt x 180.675pt>
 File: images/metz_et_al_mode_collapse.png Graphic file (type png)
 <use images/metz_et_al_mode_collapse.png>
 Package pdftex.def Info: images/metz_et_al_mode_collapse.png  used on input lin
-e 86.
+e 82.
 (pdftex.def)             Requested size: 398.33864pt x 45.0942pt.
- [17 <./images/../images/I2I_examples.png>]) (content/related_work.tex
-[18 <./images/metz_et_al_mode_collapse.png>]
+ [17 <./images/../images/I2I_examples.png>])
+(content/related_work.tex [18 <./images/metz_et_al_mode_collapse.png>]
 chapter 3.
 [19
 
@@ -1229,138 +1208,85 @@ Package pdftex.def Info: images/p4d_example.png  used on input line 19.
 <images/cityscapes_example.png, id=147, 1538.74875pt x 1163.34625pt>
 File: images/cityscapes_example.png Graphic file (type png)
 <use images/cityscapes_example.png>
-Package pdftex.def Info: images/cityscapes_example.png  used on input line 31.
+Package pdftex.def Info: images/cityscapes_example.png  used on input line 33.
 (pdftex.def)             Requested size: 398.33864pt x 301.1493pt.
 
-Underfull \vbox (badness 1521) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33 <./images/cityscapes_example.png>] [34]
-Package color Info: Redefining color black on input line 133.
-Package color Info: Redefining color green on input line 150.
-Package color Info: Redefining color blue on input line 154.
-Package color Info: Redefining color red on input line 157.
-
-
-Class scrbook Warning: deprecated old font command `\bf' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\bf' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 204.
-
-
-Class scrbook Warning: deprecated old font command `\bf' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\bf' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 204.
-
+Package color Info: Redefining color black on input line 137.
+Package color Info: Redefining color green on input line 154.
+Package color Info: Redefining color blue on input line 158.
+Package color Info: Redefining color red on input line 161.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 211.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 213.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 211.
-<images/evaluation/00991_leftImg8bit.png, id=155, 513.92pt x 256.96pt>
-File: images/evaluation/00991_leftImg8bit.png Graphic file (type png)
-<use images/evaluation/00991_leftImg8bit.png>
-Package pdftex.def Info: images/evaluation/00991_leftImg8bit.png  used on input
- line 213.
-(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
-<images/evaluation/00991_gtFine_labelIds.png, id=156, 513.92pt x 256.96pt>
-File: images/evaluation/00991_gtFine_labelIds.png Graphic file (type png)
-<use images/evaluation/00991_gtFine_labelIds.png>
-Package pdftex.def Info: images/evaluation/00991_gtFine_labelIds.png  used on i
-nput line 216.
-(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
-<images/evaluation/gta_00991_pred_label_img.png, id=157, 2055.68pt x 1027.84pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 213.
+<images/evaluation/GTA_gt_image.png, id=155, 513.92pt x 256.96pt>
+File: images/evaluation/GTA_gt_image.png Graphic file (type png)
+<use images/evaluation/GTA_gt_image.png>
+Package pdftex.def Info: images/evaluation/GTA_gt_image.png  used on input line
+ 215.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/GTA_gt_label.png, id=156, 513.92pt x 256.96pt>
+File: images/evaluation/GTA_gt_label.png Graphic file (type png)
+<use images/evaluation/GTA_gt_label.png>
+Package pdftex.def Info: images/evaluation/GTA_gt_label.png  used on input line
+ 218.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/GTA_pred_labels.png, id=157, 2055.68pt x 1027.84pt>
+File: images/evaluation/GTA_pred_labels.png Graphic file (type png)
+<use images/evaluation/GTA_pred_labels.png>
+Package pdftex.def Info: images/evaluation/GTA_pred_labels.png  used on input l
+ine 225.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
+<images/evaluation/CycleGAN_translated.png, id=158, 513.92pt x 256.96pt>
+File: images/evaluation/CycleGAN_translated.png Graphic file (type png)
+<use images/evaluation/CycleGAN_translated.png>
+Package pdftex.def Info: images/evaluation/CycleGAN_translated.png  used on inp
+ut line 229.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/CycleGAN_pred_labels.png, id=159, 2055.68pt x 1027.84pt>
+File: images/evaluation/CycleGAN_pred_labels.png Graphic file (type png)
+<use images/evaluation/CycleGAN_pred_labels.png>
+Package pdftex.def Info: images/evaluation/CycleGAN_pred_labels.png  used on in
+put line 232.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
+<images/evaluation/CyCADA_translated.png, id=160, 513.92pt x 256.96pt>
+File: images/evaluation/CyCADA_translated.png Graphic file (type png)
+<use images/evaluation/CyCADA_translated.png>
+Package pdftex.def Info: images/evaluation/CyCADA_translated.png  used on input
+ line 235.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/CyCADA_pred_labels.png, id=161, 2055.68pt x 1027.84pt>
+File: images/evaluation/CyCADA_pred_labels.png Graphic file (type png)
+<use images/evaluation/CyCADA_pred_labels.png>
+Package pdftex.def Info: images/evaluation/CyCADA_pred_labels.png  used on inpu
+t line 238.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
+<images/evaluation/SG-GAN_translated.png, id=162, 513.92pt x 256.96pt>
+File: images/evaluation/SG-GAN_translated.png Graphic file (type png)
+<use images/evaluation/SG-GAN_translated.png>
+Package pdftex.def Info: images/evaluation/SG-GAN_translated.png  used on input
+ line 241.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/SG-GAN_pred_labels.png, id=163, 2055.68pt x 1027.84pt>
+File: images/evaluation/SG-GAN_pred_labels.png Graphic file (type png)
+<use images/evaluation/SG-GAN_pred_labels.png>
+Package pdftex.def Info: images/evaluation/SG-GAN_pred_labels.png  used on inpu
+t line 244.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
 
-File: images/evaluation/gta_00991_pred_label_img.png Graphic file (type png)
-<use images/evaluation/gta_00991_pred_label_img.png>
-Package pdftex.def Info: images/evaluation/gta_00991_pred_label_img.png  used o
-n input line 223.
-(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
-<images/evaluation/CycleGAN_00991_leftImg8bit.png, id=158, 513.92pt x 256.96pt>
 
-File: images/evaluation/CycleGAN_00991_leftImg8bit.png Graphic file (type png)
-<use images/evaluation/CycleGAN_00991_leftImg8bit.png>
-Package pdftex.def Info: images/evaluation/CycleGAN_00991_leftImg8bit.png  used
- on input line 227.
-(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
-<images/evaluation/CycleGAN_00991_pred_label_img.png, id=159, 2055.68pt x 1027.
-84pt>
-File: images/evaluation/CycleGAN_00991_pred_label_img.png Graphic file (type pn
-g)
-<use images/evaluation/CycleGAN_00991_pred_label_img.png>
-Package pdftex.def Info: images/evaluation/CycleGAN_00991_pred_label_img.png  u
-sed on input line 230.
-(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
-<images/evaluation/CyCADA_00991_leftImg8bit.png, id=160, 513.92pt x 256.96pt>
-File: images/evaluation/CyCADA_00991_leftImg8bit.png Graphic file (type png)
-<use images/evaluation/CyCADA_00991_leftImg8bit.png>
-Package pdftex.def Info: images/evaluation/CyCADA_00991_leftImg8bit.png  used o
-n input line 233.
-(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
-<images/evaluation/CyCADA_00991_pred_label_img.png, id=161, 2055.68pt x 1027.84
-pt>
-File: images/evaluation/CyCADA_00991_pred_label_img.png Graphic file (type png)
+LaTeX Warning: Float too large for page by 31.61905pt on input line 279.
 
-<use images/evaluation/CyCADA_00991_pred_label_img.png>
-Package pdftex.def Info: images/evaluation/CyCADA_00991_pred_label_img.png  use
-d on input line 236.
-(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
-<images/evaluation/SG-GAN_00991_leftImg8bit.png, id=162, 513.92pt x 256.96pt>
-File: images/evaluation/SG-GAN_00991_leftImg8bit.png Graphic file (type png)
-<use images/evaluation/SG-GAN_00991_leftImg8bit.png>
-Package pdftex.def Info: images/evaluation/SG-GAN_00991_leftImg8bit.png  used o
-n input line 239.
-(pdftex.def)             Requested size: 199.16931pt x 99.58664pt.
-<images/evaluation/SG-GAN_00991_pred_label_img.png, id=163, 2055.68pt x 1027.84
-pt>
-File: images/evaluation/SG-GAN_00991_pred_label_img.png Graphic file (type png)
-
-<use images/evaluation/SG-GAN_00991_pred_label_img.png>
-Package pdftex.def Info: images/evaluation/SG-GAN_00991_pred_label_img.png  use
-d on input line 242.
-(pdftex.def)             Requested size: 199.16931pt x 99.57489pt.
-
-Overfull \hbox (64.00003pt too wide) in paragraph at lines 210--247
- [][] 
- []
-
-) (content/conclusion.tex [35] [36] [37] [38 <./images/evaluation/00991_leftImg
-8bit.png (PNG copy)> <./images/evaluation/00991_gtFine_labelIds.png> <./images/
-evaluation/gta_00991_pred_label_img.png (PNG copy)> <./images/evaluation/CycleG
-AN_00991_leftImg8bit.png (PNG copy)> <./images/evaluation/CycleGAN_00991_pred_l
-abel_img.png (PNG copy)> <./images/evaluation/CyCADA_00991_leftImg8bit.png (PNG
- copy)> <./images/evaluation/CyCADA_00991_pred_label_img.png (PNG copy)> <./ima
-ges/evaluation/SG-GAN_00991_leftImg8bit.png (PNG copy)> <./images/evaluation/SG
--GAN_00991_pred_label_img.png (PNG copy)>]
+[35] [36] [37 <./images/evaluation/GTA_gt_image.png (PNG copy)> <./images/evalu
+ation/GTA_gt_label.png> <./images/evaluation/GTA_pred_labels.png (PNG copy)> <.
+/images/evaluation/CycleGAN_translated.png (PNG copy)> <./images/evaluation/Cyc
+leGAN_pred_labels.png (PNG copy)> <./images/evaluation/CyCADA_translated.png (P
+NG copy)> <./images/evaluation/CyCADA_pred_labels.png (PNG copy)> <./images/eva
+luation/SG-GAN_translated.png (PNG copy)> <./images/evaluation/SG-GAN_pred_labe
+ls.png (PNG copy)>]) (content/conclusion.tex [38]
 chapter 6.
 ) [39
 
@@ -1381,11 +1307,11 @@ pxtt/m/n/10.95 https : / / www .
 
 [45]) [46] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 14243 strings out of 492903
- 229915 string characters out of 3130412
- 568482 words of memory out of 3000000
+ 14247 strings out of 492903
+ 229589 string characters out of 3130412
+ 571482 words of memory out of 3000000
  17505 multiletter control sequences out of 15000+200000
- 73677 words of font info for 348 fonts, out of 3000000 for 9000
+ 73872 words of font info for 351 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,18n,77p,9105b,669s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dvip
@@ -1401,7 +1327,7 @@ stall/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/f
 onts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (46 pages, 8737273 bytes).
+Output written on bsc_thesis.pdf (46 pages, 8725236 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

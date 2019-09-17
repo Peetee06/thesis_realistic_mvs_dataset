@@ -7,12 +7,10 @@
 \contentsline {section}{\numberline {2.2}Generative Adversarial Networks}{15}% 
 \contentsline {paragraph}{\nonumberline Training}{16}% 
 \contentsline {paragraph}{\nonumberline Loss functions}{16}% 
-\contentsline {subsection}{\numberline {2.2.1}The Generator}{16}% 
-\contentsline {subsection}{\numberline {2.2.2}The Discriminator}{16}% 
-\contentsline {subsection}{\numberline {2.2.3}Conditional GANs}{16}% 
-\contentsline {subsection}{\numberline {2.2.4}Training}{16}% 
-\contentsline {subsection}{\numberline {2.2.5}Advantages and Disadvantages}{16}% 
-\contentsline {paragraph}{\nonumberline Disadvantages}{16}% 
+\contentsline {subsection}{\numberline {2.2.1}Conditional GANs}{16}% 
+\contentsline {subsection}{\numberline {2.2.2}Training}{16}% 
+\contentsline {subsection}{\numberline {2.2.3}Advantages and Disadvantages}{17}% 
+\contentsline {paragraph}{\nonumberline Disadvantages}{17}% 
 \contentsline {paragraph}{\nonumberline non-convergence.}{17}% 
 \contentsline {paragraph}{\nonumberline mode collapse}{17}% 
 \contentsline {paragraph}{\nonumberline Advantages}{18}% 
@@ -53,14 +51,14 @@
 \contentsline {chapter}{\numberline {5}Experiments}{31}% 
 \contentsline {section}{\numberline {5.1}Datasets}{31}% 
 \contentsline {subsection}{\numberline {5.1.1}Synthetic dataset:\\ Playing for Data: Ground Truth from Computer Games}{31}% 
-\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{31}% 
-\contentsline {section}{\numberline {5.2}Comparison Benchmark}{33}% 
-\contentsline {subsection}{\numberline {5.2.1}Semantic Segmentation}{33}% 
+\contentsline {subsection}{\numberline {5.1.2}Real dataset:\\ The Cityscapes Dataset for Semantic Urban Scene Understanding}{33}% 
+\contentsline {section}{\numberline {5.2}Comparison Benchmark}{34}% 
+\contentsline {subsection}{\numberline {5.2.1}Semantic Segmentation}{34}% 
 \contentsline {section}{\numberline {5.3}Methodology}{34}% 
-\contentsline {section}{\numberline {5.4}Results}{34}% 
-\contentsline {subsection}{\numberline {5.4.1}Quantitative}{34}% 
+\contentsline {section}{\numberline {5.4}Results}{35}% 
+\contentsline {subsection}{\numberline {5.4.1}Quantitative}{35}% 
 \contentsline {subsection}{\numberline {5.4.2}Qualitative}{35}% 
-\contentsline {section}{\numberline {5.5}Discussion}{35}% 
+\contentsline {section}{\numberline {5.5}Discussion}{38}% 
 \contentsline {chapter}{\numberline {6}Conclusion}{39}% 
 \contentsline {section}{\numberline {6.1}Outlook and Future Work}{39}% 
-\contentsline {chapter}{\numberline {A}Blub}{41}% 
+\contentsline {chapter}{\numberline {A}Appendix}{41}% 

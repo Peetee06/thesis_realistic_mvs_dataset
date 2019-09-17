@@ -21,6 +21,8 @@ The GTA5 (Grand Theft Auto V) dataset is proposed in \cite{Richter_2016_ECCV}. I
 	\label{fig:p4d_examples}
 \end{figure}
 
+\newpage
+
 \subsection{Real dataset:\\
 	The Cityscapes Dataset for Semantic Urban Scene Understanding}
 
@@ -43,6 +45,8 @@ where predicted pixels are the pixels predicted for a specific class by the sema
 
 \section{Methodology}
 For the comparison each technique was used to translate a sample of 500 images from the GTA dataset to the Cityscapes domain. For CycleGAN and SG-GAN each, the authors provided pre-trained models. For CyCADA pretranslated images are provided in the project repository \cite{CyCADA}. To translate images with SG-GAN and CycleGAN the provided code \cite{SG},\cite{Cycle}, respectively and for the semantic segmentation task an implementation \cite{DLR} of DeepLabv3 \cite{DBLP:journals/corr/ChenPSA17} was used. To compute the IoU values the DeepLabv3 implementation uses the benchmark code provided by Cityscapes \cite{CSR}. All computations were run on a machine with Ubuntu 18.04 using an NVIDIA Geforce GTX 1070 with 8GB RAM. The images were scaled down to $512 \times 256$ pixels due to memory limitations while computing the CycleGAN samples.
+
+\newpage
 
 \section{Results}
 
@@ -127,7 +131,7 @@ As seen in Table \ref{table:results_quant}, CyCADA is the only method that impro
 \end{table}
 
 \subsection{Qualitative}
-Table \ref{table:results_qual}. 
+Table \ref{table:results_qual} shows a qualitative comparison for a single frame translated through each method and with corresponding predicted labelmap. One can see that all of the techniques darkened the overall appearance of the image while SG-GAN still has brighter color than CycleGAN and CyCADA. CyCADA smooths out the road the most out of all of the techniques and SG-GAN least. SG-GAN has a lot of noisy structure in the translated images. Also they have a bright glow between the sky and other semantic classes. The only technique that learned the mercedes star and generates it in most of the images is CyCADA. Overall the SG-GAN images look very sharp and close to the original GTA images while CycleGAN and CyCADA smooth out the textures more. The pedestrians on the right side of the images are more clearly generated in CyCADA than CycleGAN. The predicted labelmap of the ground truth GTA image clearly shows that the DeepLabv3 model trained on Cityscapes performs worse in the synthetic domain. For SG-GAN it predicts large portions of the road as sidewalks and generates noisy label images. The DeepLabv3 model is able to successfully predict streets and sidewalks for CyCADA and CycleGAN images. While it predicts some regions other than the ego car as void for SG-GAN and CycleGAN, CyCADA only has one small region that it cannot predict as belonging to one of the main classes. The CyCADA label map contains more vegetation than the ground truth. 
 
 % void
 \definecolor{black}{rgb}{0, 0, 0} % unlabeled, ego vehicle, rectification border, out of roi, static
@@ -167,85 +171,115 @@ Table \ref{table:results_qual}.
 
 \begin{table}
 	\centering
-	\begin{tabular}{cc}
-		\raisebox{-.25\height}{\textcolor{black}{\rule{0.5cm}{0.5cm}}} & void \\
-		\raisebox{-.25\height}{\textcolor{purple}{\rule{0.5cm}{0.5cm}}} & road \\
-		\raisebox{-.25\height}{\textcolor{lightpurple}{\rule{0.5cm}{0.5cm}}} & sidewalk \\
-		\raisebox{-.25\height}{\textcolor{grey}{\rule{0.5cm}{0.5cm}}} & building \\
-		\raisebox{-.25\height}{\textcolor{bluepurple}{\rule{0.5cm}{0.5cm}}} & wall \\
-		\raisebox{-.25\height}{\textcolor{darkerskin}{\rule{0.5cm}{0.5cm}}} & fence \\
-		\raisebox{-.25\height}{\textcolor{grey2}{\rule{0.5cm}{0.5cm}}} & pole \\
-		\raisebox{-.25\height}{\textcolor{orange}{\rule{0.5cm}{0.5cm}}} & traffic light \\
-		\raisebox{-.25\height}{\textcolor{lightgreen}{\rule{0.5cm}{0.5cm}}} & traffic sign \\
-		\raisebox{-.25\height}{\textcolor{green}{\rule{0.5cm}{0.5cm}}} & vegetation \\
-		\raisebox{-.25\height}{\textcolor{brightgreen}{\rule{0.5cm}{0.5cm}}} & terrain \\
-		\raisebox{-.25\height}{\textcolor{blue}{\rule{0.5cm}{0.5cm}}} & sky \\
-		\raisebox{-.25\height}{\textcolor{red}{\rule{0.5cm}{0.5cm}}} & person \\
-		\raisebox{-.25\height}{\textcolor{fullred}{\rule{0.5cm}{0.5cm}}} & rider \\
-		\raisebox{-.25\height}{\textcolor{darkblue}{\rule{0.5cm}{0.5cm}}} & car \\
-		\raisebox{-.25\height}{\textcolor{blueblack}{\rule{0.5cm}{0.5cm}}} & truck \\
-		\raisebox{-.25\height}{\textcolor{paleblue}{\rule{0.5cm}{0.5cm}}} & bus \\
-		\raisebox{-.25\height}{\textcolor{palegreenblue}{\rule{0.5cm}{0.5cm}}} & train \\
-		\raisebox{-.25\height}{\textcolor{brightblue}{\rule{0.5cm}{0.5cm}}} & motorcycle\\
-		\raisebox{-.25\height}{\textcolor{brownred}{\rule{0.5cm}{0.5cm}}} & bicycle
-	\end{tabular} 
-	\caption{Color coding of semantic classes used in semantic segmentation labelmaps.}
-	\label{table:semseg_colors}
-\end{table}
-
-
-\begin{table}
-	\centering
-	\begin{tabular}{ccc} 			
-		\textcolor{brownred}{\rule{0.5cm}{0.5cm}} & \textcolor{brownred}{\rule{0.5cm}{0.5cm}} & \textcolor{brownred}{\rule{0.5cm}{0.5cm}} \\
-		\rotatebox[origin=c]{90}{test} & \rotatebox[origin=c]{90}{test} &
-		\rotatebox[origin=c]{90}{test}
-	\end{tabular}
-	\caption{\todo{change Table \ref{table:semseg_colors} to this format with less distance between columns.}}
-\end{table}
-
-
-\begin{table}
-	\centering
-	\begin{tabular}{ccc}
+	\setlength\tabcolsep{1.5pt}
+%	\begin{tabular}{cc||c}
+%		\rotatebox[origin=c]{90}{\thead{GTA \\ (Ground Truth)}} & 
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{images/evaluation/00991_leftImg8bit.png}
+%		\end{minipage} & 
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{images/evaluation/00991_gtFine_labelIds.png}
+%		\end{minipage}\\
+%		\hline
+%		\hline
+%		\rotatebox[origin=c]{90}{GTA} &
+%		\multicolumn{1}{c||}{} &
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{images/evaluation/gta_00991_pred_label_img.png}
+%		\end{minipage}\\
+%		\rotatebox[origin=c]{90}{CycleGAN} &
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_00991_leftImg8bit.png}
+%		\end{minipage} &
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_00991_pred_label_img.png}
+%		\end{minipage}\\
+%		\rotatebox[origin=c]{90}{CyCADA} &
+%		\begin{minipage}[c]{0.45\textwidth} \includegraphics[width=\textwidth]{images/evaluation/CyCADA_00991_leftImg8bit.png} 
+%		\end{minipage}& 
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{images/evaluation/CyCADA_00991_pred_label_img.png}
+%		\end{minipage}\\
+%		\rotatebox[origin=c]{90}{SG-GAN} &
+%		\begin{minipage}[c]{0.45\textwidth} \includegraphics[width=\textwidth]{images/evaluation/SG-GAN_00991_leftImg8bit.png}
+%		\end{minipage} & 
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\includegraphics[width=\textwidth]{images/evaluation/SG-GAN_00991_pred_label_img.png}
+%		\end{minipage} \\
+%		%\multicolumn{2}{c}{} \\
+%		\multicolumn{1}{c}{} & (translated) Image & (predicted) Labelmap
+%	\end{tabular}
+		\begin{tabular}{cc||c}
 		\rotatebox[origin=c]{90}{\thead{GTA \\ (Ground Truth)}} & 
-		\begin{minipage}[c]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{images/evaluation/00991_leftImg8bit.png}
+		\begin{minipage}[c]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/GTA_gt_image.png}
 		\end{minipage} & 
-		\begin{minipage}[c]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{images/evaluation/00991_gtFine_labelIds.png}
+		\begin{minipage}[c]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/GTA_gt_label.png}
 		\end{minipage}\\
 		\hline
 		\hline
 		\rotatebox[origin=c]{90}{GTA} &
-		\multicolumn{1}{c}{} &
-		\begin{minipage}[c]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{images/evaluation/gta_00991_pred_label_img.png}
+		\multicolumn{1}{c||}{} &
+		\begin{minipage}[c]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/GTA_pred_labels.png}
 		\end{minipage}\\
 		\rotatebox[origin=c]{90}{CycleGAN} &
-		\begin{minipage}[c]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_00991_leftImg8bit.png}
+		\begin{minipage}[c]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_translated.png}
 		\end{minipage} &
-		\begin{minipage}[c]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_00991_pred_label_img.png}
+		\begin{minipage}[c]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/CycleGAN_pred_labels.png}
 		\end{minipage}\\
 		\rotatebox[origin=c]{90}{CyCADA} &
-		\begin{minipage}[c]{0.5\textwidth} \includegraphics[width=\textwidth]{images/evaluation/CyCADA_00991_leftImg8bit.png} 
+		\begin{minipage}[c]{0.45\textwidth} \includegraphics[width=\textwidth]{images/evaluation/CyCADA_translated.png} 
 		\end{minipage}& 
-		\begin{minipage}[c]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{images/evaluation/CyCADA_00991_pred_label_img.png}
+		\begin{minipage}[c]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/CyCADA_pred_labels.png}
 		\end{minipage}\\
 		\rotatebox[origin=c]{90}{SG-GAN} &
-		\begin{minipage}[c]{0.5\textwidth} \includegraphics[width=\textwidth]{images/evaluation/SG-GAN_00991_leftImg8bit.png}
+		\begin{minipage}[c]{0.45\textwidth} \includegraphics[width=\textwidth]{images/evaluation/SG-GAN_translated.png}
 		\end{minipage} & 
-		\begin{minipage}[c]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{images/evaluation/SG-GAN_00991_pred_label_img.png}
+		\begin{minipage}[c]{0.45\textwidth}
+			\includegraphics[width=\textwidth]{images/evaluation/SG-GAN_pred_labels.png}
 		\end{minipage} \\
-		\multicolumn{2}{c}{} \\
+		%\multicolumn{2}{c}{} \\
 		\multicolumn{1}{c}{} & (translated) Image & (predicted) Labelmap
 	\end{tabular} 
 	\caption{Ground Truth image and corresponding Ground Truth labelmap from the GTA dataset (top) and the images translated by the different techniques (left side) with their corresponding predicted labelmaps (right side)}
 	\label{table:results_qual}
+	\bigskip
+	\centering
+	\begin{tabular}{cccccccccccccccccccc}
+		\raisebox{-.25\height}{\textcolor{black}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{purple}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{lightpurple}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{grey}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{bluepurple}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{darkerskin}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{grey2}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{orange}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{lightgreen}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{green}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{brightgreen}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{blue}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{red}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{fullred}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{darkblue}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{blueblack}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{paleblue}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{palegreenblue}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{brightblue}{\rule{0.5cm}{0.5cm}}} &
+		\raisebox{-.25\height}{\textcolor{brownred}{\rule{0.5cm}{0.5cm}}} \\
+		\rotatebox[origin=r]{90}{void} & \rotatebox[origin=r]{90}{road} & \rotatebox[origin=r]{90}{sidewalk} & \rotatebox[origin=r]{90}{building} & \rotatebox[origin=r]{90}{wall} & \rotatebox[origin=r]{90}{fence} & \rotatebox[origin=r]{90}{pole} & \rotatebox[origin=r]{90}{traffic light} & \rotatebox[origin=r]{90}{traffic sign} & \rotatebox[origin=r]{90}{vegetation} & \rotatebox[origin=r]{90}{terrain} & \rotatebox[origin=r]{90}{sky} & \rotatebox[origin=r]{90}{person} & \rotatebox[origin=r]{90}{rider} & \rotatebox[origin=r]{90}{car} & \rotatebox[origin=r]{90}{truck} & \rotatebox[origin=r]{90}{bus} & \rotatebox[origin=r]{90}{train} & \rotatebox[origin=r]{90}{motorcycle} & \rotatebox[origin=r]{90}{bicycle}
+	\end{tabular} 
+	\caption{Color coding of semantic classes used in semantic segmentation labelmaps.}
+	\label{table:semseg_colors}
+	\setlength\tabcolsep{6pt}
 \end{table}
-\section{Discussion}
 
+
+\newpage
+
+\section{Discussion}
+CyCADA performed best on average for both category and class Scores in this comparison. From the translated images used in this comparison it looks like CyCADA was able to smoothen textures more than the other methods giving them a more realistic look. This is especially obvious when looking at the ``flat'' category scores where it improves semantic segmentation by as much as $15.4\%$. The untranslated GTA images having the best scores for human, sky and object categories is probably due to noise and artifacts generated by the adaptation techniques. This results in reduced details for instances of the human category which is generally already smaller (pixel-wise) than the other categories. SG-GAN creates a lot of noise into the sky which makes correct prediction of sky labels a lot harder for the DeepLabv3 model. SG-GAN performing best for cars and busses might be due to generating distinct pixels around semantic boundaries which may result in better distinction between instances of cars and busses far in the background and their surroundings. The ``glow'' is especially visible between the sky and its neighboring semantic classes. This might be the reason for SG-GAN to perform best for traffic signs as they are easier to seperate from the background. Overall the results are not as expected. All of the techniques compared in this work show in their corresponding papers that they improve the performance of semantic segmentation models compared to unadapted images for GTA to Cityscapes domain adaptation. This is not the case here. This is probably due to the models used in this work not being the ones the authors actually used in their works. Therefore it can't be ensured that they were trained the way the authors describe which may result in the decrease in average performance for CycleGAN and SG-GAN. 

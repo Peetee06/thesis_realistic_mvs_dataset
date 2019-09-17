@@ -54,12 +54,6 @@ On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values fr
 
 \paragraph{Loss functions} There are many different loss functions that can be used for GANs. See chapter \ref{sec:techniques} for the ones that the techniques in this work use.
 
-
-\todo{restructure this or delete generator and discriminator subsections}
-\subsection{The Generator}
-
-\subsection{The Discriminator}
-
 \subsection{Conditional GANs}
 Instead of having random noise as input to the Net, conditional GANs get a conditional input that determines the output. \cite{DBLP:journals/corr/IsolaZZE16} generated images of shoes depending on drawn sketches thereof, translated grayscale images to color images and more (See Figure \ref{fig:I2I_examples} for examples). This is the same for the methods compared in this work: They use a synthetic image as conditional input and generate an image that looks more realistic while preserving features and image elements of the original image.
 
@@ -74,6 +68,8 @@ Instead of having random noise as input to the Net, conditional GANs get a condi
 \subsection{Training}
 There are many different approaches on training GANs. Training details of the Techniques that this work focuses on can be found in Section \ref{sec:techniques}.
 
+
+\newpage
 
 \subsection{Advantages and Disadvantages}
 \paragraph{Disadvantages}
