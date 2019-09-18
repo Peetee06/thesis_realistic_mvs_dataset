@@ -191,6 +191,11 @@ Ashish Shrivastava, Tomas Pfister, Oncel Tuzel, Josh Susskind, Wenda Wang, and
   training.
 \newblock {\em CoRR}, abs/1612.07828, 2016.
 
+\bibitem[SS01]{Stockman:2001:CV:558008}
+George Stockman and Linda~G. Shapiro.
+\newblock {\em Computer Vision}.
+\newblock Prentice Hall PTR, Upper Saddle River, NJ, USA, 1st edition, 2001.
+
 \bibitem[SS16]{DBLP:journals/corr/SunS16a}
 Baochen Sun and Kate Saenko.
 \newblock Deep {CORAL:} correlation alignment for deep domain adaptation.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  8 SEP 2019 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  18 SEP 2019 22:32
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1138,74 +1138,76 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-) (content/foundations.tex [11
+[11
 
 
-] [12
-
-
-]
+]) (content/foundations.tex [12]
 chapter 2.
-<./images/../images/DA_examples_cityscapes_gta.png, id=64, 390.4989pt x 123.340
+<./images/../images/paired_data.png, id=64, 1590.94376pt x 487.8225pt>
+File: ./images/../images/paired_data.png Graphic file (type png)
+<use ./images/../images/paired_data.png>
+Package pdftex.def Info: ./images/../images/paired_data.png  used on input line
+ 13.
+(pdftex.def)             Requested size: 398.33864pt x 122.13396pt.
+<./images/../images/DA_examples_cityscapes_gta.png, id=66, 390.4989pt x 123.340
 8pt>
 File: ./images/../images/DA_examples_cityscapes_gta.png Graphic file (type png)
 
 <use ./images/../images/DA_examples_cityscapes_gta.png>
 Package pdftex.def Info: ./images/../images/DA_examples_cityscapes_gta.png  use
-d on input line 13.
+d on input line 20.
 (pdftex.def)             Requested size: 318.67212pt x 100.66017pt.
+[13
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-<./images/../images/semseg.png, id=71, 1884.03876pt x 493.845pt>
+] [14 <./images/../images/paired_data.png> <./images/../images/DA_examples_city
+scapes_gta.png>]
+<./images/../images/semseg.png, id=77, 1027.84pt x 256.96pt>
 File: ./images/../images/semseg.png Graphic file (type png)
 <use ./images/../images/semseg.png>
-Package pdftex.def Info: ./images/../images/semseg.png  used on input line 27.
-(pdftex.def)             Requested size: 398.33864pt x 104.4113pt.
-
-[14 <./images/../images/DA_examples_cityscapes_gta.png> <./images/../images/sem
-seg.png>] [15]
-<./images/../images/I2I_examples.png, id=84, 1511.6475pt x 960.58875pt>
+Package pdftex.def Info: ./images/../images/semseg.png  used on input line 36.
+(pdftex.def)             Requested size: 398.33864pt x 99.58664pt.
+ [15 <./images/../images/semseg.png>] [16]
+<./images/../images/I2I_examples.png, id=89, 1511.6475pt x 960.58875pt>
 File: ./images/../images/I2I_examples.png Graphic file (type png)
 <use ./images/../images/I2I_examples.png>
 Package pdftex.def Info: ./images/../images/I2I_examples.png  used on input lin
-e 62.
+e 69.
 (pdftex.def)             Requested size: 318.67212pt x 202.49178pt.
- [16]
-<images/metz_et_al_mode_collapse.png, id=88, 1595.9625pt x 180.675pt>
+ [17 <./images/../images/I2I_examples.png>]
+<images/metz_et_al_mode_collapse.png, id=94, 1595.9625pt x 180.675pt>
 File: images/metz_et_al_mode_collapse.png Graphic file (type png)
 <use images/metz_et_al_mode_collapse.png>
 Package pdftex.def Info: images/metz_et_al_mode_collapse.png  used on input lin
-e 82.
+e 84.
 (pdftex.def)             Requested size: 398.33864pt x 45.0942pt.
- [17 <./images/../images/I2I_examples.png>])
-(content/related_work.tex [18 <./images/metz_et_al_mode_collapse.png>]
+ [18 <./images/metz_et_al_mode_collapse.png>])
+(content/related_work.tex [19] [20
+
+
+]
 chapter 3.
-[19
-
-
-] [20]) (content/techniques.tex [21] [22
+[21] [22]) (content/techniques.tex [23] [24
 
 
 ]
 chapter 4.
-[23] [24]
+[25] [26]
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 68.
  (/home/peete/.miktex/texmfs/install/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [25] [26] [27]) (content/experiments.tex [28] [29] [30
+) [27] [28] [29]) (content/experiments.tex [30] [31] [32
 
 
 ]
 chapter 5.
-<images/p4d_example.png, id=138, 1533.73pt x 1287.81125pt>
+<images/p4d_example.png, id=147, 1533.73pt x 1287.81125pt>
 File: images/p4d_example.png Graphic file (type png)
 <use images/p4d_example.png>
 Package pdftex.def Info: images/p4d_example.png  used on input line 19.
 (pdftex.def)             Requested size: 398.33864pt x 334.46933pt.
-[31] [32 <./images/p4d_example.png>]
-<images/cityscapes_example.png, id=147, 1538.74875pt x 1163.34625pt>
+[33] [34 <./images/p4d_example.png>]
+<images/cityscapes_example.png, id=155, 1538.74875pt x 1163.34625pt>
 File: images/cityscapes_example.png Graphic file (type png)
 <use images/cityscapes_example.png>
 Package pdftex.def Info: images/cityscapes_example.png  used on input line 33.
@@ -1213,105 +1215,173 @@ Package pdftex.def Info: images/cityscapes_example.png  used on input line 33.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33 <./images/cityscapes_example.png>] [34]
-Package color Info: Redefining color black on input line 137.
-Package color Info: Redefining color green on input line 154.
-Package color Info: Redefining color blue on input line 158.
-Package color Info: Redefining color red on input line 161.
+ [35 <./images/cityscapes_example.png>] [36]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 213.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 213.
-<images/evaluation/GTA_gt_image.png, id=155, 513.92pt x 256.96pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+<images/evaluation/GTA_gt_image_train.png, id=163, 513.92pt x 256.96pt>
+File: images/evaluation/GTA_gt_image_train.png Graphic file (type png)
+<use images/evaluation/GTA_gt_image_train.png>
+Package pdftex.def Info: images/evaluation/GTA_gt_image_train.png  used on inpu
+t line 61.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/GTA_gt_label_train.png, id=164, 513.92pt x 256.96pt>
+File: images/evaluation/GTA_gt_label_train.png Graphic file (type png)
+<use images/evaluation/GTA_gt_label_train.png>
+Package pdftex.def Info: images/evaluation/GTA_gt_label_train.png  used on inpu
+t line 64.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/GTA_pred_labels_train.png, id=165, 2055.68pt x 1027.84pt>
+File: images/evaluation/GTA_pred_labels_train.png Graphic file (type png)
+<use images/evaluation/GTA_pred_labels_train.png>
+Package pdftex.def Info: images/evaluation/GTA_pred_labels_train.png  used on i
+nput line 71.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
+<images/evaluation/CycleGAN_translated_train.png, id=166, 513.92pt x 256.96pt>
+File: images/evaluation/CycleGAN_translated_train.png Graphic file (type png)
+<use images/evaluation/CycleGAN_translated_train.png>
+Package pdftex.def Info: images/evaluation/CycleGAN_translated_train.png  used 
+on input line 75.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/CycleGAN_pred_labels_train.png, id=167, 2055.68pt x 1027.84p
+t>
+File: images/evaluation/CycleGAN_pred_labels_train.png Graphic file (type png)
+<use images/evaluation/CycleGAN_pred_labels_train.png>
+Package pdftex.def Info: images/evaluation/CycleGAN_pred_labels_train.png  used
+ on input line 78.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
+<images/evaluation/CyCADA_translated_train.png, id=168, 513.92pt x 256.96pt>
+File: images/evaluation/CyCADA_translated_train.png Graphic file (type png)
+<use images/evaluation/CyCADA_translated_train.png>
+Package pdftex.def Info: images/evaluation/CyCADA_translated_train.png  used on
+ input line 81.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/CyCADA_pred_labels_train.png, id=169, 2055.68pt x 1027.84pt>
+
+File: images/evaluation/CyCADA_pred_labels_train.png Graphic file (type png)
+<use images/evaluation/CyCADA_pred_labels_train.png>
+Package pdftex.def Info: images/evaluation/CyCADA_pred_labels_train.png  used o
+n input line 84.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
+<images/evaluation/SG-GAN_translated_train.png, id=170, 513.92pt x 256.96pt>
+File: images/evaluation/SG-GAN_translated_train.png Graphic file (type png)
+<use images/evaluation/SG-GAN_translated_train.png>
+Package pdftex.def Info: images/evaluation/SG-GAN_translated_train.png  used on
+ input line 87.
+(pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
+<images/evaluation/SG-GAN_pred_labels_train.png, id=171, 2055.68pt x 1027.84pt>
+
+File: images/evaluation/SG-GAN_pred_labels_train.png Graphic file (type png)
+<use images/evaluation/SG-GAN_pred_labels_train.png>
+Package pdftex.def Info: images/evaluation/SG-GAN_pred_labels_train.png  used o
+n input line 90.
+(pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
+
+Overfull \hbox (26.96371pt too wide) in paragraph at lines 58--95
+ [][] 
+ []
+
+Package color Info: Redefining color black on input line 180.
+Package color Info: Redefining color green on input line 197.
+Package color Info: Redefining color blue on input line 201.
+Package color Info: Redefining color red on input line 204.
+<images/evaluation/GTA_gt_image.png, id=172, 513.92pt x 256.96pt>
 File: images/evaluation/GTA_gt_image.png Graphic file (type png)
 <use images/evaluation/GTA_gt_image.png>
 Package pdftex.def Info: images/evaluation/GTA_gt_image.png  used on input line
- 215.
+ 258.
 (pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
-<images/evaluation/GTA_gt_label.png, id=156, 513.92pt x 256.96pt>
+<images/evaluation/GTA_gt_label.png, id=173, 513.92pt x 256.96pt>
 File: images/evaluation/GTA_gt_label.png Graphic file (type png)
 <use images/evaluation/GTA_gt_label.png>
 Package pdftex.def Info: images/evaluation/GTA_gt_label.png  used on input line
- 218.
+ 261.
 (pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
-<images/evaluation/GTA_pred_labels.png, id=157, 2055.68pt x 1027.84pt>
+<images/evaluation/GTA_pred_labels.png, id=174, 2055.68pt x 1027.84pt>
 File: images/evaluation/GTA_pred_labels.png Graphic file (type png)
 <use images/evaluation/GTA_pred_labels.png>
 Package pdftex.def Info: images/evaluation/GTA_pred_labels.png  used on input l
-ine 225.
+ine 268.
 (pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
-<images/evaluation/CycleGAN_translated.png, id=158, 513.92pt x 256.96pt>
+<images/evaluation/CycleGAN_translated.png, id=175, 513.92pt x 256.96pt>
 File: images/evaluation/CycleGAN_translated.png Graphic file (type png)
 <use images/evaluation/CycleGAN_translated.png>
 Package pdftex.def Info: images/evaluation/CycleGAN_translated.png  used on inp
-ut line 229.
+ut line 272.
 (pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
-<images/evaluation/CycleGAN_pred_labels.png, id=159, 2055.68pt x 1027.84pt>
+<images/evaluation/CycleGAN_pred_labels.png, id=176, 2055.68pt x 1027.84pt>
 File: images/evaluation/CycleGAN_pred_labels.png Graphic file (type png)
 <use images/evaluation/CycleGAN_pred_labels.png>
 Package pdftex.def Info: images/evaluation/CycleGAN_pred_labels.png  used on in
-put line 232.
+put line 275.
 (pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
-<images/evaluation/CyCADA_translated.png, id=160, 513.92pt x 256.96pt>
+<images/evaluation/CyCADA_translated.png, id=177, 513.92pt x 256.96pt>
 File: images/evaluation/CyCADA_translated.png Graphic file (type png)
 <use images/evaluation/CyCADA_translated.png>
 Package pdftex.def Info: images/evaluation/CyCADA_translated.png  used on input
- line 235.
+ line 278.
 (pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
-<images/evaluation/CyCADA_pred_labels.png, id=161, 2055.68pt x 1027.84pt>
+<images/evaluation/CyCADA_pred_labels.png, id=178, 2055.68pt x 1027.84pt>
 File: images/evaluation/CyCADA_pred_labels.png Graphic file (type png)
 <use images/evaluation/CyCADA_pred_labels.png>
 Package pdftex.def Info: images/evaluation/CyCADA_pred_labels.png  used on inpu
-t line 238.
+t line 281.
 (pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
-<images/evaluation/SG-GAN_translated.png, id=162, 513.92pt x 256.96pt>
+<images/evaluation/SG-GAN_translated.png, id=179, 513.92pt x 256.96pt>
 File: images/evaluation/SG-GAN_translated.png Graphic file (type png)
 <use images/evaluation/SG-GAN_translated.png>
 Package pdftex.def Info: images/evaluation/SG-GAN_translated.png  used on input
- line 241.
+ line 284.
 (pdftex.def)             Requested size: 179.25116pt x 89.6276pt.
-<images/evaluation/SG-GAN_pred_labels.png, id=163, 2055.68pt x 1027.84pt>
+<images/evaluation/SG-GAN_pred_labels.png, id=180, 2055.68pt x 1027.84pt>
 File: images/evaluation/SG-GAN_pred_labels.png Graphic file (type png)
 <use images/evaluation/SG-GAN_pred_labels.png>
 Package pdftex.def Info: images/evaluation/SG-GAN_pred_labels.png  used on inpu
-t line 244.
+t line 287.
 (pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
 
+LaTeX Warning: Float too large for page by 31.61905pt on input line 322.
 
-LaTeX Warning: Float too large for page by 31.61905pt on input line 279.
+[37] [38 <./images/evaluation/GTA_gt_image_train.png (PNG copy)> <./images/eval
+uation/GTA_gt_label_train.png> <./images/evaluation/GTA_pred_labels_train.png (
+PNG copy)> <./images/evaluation/CycleGAN_translated_train.png (PNG copy)> <./im
+ages/evaluation/CycleGAN_pred_labels_train.png (PNG copy)> <./images/evaluation
+/CyCADA_translated_train.png (PNG copy)> <./images/evaluation/CyCADA_pred_label
+s_train.png (PNG copy)> <./images/evaluation/SG-GAN_translated_train.png (PNG c
+opy)> <./images/evaluation/SG-GAN_pred_labels_train.png (PNG copy)>] [39]
+[40 <./images/evaluation/GTA_gt_image.png (PNG copy)> <./images/evaluation/GTA_
+gt_label.png> <./images/evaluation/GTA_pred_labels.png (PNG copy)> <./images/ev
+aluation/CycleGAN_translated.png (PNG copy)> <./images/evaluation/CycleGAN_pred
+_labels.png (PNG copy)> <./images/evaluation/CyCADA_translated.png (PNG copy)> 
+<./images/evaluation/CyCADA_pred_labels.png (PNG copy)> <./images/evaluation/SG
+-GAN_translated.png (PNG copy)> <./images/evaluation/SG-GAN_pred_labels.png (PN
+G copy)>]) (content/conclusion.tex [41] [42
 
-[35] [36] [37 <./images/evaluation/GTA_gt_image.png (PNG copy)> <./images/evalu
-ation/GTA_gt_label.png> <./images/evaluation/GTA_pred_labels.png (PNG copy)> <.
-/images/evaluation/CycleGAN_translated.png (PNG copy)> <./images/evaluation/Cyc
-leGAN_pred_labels.png (PNG copy)> <./images/evaluation/CyCADA_translated.png (P
-NG copy)> <./images/evaluation/CyCADA_pred_labels.png (PNG copy)> <./images/eva
-luation/SG-GAN_translated.png (PNG copy)> <./images/evaluation/SG-GAN_pred_labe
-ls.png (PNG copy)>]) (content/conclusion.tex [38]
+
+]
 chapter 6.
-) [39
-
-
-] [40
+) [43] [44
 
 
 ]
 chapter A.
-(bsc_thesis.bbl [41] [42
+(bsc_thesis.bbl [45] [46
 
 
-] [43] [44]
+] [47] [48]
 Underfull \hbox (badness 4144) in paragraph at lines 156--160
 []\T1/pxr/m/n/10.95 (+20) Blender Project.  Cy-cles ren-der-ing en-gine.  $\T1/
 pxtt/m/n/10.95 https : / / www .
  []
 
-[45]) [46] (bsc_thesis.aux) ) 
+[49]) [50] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 14247 strings out of 492903
- 229589 string characters out of 3130412
- 571482 words of memory out of 3000000
- 17505 multiletter control sequences out of 15000+200000
- 73872 words of font info for 351 fonts, out of 3000000 for 9000
+ 14304 strings out of 492903
+ 231851 string characters out of 3130412
+ 574482 words of memory out of 3000000
+ 17548 multiletter control sequences out of 15000+200000
+ 74067 words of font info for 354 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,18n,77p,9105b,669s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dvip
@@ -1327,9 +1397,9 @@ stall/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/f
 onts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (46 pages, 8725236 bytes).
+Output written on bsc_thesis.pdf (50 pages, 10811394 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
+ 269 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46673 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 46723 words of extra memory for PDF output out of 51595 (max. 10000000)
 

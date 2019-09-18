@@ -1,7 +1,7 @@
 \chapter{Domain Adaptation Techniques}
 \label{sec:techniques}
 
-This chapter will give an overview over the three \textbf{Domain Adaptation Techniques} that will be compared in this work, namely \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}. It will explain how these techniques work, what kind of Network Architecture they use and how training these Nets was approached. See table \ref{table:DA_comparison}
+This chapter will give an overview over the three \textbf{Domain Adaptation Techniques} that will be compared in this work, namely \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}. It will explain how these techniques work, what kind of Network Architecture they use and how training these Nets was approached. See table \ref{table:DA_comparison} for an overview of what losses the techniques use.
 
 All of the methods compared in this work are based on Generative Adversarial Networks which were initially proposed in \cite{NIPS2014_5423} and are all designed to be able to train on unpaired data which is necessary for the synthetic-to-real task focused on in this work. See chapter \ref{sec:foundations} for more context and details.
 
@@ -19,7 +19,7 @@ All of the methods compared in this work are based on Generative Adversarial Net
 		soft-gradient loss & - & - & $\checkmark$\\
 		\hline
 	\end{tabular} 
-	\caption{Comparison of loss functions ofDomain Adaptation Techniques \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}}
+	\caption{Comparison of loss functions of Domain Adaptation Techniques \textbf{CycleGAN} \cite{DBLP:journals/corr/ZhuPIE17}, \textbf{CyCADA} \cite{DBLP:journals/corr/abs-1711-03213} and \textbf{SG-GAN} \cite{DBLP:journals/corr/abs-1801-01726}}
 	\label{table:DA_comparison}
 \end{table}
 
@@ -95,7 +95,7 @@ The authors use the task loss on labeled source data to pretrain the source task
 The authors use VGG16-FCN8s \cite{DBLP:journals/corr/LongSD14} as well as DRN-26 \cite{DBLP:journals/corr/YuKF17} during their experiments. 
 
 \subsubsection{Training Details}
-Using the FCN8s architecture the authors train their source semantic segmentation model for 100k iterations using SGD, a learning rate of 0.001 and momentum of 0.9. For DRN-26 they use SGD aswell with the same hyper-parameters but for 115k iterations. Both times they crop the images to $600 \times 600$ and train on batches of 8 images. They used the original hyper-parameters and network architecture of CycleGAN \cite{DBLP:journals/corr/ZhuPIE17} for cycle-consistent image adaptation. The images were scaled to 1024 pixels width and randomly cropped to patches of $400 \times 400$ for training. They trained for 20 epochs. The authors used SGD with momentum 0.99 and learning rate 0.00001 for feature level adaptation training. %TODO check last few sentences and D_feat again if time
+Using the FCN8s architecture the authors train their source semantic segmentation model for 100k iterations using SGD, a learning rate of 0.001 and momentum of 0.9. For DRN-26 they use SGD as well with the same hyper-parameters but for 115k iterations. Both times they crop the images to $600 \times 600$ and train on batches of 8 images. They used the original hyper-parameters and network architecture of CycleGAN \cite{DBLP:journals/corr/ZhuPIE17} for cycle-consistent image adaptation. The images were scaled to 1024 pixels width and randomly cropped to patches of $400 \times 400$ for training. They trained for 20 epochs. The authors used SGD with momentum 0.99 and learning rate 0.00001 for feature level adaptation training. %TODO check last few sentences and D_feat again if time
 
 
 \section{SG-GAN}
@@ -127,7 +127,7 @@ With input image $v$ and corresponding semantic labeling $s_v$, the gradient sen
 \begin{align}
 		l_{\text{grad}}(v,s_v,G_{V\rightarrow R}) &= \lVert(|(|C_i * v |-|C_i*G_{V\rightarrow R}(v)|)|) \odot sgn(C_s*s_v)\rVert_1
 \end{align}
-where $C_i$ is the gradient filter for the image and $C_s$ the one for its semantic labeling map and $G_{V\rightarrow R}$ is the generator that maps from \underline{V}irtual to \underline{R}eal domain. $*$ describes the convolution of the filters over the image, $\odot$ is the element-wise multiplication, $|\cdot|$ is the absolute value- and $sgn$ the sign function. The loss grows, the higher the difference between gradients of image $v$ and image $G_{V\rightarrow R}(v)$. The element-wise multiplication with $sgn(C_s * s_v)$ enforces that the loss focuses on semantic boundaries only. For the soft gradient loss it may be believed that $v$ and $G_{V\rightarrow R}(v)$ share similar texture within semantic classes and therefore one will have edges where the other does aswell. Define following formula for the soft gradient-sensitive loss in which $\beta$ controls how much belief is set into the texture similarities:
+where $C_i$ is the gradient filter for the image and $C_s$ the one for its semantic labeling map and $G_{V\rightarrow R}$ is the generator that maps from \underline{V}irtual to \underline{R}eal domain. $*$ describes the convolution of the filters over the image, $\odot$ is the element-wise multiplication, $|\cdot|$ is the absolute value- and $sgn$ the sign function. The loss grows, the higher the difference between gradients of image $v$ and image $G_{V\rightarrow R}(v)$. The element-wise multiplication with $sgn(C_s * s_v)$ enforces that the loss focuses on semantic boundaries only. For the soft gradient loss it may be believed that $v$ and $G_{V\rightarrow R}(v)$ share similar texture within semantic classes and therefore one will have edges where the other does as well. Define following formula for the soft gradient-sensitive loss in which $\beta$ controls how much belief is set into the texture similarities:
 \begin{align}
 	\begin{split}
 		l_{s-\text{grad}}(v, s_v, G_{V\rightarrow R}, \alpha, \beta) &= \lVert(|(|C_i*v|-|C_i*G_{V\rightarrow R}(v)|)|)\\
@@ -159,10 +159,10 @@ Which results in the optimization target:
 \end{align}
 
 \subsection{Implementation}
-The above mentioned semantic-aware discriminator enforces higher-level semantic consistencies. For example compared to the virtual world, real world may have less illumination. Instead of darkening the tone of the whole image it is instead more accurate to keep the sky bright and only darken e.g. the road. To achieve this semantic-aware judgement of realism, the discriminators' last layers' number of filters is transited to the number of semantic classes. Semantic masks are then applied upon these filters in order to make them focus on different semantic classes. Usually the last layer's feature map of the discriminator is a tensor $\mathbf{T}$ with shape $(w,h,1)$ with $w$ being the width and $h$ being the height. The SG-GAN approach changes this to $(w,h,s)$ where $s$ is the number of semantic classes. The semantic labeling of the image is converted to one-hot style and resized to $(w,h)$. This results in a mask $\mathbf{M}$ with shape $(w,h,s)$. Now multiplying $\mathbf{T}$ and $\mathbf{M}$ element-wise will result in each filter within $\mathbf{T}$ only focussing on one particular semantic class. Summing up $\mathbf{T}$ along the last dimension will result in a tensor of shape $(w,h,1)$ which then can be further processed as in the standard discriminator. 
+The above mentioned semantic-aware discriminator enforces higher-level semantic consistencies. For example, compared to the virtual world, real world may have less illumination. Instead of darkening the tone of the whole image it is instead more accurate to keep the sky bright and only darken e.g. the road. To achieve this semantic-aware judgement of realism, the discriminators' last layers' number of filters is transited to the number of semantic classes. Semantic masks are then applied upon these filters in order to make them focus on different semantic classes. Usually, the last layer's feature map of the discriminator is a tensor $\mathbf{T}$ with shape $(w,h,1)$ with $w$ being the width and $h$ being the height. The SG-GAN approach changes this to $(w,h,s)$ where $s$ is the number of semantic classes. The semantic labeling of the image is converted to one-hot style and resized to $(w,h)$. This results in a mask $\mathbf{M}$ with shape $(w,h,s)$. Now multiplying $\mathbf{T}$ and $\mathbf{M}$ element-wise will result in each filter within $\mathbf{T}$ only focussing on one particular semantic class. Summing up $\mathbf{T}$ along the last dimension will result in a tensor of shape $(w,h,1)$ which then can be further processed as in the standard discriminator. 
 
 \subsubsection{Network Architecture}
-The images are resized to $256 \times 512$. The authors adapt the architecture from \cite{DBLP:journals/corr/IsolaZZE16} for the generator aswell as the PatchGAN from the same work for the semantic-aware discriminator. 
+The images are resized to $256 \times 512$. The authors adapt the architecture from \cite{DBLP:journals/corr/IsolaZZE16} for the generator as well as the PatchGAN from the same work for the semantic-aware discriminator. 
 
 
 \subsubsection{Training Details}
