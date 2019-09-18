@@ -62,7 +62,7 @@ The game plays out in two scenarios. The first is where the discriminator D is g
 On each step, two minibatches are sampled: a minibatch of $\mathbf{x}$ values from the dataset and one of random noise $\mathbf{z}$. Then two gradient steps are made simultaneously (simultaneous stochastic gradient descent): one updating $\theta^{(D)}$ to reduce $J^{(D)}$ and one updating $\theta^{(G)}$ to reduce $J^{(G)}$.
 
 \subsection{Conditional GANs}
-Instead of having random noise as input to the Net, conditional GANs get a conditional input that determines the output. \cite{DBLP:journals/corr/IsolaZZE16} generated images of shoes depending on drawn sketches thereof, translated grayscale images to color images and more (See Figure \ref{fig:I2I_examples} for examples). This is the same for the methods compared in this work: They use a synthetic image as conditional input and generate an image that looks more realistic while preserving features and image elements of the original image.
+In addition to random noise as input to the network, conditional GANs get a conditional input that determines the output. \cite{DBLP:journals/corr/IsolaZZE16} generated images of shoes depending on drawn sketches thereof, translated grayscale images to color images and more (See Figure \ref{fig:I2I_examples} for examples). This is the same for the methods compared in this work: They use a synthetic image as conditional input and generate an image that looks more realistic while preserving features and image elements of the original image.
 
 \begin{figure}
 	\centering
