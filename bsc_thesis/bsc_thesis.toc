@@ -59,7 +59,6 @@
 \contentsline {section}{\numberline {5.4}Results}{37}% 
 \contentsline {subsection}{\numberline {5.4.1}Quantitative}{37}% 
 \contentsline {subsection}{\numberline {5.4.2}Qualitative}{37}% 
-\contentsline {section}{\numberline {5.5}Discussion}{41}% 
+\contentsline {section}{\numberline {5.5}Discussion}{42}% 
 \contentsline {chapter}{\numberline {6}Conclusion}{43}% 
-\contentsline {section}{\numberline {6.1}Outlook and Future Work}{43}% 
-\contentsline {chapter}{\numberline {A}Appendix}{45}% 
+\contentsline {section}{\numberline {6.1}Outlook and Future Work}{44}% 

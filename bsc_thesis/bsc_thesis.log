@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  18 SEP 2019 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  22 SEP 2019 11:51
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1341,7 +1341,7 @@ Package pdftex.def Info: images/evaluation/SG-GAN_pred_labels.png  used on inpu
 t line 287.
 (pdftex.def)             Requested size: 179.25116pt x 89.61583pt.
 
-LaTeX Warning: Float too large for page by 31.61905pt on input line 322.
+LaTeX Warning: Float too large for page by 45.21906pt on input line 322.
 
 [37] [38 <./images/evaluation/GTA_gt_image_train.png (PNG copy)> <./images/eval
 uation/GTA_gt_label_train.png> <./images/evaluation/GTA_pred_labels_train.png (
@@ -1350,38 +1350,60 @@ ages/evaluation/CycleGAN_pred_labels_train.png (PNG copy)> <./images/evaluation
 /CyCADA_translated_train.png (PNG copy)> <./images/evaluation/CyCADA_pred_label
 s_train.png (PNG copy)> <./images/evaluation/SG-GAN_translated_train.png (PNG c
 opy)> <./images/evaluation/SG-GAN_pred_labels_train.png (PNG copy)>] [39]
-[40 <./images/evaluation/GTA_gt_image.png (PNG copy)> <./images/evaluation/GTA_
-gt_label.png> <./images/evaluation/GTA_pred_labels.png (PNG copy)> <./images/ev
-aluation/CycleGAN_translated.png (PNG copy)> <./images/evaluation/CycleGAN_pred
-_labels.png (PNG copy)> <./images/evaluation/CyCADA_translated.png (PNG copy)> 
-<./images/evaluation/CyCADA_pred_labels.png (PNG copy)> <./images/evaluation/SG
--GAN_translated.png (PNG copy)> <./images/evaluation/SG-GAN_pred_labels.png (PN
-G copy)>]) (content/conclusion.tex [41] [42
-
-
-]
+[40] [41 <./images/evaluation/GTA_gt_image.png (PNG copy)> <./images/evaluation
+/GTA_gt_label.png> <./images/evaluation/GTA_pred_labels.png (PNG copy)> <./imag
+es/evaluation/CycleGAN_translated.png (PNG copy)> <./images/evaluation/CycleGAN
+_pred_labels.png (PNG copy)> <./images/evaluation/CyCADA_translated.png (PNG co
+py)> <./images/evaluation/CyCADA_pred_labels.png (PNG copy)> <./images/evaluati
+on/SG-GAN_translated.png (PNG copy)> <./images/evaluation/SG-GAN_pred_labels.pn
+g (PNG copy)>]) (content/conclusion.tex [42]
 chapter 6.
-) [43] [44
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43
+
+
+])
+(bsc_thesis.bbl [44] [45
 
 
 ]
-chapter A.
-(bsc_thesis.bbl [45] [46
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
+[]\T1/pxr/m/n/10.95 (+20) Cognitive Sys-tems group.  tcml clus-ter uni-ver-sitä
+t
+ []
 
 
-] [47] [48]
-Underfull \hbox (badness 4144) in paragraph at lines 156--160
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
+\T1/pxr/m/n/10.95 (+20) tübin-gen.  $\T1/pxtt/m/n/10.95 https : / / uni-[]tuebi
+ngen . de / fakultaeten /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
+\T1/pxtt/m/n/10.95 mathematisch-[]naturwissenschaftliche-[]fakultaet /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
+\T1/pxtt/m/n/10.95 fachbereiche / informatik / lehrstuehle / kognitive-[]system
+e /
+ []
+
+[46]
+Underfull \hbox (badness 4144) in paragraph at lines 163--167
 []\T1/pxr/m/n/10.95 (+20) Blender Project.  Cy-cles ren-der-ing en-gine.  $\T1/
 pxtt/m/n/10.95 https : / / www .
  []
 
-[49]) [50] (bsc_thesis.aux) ) 
+[47]) [48] (bsc_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 14304 strings out of 492903
- 231851 string characters out of 3130412
+ 14297 strings out of 492903
+ 231799 string characters out of 3130412
  574482 words of memory out of 3000000
- 17548 multiletter control sequences out of 15000+200000
- 74067 words of font info for 354 fonts, out of 3000000 for 9000
+ 17549 multiletter control sequences out of 15000+200000
+ 73677 words of font info for 348 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,18n,77p,9105b,669s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/peete/.miktex/texmfs/install/fonts/enc/dvip
@@ -1397,9 +1419,9 @@ stall/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/f
 onts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (50 pages, 10811381 bytes).
+Output written on bsc_thesis.pdf (48 pages, 10812616 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
+ 262 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46723 words of extra memory for PDF output out of 51595 (max. 10000000)
 
