@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  22 SEP 2019 11:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050) (preloaded format=pdflatex 2019.4.18)  22 SEP 2019 22:00
 entering extended mode
 **./bsc_thesis.tex
 (bsc_thesis.tex
@@ -1350,21 +1350,21 @@ ages/evaluation/CycleGAN_pred_labels_train.png (PNG copy)> <./images/evaluation
 /CyCADA_translated_train.png (PNG copy)> <./images/evaluation/CyCADA_pred_label
 s_train.png (PNG copy)> <./images/evaluation/SG-GAN_translated_train.png (PNG c
 opy)> <./images/evaluation/SG-GAN_pred_labels_train.png (PNG copy)>] [39]
-[40] [41 <./images/evaluation/GTA_gt_image.png (PNG copy)> <./images/evaluation
-/GTA_gt_label.png> <./images/evaluation/GTA_pred_labels.png (PNG copy)> <./imag
-es/evaluation/CycleGAN_translated.png (PNG copy)> <./images/evaluation/CycleGAN
-_pred_labels.png (PNG copy)> <./images/evaluation/CyCADA_translated.png (PNG co
-py)> <./images/evaluation/CyCADA_pred_labels.png (PNG copy)> <./images/evaluati
-on/SG-GAN_translated.png (PNG copy)> <./images/evaluation/SG-GAN_pred_labels.pn
-g (PNG copy)>]) (content/conclusion.tex [42]
+[40 <./images/evaluation/GTA_gt_image.png (PNG copy)> <./images/evaluation/GTA_
+gt_label.png> <./images/evaluation/GTA_pred_labels.png (PNG copy)> <./images/ev
+aluation/CycleGAN_translated.png (PNG copy)> <./images/evaluation/CycleGAN_pred
+_labels.png (PNG copy)> <./images/evaluation/CyCADA_translated.png (PNG copy)> 
+<./images/evaluation/CyCADA_pred_labels.png (PNG copy)> <./images/evaluation/SG
+-GAN_translated.png (PNG copy)> <./images/evaluation/SG-GAN_pred_labels.png (PN
+G copy)>]) (content/conclusion.tex [41] [42
+
+
+]
 chapter 6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43
-
-
-])
+ [43])
 (bsc_thesis.bbl [44] [45
 
 
@@ -1419,7 +1419,7 @@ stall/fonts/type1/urw/helvetic/uhvb8a.pfb></home/peete/.miktex/texmfs/install/f
 onts/type1/urw/palatino/uplb8a.pfb></home/peete/.miktex/texmfs/install/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></home/peete/.miktex/texmfs/install/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on bsc_thesis.pdf (48 pages, 10812616 bytes).
+Output written on bsc_thesis.pdf (48 pages, 10812330 bytes).
 PDF statistics:
  262 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
