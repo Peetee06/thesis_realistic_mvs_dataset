@@ -1,0 +1,14 @@
+\beamer@sectionintoc {1}{Introduction}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Foundations}{6}{0}{1}
+\beamer@sectionintoc {2}{Related Work}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{A Categorization}{10}{0}{2}
+\beamer@sectionintoc {3}{Domain Adaptation techniques}{14}{0}{3}
+\beamer@subsectionintoc {3}{1}{Motivation}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{Techniques}{16}{0}{3}
+\beamer@sectionintoc {4}{Experiments}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{Methodology}{20}{0}{4}
+\beamer@subsectionintoc {4}{2}{Results}{27}{0}{4}
+\beamer@sectionintoc {5}{Discussion}{31}{0}{5}
+\beamer@subsectionintoc {5}{1}{Training}{31}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{35}{0}{6}
